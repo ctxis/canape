@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CSScriptIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Code_CodeFileCS.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VBScriptIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Code_CodeFileVB.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\copy.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NetGraphIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Data_Schema.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FloppyDisk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\FloppyDisk.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="folderopen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\folderopen.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Network" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Network.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Network_Map" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Network_Map.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="otheroptions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\otheroptions.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PythonScriptIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\py.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="textdoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\textdoc.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UtilityText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\UtilityText.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ScriptIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Utility_VBScript.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VSProject_genericproject" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\VSProject_genericproject.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_112_LeftArrowShort_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\112_LeftArrowShort_Green.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_112_RightArrowShort_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\112_RightArrowShort_Green.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_112_Tick_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\112_Tick_Green.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_112_DownArrowShort_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\112_DownArrowShort_Green.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_112_UpArrowShort_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\112_UpArrowShort_Green.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FillBytesForm_EmptyHexString" xml:space="preserve">
+    <value>Hex string cannot be empty</value>
+  </data>
+  <data name="FillBytesForm_InvalidHexString" xml:space="preserve">
+    <value>Hex string is invalid</value>
+  </data>
+  <data name="FillBytesForm_MinMaxInvalid" xml:space="preserve">
+    <value>Minimum byte value must be less than maximum</value>
+  </data>
+  <data name="FillBytesForm_InvalidHexStringLength" xml:space="preserve">
+    <value>Hex string must be multiples of two characters</value>
+  </data>
+  <data name="MessageBox_ErrorString" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="NetGraphDocumentControl_NoDocumentSet" xml:space="preserve">
+    <value>No document set in node, do you want to create a new document?</value>
+  </data>
+  <data name="NetGraphDocumentControl_NoDocumentSetCaption" xml:space="preserve">
+    <value>New Document?</value>
+  </data>
+  <data name="BinaryDataEditorControl_NoMatch" xml:space="preserve">
+    <value>Could not find a match</value>
+  </data>
+  <data name="BinaryDataEditorControl_NoMatchCaption" xml:space="preserve">
+    <value>No Match</value>
+  </data>
+  <data name="TreeDataKeyEditorControl_NoMatch" xml:space="preserve">
+    <value>Could not find a match</value>
+  </data>
+  <data name="TreeDataKeyEditorControl_NoMatchCaption" xml:space="preserve">
+    <value>No Match</value>
+  </data>
+  <data name="ScriptSelectForm_Caption" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ScriptSelectForm_NoClass" xml:space="preserve">
+    <value>Must specify a class</value>
+  </data>
+  <data name="ScriptSelectForm_NoDocument" xml:space="preserve">
+    <value>Must specify a script document</value>
+  </data>
+  <data name="ChangeTagForm_UseEmptyTag" xml:space="preserve">
+    <value>Do you to specify an empty tag?</value>
+  </data>
+  <data name="ChangeTagForm_UseEmptyTagCaption" xml:space="preserve">
+    <value>Empty Tag?</value>
+  </data>
+  <data name="TreeDataKeyEditorControl_ParseError" xml:space="preserve">
+    <value>Parse Error</value>
+  </data>
+  <data name="TreeDataKeyEditorControl_NoParseResults" xml:space="preserve">
+    <value>No results returned from parse with</value>
+  </data>
+  <data name="TreeDataKeyEditorControl_NoParseResultsCaption" xml:space="preserve">
+    <value>No results</value>
+  </data>
+  <data name="ScriptDocumentControl_NoMatch" xml:space="preserve">
+    <value>Could not find a match</value>
+  </data>
+  <data name="ScriptDocumentControl_NoMatchCaption" xml:space="preserve">
+    <value>No Match</value>
+  </data>
+  <data name="GotoLineForm_Label" xml:space="preserve">
+    <value>Line Number (1 - {0})</value>
+  </data>
+  <data name="ParserDocumentControl_InvalidIdentifier" xml:space="preserve">
+    <value>Name '{0}' is not a valid identifier</value>
+  </data>
+  <data name="ParserDocumentControl_InvalidIdentifierCaption" xml:space="preserve">
+    <value>Invalid name</value>
+  </data>
+  <data name="ParserDocumentControl_TypeNameExists" xml:space="preserve">
+    <value>Type {0} already exists, please choose a different name</value>
+  </data>
+  <data name="ParserDocumentControl_TypeNameExistsCaption" xml:space="preserve">
+    <value>Type name exists</value>
+  </data>
+  <data name="ParserDocumentControl_RemoveType" xml:space="preserve">
+    <value>Do you want to remove {0}?</value>
+  </data>
+  <data name="ParserDocumentControl_RemoveTypeCaption" xml:space="preserve">
+    <value>Remove {0}?</value>
+  </data>
+  <data name="ParserComponent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\ParserComponent.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InjectPacketForm_NotSupported" xml:space="preserve">
+    <value>Could not inject at specified node. Not supported</value>
+  </data>
+  <data name="InjectPacketForm_SelectGraph" xml:space="preserve">
+    <value>No connection available for injection</value>
+  </data>
+  <data name="Assembly_ProjectEntry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Web_GlobalAppClass.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ParserDocumentControl_Validation" xml:space="preserve">
+    <value>Parser validated ok</value>
+  </data>
+  <data name="ParserDocumentControl_ValidationCaption" xml:space="preserve">
+    <value>Validation Passed</value>
+  </data>
+  <data name="ParserDocumentControl_ValidationError" xml:space="preserve">
+    <value>Validation Error</value>
+  </data>
+  <data name="InjectPacketForm_SelectNode" xml:space="preserve">
+    <value>No node selected for injection</value>
+  </data>
+  <data name="SelectBlockForm_EndOffsetLessThanOffset" xml:space="preserve">
+    <value>The end offset must be greater or equal to start offset</value>
+  </data>
+  <data name="SelectBlockForm_OffsetGreaterThanSize" xml:space="preserve">
+    <value>The offset must be less than the size of the hex ({0} bytes)</value>
+  </data>
+  <data name="HexEditor_InvalidBase64Length" xml:space="preserve">
+    <value>Selected data has an invalid base64 length, should be a multiple of 4 bytes.</value>
+  </data>
+  <data name="AllFilesFilter_String" xml:space="preserve">
+    <value>All Files (*.*)|*.*</value>
+  </data>
+  <data name="PacketLogControl_ClearLog" xml:space="preserve">
+    <value>Do you want to clear the log?</value>
+  </data>
+  <data name="PacketLogControl_ClearLogCaption" xml:space="preserve">
+    <value>Clear Log?</value>
+  </data>
+  <data name="PacketLogControl_DataColumn" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="PacketLogControl_ErrorReadingFile" xml:space="preserve">
+    <value>Error reading file {0}</value>
+  </data>
+  <data name="PacketLogControl_ErrorWritingPackets" xml:space="preserve">
+    <value>Error writing packets '{0}'</value>
+  </data>
+  <data name="PacketLogControl_HashColumn" xml:space="preserve">
+    <value>Hash</value>
+  </data>
+  <data name="PacketLogControl_LengthColumn" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="PacketLogControl_NetworkColumn" xml:space="preserve">
+    <value>Network</value>
+  </data>
+  <data name="PacketLogControl_NoColumn" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="PacketLogControl_SelectDiffPackets" xml:space="preserve">
+    <value>Must select two packets to difference</value>
+  </data>
+  <data name="PacketLogControl_TagColumn" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="PacketLogControl_TimestampColumn" xml:space="preserve">
+    <value>Timestamp</value>
+  </data>
+  <data name="TextFileFilter_String" xml:space="preserve">
+    <value>Text Files (*.txt)|*.txt|All Files (*.*)|*.*</value>
+  </data>
+  <data name="SslConfigControl_SpecifyCertPrivateKey" xml:space="preserve">
+    <value>You must provide a certificate with a private key</value>
+  </data>
+  <data name="InjectPacketControl_CancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="InjectPacketControl_InjectButtonText" xml:space="preserve">
+    <value>Inject</value>
+  </data>
+  <data name="StringConverters_InvalidHexStringLength" xml:space="preserve">
+    <value>Hex string must be a multiple of 2 hex characters</value>
+  </data>
+  <data name="ConfigurePacScriptForm_TestReturned" xml:space="preserve">
+    <value>Test returned '{0}'</value>
+  </data>
+  <data name="CreateCertForm_MustSpecifyCA" xml:space="preserve">
+    <value>Must specify a root certificate</value>
+  </data>
+  <data name="CreateCertForm_MustSpecifyCN" xml:space="preserve">
+    <value>Must specify a common name</value>
+  </data>
+  <data name="CreateCertForm_CertSelect" xml:space="preserve">
+    <value>Certificate Select</value>
+  </data>
+  <data name="CreateCertForm_CertSelectTitle" xml:space="preserve">
+    <value>Select a certificate from the following list</value>
+  </data>
+  <data name="CreateCertForm_NoStoreCerts" xml:space="preserve">
+    <value>No available certificates with private keys found in store</value>
+  </data>
+  <data name="CreateCertForm_StoreError" xml:space="preserve">
+    <value>Information could not be written out for this certificate.</value>
+  </data>
+  <data name="EditFilterForm_InvalidRegex" xml:space="preserve">
+    <value>Invalid regular expression</value>
+  </data>
+  <data name="EditFilterForm_MustProvideHost" xml:space="preserve">
+    <value>Must provide a host (* is wildcard)</value>
+  </data>
+  <data name="EditPacketForm_Title" xml:space="preserve">
+    <value>Edit Packet - {0}</value>
+  </data>
+  <data name="FindPacketForm_CancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="FindPacketForm_FindButtonText" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="FindPacketForm_SelectMode" xml:space="preserve">
+    <value>Error, must specify a matching mode</value>
+  </data>
+  <data name="FindPacketForm_SelectModeEncoding" xml:space="preserve">
+    <value>Must select a mode and an encoding</value>
+  </data>
+  <data name="FindPacketForm_SpecifySearch" xml:space="preserve">
+    <value>Must provide a search string</value>
+  </data>
+  <data name="HistogramLogViewerForm_Title" xml:space="preserve">
+    <value>Histogram from {0} packet(s), {1} byte(s)</value>
+  </data>
+  <data name="LoadCertFromFileForm_CertFilter" xml:space="preserve">
+    <value>PFX Certificate (*.pfx;*.p12)|*.pfx;*.p12|Certificate Files (*.cer,*.pem,*.crt,*.der)|*.cer;*.pem;*.crt;*.der|All Files (*.*)|*.*</value>
+  </data>
+  <data name="LoadCertFromFileForm_KeyFilter" xml:space="preserve">
+    <value>Key File (*.key)|*.key|All Files (*.*)|*.*</value>
+  </data>
+  <data name="LoadCertFromFileForm_NoPrivateKey" xml:space="preserve">
+    <value>Certificate does not have a private key</value>
+  </data>
+  <data name="LoadCertFromFileForm_SpecifyCert" xml:space="preserve">
+    <value>Must specify a certificate file</value>
+  </data>
+  <data name="LoadCertFromFileForm_SpecifyKey" xml:space="preserve">
+    <value>Must specify a key file</value>
+  </data>
+  <data name="PacketLogViewerForm_ConvertToBytes" xml:space="preserve">
+    <value>Do you want to convert this packet to bytes?</value>
+  </data>
+  <data name="PacketLogViewerForm_ConvertToBytesCaption" xml:space="preserve">
+    <value>Convert?</value>
+  </data>
+  <data name="PacketLogViewerForm_Header" xml:space="preserve">
+    <value>{0} of {1} - {2} - {3} - {4}</value>
+  </data>
+  <data name="PacketLogViewerForm_Title" xml:space="preserve">
+    <value>Packet Log</value>
+  </data>
+  <data name="PacketLogViewerForm_TitleReadOnly" xml:space="preserve">
+    <value>Packet Log - Read Only</value>
+  </data>
+  <data name="PrimitiveValueEditorForm_InvalidValue" xml:space="preserve">
+    <value>Invalid value - {0}</value>
+  </data>
+  <data name="ProjectExplorer_AssembliesFileFilter" xml:space="preserve">
+    <value>Assemblies (*.dll;*.exe)|*.dll;*.exe|All Files (*.*)|*.*</value>
+  </data>
+  <data name="ProjectExplorer_CouldntCreateTest" xml:space="preserve">
+    <value>Could not create test type</value>
+  </data>
+  <data name="ProjectExplorer_DataNodeName" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="ProjectExplorer_DeleteDocument" xml:space="preserve">
+    <value>Do you want to delete document '{0}'?</value>
+  </data>
+  <data name="ProjectExplorer_DeleteDocumentCaption" xml:space="preserve">
+    <value>Delete?</value>
+  </data>
+  <data name="ProjectExplorer_GraphsNodeName" xml:space="preserve">
+    <value>Graphs</value>
+  </data>
+  <data name="ProjectExplorer_RootNodeName" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="ProjectExplorer_ScriptsNodeName" xml:space="preserve">
+    <value>Scripts</value>
+  </data>
+  <data name="ProjectExplorer_ServicesNodeName" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="ProjectExplorer_TestName" xml:space="preserve">
+    <value>{0} Test</value>
+  </data>
+  <data name="ProjectExplorer_TestsNodeName" xml:space="preserve">
+    <value>Tests</value>
+  </data>
+  <data name="SelectEndointForm_SelectServer" xml:space="preserve">
+    <value>Must select a template</value>
+  </data>
+  <data name="SelectEndpointForm_SelectClass" xml:space="preserve">
+    <value>Must specify a class</value>
+  </data>
+  <data name="SelectEndpointForm_SelectScript" xml:space="preserve">
+    <value>Must specify a script document</value>
+  </data>
+  <data name="SelectLibraryNodeForm_DescriptionColumn" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="SelectLibraryNodeForm_NameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SelectLibraryNodeForm_SelectNode" xml:space="preserve">
+    <value>Must select a node type</value>
+  </data>
+  <data name="SelectScriptTemplateForm_EmptyScript" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="SelectScriptTemplateForm_EmptyScriptDescription" xml:space="preserve">
+    <value>An empty script file</value>
+  </data>
+  <data name="SelectTemplateForm_DescriptionColumn" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="SelectTemplateForm_NameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SelectTemplateForm_SpecifyTemplate" xml:space="preserve">
+    <value>Must select a template type</value>
+  </data>
+  <data name="ConfigurePacScriptForm_CannotUseProxyScript" xml:space="preserve">
+    <value>Could not create proxy script factory</value>
+  </data>
+  <data name="AddReferenceForm_MustSpecifyAnAssemblyName" xml:space="preserve">
+    <value>Must specify an assembly name for manual loading</value>
+  </data>
+  <data name="CreateCertForm_MustSpecifyTemplate" xml:space="preserve">
+    <value>Must specify a template certificate</value>
+  </data>
+  <data name="LineContainer_LabelDescription" xml:space="preserve">
+    <value>The label to assign to the line. Allows a node to specify which route a packet should take</value>
+  </data>
+  <data name="EditConfigPropertyForm_SelectAType" xml:space="preserve">
+    <value>Please select a type for the property</value>
+  </data>
+  <data name="EditConfigPropertyForm_SpecifyAName" xml:space="preserve">
+    <value>Please specify a valid name, it must only contain letters, digits or underscores and must not start with a digit</value>
+  </data>
+  <data name="CreateCertForm_SpecifyPassword" xml:space="preserve">
+    <value>Certificate key is protected, do you want to specify the password?</value>
+  </data>
+  <data name="CreateCertForm_SpecifyPasswordCaption" xml:space="preserve">
+    <value>Specify Password?</value>
+  </data>
+  <data name="SslConfigControl_ErrorLoadingStoreCert" xml:space="preserve">
+    <value>Error loading certificate from store: {0}</value>
+  </data>
+  <data name="SslConfigControl_NoPrivateKeyInStore" xml:space="preserve">
+    <value>No available certificates with private keys found in store</value>
+  </data>
+  <data name="LoadCertFromFileForm_InvalidPrivateKeyFile" xml:space="preserve">
+    <value>Could not load private key from file</value>
+  </data>
+  <data name="EventLogControl_ClearLog" xml:space="preserve">
+    <value>Do you want to clear the log?</value>
+  </data>
+  <data name="EventLogControl_ClearLogCaption" xml:space="preserve">
+    <value>Clear Log?</value>
+  </data>
+  <data name="EventLogControl_TextFilesFilter" xml:space="preserve">
+    <value>Text Files (*.txt)|*.txt|All Files (*.*)|*.*"</value>
+  </data>
+  <data name="PacketLogViewerForm_ConfirmSave" xml:space="preserve">
+    <value>Log contains modified data, do you want to save now?</value>
+  </data>
+  <data name="PacketLogViewerForm_ConfirmSaveCaption" xml:space="preserve">
+    <value>Save?</value>
+  </data>
+  <data name="ParserDocumentControl_EnumsNodeName" xml:space="preserve">
+    <value>Enums</value>
+  </data>
+  <data name="ParserDocumentControl_ParsersNodeName" xml:space="preserve">
+    <value>Parsers</value>
+  </data>
+  <data name="ParserDocumentControl_RootNodeName" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="ParserDocumentControl_SequencesNodeName" xml:space="preserve">
+    <value>Sequences</value>
+  </data>
+  <data name="ParserDocumentControl_CSSourceFilter" xml:space="preserve">
+    <value>C# Source File (*.cs)|*.cs|All Files (*.*)|*.*</value>
+  </data>
+  <data name="BinaryFrameDiffControl_NoDifferenceFound" xml:space="preserve">
+    <value>No differences found</value>
+  </data>
+  <data name="BinaryFrameDiffControl_NoDifferenceFoundCaption" xml:space="preserve">
+    <value>No Differences</value>
+  </data>
+  <data name="ConnectionHistoryControl_NoPackets" xml:space="preserve">
+    <value>No logged packets available from this connection</value>
+  </data>
+  <data name="CloneCertChainForm_DestinationMustBeADirectoryAndExist" xml:space="preserve">
+    <value>Must specify a directory which exists</value>
+  </data>
+  <data name="CloneCertChainForm_UrlMustBeHttpsOrTcp" xml:space="preserve">
+    <value>Url scheme must be https:// or tcp://</value>
+  </data>
+  <data name="LayerEditorControl_ScriptMenuItem" xml:space="preserve">
+    <value>Scripted Layer</value>
+  </data>
+  <data name="PCAPFileFilter_String" xml:space="preserve">
+    <value>PCAP Files (*.pcap)|*.pcap|All Files (*.*)|*.*</value>
+  </data>
+  <data name="StateGraphDocumentControl_SetStateName" xml:space="preserve">
+    <value>Set State {0}</value>
+  </data>
+  <data name="BinaryFrameDiffControl_LabelFormat" xml:space="preserve">
+    <value>Difference {0} of {1}</value>
+  </data>
+  <data name="BinaryFrameDiffControl_BuildingDifferences" xml:space="preserve">
+    <value>Building differences!</value>
+  </data>
+  <data name="LineContainer_WeakDescription" xml:space="preserve">
+    <value>Indicates if this path only holds a weak reference to the destination node. If true it does not block shutdown of destination</value>
+  </data>
+  <data name="PacketLogControl_CustomColumn" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="DiffPacketsControl_NoDifferencesFound" xml:space="preserve">
+    <value>No differences found </value>
+  </data>
+  <data name="DiffPacketsControl_NoDifferencesFoundCaption" xml:space="preserve">
+    <value>No differences</value>
+  </data>
+  <data name="DiffPacketsControl_NodeAdded" xml:space="preserve">
+    <value>Node {0} added to right hand side </value>
+  </data>
+  <data name="DiffPacketsControl_NodeDeleted" xml:space="preserve">
+    <value>Node {0} deleted from left hand side</value>
+  </data>
+  <data name="DiffPacketsControl_NodeModified" xml:space="preserve">
+    <value>Node {0} modified as {1} </value>
+  </data>
+  <data name="PacketLogControl_ColumnEditor" xml:space="preserve">
+    <value>Packet Log Column Editor</value>
+  </data>
+  <data name="GuiUtils_CopyToDiffDocument" xml:space="preserve">
+    <value>Diff Document</value>
+  </data>
+  <data name="GuiUtils_CopyToPacketLog" xml:space="preserve">
+    <value>Packet Log</value>
+  </data>
+  <data name="GuiUtils_CopyToTestDocument" xml:space="preserve">
+    <value>Test Document</value>
+  </data>
+  <data name="GuiUtils_LeftDiffDocument" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="GuiUtils_NewDocument" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="GuiUtils_RightDiffDocument" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="PacketLogControl_CopyToExistingDiffLogLeft" xml:space="preserve">
+    <value>To {0} Left</value>
+  </data>
+  <data name="PacketLogControl_CopyToExistingDiffLogRight" xml:space="preserve">
+    <value>To {0} Right</value>
+  </data>
+  <data name="PacketLogControl_CopyToNewDiffLogLeft" xml:space="preserve">
+    <value>New Diff Log Left</value>
+  </data>
+  <data name="PacketLogControl_CopyToNewDiffLogRight" xml:space="preserve">
+    <value>New Diff Log Right</value>
+  </data>
+  <data name="Network_Map_Started" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Network_Map1.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CredentialsEditorForm_MustProvideARealm" xml:space="preserve">
+    <value>Must provide a realm, this identifies the source of the authentication request</value>
+  </data>
+  <data name="CredentialsEditorForm_MustProvideAUsername" xml:space="preserve">
+    <value>Must provide a username</value>
+  </data>
+  <data name="CredentialsEditorForm_PrincipalAlreadyExists" xml:space="preserve">
+    <value>Principal {0}@{1} already exists, do you want to overwrite the existing one?</value>
+  </data>
+  <data name="GetAuthenticationCredentialsForm_MustSpecifyUsername" xml:space="preserve">
+    <value>Must specify a username</value>
+  </data>
+  <data name="GetAuthenticationCredentialsForm_TitleFormat" xml:space="preserve">
+    <value>Enter Credentials for {0}@{1}</value>
+  </data>
+  <data name="HistogramChartControl_AllTags" xml:space="preserve">
+    <value>All Tags</value>
+  </data>
+  <data name="HistogramChartControl_Title" xml:space="preserve">
+    <value>Histogram from {0} packet(s), {1} byte(s)</value>
+  </data>
+  <data name="TagStatisticsChartControl_ByteCountToolTip" xml:space="preserve">
+    <value>Total Bytes: #VAL</value>
+  </data>
+  <data name="TagStatisticsChartControl_CountToolTip" xml:space="preserve">
+    <value>Total Packets: #VAL</value>
+  </data>
+  <data name="CustomPacketLogColumn_RawValueDescription" xml:space="preserve">
+    <value>Return the raw value for the node rather than the node itself, bypasses node formatting</value>
+  </data>
+  <data name="CustomPacketLogColumn_SelectionPathDescription" xml:space="preserve">
+    <value>Specify the selection path for the part of the frame to display</value>
+  </data>
+  <data name="PacketLogColumn_ColumnWidthDescription" xml:space="preserve">
+    <value>Width of the column</value>
+  </data>
+  <data name="PacketLogColumn_CustomFormatDescription" xml:space="preserve">
+    <value>.NET style custom format string for value, must be of the form {0:fmt}, see String.Format in MSDN for more information</value>
+  </data>
+  <data name="PacketLogColumn_NameDescription" xml:space="preserve">
+    <value>Name of the column</value>
+  </data>
+  <data name="TimestampPacketLogColumn_TicksDescription" xml:space="preserve">
+    <value>Return the ticks in 100ns intervals rather than the full date time</value>
+  </data>
+  <data name="ParserDocumentControl_ScriptsNodeName" xml:space="preserve">
+    <value>Scripts</value>
+  </data>
+  <data name="ScriptDocumentControl_ParseFailedSaveScript" xml:space="preserve">
+    <value>Script did not parse correctly, do you want to continue to save?</value>
+  </data>
+  <data name="ScriptDocumentControl_SaveScript" xml:space="preserve">
+    <value>Do you want to save your script?</value>
+  </data>
+  <data name="ScriptDocumentControl_SaveScriptCaption" xml:space="preserve">
+    <value>Save {0}?</value>
+  </data>
+  <data name="ScriptDocumentControl_ScriptOk" xml:space="preserve">
+    <value>Script OK</value>
+  </data>
+  <data name="ScriptDocumentControl_ScriptOkCaption" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ScriptDocumentControl_SourceFilter" xml:space="preserve">
+    <value>{0} Source Files (*.{1})|*.{1}|{2}</value>
+  </data>
+  <data name="DefaultPythonParserScript" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultPythonParserScript.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="CustomPacketLogColumn_FormatExpressionDescription" xml:space="preserve">
+    <value>Expression to format the node. Access the node through the value property, you can also access the LogPacket directly as 'this'. Ignore RawValue when using an expression.</value>
+  </data>
+  <data name="DataKeyEditorControl_FormatStringName" xml:space="preserve">
+    <value>Formatted String</value>
+  </data>
+  <data name="ParserDocumentControl_InvalidParserType" xml:space="preserve">
+    <value>Invalid parser type</value>
+  </data>
+  <data name="SingleFrameEditorControl_FrameModifiedSave" xml:space="preserve">
+    <value>Frame was modified, do you want to save it?</value>
+  </data>
+  <data name="SingleFrameEditorControl_FrameModifiedSaveCaption" xml:space="preserve">
+    <value>Save Frame?</value>
+  </data>
+  <data name="CreateCertForm_MustSpecifyAValidRSAKeySize" xml:space="preserve">
+    <value>Must specify a valid RSA key size</value>
+  </data>
+  <data name="PythonSyntaxHighlighting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PythonSyntaxHighlighting.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+</root>

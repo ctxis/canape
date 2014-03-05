@@ -1,0 +1,1128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BinaryIntegerFuzzerNode_InvalidIncrement" xml:space="preserve">
+    <value>Das Inkrement kann nicht 0 sein</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNode_InvalidLength" xml:space="preserve">
+    <value>Die Länge muss zwischen 1 und 8 Bytes lang sein</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNode_NegativeInvalidMaxValue" xml:space="preserve">
+    <value>Das Maximum muss kleiner sein als das Minimum bei einer negative Inkrementierung</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNode_PositiveInvalidMaxValue" xml:space="preserve">
+    <value>Das Maximum muss gößer sein als das Minimum bei einer positive Inkrementierung</value>
+  </data>
+  <data name="ByteFuzzer_IgnoringNode" xml:space="preserve">
+    <value>Der Knoten {0} wird ignoriert, da er kein Byte Wert enthält</value>
+  </data>
+  <data name="DuplicatorNodeConfig_DuplicationCount" xml:space="preserve">
+    <value>Die Anzahl der Dublizierungen des übereinstimmenden Paketes, bei 0 wird das Paket verworfen</value>
+  </data>
+  <data name="DuplicatorNode_Description" xml:space="preserve">
+    <value>Ein Knoten um alle ankommenden Pakete zu dublizieren</value>
+  </data>
+  <data name="DuplicatorNode_Name" xml:space="preserve">
+    <value>Dublizierknoten</value>
+  </data>
+  <data name="DuplicatorNode_NodeName" xml:space="preserve">
+    <value>Duplizierer</value>
+  </data>
+  <data name="FilterNode_Description" xml:space="preserve">
+    <value>Ein Knoten um Pakete anhand von Filter zu filtern</value>
+  </data>
+  <data name="FilterNode_Name" xml:space="preserve">
+    <value>Filterknoten</value>
+  </data>
+  <data name="FilterNode_NodeName" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="InjectorNodeConfig_DropTrigger" xml:space="preserve">
+    <value>Wenn wahr wird das Paket verworfen</value>
+  </data>
+  <data name="InjectorNodeConfig_PacketLog" xml:space="preserve">
+    <value>Der Log der Pakete, welche injiziert wurden</value>
+  </data>
+  <data name="InjectorNodeConfig_Prefix" xml:space="preserve">
+    <value>Wenn wahr, wird das Paket gesendet bevor es  getriggered wird</value>
+  </data>
+  <data name="InjectorNodeConfig_Repeat" xml:space="preserve">
+    <value>Wenn wahr, wird das Paket jedes mal wenn der Knoten getriggert wird gesendet, ansonsten wird gestoppt</value>
+  </data>
+  <data name="InjectorNodeConfig_Sequential" xml:space="preserve">
+    <value>Wenn wahr, wird jedes Paket im Log immer wenn der Knoten getriggered wird gesendet, ansonsten werden alle Pakete gesendet</value>
+  </data>
+  <data name="InjectorNode_Description" xml:space="preserve">
+    <value>Ein Knoten um Pakete in ein Netzwerk aus einem Paketlog zu injizieren, sofern der Knotenfilter passt</value>
+  </data>
+  <data name="InjectorNode_Name" xml:space="preserve">
+    <value>Injiziererknoten</value>
+  </data>
+  <data name="InjectorNode_NodeName" xml:space="preserve">
+    <value>Injizierer</value>
+  </data>
+  <data name="LogToPacketLogNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Farbe des Packetlog</value>
+  </data>
+  <data name="LogToPacketLogNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Konvertiere Pakete in Bytes vor dem loggen</value>
+  </data>
+  <data name="LogToPacketLogNodeConfig_PacketLogDescription" xml:space="preserve">
+    <value>Der Paketlog loggt Pakete nach</value>
+  </data>
+  <data name="LogToPacketLogNodeConfig_TagDescription" xml:space="preserve">
+    <value>Tag für Paket</value>
+  </data>
+  <data name="LogToPacketLogNode_Description" xml:space="preserve">
+    <value>Ein Knoten um Pakete in ein Paketlog Dokument zu speichern, anstatt in den aktuellen Service</value>
+  </data>
+  <data name="LogToPacketLogNode_Name" xml:space="preserve">
+    <value>In Paketknoten loggen</value>
+  </data>
+  <data name="LogToPacketLogNode_NodeName" xml:space="preserve">
+    <value>Packetlog</value>
+  </data>
+  <data name="LogToPacketLogNode_PacketLogIsNull" xml:space="preserve">
+    <value>Es muss ein Packetlog angegeben werden</value>
+  </data>
+  <data name="ReplayByTagDataServer_PacketLogIsNull" xml:space="preserve">
+    <value>Es muss ein Paketlog angeben werden</value>
+  </data>
+  <data name="SelectorNodeConfig_PathName" xml:space="preserve">
+    <value>Der auszuwählende Pfadname</value>
+  </data>
+  <data name="SelectorNode_Description" xml:space="preserve">
+    <value>Ein Knoten um den aktuellen Knoten auf dem Frame im ausgewählten Pfad zu setzen</value>
+  </data>
+  <data name="SelectorNode_Name" xml:space="preserve">
+    <value>Auswahlknoten</value>
+  </data>
+  <data name="SelectorNode_NodeName" xml:space="preserve">
+    <value>Auswähler</value>
+  </data>
+  <data name="SetMetaStateNodeConfig_ConvertSelectionToString" xml:space="preserve">
+    <value>Wenn UseSelection wahr ist, muss angegeben werden, ob die Daten in einen String konvertiert werden sollen</value>
+  </data>
+  <data name="SetMetaStateNodeConfig_Global" xml:space="preserve">
+    <value>Gibt an, ob der Wert zu einem globalen oder lokalen Zustand gesetzt werden soll</value>
+  </data>
+  <data name="SetMetaStateNodeConfig_MetaName" xml:space="preserve">
+    <value>Der Name eines zu setzenden Meta-Wertes</value>
+  </data>
+  <data name="SetMetaStateNodeConfig_Private" xml:space="preserve">
+    <value>Gibt an, ob der Wert privat oder öffentlich ist</value>
+  </data>
+  <data name="SetMetaStateNodeConfig_ResetStateOnMatch" xml:space="preserve">
+    <value>Den gekenntzeichneten Meta-Wert zurücksetzen, sofern der Wert bereits vorhanden ist</value>
+  </data>
+  <data name="SetMetaStateNodeConfig_UseSelection" xml:space="preserve">
+    <value>Wenn wahr, wird der ausgewählte Pfad für den Metawert extrahiert</value>
+  </data>
+  <data name="SetMetaStateNodeConfig_Value" xml:space="preserve">
+    <value>Der zu setzende Meta-Wert</value>
+  </data>
+  <data name="SetMetaStateNode_Description" xml:space="preserve">
+    <value>Ein Knoten um den Meta-Wert zu setzen, sofern die Knotenfilter eine Übereinstimmung finden</value>
+  </data>
+  <data name="SetMetaStateNode_Name" xml:space="preserve">
+    <value>Metaknoten setzen</value>
+  </data>
+  <data name="SetMetaStateNode_NodeName" xml:space="preserve">
+    <value>Statussetzer</value>
+  </data>
+  <data name="SimpleReplayDataEndpoint_PacketLogIsNull" xml:space="preserve">
+    <value>Es muss ein Paketlog angegeben werden</value>
+  </data>
+  <data name="EchoDataEndpointConfig_ConvertToBasicDescription" xml:space="preserve">
+    <value>Wenn wahr, werden Echo Pakete vor dem Senden in ein Basis Byte Format konvertiert</value>
+  </data>
+  <data name="EchoDataEndpoint_Name" xml:space="preserve">
+    <value>Echo Endpunkt</value>
+  </data>
+  <data name="EchoDataEndpoint_Description" xml:space="preserve">
+    <value>Ein einfacher Endpunkt, welcher seine Eingabe ausgibt</value>
+  </data>
+  <data name="EchoDataEndpoint_NodeName" xml:space="preserve">
+    <value>Echo Endpunkt</value>
+  </data>
+  <data name="DnsDataServerConfig_ResponseAddressDescription" xml:space="preserve">
+    <value>Auf alle A Anfragen wird mit dieser IP Addresse geantwortet. Zum Deaktivieren auf 0.0.0.0 setzen</value>
+  </data>
+  <data name="DnsDataServerConfig_ResponseAddress6Description" xml:space="preserve">
+    <value>Auf alle AAAA Anfragen wird mit dieser IP Adresse geantwortet. Zum Deaktivieren auf :: setzen</value>
+  </data>
+  <data name="DnsDataServerConfig_ReverseDnsDescription" xml:space="preserve">
+    <value>Gebe einen String an, der bei einer Anfrage eines PTR Eintrages angezeigt wird</value>
+  </data>
+  <data name="DnsDataServerConfig_TimeToLiveDescription" xml:space="preserve">
+    <value>Setze die TTL Antwort</value>
+  </data>
+  <data name="DnsDataServer_Name" xml:space="preserve">
+    <value>Ein einfacher DNS Server</value>
+  </data>
+  <data name="DnsDataServer_Description" xml:space="preserve">
+    <value>Ein einfacher DNS Server</value>
+  </data>
+  <data name="DnsDataServer_NodeName" xml:space="preserve">
+    <value>DNS Server</value>
+  </data>
+  <data name="Asn1ParserConfig_NoVerifyDescription" xml:space="preserve">
+    <value>Es werden keine ASN1 Objekte vor dem deserialisieren von Bytes innerhalb von Sequenzen, Sets und markierten Objekten verifiziert</value>
+  </data>
+  <data name="Asn1ParserConfig_IgnoreSequencesDescription" xml:space="preserve">
+    <value>Die Sequenzen werden ignoriert, dabei werden DER enkodierte Bytes behalten</value>
+  </data>
+  <data name="Asn1ParserConfig_IgnoreSetsDescription" xml:space="preserve">
+    <value>Die Sets werden ignoriert, dabei werden DER enkodierte Bytes behalten</value>
+  </data>
+  <data name="Asn1ParserConfig_IgnoreTaggedObjectsDescription" xml:space="preserve">
+    <value>Die markierten Objekte werden ignoriert, dabei werden DER enkodierte Bytes behalten</value>
+  </data>
+  <data name="Asn1ParserConfig_NoDecodeDescription" xml:space="preserve">
+    <value>Blattwerte werden nicht dekodiert, dabei werden DER enkodierte Bytes behalten</value>
+  </data>
+  <data name="Asn1Parser_Name" xml:space="preserve">
+    <value>ASN1 Parser</value>
+  </data>
+  <data name="Asn1Parser_Description" xml:space="preserve">
+    <value>Die ASN1 DER Bytesequenz wird in seperate Objekte geparst und das Ergebnis wird dekodiert</value>
+  </data>
+  <data name="Asn1Parser_NodeName" xml:space="preserve">
+    <value>ASN1 Parser</value>
+  </data>
+  <data name="BinaryVectorConfig_LittleEndianDescription" xml:space="preserve">
+    <value>Wahr, um als Little Endian und falsch um als Big Endian zu lesen</value>
+  </data>
+  <data name="BinaryVectorConfig_LengthTypeDescription" xml:space="preserve">
+    <value>Der zu lesende Typ der Längenvariable</value>
+  </data>
+  <data name="BinaryVectorConfig_InclusiveDescription" xml:space="preserve">
+    <value>Gibt an, ob die Größe des Feldes im Feld inkludiert werden soll</value>
+  </data>
+  <data name="BinaryVectorConfig_StrideDescription" xml:space="preserve">
+    <value>Indiziert die Anzahl der Bytes pro Item</value>
+  </data>
+  <data name="BinaryVectorConfig_AdjustmentDescription" xml:space="preserve">
+    <value>Gibt einen Vor- und Nachjustierungswert in Bytes für ungezählte Felder an
+</value>
+  </data>
+  <data name="BinaryVectorConfig_PrefixLenDescription" xml:space="preserve">
+    <value>Sofern die Daten einen Prefix besitzen, muss dieser hier angegeben werden</value>
+  </data>
+  <data name="BinaryVectorParser_Name" xml:space="preserve">
+    <value>Binärvektorparser</value>
+  </data>
+  <data name="BinaryVectorParser_Description" xml:space="preserve">
+    <value>Parsen eines Längenfelds und lesen der benötigten Bytelänge</value>
+  </data>
+  <data name="BinaryVectorParser_NodeName" xml:space="preserve">
+    <value>Vector</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Gibt an, ob der gefuzzte Wert als Text gespeichert werden soll</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Gibt an, ob die Pakete vor und nach dem Fuzzen gespeichert werden</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Gibt die Farbe des Log an</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Gibt die Startposition für das Fuzzing an</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Gibt die Länge zum Fuzzen der Startposition an, kleiner als 0 heißt string.length - fuzzlength + 1</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Gibt an, ob mitgeschnittene Packete zu Bytes konvertiert werden, bevor diese mitgeschnitten werden.</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_BinaryEncodingDescription" xml:space="preserve">
+    <value>Gibt das Encoding an, welches genutzt wird sofern die Knoten keine Strings sind</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Gibt an, dass beim Fuzzen, Knoten nicht zu Strings konvertiert, sondern ignoriert werden</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_RegexMatchDescription" xml:space="preserve">
+    <value>Gibt eine Übereinstimmung für den regulären Ausdruck an, um die zu fuzzende Teile anzugeben. Dies ersetzt alle Übereinstimmungen</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_CaseSensitiveDescription" xml:space="preserve">
+    <value>Gibt an, ob der Regex Groß-/Kleinschreibung beachtet</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_MultilineDescription" xml:space="preserve">
+    <value>Gib an, dass der reguläre Ausdruck über mehrere Zeilen geht</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_MaxReplacementsDescription" xml:space="preserve">
+    <value>Gibt die maximale Anzahl an Ersetzungen bei regulären Ausdrücken an, -1 bedeutet alle</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_DocumentDescription" xml:space="preserve">
+    <value>Gibt ein Dokument an, von welchem aus gefuzzt werden soll. Dies wird mit FuzzTextList kombiniert</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_FuzzTextListDescription" xml:space="preserve">
+    <value>Gibt die Liste von Fuzzwerten an</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_SelectRandomDescription" xml:space="preserve">
+    <value>Wahl eines zufälligen Textwertes</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_StoreLocalPositionDescription" xml:space="preserve">
+    <value>Speichert die aktuelle Fuzzposition in einem lokalen Wert, dies wird nicht zwischen Verbindungen behalten</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Gibt an, ob der gefuzzte Wert als Text geloggt werden soll</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Gibt an, ob alle Pakete geloggt werden sollen. Dies gilt sowohl vor als auch nach dem Fuzzen</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Gibt die Farbe des Log an</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Gibt die Startstringposition für das Fuzzen an</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Gibt die Länge zum Fuzzen von der Startposition an, kleiner als 0 heißt string.length - fuzzlength + 1</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Gibt an, ob die Pakete zu Bytes konvertiert werden sollen, bevor sie geloggt werden</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_BinaryEncodingDescription" xml:space="preserve">
+    <value>Gibt das Encoding an wenn die Knoten keine Strings sind</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Knoten werden während des Fuzzen nicht zu Strings konvertiert, sondern ignoriert</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_RegexMatchDescription" xml:space="preserve">
+    <value>Gibt einen Regexmatch an, um anzugeben welche Teile gefuzzt werden sollen. Ersetzt alle Übereinstimmungen im angegebenen Bereich</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_CaseSensitiveDescription" xml:space="preserve">
+    <value>Gibt an, ob der Regex Groß-/Kleinschreibung beachtet</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_MultilineDescription" xml:space="preserve">
+    <value>Gibt an, ob der reguläre Ausdruck über mehrere Zeilen geht</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_MaxReplacementsDescription" xml:space="preserve">
+    <value>Gibt die maximale Anzahl an Ersetzungen bei regulären Ausdrücken an, -1 heißt alle</value>
+  </data>
+  <data name="TextListFuzzerNode_Name" xml:space="preserve">
+    <value>Wörterbuch Fuzzerknoten</value>
+  </data>
+  <data name="TextListFuzzerNode_Description" xml:space="preserve">
+    <value>Ein Knoten um Teile eines Strings mit Hilfe einer Textliste zu fuzzen</value>
+  </data>
+  <data name="TextListFuzzerNode_NodeName" xml:space="preserve">
+    <value>Textlistenfuzzer</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_MaxFuzzPointsDescription" xml:space="preserve">
+    <value>Gibt die maximale Anzahl von Fuzzpunkten innerhalb der Binary an, wenn 0 dann wird die maximale Länge des Paketes genommen</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_RandomFuzzPointCountDescription" xml:space="preserve">
+    <value>Wenn wahr, wird eine zufällige Anzahl an Fuzzbytes generiert, ansonsten eine exakte Anzahl</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_CombinationModeDescription" xml:space="preserve">
+    <value>Gibt die Art an, in welcher Art die Bytes beim Fuzzen modifiziert werden. Bei zufälliger Art sollte eine andere Methode benutzt werden</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Gibt an, ob die gefuzzten Bytes als Text geloggt werden sollen</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Gibt an, ob die Pakete vor und nach dem Fuzzen gespeichert werden sollen</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Gibt an, ob mitgeschnittene Packete zu Bytes konvertiert werden, bevor diese mitgeschnitten werden</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_ColorDescription" xml:space="preserve">
+    <value>Gibt die Farbe des Log an</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Gibt die Startposition für das Fuzzen an</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Gibt die Länge zum Fuzzen von der Startposition an, kleiner als 0 heißt string.length - fuzzlength + 1</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_MinValueDescription" xml:space="preserve">
+    <value>Gibt den Mindestzeichenwert für das Fuzzing an</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_MaxValueDescription" xml:space="preserve">
+    <value>Gibt den Maximalzeichenwert für das Fuzzing an</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Die Knoten sollen nicht zu Bytearrays konvertiert werden, daher werden diese ignoriert</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_StringEncodingDescription" xml:space="preserve">
+    <value>Gibt das Textencoding an, welches verwendet werden soll, sofern der Knoten kein Zeichen oder Stringarray ist</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_MaxFuzzPointsDescription" xml:space="preserve">
+    <value>Gibt die maximale Anzahl an Punkten an, die in der Binary gefuzzt werden sollen. Wenn 0 dann wird die maximale Länge des Paketes genommen</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_RandomFuzzPointCountDescription" xml:space="preserve">
+    <value>Wenn wahr, wird eine Zufällige Anzahl an Fuzzbytes generiert, ansonsten eine exakte Anzahl</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_CombinationModeDescription" xml:space="preserve">
+    <value>Gibt an, auf welche Weise die Bytes beim Fuzzen modifiziert werden. Bei zufälliger Weise wird eine der anderen Methoden ausgewählt</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Gibt an, ob die gefuzzten Bytes als Text geloggt werden</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Gibt an, ob alle Pakete sowohl vor als auch nach dem Fuzzen geloggt werden</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Gibt an, ob die Pakete zu Bytes konvertiert werden, bevor sie geloggt werden</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Gibt die Farbe des Log an</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Gibt die Startbyteposition zum Fuzzen an</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Gibt die Länge zum Fuzzen von der Startposition an, kleiner als 0 heißt string.length - fuzzlength + 1</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_ConvertToBasicDescription" xml:space="preserve">
+    <value>Wenn wahr, werden die Pakete in eine einfache Byteform konvertiert, bevor diese geloggt werden	</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_PacketsDescription" xml:space="preserve">
+    <value>Der Log der Pakete die gesendet werden sollen</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_CloseAfterMatchDescription" xml:space="preserve">
+    <value>Gibt an ob die Verbindung geschlossen werden soll, nachdem die Filter Übereinstimmungen gefunden haben und das Paket gesendet wurde</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_CloseAfterNonMatchDescription" xml:space="preserve">
+    <value>Gibt an ob die Verbindung geschlossen werden soll, nachdem die Filter Übereinstimmungen nicht gefunden haben und das Paket gesendet wurde</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_FiltersDescription" xml:space="preserve">
+    <value>Liste an Filtern die auf hereinkommende Pakete angewendet werden sollen, um zu überprüfen ob das Paket gesendet werden soll</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_MatchAllFiltersDescription" xml:space="preserve">
+    <value>Gibt an, dass alle Filter matchen müssen</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_TagOnMatchDescription" xml:space="preserve">
+    <value>Gibt die Paketmarkierung an die gesendet werden soll wenn die Filter eine Übereinstimmung finden</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_RepeatOnMatchDescription" xml:space="preserve">
+    <value>Gibt die Anzahl an wie oft ein Paket bei einer Übereinstimmung gesendet werden soll</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_TagOnNonMatchDescription" xml:space="preserve">
+    <value>Gibt die Paketmarkierung an die gesendet werden soll wenn die Filter keine Übereinstimmung finden</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_RepeatOnNonMatchDescription" xml:space="preserve">
+    <value>Gibt die Anzahl an wie oft ein Paket bei einer Nichtübereinstimmung gesendet werden soll</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_TagOnStartDescription" xml:space="preserve">
+    <value>Gibt an welche Paketmarkierung gesender werden soll wenn der Endpunkt anfängt, wenn leer werden keine Pakete gesendet</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_RepeatOnStartDescription" xml:space="preserve">
+    <value>Gibt die Anzahl an wie oft ein Startpaket gesendet werden soll</value>
+  </data>
+  <data name="SimpleReplayByTagEndpoint_Name" xml:space="preserve">
+    <value>Einfache Wiederholung einer Endmarkierung</value>
+  </data>
+  <data name="SimpleReplayByTagEndpoint_Description" xml:space="preserve">
+    <value>Ein einfacher Wiederholungsendpunkt, der als Antwort auf ein hereinkommendes Paket ein speziell markiertes Paket in einem Log zurückgibt </value>
+  </data>
+  <data name="SimpleReplayByTagEndpoint_NodeName" xml:space="preserve">
+    <value>Wiederholungsendpunkt markieren</value>
+  </data>
+  <data name="ReplayByTagDataEndpointConfig_ConvertToBasicDescription" xml:space="preserve">
+    <value>Wenn wahr, werden die Pakete in eine einfache Byteform konvertiert, bevor diese gesendet werden</value>
+  </data>
+  <data name="ReplayByTagDataEndpointConfig_PacketsDescription" xml:space="preserve">
+    <value>Der Paketlog der verwendet werden soll, wenn die Pakete gesendet werden</value>
+  </data>
+  <data name="ReplayByTagDataEndpointConfig_ReplayEntriesDescription" xml:space="preserve">
+    <value>Eine Sammlung von Wiederholungseinträgen, die die Übereinstimmungsbedingungen und die Markierung bestimmen die gesendet werden soll</value>
+  </data>
+  <data name="ReplayByTagDataEndpointConfig_TagOnStartDescription" xml:space="preserve">
+    <value>Gibt die Markierung der Pakete an, die bei einem Verbungsaufbau gesendet werden soll. Sofern diese leer sind, werden keine Pakete gesendet</value>
+  </data>
+  <data name="ReplayByTagEntryFactory_TagDescription" xml:space="preserve">
+    <value>Gibt die Markierung für eine Übereinstimmung an, um festzustellen welche Pakete gesendet werden</value>
+  </data>
+  <data name="ReplayByTagEntryFactory_CloseAfterSendDescription" xml:space="preserve">
+    <value>Stellt fest ob die Verbindung geschlossen werden soll nachdem das Paket gesendet wurde</value>
+  </data>
+  <data name="ReplayByTagEntryFactory_FiltersDescription" xml:space="preserve">
+    <value>Liste an Filtern die angewendet werden sollen, um festzustellen ob die Pakete gesendet werden</value>
+  </data>
+  <data name="ReplayByTagEntryFactory_MatchAllFiltersDescription" xml:space="preserve">
+    <value>Gibt an, dass alle Filter matchen müssen</value>
+  </data>
+  <data name="ReplayByTagEntryFactory_RepeatCountDescription" xml:space="preserve">
+    <value>Gibt an, wie oft das markierte Paket gesendet werden soll</value>
+  </data>
+  <data name="ReplayByTagDataEndpoint_Name" xml:space="preserve">
+    <value>Komplette Wiederholung beim Markierungsendpunkt</value>
+  </data>
+  <data name="ReplayByTagDataEndpoint_Description" xml:space="preserve">
+    <value>Ein Wiederholungsendpunkt, der als Antwort auf ein hereinkommendes Paket ein speziel markiertes Paket in einem Log zurückgibt</value>
+  </data>
+  <data name="ReplayByTagDataEndpoint_NodeName" xml:space="preserve">
+    <value>Wiederholungsendpunkt markieren</value>
+  </data>
+  <data name="HttpResponseStreamParser_Name" xml:space="preserve">
+    <value>HTTP Antworten Parser</value>
+  </data>
+  <data name="HttpResponseStreamParser_Description" xml:space="preserve">
+    <value>HTTP Antworten Parser für einen Stream</value>
+  </data>
+  <data name="HttpResponseStreamParser_NodeName" xml:space="preserve">
+    <value>HTTP Antwort</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_StartValueDescription" xml:space="preserve">
+    <value>Gibt den Startwert für das Fuzzen an</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_EndValueDescription" xml:space="preserve">
+    <value>Gibt ein Ende für das Fuzzen an</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_IncrementDescription" xml:space="preserve">
+    <value>Gibt die Inkrementierung zwischen zwei Werten an</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_FormatDescription" xml:space="preserve">
+    <value>Gibt das Basisformat an, außer wenn  CustomFormat angegeben wurde</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_CustomFormatDescription" xml:space="preserve">
+    <value>Gibt einen eigenen .NET Format String für den Wert an</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_StoreLocalPositionDescription" xml:space="preserve">
+    <value>Speichert den aktuellen Fuzzwert als lokale Variable, dies ist nicht innerhalb von 2 Verbindungen beständigt</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Gibt an, ob der gefuzzte Wert als Text geloggt werden soll</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Gibt an, dass die Pakete vor und nach dem Fuzzen gespeichert werden</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Gibt die Farbe des Log an</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Gibt die Startposition zum Fuzzen an</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Gibt die Länge zum Fuzzen von der Startposition an. Kleiner als 0 bedeutet string.length - fuzzlength + 1</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Gibt an, dass mitgeschnittene Packete zu Bytes konvertiert werden, bevor diese mitgeschnitten werden.</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_BinaryEncodingDescription" xml:space="preserve">
+    <value>Gibt die Enkodierung an, falls die Knoten keine Strings sind</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Konvertiere beim Fuzzen keine Knoten zu Strings, sondern ignoriere diese</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_RegexMatchDescription" xml:space="preserve">
+    <value>Gibt einen Regexmatch an, um anzugeben welche Teile gefuzzt werden sollen. Dies ersetzt alle Übereinstimmungen im angegebenen Bereich</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_CaseSensitiveDescription" xml:space="preserve">
+    <value>Gibt an, ob der Regex Groß-/Kleinschreibung beachtet</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_MultilineDescription" xml:space="preserve">
+    <value>Gibt an, dass der reguläre Ausdruck über mehrere Zeilen geht</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_MaxReplacementsDescription" xml:space="preserve">
+    <value>Gibt die maximale Anzahl an Ersetzungen bei regulären Ausdrücken an, -1 heißt alle
+
+</value>
+  </data>
+  <data name="NumericStringFuzzerNode_Name" xml:space="preserve">
+    <value>Numerischer String Fuzzerknoten</value>
+  </data>
+  <data name="NumericStringFuzzerNode_Description" xml:space="preserve">
+    <value>Ein Knoten, welcher einen Teil eines Strings durch inkrementieren fuzzt</value>
+  </data>
+  <data name="NumericStringFuzzerNode_NodeName" xml:space="preserve">
+    <value>Numerischer String Fuzzer</value>
+  </data>
+  <data name="SplitterNode_Name" xml:space="preserve">
+    <value>Splitternode</value>
+  </data>
+  <data name="SplitterNode_Description" xml:space="preserve">
+    <value>Ein Knoten zum Teilen eines Paketes, welcher auf einem Selektionspfad zu mehreren Paketen basiert</value>
+  </data>
+  <data name="SplitterNode_NodeName" xml:space="preserve">
+    <value>Teiler</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNodeConfig_MinLengthDescription" xml:space="preserve">
+    <value>Minimale Länge eines Fuzzstrings</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNodeConfig_MaxLengthDescription" xml:space="preserve">
+    <value>Maximale Länge eines Fuzzstrings</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNodeConfig_ModeDescription" xml:space="preserve">
+    <value>Gibt an, wie der Fuzzer die Zeichen generieren soll</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNodeConfig_PatternDescription" xml:space="preserve">
+    <value>Der Stringpattern, welcher beim RepeatingPattern-Modus verwendet werden soll</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNodeConfig_MinRandomCharDescription" xml:space="preserve">
+    <value>Minimale Anzahl an Zeichen beim RandomCharacters-Mode</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNodeConfig_MaxRandomCharDescription" xml:space="preserve">
+    <value>Maximale Anzahl an Zeichen beim RandomCharacters-Mode</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNodeConfig_AppendFuzzDescription" xml:space="preserve">
+    <value>Gibt an, ob der Fuzzwert an den existierenden String angehängt werden soll</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNode_Name" xml:space="preserve">
+    <value>Zufällige Stringlänge des Stringfuzzerknotens</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNode_Description" xml:space="preserve">
+    <value>Ein Knoten um Strings mit zufälliger Länge zu erzeugen</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNode_NodeName" xml:space="preserve">
+    <value>Stringlängenfuzzer</value>
+  </data>
+  <data name="HttpDataServerConfig_HttpPathDescription" xml:space="preserve">
+    <value>Ein globaler String um einen Pfad zu finden, bei Fund wird der Inhalt gefunden, ansonsten 404</value>
+  </data>
+  <data name="HttpDataServerConfig_ValidResponseDataDescription" xml:space="preserve">
+    <value>Die Antwort, die bei einem übereinstimmenden HTTP Pfad gesendet wird</value>
+  </data>
+  <data name="HttpDataServerConfig_NotFoundResponseDataDescription" xml:space="preserve">
+    <value>Die Antwort, die bei einem nicht übereinstimmenden HTTP Pfad gesendet wird</value>
+  </data>
+  <data name="HttpDataServerConfig_CloseAfterSendingDescription" xml:space="preserve">
+    <value>Gibt an, dass die Verbindung nach dem Senden geschlossen wird</value>
+  </data>
+  <data name="HttpDataServerConfig_ContentTypeDescription" xml:space="preserve">
+    <value>Gibt den Content Type der gültigen Daten an</value>
+  </data>
+  <data name="HttpDataServer_Name" xml:space="preserve">
+    <value>Einfacher HTTP Server</value>
+  </data>
+  <data name="HttpDataServer_Description" xml:space="preserve">
+    <value>Ein einfacher HTTP server</value>
+  </data>
+  <data name="HttpDataServer_NodeName" xml:space="preserve">
+    <value>HTTP Server</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Gibt die Startposition für das Fuzzing an</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Gibt die Länge der Startposition zum Fuzzen an. Der Wert muss zwischen 1 und 8 Bytes liegen</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Es werden beim Fuzzen keine Knoten zu Byte Arrays konvertiert, sondern ignoriert</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_MinValueDescription" xml:space="preserve">
+    <value>Maxmimum Integer Wert</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_MaxValueDescription" xml:space="preserve">
+    <value>Maximum Integer Wert</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_IncrementDescription" xml:space="preserve">
+    <value>Der Inkrement Wert</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_LittleEndianDescription" xml:space="preserve">
+    <value>Gibt an, ob es sich bei dem Integer um einen im little endian oder big endian Format handelt</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Gibt an, ob die gefuzzten Bytes als Text geloggt werden</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Gibt an, dass die Pakete vor und nach dem Fuzzen gespeichert werden</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Gibt an, dass mitgeschnittene Packete zu Bytes konvertiert werden, bevor diese mitgeschnitten werden.</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Gibt die Farbe des Log an</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNode_Name" xml:space="preserve">
+    <value>Binary Integer Fuzzerknoten</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNode_Description" xml:space="preserve">
+    <value>Ein Knoten um den binären Teil mit einem inkrementierenden Wert zu fuzzen</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNode_NodeName" xml:space="preserve">
+    <value>Binary Integer Fuzzer</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_MinByteValueDescription" xml:space="preserve">
+    <value>Gibt den minimalen Bytewert fürs Fuzzen an</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_MaxByteValueDescription" xml:space="preserve">
+    <value>Gibt den maximalen Bytewert fürs Fuzzen an</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Knoten werden nicht zu Bytearrays konvertiert, sondern ignoriert</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_MaxFuzzPointsDescription" xml:space="preserve">
+    <value>Gibt die maximale Anzahl an Punkten an, die in der Binary gefuzzt werden sollen. Bei 0 wird die maximale Länge des Paketes genommen</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_RandomFuzzPointCountDescription" xml:space="preserve">
+    <value>Wenn wahr, dann wird eine Zufällige Anzahl an Fuzzbytes generiert, ansonsten eine exakte Anzahl</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_CombinationModeDescription" xml:space="preserve">
+    <value>Gibt an, auf welche Weise die Bytes beim Fuzzen modifiziert werden. Bei zufälliger Weise wird eine der anderen Methoden ausgewählt</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Gibt an, ob die gefuzzten Bytes als Text geloggt werden</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Gibt an, ob alle Pakete geloggt werden sollen. Dies gilt sowohl vor als auch nach dem Fuzzen</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Gibt an, ob die Pakete zu Bytes konvertiert werden sollen, bevor diese geloggt werden</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Gibt die Farbe des Log an</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Gibt die Startbyteposition zum Fuzzen an</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Gibt die Länge zum Fuzzen von der Startposition an, kleiner als 0 heißt string.length - fuzzlength + 1</value>
+  </data>
+  <data name="RandomByteFuzzerNode_Name" xml:space="preserve">
+    <value>Zufälliger Bytefuzzerknoten</value>
+  </data>
+  <data name="RandomByteFuzzerNode_Description" xml:space="preserve">
+    <value>Ein Knoten, um zufällig Binärteile eines Paketes zu fuzzen</value>
+  </data>
+  <data name="RandomByteFuzzerNode_NodeName" xml:space="preserve">
+    <value>Byte Fuzzer</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Knoten werden nicht zu Bytearrays konvertiert, sondern ignoriert</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_MaxFuzzPointsDescription" xml:space="preserve">
+    <value>ibt die maximale Anzahl an Punkten an, die in der Binary gefuzzt werden sollen. Bei 0 wird die maximale Länge des Paketes genommen</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_RandomFuzzPointCountDescription" xml:space="preserve">
+    <value>Wenn wahr, dann wird eine Zufällige Anzahl an Fuzzbytes generiert, ansonsten eine exakte Anzahl</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_CombinationModeDescription" xml:space="preserve">
+    <value>Gibt an, auf welche Weise die Bytes beim Fuzzen modifiziert werden. Bei zufälliger Weise wird eine der anderen Methoden ausgewählt</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Gibt an, ob die gefuzzten Bytes als Text geloggt werden</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Gibt an, ob alle Pakete geloggt werden sollen. Dies gilt sowohl vor als auch nach dem Fuzzen</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Gibt an, ob die Pakete zu Bytes konvertiert werden sollen, bevor diese geloggt werden</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Gibt die Farbe des Log an</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Gibt die Startbyteposition zum Fuzzen an</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Gibt die Länge zum Fuzzen von der Startposition an, kleiner als 0 heißt string.length - fuzzlength + 1</value>
+  </data>
+  <data name="RandomBitFuzzerNode_Name" xml:space="preserve">
+    <value>Zufälliger Bitfuzzerknoten</value>
+  </data>
+  <data name="RandomBitFuzzerNode_Description" xml:space="preserve">
+    <value>Ein Knoten um zufällig Bits eines Paketes zu fuzzen</value>
+  </data>
+  <data name="RandomBitFuzzerNode_NodeName" xml:space="preserve">
+    <value>Bit Fuzzer</value>
+  </data>
+  <data name="BinaryMutatorNodeConfig_MatchDescription" xml:space="preserve">
+    <value>Gibt das übereinstimmende Array aus Bytes an</value>
+  </data>
+  <data name="BinaryMutatorNodeConfig_ReplacementDescription" xml:space="preserve">
+    <value>Gibt das zu ersetzende Array aus Bytes an</value>
+  </data>
+  <data name="BinaryMutatorNode_Name" xml:space="preserve">
+    <value>Binary Mutatorknoten</value>
+  </data>
+  <data name="BinaryMutatorNode_Description" xml:space="preserve">
+    <value>Ein Knoten zur Ersetzung, je nach binärer Übereinstimmung</value>
+  </data>
+  <data name="BinaryMutatorNode_NodeName" xml:space="preserve">
+    <value>Binary Mutator</value>
+  </data>
+  <data name="SimpleReplayEndpointConfig_ConvertToBasicDescription" xml:space="preserve">
+    <value>Wenn wahr, werden die Pakete vor dem Senden in eine einfache Byteform konvertiert</value>
+  </data>
+  <data name="SimpleReplayEndpointConfig_PacketsDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SimpleReplayEndpointConfig_CloseAfterSendDescription" xml:space="preserve">
+    <value>Gibt an, ob die Verbindung geschlossen werden soll nachdem das Paket gesendet wurde</value>
+  </data>
+  <data name="SimpleReplayEndpointConfig_CloseAfterRecvDescription" xml:space="preserve">
+    <value>Gibt an, ob die Verbindung geschlossen werden soll nachdem das Paket erhalten wurde</value>
+  </data>
+  <data name="SimpleReplayEndpointConfig_SendAtStartDescription" xml:space="preserve">
+    <value>Gibt an, ob zusätzlich ein Paket beim Verbindungsstart gesendet wird</value>
+  </data>
+  <data name="SimpleReplayDataEndpoint_Name" xml:space="preserve">
+    <value>Einfacher Wiederholungsendpunkt</value>
+  </data>
+  <data name="SimpleReplayDataEndpoint_Description" xml:space="preserve">
+    <value>Einfacher Wiederholungsendpunkt, welcher alle Pakete beim Erhalt eines Paketes in einen Log ausgibt</value>
+  </data>
+  <data name="SimpleReplayDataEndpoint_NodeName" xml:space="preserve">
+    <value>Einfacher Wiederholungsendpunkt</value>
+  </data>
+  <data name="DNSParser_Name" xml:space="preserve">
+    <value>DNS Parser</value>
+  </data>
+  <data name="DNSParser_Description" xml:space="preserve">
+    <value>Array Parser für DNS Pakete</value>
+  </data>
+  <data name="DNSParser_NodeName" xml:space="preserve">
+    <value>DNS Parser</value>
+  </data>
+  <data name="StringConverterNodeConfig_EncodingDescription" xml:space="preserve">
+    <value>Gibt dieie binäre Enkodierung an, mit welcher der String bearbeitet wird</value>
+  </data>
+  <data name="StringConverterNode_Name" xml:space="preserve">
+    <value>String Konvertierer</value>
+  </data>
+  <data name="StringConverterNode_Description" xml:space="preserve">
+    <value>Konvertiert binäre Daten mit entsprechendem Encoding zu einem String</value>
+  </data>
+  <data name="StringConverterNode_NodeName" xml:space="preserve">
+    <value>Stringkonvertierer</value>
+  </data>
+  <data name="WcfXmlMessageConfig_NoEncodeDescription" xml:space="preserve">
+    <value>Die XML-Ausgabe nicht wieder in zurück in Binärdaten enkodieren</value>
+  </data>
+  <data name="WcfXmlMessageConfig_NoDecodeDescription" xml:space="preserve">
+    <value>Die Binäreingabe nicht zurück in XML konvertieren</value>
+  </data>
+  <data name="WcfXmlMessage_Name" xml:space="preserve">
+    <value>WCF Binary Parser</value>
+  </data>
+  <data name="WcfXmlMessage_Description" xml:space="preserve">
+    <value>Parst eine binäre WCF-Nachricht in XML und konventiert es wieder zurück</value>
+  </data>
+  <data name="WcfXmlMessage_NodeName" xml:space="preserve">
+    <value>WCF Binary</value>
+  </data>
+  <data name="HttpRequestStreamParser_Name" xml:space="preserve">
+    <value>HTTP Anfragen Parser</value>
+  </data>
+  <data name="HttpRequestStreamParser_Description" xml:space="preserve">
+    <value>HTTP Anfragen Parser für einen Datenstrom</value>
+  </data>
+  <data name="HttpRequestStreamParser_NodeName" xml:space="preserve">
+    <value>HTTP Anfrage</value>
+  </data>
+  <data name="HTTPCookieParser_Name" xml:space="preserve">
+    <value>HTTP Cookie Parser</value>
+  </data>
+  <data name="HTTPCookieParser_Description" xml:space="preserve">
+    <value>Parser für HTTP Style Cookie Strings. Gehe sicher, dass die Knoten angegeben worden sind, welche geparst werden sollen beim Konfigurieren des Graphen</value>
+  </data>
+  <data name="HTTPCookieParser_NodeName" xml:space="preserve">
+    <value>Cookie Parser</value>
+  </data>
+  <data name="NullDataEndpoint_Name" xml:space="preserve">
+    <value>Null Server</value>
+  </data>
+  <data name="NullDataEndpoint_Description" xml:space="preserve">
+    <value>Ein simpler Server, welcher die Eingabe verwirft</value>
+  </data>
+  <data name="NullDataEndpoint_NodeName" xml:space="preserve">
+    <value>Null Server</value>
+  </data>
+  <data name="RegexMutatorNodeConfig_RegexDescription" xml:space="preserve">
+    <value>Gibt den reguläre Ausdruck an, auf den gematcht werden soll</value>
+  </data>
+  <data name="RegexMutatorNodeConfig_ReplacementDescription" xml:space="preserve">
+    <value>Gibt den Ersetzungsstring an, der bei einer Übereinstimmung verwendet werden soll</value>
+  </data>
+  <data name="RegexMutatorNodeConfig_CaseSensitiveDescription" xml:space="preserve">
+    <value>Gibt an, ob bei einer Übereinstimmung die Groß-/Kleinschreibung beachtet werden soll</value>
+  </data>
+  <data name="RegexMutatorNodeConfig_MultiLineDescription" xml:space="preserve">
+    <value>Gibt an, ob die Übereinstimmung Zeilenumbrüche ignorieren soll</value>
+  </data>
+  <data name="RegexMutatorNodeConfig_StringEncodingDescription" xml:space="preserve">
+    <value>Gibt das Encoding an, welches verwendet werden soll, sofern die ausgewählten Knoten keine Strings sind</value>
+  </data>
+  <data name="RegexMutatorNode_Name" xml:space="preserve">
+    <value>Regexknoten</value>
+  </data>
+  <data name="RegexMutatorNode_Description" xml:space="preserve">
+    <value>Ein Knoten zum Werte ersetzen, dieser basiert auf regulären Ausdrücken</value>
+  </data>
+  <data name="RegexMutatorNode_NodeName" xml:space="preserve">
+    <value>Regex</value>
+  </data>
+  <data name="FrameFilterMutatorNode_Name" xml:space="preserve">
+    <value>Frame Filter Mutatorknoten</value>
+  </data>
+  <data name="FrameFilterMutatorNode_Description" xml:space="preserve">
+    <value>Ein Knoten, um bestimmte Knoten eines Frames zu filtern</value>
+  </data>
+  <data name="FrameFilterMutatorNode_NodeName" xml:space="preserve">
+    <value>Frame Filter Mutator</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_MinLengthDescription" xml:space="preserve">
+    <value>Minimale Länge eines Fuzzstrings</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_MaxLengthDescription" xml:space="preserve">
+    <value>Maximale Länge eines Fuzzstrings</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_FixedLengthDescription" xml:space="preserve">
+    <value>Gibt an, ob der String eine feste Länge bei MaxLength hat</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_MinRandomCharDescription" xml:space="preserve">
+    <value>Gibt die Mindestanzahl an erlaubten Zeichen an</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_MaxRandomCharDescription" xml:space="preserve">
+    <value>Gibt die Maximalanzahl an erlaubten Zeichen an</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Gibt an, ob der gefuzzte Wert als Text geloggt werden soll</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Gibt an, ob alle Pakete geloggt werden sollen. Dies gilt sowohl vor als auch nach dem Fuzzen</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Gibt die Farbe des Log an</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Gibt die Startstringposition zum Fuzzen an</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Gibt die Länge zum Fuzzen von der Startposition an, kleiner als 0 heißt string.length - fuzzlength + 1</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Gibt an, ob die Pakete zu Bytes konvertiert werden sollen bevor sie geloggt werden</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_BinaryEncodingDescription" xml:space="preserve">
+    <value>Gibt das Encoding an, sofern die Knoten keine Strings sind</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Knoten werden nicht zu Bytearrays konvertiert, sondern ignoriert</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_RegexMatchDescription" xml:space="preserve">
+    <value>Gibt einen Regexmatch an, um anzugeben welche Teile gefuzzt werden sollen. Hierbei werden alle Übereinstimmungen im angegebenen Bereich ersetzt</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_CaseSensitiveDescription" xml:space="preserve">
+    <value>Gibt an, ob bei einer Übereinstimmung die Groß-/Kleinschreibung beachtet werden soll</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_MultilineDescription" xml:space="preserve">
+    <value>Gibt an, ob die Übereinstimmung Zeilenumbrüche ignorieren soll</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_MaxReplacementsDescription" xml:space="preserve">
+    <value>Gibt die maximale Anzahl an Ersetzungen bei regulären Ausdrücken an, -1 bedeutet alle</value>
+  </data>
+  <data name="RandomStringFuzzerNode_Name" xml:space="preserve">
+    <value>Zufallsstringfuzzerknoten</value>
+  </data>
+  <data name="RandomStringFuzzerNode_Description" xml:space="preserve">
+    <value>Ein Knoten, um Teile eines Strings mit zufälligen Werten zu fuzzen</value>
+  </data>
+  <data name="RandomStringFuzzerNode_NodeName" xml:space="preserve">
+    <value>Zufallsstringfuzzer</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_MinLengthDescription" xml:space="preserve">
+    <value>Minimale Länge eines Fuzzstrings</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_MaxLengthDescription" xml:space="preserve">
+    <value>Maximale Länge eines Fuzzstrings</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_PatternDescription" xml:space="preserve">
+    <value>Gibt das Stringpattern an</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_FixedLengthDescription" xml:space="preserve">
+    <value>Gibt an, ob der String nur eine feste Länge bei MaxLength hat</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Gibt an, ob der gefuzzte Wert als Text geloggt werden soll</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Gibt an, ob alle Pakete geloggt werden sollen. Dies gilt sowohl vor als auch nach dem Fuzzen</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Gibt die Farbe des Log an</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Gibt den Startwert für das Fuzzen an</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Gibt die Länge zum Fuzzen von der Startposition an, kleiner als 0 heißt string.length - fuzzlength + 1</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Gibt an, ob die Pakete zu Bytes konvertiert werden sollen bevor sie geloggt werden</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_BinaryEncodingDescription" xml:space="preserve">
+    <value>Gibt das Encoding an, sofern die Knoten keine Strings sind</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Knoten werden nicht zu Strings konvertiert, sondern ignoriert</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_RegexMatchDescription" xml:space="preserve">
+    <value>Gibt einen Regexmatch an, um anzugeben welche Teile gefuzzt werden sollen. Hierbei werden alle Übereinstimmungen im angegebenen Bereich ersetzt</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_CaseSensitiveDescription" xml:space="preserve">
+    <value>Gibt an, ob bei einer Übereinstimmung die Groß-/Kleinschreibung beachtet werden soll</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_MultilineDescription" xml:space="preserve">
+    <value>Gibt an, ob die Übereinstimmung Zeilenumbrüche ignorieren soll</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_MaxReplacementsDescription" xml:space="preserve">
+    <value>Gibt die maximale Anzahl an Ersetzungen bei regulären Ausdrücken an, -1 bedeutet alle</value>
+  </data>
+  <data name="PatternStringFuzzerNode_Name" xml:space="preserve">
+    <value>Strukturierte String als Fuzzknoten</value>
+  </data>
+  <data name="PatternStringFuzzerNode_Description" xml:space="preserve">
+    <value>Ein Knoten zum Fuzzen als Teil eines Strings mit strukturierten Daten</value>
+  </data>
+  <data name="PatternStringFuzzerNode_NodeName" xml:space="preserve">
+    <value>Strukturierte String als Fuzzer</value>
+  </data>
+  <data name="SequentialReplayEndpoint_Description" xml:space="preserve">
+    <value>Ein Endpunkt welcher Packete aus einem Log sequentiell bei Empfang wiederholt</value>
+  </data>
+  <data name="SequentialReplayEndpoint_Name" xml:space="preserve">
+    <value>Sequenzielle Wiederholung eines Endpunkt</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_CloseAfterSendDescription" xml:space="preserve">
+    <value>Wenn wahr, dann wird die Verbindung geschlossen nachdem alle Packete gesendet wurden</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_ConvertToBasicDescription" xml:space="preserve">
+    <value>Wenn wahr, dann werden Packete, bevor sie gesendet werden, zurück in ein "Basic Byte" Format konvertiert</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_FiltersDescription" xml:space="preserve">
+    <value>Spezifiziert eine Filterliste um eingehende Packete in der Antwort auszufiltern</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_MatchAllFiltersDescription" xml:space="preserve">
+    <value>Angeben, dass alle Filter zutreffen müssen</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_PacketsDescription" xml:space="preserve">
+    <value>Das Packetlog welches gesendet werden soll wenn ein Packet empfangen wird</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_RepeatCountDescription" xml:space="preserve">
+    <value>Spezifiziert die Anzahl wie oft Packete gesendet werden</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_SendAtStartDescription" xml:space="preserve">
+    <value>Angeben ob die Packete bei einem Verbindungsaufbau gesendet werden sollen</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_Tag" xml:space="preserve">
+    <value>Spezifiert den "Tag" der gesendet werden soll, wenn nicht angegeben, werden alle Packete gesendet</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_WaitForResponseOnCloseDescription" xml:space="preserve">
+    <value>Wenn wahr, dann wird auf eine Antwort gewartet bevor die Verbindung geschlossen wird, wenn "CloseAfterSend" gesetzt ist</value>
+  </data>
+  <data name="SequentialReplayEndpoint_PacketLogIsNull" xml:space="preserve">
+    <value>Ein Packet Log muß spezifiziert werden</value>
+  </data>
+</root>

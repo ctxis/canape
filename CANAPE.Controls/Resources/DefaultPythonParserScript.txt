@@ -1,0 +1,3 @@
+# To use place in an expression using the name, e.g. ExampleScript.RunMe(this)
+def RunMe(self):	
+    return "Argh!

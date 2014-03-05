@@ -1,0 +1,1386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F16F4B25-643F-441E-95DD-B20668F760DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CANAPE</RootNamespace>
+    <AssemblyName>CANAPE.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\CANAPE\canape.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.TextEditor, Version=3.2.1.6466, Culture=neutral, PublicKeyToken=4d61825e8dd49f1a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ICSharpCode.TextEditor.3.2.1.6466\lib\Net20\ICSharpCode.TextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\AssemblyNameListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AssemblyNameListView.Designer.cs">
+      <DependentUpon>AssemblyNameListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BaseDiffControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseDiffControl.Designer.cs">
+      <DependentUpon>BaseDiffControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CredentialsEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CredentialsEditorControl.Designer.cs">
+      <DependentUpon>CredentialsEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\PacketLogDiffDocumentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\PacketLogDiffDocumentControl.Designer.cs">
+      <DependentUpon>PacketLogDiffDocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentControl.cs" />
+    <Compile Include="Controls\DocumentEditors\AssemblyDocumentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\AssemblyDocumentControl.Designer.cs">
+      <DependentUpon>AssemblyDocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\BinaryDocumentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\BinaryDocumentControl.Designer.cs">
+      <DependentUpon>BinaryDocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\NetGraphTestDocumentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\NetGraphTestDocumentControl.Designer.cs">
+      <DependentUpon>NetGraphTestDocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\NetServerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\NetServerControl.Designer.cs">
+      <DependentUpon>NetServerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\NetAutoClientControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\NetAutoClientControl.Designer.cs">
+      <DependentUpon>NetAutoClientControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\ParserEditors\ScriptParserTypeEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\ParserEditors\ScriptParserTypeEditorControl.Designer.cs">
+      <DependentUpon>ScriptParserTypeEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\SimpleSyntaxModeProvider.cs" />
+    <Compile Include="Controls\DocumentEditors\ScriptDocumentConfigEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\ScriptDocumentConfigEditorControl.Designer.cs">
+      <DependentUpon>ScriptDocumentConfigEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extension\BaseHighlighter.cs" />
+    <Compile Include="Controls\DocumentEditors\SourceHighlighters\CSharpHighlighter.cs" />
+    <Compile Include="Controls\DocumentEditors\SourceHighlighters\PythonHighlighter.cs" />
+    <Compile Include="Controls\DocumentEditors\StateGraphDocumentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\StateGraphDocumentControl.Designer.cs">
+      <DependentUpon>StateGraphDocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DynamicConfigEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DynamicConfigEditorControl.Designer.cs">
+      <DependentUpon>DynamicConfigEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataEndpointSelectionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DataEndpointSelectionControl.Designer.cs">
+      <DependentUpon>DataEndpointSelectionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FindDataFrameControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FindDataFrameControl.Designer.cs">
+      <DependentUpon>FindDataFrameControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HexEditorControlConfig.cs" />
+    <Compile Include="Controls\IDiffWindow.cs" />
+    <Compile Include="Controls\IReadOnlyControl.cs" />
+    <Compile Include="Controls\ConnectionHistoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ConnectionHistoryControl.Designer.cs">
+      <DependentUpon>ConnectionHistoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LayerEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LayerEditorControl.Designer.cs">
+      <DependentUpon>LayerEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\SingleFrameEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\SingleFrameEditorControl.Designer.cs">
+      <DependentUpon>SingleFrameEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PacketCharts\HistogramChartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PacketCharts\HistogramChartControl.Designer.cs">
+      <DependentUpon>HistogramChartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IPacketLogViewer.cs" />
+    <Compile Include="Controls\PacketCharts\NetworkTrafficChartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PacketCharts\NetworkTrafficChartControl.Designer.cs">
+      <DependentUpon>NetworkTrafficChartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PacketCharts\TagStatisticsChartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PacketCharts\TagStatisticsChartControl.Designer.cs">
+      <DependentUpon>TagStatisticsChartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PacketLogControlConfig.cs" />
+    <Compile Include="Controls\PropertyBagViewerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PropertyBagViewerControl.Designer.cs">
+      <DependentUpon>PropertyBagViewerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RedirectLogControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RedirectLogControl.Designer.cs">
+      <DependentUpon>RedirectLogControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ResizingTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\LayersEditor.cs" />
+    <Compile Include="Editors\SequenceChoiceEditor.cs" />
+    <Compile Include="Editors\SslConfigEditor.cs" />
+    <Compile Include="Extension\DefaultDocumentFactory.cs" />
+    <Compile Include="Extension\DocumentEditorAttribute.cs" />
+    <Compile Include="Extension\DocumentEditorManager.cs" />
+    <Compile Include="Extension\DocumentFactoryAttribute.cs" />
+    <Compile Include="Extension\DocumentFactoryManager.cs" />
+    <Compile Include="Extension\HexConverterAttribute.cs" />
+    <Compile Include="Extension\HexConverterExtensionManager.cs" />
+    <Compile Include="Extension\HexConverters.cs" />
+    <Compile Include="Extension\HexInspectorAttribute.cs" />
+    <Compile Include="Extension\HexInspectorData.cs" />
+    <Compile Include="Extension\HexInspectorExtensionManager.cs" />
+    <Compile Include="Extension\IDocumentFactory.cs" />
+    <Compile Include="Extension\IHexConverter.cs" />
+    <Compile Include="Extension\IHexInspector.cs" />
+    <Compile Include="Extension\IPacketLogExtension.cs" />
+    <Compile Include="Extension\IParserSerializer.cs" />
+    <Compile Include="Extension\IStringConverter.cs" />
+    <Compile Include="Extension\MenuExtensionAttribute.cs" />
+    <Compile Include="Extension\MenuExtensionManager.cs" />
+    <Compile Include="Extension\MenuExtensionManagerMethods.cs" />
+    <Compile Include="Extension\PacketLogExtensionAttribute.cs" />
+    <Compile Include="Controls\DocumentEditors\ParserDocumentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\ParserDocumentControl.Designer.cs">
+      <DependentUpon>ParserDocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\ParserEditors\EnumParserTypeEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\ParserEditors\EnumParserTypeEditorControl.Designer.cs">
+      <DependentUpon>EnumParserTypeEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\ParserEditors\SequenceParserTypeEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\ParserEditors\SequenceParserTypeEditorControl.Designer.cs">
+      <DependentUpon>SequenceParserTypeEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\ScriptDocumentConfig.cs" />
+    <Compile Include="Controls\DocumentEditors\ScriptTestDocumentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\ScriptTestDocumentControl.Designer.cs">
+      <DependentUpon>ScriptTestDocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GraphTestControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\GraphTestControl.Designer.cs">
+      <DependentUpon>GraphTestControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HexEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HexEditorControl.Designer.cs">
+      <DependentUpon>HexEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IDocumentControl.cs" />
+    <Compile Include="Controls\InlineSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InlineSearchControl.Designer.cs">
+      <DependentUpon>InlineSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MetaEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MetaEditorControl.Designer.cs">
+      <DependentUpon>MetaEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\BinaryDataEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\BinaryDataEditorControl.Designer.cs">
+      <DependentUpon>BinaryDataEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\BinaryDataNodeEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\BinaryDataNodeEditorControl.Designer.cs">
+      <DependentUpon>BinaryDataNodeEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\DataKeyEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\DataKeyEditorControl.Designer.cs">
+      <DependentUpon>DataKeyEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\DataNodeEditorAttribute.cs" />
+    <Compile Include="Controls\NodeEditors\DataNodeEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\DataNodeEditorControl.Designer.cs">
+      <DependentUpon>DataNodeEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\DataNodeEditorManager.cs" />
+    <Compile Include="Controls\NodeEditors\EnumDataNodeEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\EnumDataNodeEditorControl.Designer.cs">
+      <DependentUpon>EnumDataNodeEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\FlagsEnumDataNodeEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\FlagsEnumDataNodeEditorControl.Designer.cs">
+      <DependentUpon>FlagsEnumDataNodeEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NodeRichTextBox.cs" />
+    <Compile Include="Controls\NodeRichTextBox.Designer.cs">
+      <DependentUpon>NodeRichTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\TreeDataKeyEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\TreeDataKeyEditorControl.Designer.cs">
+      <DependentUpon>TreeDataKeyEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\DataValueEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\DataValueEditorControl.Designer.cs">
+      <DependentUpon>DataValueEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\PacketLogDocumentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\PacketLogDocumentControl.Designer.cs">
+      <DependentUpon>PacketLogDocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\TextDocumentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\TextDocumentControl.Designer.cs">
+      <DependentUpon>TextDocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EventLogControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EventLogControl.Designer.cs">
+      <DependentUpon>EventLogControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\FixedProxyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\FixedProxyControl.Designer.cs">
+      <DependentUpon>FixedProxyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\GenericProxyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\GenericProxyControl.Designer.cs">
+      <DependentUpon>GenericProxyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\NetGraphDocumentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\NetGraphDocumentControl.Designer.cs">
+      <DependentUpon>NetGraphDocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\NetServiceDocumentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\NetServiceDocumentControl.Designer.cs">
+      <DependentUpon>NetServiceDocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\IDataNodeEditor.cs" />
+    <Compile Include="Extension\PacketLogExtensionManager.cs" />
+    <Compile Include="Extension\PacketLogSelectedExtension.cs" />
+    <Compile Include="Extension\ParserSerializerAttribute.cs" />
+    <Compile Include="Extension\ParserSerializerExtensionManager.cs" />
+    <Compile Include="Extension\ScriptHighlightingAttribute.cs" />
+    <Compile Include="Extension\ScriptHighlightingExtensionManager.cs" />
+    <Compile Include="Extension\StringConverterAttribute.cs" />
+    <Compile Include="Extension\StringConverterExtensionManager.cs" />
+    <Compile Include="Extension\StringConverters.cs" />
+    <Compile Include="Forms\AddReferenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddReferenceForm.Designer.cs">
+      <DependentUpon>AddReferenceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CloneCertChainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CloneCertChainForm.Designer.cs">
+      <DependentUpon>CloneCertChainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfigurePacScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigurePacScriptForm.Designer.cs">
+      <DependentUpon>ConfigurePacScriptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConnectionStatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConnectionStatisticsForm.Designer.cs">
+      <DependentUpon>ConnectionStatisticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CredentialEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CredentialEditorForm.Designer.cs">
+      <DependentUpon>CredentialEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GetAuthenticationCredentialsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GetAuthenticationCredentialsForm.Designer.cs">
+      <DependentUpon>GetAuthenticationCredentialsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PacketDiffLogViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PacketDiffLogViewerForm.Designer.cs">
+      <DependentUpon>PacketDiffLogViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditConfigPropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditConfigPropertyForm.Designer.cs">
+      <DependentUpon>EditConfigPropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EventLogViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EventLogViewerForm.Designer.cs">
+      <DependentUpon>EventLogViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GetPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GetPasswordForm.Designer.cs">
+      <DependentUpon>GetPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GotoLineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GotoLineForm.Designer.cs">
+      <DependentUpon>GotoLineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HistogramLogViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HistogramLogViewerForm.Designer.cs">
+      <DependentUpon>HistogramLogViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HTMLLogViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HTMLLogViewerForm.Designer.cs">
+      <DependentUpon>HTMLLogViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HttpProxyOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HttpProxyOptionsForm.Designer.cs">
+      <DependentUpon>HttpProxyOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LayerEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LayerEditorForm.Designer.cs">
+      <DependentUpon>LayerEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LogViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LogViewerForm.Designer.cs">
+      <DependentUpon>LogViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MetaEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MetaEditorForm.Designer.cs">
+      <DependentUpon>MetaEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ObjectEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ObjectEditorForm.Designer.cs">
+      <DependentUpon>ObjectEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ScriptEditorConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ScriptEditorConfigurationForm.Designer.cs">
+      <DependentUpon>ScriptEditorConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectBlockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectBlockForm.Designer.cs">
+      <DependentUpon>SelectBlockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectEndpointForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectLayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectProjectTemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectScriptTemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SslConfigAdvancedOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SslConfigAdvancedOptionsForm.Designer.cs">
+      <DependentUpon>SslConfigAdvancedOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SslConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SslConfigForm.Designer.cs">
+      <DependentUpon>SslConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalControlConfig.cs" />
+    <Compile Include="Controls\PacketLogColumn.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\DiffRange.cs" />
+    <Compile Include="Utils\ParseWithPipelineNode.cs" />
+    <Compile Include="Utils\ParseWithPipelineNodeFactory.cs" />
+    <Compile Include="Controls\ProjectExplorerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProjectExplorerControl.Designer.cs">
+      <DependentUpon>ProjectExplorerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProxyClientControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProxyClientControl.Designer.cs">
+      <DependentUpon>ProxyClientControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\ScriptDocumentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DocumentEditors\ScriptDocumentControl.Designer.cs">
+      <DependentUpon>ScriptDocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ScriptSelectionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ScriptSelectionControl.Designer.cs">
+      <DependentUpon>ScriptSelectionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BinaryFrameDiffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BinaryFrameDiffForm.Designer.cs">
+      <DependentUpon>BinaryFrameDiffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangeTagForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangeTagForm.Designer.cs">
+      <DependentUpon>ChangeTagForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectScriptForm.Designer.cs">
+      <DependentUpon>SelectScriptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectTemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectTemplateForm.Designer.cs">
+      <DependentUpon>SelectTemplateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DebugWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DebugWindowForm.Designer.cs">
+      <DependentUpon>DebugWindowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DictionaryEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DictionaryEditorForm.Designer.cs">
+      <DependentUpon>DictionaryEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ByteArrayValueEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ByteArrayValueEditorForm.Designer.cs">
+      <DependentUpon>ByteArrayValueEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateCertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateCertForm.Designer.cs">
+      <DependentUpon>CreateCertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditFilterForm.Designer.cs">
+      <DependentUpon>EditFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditPacketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditPacketForm.Designer.cs">
+      <DependentUpon>EditPacketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditProjectPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditProjectPropertiesForm.Designer.cs">
+      <DependentUpon>EditProjectPropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FillBytesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FillBytesForm.Designer.cs">
+      <DependentUpon>FillBytesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FindDataFrameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FindDataFrameForm.Designer.cs">
+      <DependentUpon>FindDataFrameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HexEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HexEditorForm.Designer.cs">
+      <DependentUpon>HexEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InjectPacketControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InjectPacketControl.Designer.cs">
+      <DependentUpon>InjectPacketControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoadCertFromFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoadCertFromFileForm.Designer.cs">
+      <DependentUpon>LoadCertFromFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PacketLogViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PacketLogViewerForm.Designer.cs">
+      <DependentUpon>PacketLogViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ObjectCollectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ObjectCollectionForm.Designer.cs">
+      <DependentUpon>ObjectCollectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrimitiveValueEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrimitiveValueEditorForm.Designer.cs">
+      <DependentUpon>PrimitiveValueEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ScriptOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ScriptOptionsForm.Designer.cs">
+      <DependentUpon>ScriptOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectLibraryNodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectLibraryNodeForm.Designer.cs">
+      <DependentUpon>SelectLibraryNodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectLibraryOrScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectLibraryOrScriptForm.Designer.cs">
+      <DependentUpon>SelectLibraryOrScriptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StringValueEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StringValueEditorForm.Designer.cs">
+      <DependentUpon>StringValueEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\FrameEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NodeEditors\FrameEditorControl.Designer.cs">
+      <DependentUpon>FrameEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListViewExtension.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ActiveNetgraphControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ActiveNetgraphControl.Designer.cs">
+      <DependentUpon>ActiveNetgraphControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PacketLogControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PacketLogControl.Designer.cs">
+      <DependentUpon>PacketLogControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\ByteArrayEditor.cs" />
+    <Compile Include="Editors\ColorValueEditor.cs" />
+    <Compile Include="Editors\DataFrameFilterEditor.cs" />
+    <Compile Include="Editors\NodePropertiesEditor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\PropertyEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PropertyEditorControl.Designer.cs">
+      <DependentUpon>PropertyEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SslConfigControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SslConfigControl.Designer.cs">
+      <DependentUpon>SslConfigControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ColorValueConverter.cs" />
+    <Compile Include="Utils\ListViewItemSorter.cs" />
+    <Compile Include="Utils\ParseWithUtils.cs" />
+    <Compile Include="Utils\GuiUtils.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\CANAPE\canape.snk">
+      <Link>canape.snk</Link>
+    </None>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Be.Windows.Forms.HexBox\Be.Windows.Forms.HexBox.csproj">
+      <Project>{26C5F25F-B450-4CAF-AD8B-B8D11AE73457}</Project>
+      <Name>Be.Windows.Forms.HexBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Documents\CANAPE.Documents.csproj">
+      <Project>{8B96A90D-7898-4688-B401-12F56BE1AB47}</Project>
+      <Name>CANAPE.Documents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Extension\CANAPE.Extension.csproj">
+      <Project>{28C043FE-9095-4AC8-A442-70B012950F59}</Project>
+      <Name>CANAPE.Extension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Net\CANAPE.Net.csproj">
+      <Project>{5859BC1C-AF63-4743-B853-144B108545D1}</Project>
+      <Name>CANAPE.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.NodeLibrary\CANAPE.NodeLibrary.csproj">
+      <Project>{F6D34D6D-1746-43F2-B51C-106C71FF818C}</Project>
+      <Name>CANAPE.NodeLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Parser\CANAPE.Parser.csproj">
+      <Project>{98F335B7-61C4-4143-AF03-2012D1374BEC}</Project>
+      <Name>CANAPE.Parser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Scripting\CANAPE.Scripting.csproj">
+      <Project>{D930CADC-7534-42B3-ADFD-E07549C67528}</Project>
+      <Name>CANAPE.Scripting</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Security\CANAPE.Security.csproj">
+      <Project>{AB96ACE5-9681-414D-87F7-54ED3BCC24D7}</Project>
+      <Name>CANAPE.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE\CANAPE.csproj">
+      <Project>{34432D8F-EAD0-48B9-8317-EB9D69D68B95}</Project>
+      <Name>CANAPE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Controls.GraphEditor\CANAPE.Controls.GraphEditor.csproj">
+      <Project>{7017E215-2768-47E3-A20F-13CB92886222}</Project>
+      <Name>CANAPE.Controls.GraphEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NCalc\NCalc.csproj">
+      <Project>{5f014003-50d8-49e0-8afe-91d38dccc97c}</Project>
+      <Name>NCalc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ActiveNetgraphControl.de.resx">
+      <DependentUpon>ActiveNetgraphControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AssemblyNameListView.resx">
+      <DependentUpon>AssemblyNameListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BaseDiffControl.de.resx">
+      <DependentUpon>BaseDiffControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BaseDiffControl.resx">
+      <DependentUpon>BaseDiffControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CredentialsEditorControl.resx">
+      <DependentUpon>CredentialsEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\PacketLogDiffDocumentControl.resx">
+      <DependentUpon>PacketLogDiffDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\AssemblyDocumentControl.de.resx">
+      <DependentUpon>AssemblyDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\AssemblyDocumentControl.resx">
+      <DependentUpon>AssemblyDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\BinaryDocumentControl.resx">
+      <DependentUpon>BinaryDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\FixedProxyControl.de.resx">
+      <DependentUpon>FixedProxyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\GenericProxyControl.de.resx">
+      <DependentUpon>GenericProxyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\NetAutoClientControl.de.resx">
+      <DependentUpon>NetAutoClientControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\NetGraphDocumentControl.de.resx">
+      <DependentUpon>NetGraphDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\NetGraphTestDocumentControl.de.resx">
+      <DependentUpon>NetGraphTestDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\NetGraphTestDocumentControl.resx">
+      <DependentUpon>NetGraphTestDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\NetServerControl.de.resx">
+      <DependentUpon>NetServerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\NetServerControl.resx">
+      <DependentUpon>NetServerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\NetAutoClientControl.resx">
+      <DependentUpon>NetAutoClientControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\NetServiceDocumentControl.de.resx">
+      <DependentUpon>NetServiceDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\ParserDocumentControl.de.resx">
+      <DependentUpon>ParserDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\ParserDocumentControl.resx">
+      <DependentUpon>ParserDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\ParserEditors\EnumParserTypeEditorControl.de.resx">
+      <DependentUpon>EnumParserTypeEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\ParserEditors\EnumParserTypeEditorControl.resx">
+      <DependentUpon>EnumParserTypeEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\ParserEditors\ScriptParserTypeEditorControl.resx">
+      <DependentUpon>ScriptParserTypeEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\ParserEditors\SequenceParserTypeEditorControl.de.resx">
+      <DependentUpon>SequenceParserTypeEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\ParserEditors\SequenceParserTypeEditorControl.resx">
+      <DependentUpon>SequenceParserTypeEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\ScriptDocumentConfigEditorControl.resx">
+      <DependentUpon>ScriptDocumentConfigEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\ScriptDocumentControl.de.resx">
+      <DependentUpon>ScriptDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\ScriptTestDocumentControl.de.resx">
+      <DependentUpon>ScriptTestDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\ScriptTestDocumentControl.resx">
+      <DependentUpon>ScriptTestDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\StateGraphDocumentControl.de.resx">
+      <DependentUpon>StateGraphDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\StateGraphDocumentControl.resx">
+      <DependentUpon>StateGraphDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DynamicConfigEditorControl.de.resx">
+      <DependentUpon>DynamicConfigEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DynamicConfigEditorControl.resx">
+      <DependentUpon>DynamicConfigEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DataEndpointSelectionControl.resx">
+      <DependentUpon>DataEndpointSelectionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EventLogControl.de.resx">
+      <DependentUpon>EventLogControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FindDataFrameControl.de.resx">
+      <DependentUpon>FindDataFrameControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FindDataFrameControl.resx">
+      <DependentUpon>FindDataFrameControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GraphTestControl.de.resx">
+      <DependentUpon>GraphTestControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GraphTestControl.resx">
+      <DependentUpon>GraphTestControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HexEditorControl.de.resx">
+      <DependentUpon>HexEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HexEditorControl.resx">
+      <DependentUpon>HexEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InjectPacketControl.de.resx">
+      <DependentUpon>InjectPacketControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InlineSearchControl.de.resx">
+      <DependentUpon>InlineSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InlineSearchControl.resx">
+      <DependentUpon>InlineSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LayerEditorControl.resx">
+      <DependentUpon>LayerEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MetaEditorControl.de.resx">
+      <DependentUpon>MetaEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MetaEditorControl.resx">
+      <DependentUpon>MetaEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ConnectionHistoryControl.resx">
+      <DependentUpon>ConnectionHistoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeEditors\BinaryDataEditorControl.resx">
+      <DependentUpon>BinaryDataEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeEditors\BinaryDataNodeEditorControl.resx">
+      <DependentUpon>BinaryDataNodeEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeEditors\DataKeyEditorControl.de.resx">
+      <DependentUpon>DataKeyEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeEditors\DataKeyEditorControl.resx">
+      <DependentUpon>DataKeyEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeEditors\DataNodeEditorControl.resx">
+      <DependentUpon>DataNodeEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeEditors\EnumDataNodeEditorControl.resx">
+      <DependentUpon>EnumDataNodeEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeEditors\FlagsEnumDataNodeEditorControl.de.resx">
+      <DependentUpon>FlagsEnumDataNodeEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeEditors\FlagsEnumDataNodeEditorControl.resx">
+      <DependentUpon>FlagsEnumDataNodeEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeEditors\SingleFrameEditorControl.resx">
+      <DependentUpon>SingleFrameEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeRichTextBox.de.resx">
+      <DependentUpon>NodeRichTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeRichTextBox.resx">
+      <DependentUpon>NodeRichTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeEditors\TreeDataKeyEditorControl.resx">
+      <DependentUpon>TreeDataKeyEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeEditors\DataValueEditorControl.resx">
+      <DependentUpon>DataValueEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\PacketLogDocumentControl.resx">
+      <DependentUpon>PacketLogDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\TextDocumentControl.resx">
+      <DependentUpon>TextDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EventLogControl.resx">
+      <DependentUpon>EventLogControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\FixedProxyControl.resx">
+      <DependentUpon>FixedProxyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\GenericProxyControl.resx">
+      <DependentUpon>GenericProxyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\NetGraphDocumentControl.resx">
+      <DependentUpon>NetGraphDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\NetServiceDocumentControl.resx">
+      <DependentUpon>NetServiceDocumentControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PacketCharts\HistogramChartControl.resx">
+      <DependentUpon>HistogramChartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PacketCharts\NetworkTrafficChartControl.resx">
+      <DependentUpon>NetworkTrafficChartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PacketCharts\TagStatisticsChartControl.resx">
+      <DependentUpon>TagStatisticsChartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PacketLogControl.de.resx">
+      <DependentUpon>PacketLogControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProjectExplorerControl.de.resx">
+      <DependentUpon>ProjectExplorerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProjectExplorerControl.resx">
+      <DependentUpon>ProjectExplorerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PropertyBagViewerControl.de.resx">
+      <DependentUpon>PropertyBagViewerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PropertyBagViewerControl.resx">
+      <DependentUpon>PropertyBagViewerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PropertyEditorControl.de.resx">
+      <DependentUpon>PropertyEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProxyClientControl.de.resx">
+      <DependentUpon>ProxyClientControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProxyClientControl.resx">
+      <DependentUpon>ProxyClientControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DocumentEditors\ScriptDocumentControl.resx">
+      <DependentUpon>ScriptDocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RedirectLogControl.de.resx">
+      <DependentUpon>RedirectLogControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RedirectLogControl.resx">
+      <DependentUpon>RedirectLogControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ScriptSelectionControl.de.resx">
+      <DependentUpon>ScriptSelectionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ScriptSelectionControl.resx">
+      <DependentUpon>ScriptSelectionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SslConfigControl.de.resx">
+      <DependentUpon>SslConfigControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddReferenceForm.de.resx">
+      <DependentUpon>AddReferenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddReferenceForm.resx">
+      <DependentUpon>AddReferenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BinaryFrameDiffForm.de.resx">
+      <DependentUpon>BinaryFrameDiffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BinaryFrameDiffForm.resx">
+      <DependentUpon>BinaryFrameDiffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ByteArrayValueEditorForm.de.resx">
+      <DependentUpon>ByteArrayValueEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangeTagForm.de.resx">
+      <DependentUpon>ChangeTagForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangeTagForm.resx">
+      <DependentUpon>ChangeTagForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CloneCertChainForm.resx">
+      <DependentUpon>CloneCertChainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigurePacScriptForm.de.resx">
+      <DependentUpon>ConfigurePacScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigurePacScriptForm.resx">
+      <DependentUpon>ConfigurePacScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConnectionStatisticsForm.resx">
+      <DependentUpon>ConnectionStatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CredentialEditorForm.resx">
+      <DependentUpon>CredentialEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GetAuthenticationCredentialsForm.resx">
+      <DependentUpon>GetAuthenticationCredentialsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PacketDiffLogViewerForm.de.resx">
+      <DependentUpon>PacketDiffLogViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PacketDiffLogViewerForm.resx">
+      <DependentUpon>PacketDiffLogViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateCertForm.de.resx">
+      <DependentUpon>CreateCertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DebugWindowForm.de.resx">
+      <DependentUpon>DebugWindowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DictionaryEditorForm.de.resx">
+      <DependentUpon>DictionaryEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditConfigPropertyForm.de.resx">
+      <DependentUpon>EditConfigPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditConfigPropertyForm.resx">
+      <DependentUpon>EditConfigPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditFilterForm.de.resx">
+      <DependentUpon>EditFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditPacketForm.de.resx">
+      <DependentUpon>EditPacketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditProjectPropertiesForm.de.resx">
+      <DependentUpon>EditProjectPropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EventLogViewerForm.resx">
+      <DependentUpon>EventLogViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FillBytesForm.de.resx">
+      <DependentUpon>FillBytesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDataFrameForm.de.resx">
+      <DependentUpon>FindDataFrameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GetPasswordForm.de.resx">
+      <DependentUpon>GetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GetPasswordForm.resx">
+      <DependentUpon>GetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GotoLineForm.de.resx">
+      <DependentUpon>GotoLineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GotoLineForm.resx">
+      <DependentUpon>GotoLineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HexEditorForm.de.resx">
+      <DependentUpon>HexEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HistogramLogViewerForm.resx">
+      <DependentUpon>HistogramLogViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HTMLLogViewerForm.resx">
+      <DependentUpon>HTMLLogViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HttpProxyOptionsForm.de.resx">
+      <DependentUpon>HttpProxyOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HttpProxyOptionsForm.resx">
+      <DependentUpon>HttpProxyOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LayerEditorForm.resx">
+      <DependentUpon>LayerEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoadCertFromFileForm.de.resx">
+      <DependentUpon>LoadCertFromFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogViewerForm.resx">
+      <DependentUpon>LogViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MetaEditorForm.de.resx">
+      <DependentUpon>MetaEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MetaEditorForm.resx">
+      <DependentUpon>MetaEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ObjectCollectionForm.de.resx" />
+    <EmbeddedResource Include="Forms\ObjectEditorForm.resx">
+      <DependentUpon>ObjectEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PacketLogViewerForm.de.resx">
+      <DependentUpon>PacketLogViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrimitiveValueEditorForm.de.resx">
+      <DependentUpon>PrimitiveValueEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ScriptEditorConfigurationForm.resx">
+      <DependentUpon>ScriptEditorConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ScriptOptionsForm.de.resx">
+      <DependentUpon>ScriptOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectBlockForm.de.resx">
+      <DependentUpon>SelectBlockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectBlockForm.resx">
+      <DependentUpon>SelectBlockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectLibraryOrScriptForm.de.resx">
+      <DependentUpon>SelectLibraryOrScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectLibraryNodeForm.de.resx" />
+    <EmbeddedResource Include="Forms\SelectScriptForm.de.resx" />
+    <EmbeddedResource Include="Forms\SelectScriptForm.resx">
+      <DependentUpon>SelectScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectTemplateForm.de.resx" />
+    <EmbeddedResource Include="Forms\SelectTemplateForm.resx">
+      <DependentUpon>SelectTemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DebugWindowForm.resx">
+      <DependentUpon>DebugWindowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DictionaryEditorForm.resx">
+      <DependentUpon>DictionaryEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ByteArrayValueEditorForm.resx">
+      <DependentUpon>ByteArrayValueEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateCertForm.resx">
+      <DependentUpon>CreateCertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditFilterForm.resx">
+      <DependentUpon>EditFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditPacketForm.resx">
+      <DependentUpon>EditPacketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditProjectPropertiesForm.resx">
+      <DependentUpon>EditProjectPropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FillBytesForm.resx">
+      <DependentUpon>FillBytesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindDataFrameForm.resx">
+      <DependentUpon>FindDataFrameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HexEditorForm.resx">
+      <DependentUpon>HexEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InjectPacketControl.resx">
+      <DependentUpon>InjectPacketControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoadCertFromFileForm.resx">
+      <DependentUpon>LoadCertFromFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PacketLogViewerForm.resx">
+      <DependentUpon>PacketLogViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ObjectCollectionForm.resx">
+      <DependentUpon>ObjectCollectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrimitiveValueEditorForm.resx">
+      <DependentUpon>PrimitiveValueEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ScriptOptionsForm.resx">
+      <DependentUpon>ScriptOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectLibraryNodeForm.resx">
+      <DependentUpon>SelectLibraryNodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectLibraryOrScriptForm.resx">
+      <DependentUpon>SelectLibraryOrScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SslConfigAdvancedOptionsForm.de.resx" />
+    <EmbeddedResource Include="Forms\SslConfigAdvancedOptionsForm.resx">
+      <DependentUpon>SslConfigAdvancedOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SslConfigForm.de.resx">
+      <DependentUpon>SslConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SslConfigForm.resx">
+      <DependentUpon>SslConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StringValueEditorForm.de.resx" />
+    <EmbeddedResource Include="Forms\StringValueEditorForm.resx">
+      <DependentUpon>StringValueEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeEditors\FrameEditorControl.resx">
+      <DependentUpon>FrameEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ListViewExtension.resx">
+      <DependentUpon>ListViewExtension.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ActiveNetgraphControl.resx">
+      <DependentUpon>ActiveNetgraphControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PacketLogControl.resx">
+      <DependentUpon>PacketLogControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PropertyEditorControl.resx">
+      <DependentUpon>PropertyEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SslConfigControl.resx">
+      <DependentUpon>SslConfigControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\112_Tick_Green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Code_CodeFileCS.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Code_CodeFileVB.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\copy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Data_Schema.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\FloppyDisk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\folderopen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Network.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\DropdownIcon.ico" />
+    <None Include="Resources\PythonSyntaxHighlighting.txt" />
+    <None Include="Resources\DefaultPythonParserScript.txt" />
+    <None Include="Icons\Network_Map1.ico" />
+    <Content Include="Icons\ParserComponent.ico" />
+    <Content Include="frameworkAssemblies.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\VSObject_Class_Private_Script.bmp" />
+    <Content Include="Icons\VSObject_Class_Script.bmp" />
+    <Content Include="Icons\VSObject_Field_Private_Script.bmp" />
+    <Content Include="Icons\VSObject_Field_Script.bmp" />
+    <None Include="Icons\Web_GlobalAppClass.ico" />
+    <None Include="Icons\VSProject_component.bmp" />
+    <None Include="Icons\VSObject_Field_Private.bmp" />
+    <None Include="Icons\VSObject_Field.bmp" />
+    <None Include="Icons\VSObject_Class_Private.bmp" />
+    <None Include="Icons\VSObject_Class.bmp" />
+    <None Include="Icons\112_RightArrowShort_Green.ico" />
+    <None Include="Icons\112_LeftArrowShort_Green.ico" />
+    <None Include="Icons\112_DownArrowShort_Green.ico" />
+    <None Include="Icons\112_UpArrowShort_Green.ico" />
+    <None Include="Icons\Folder.ico" />
+    <Content Include="Icons\Network_Map.ico" />
+    <None Include="Icons\VSProject_genericproject.ico" />
+    <None Include="Icons\UtilityText.ico" />
+    <None Include="Icons\Utility_VBScript.ico" />
+    <None Include="Icons\textdoc.ico" />
+    <None Include="Icons\py.ico" />
+    <None Include="Icons\otheroptions.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

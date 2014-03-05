@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98F335B7-61C4-4143-AF03-2012D1374BEC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CANAPE.Parser</RootNamespace>
+    <AssemblyName>CANAPE.Parser</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\CANAPE\canape.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Members\ArrayMemberEntry.cs" />
+    <Compile Include="Members\BitFieldMemberEntry.cs" />
+    <Compile Include="BitIntegers.cs" />
+    <Compile Include="Members\BooleanMemberEntry.cs" />
+    <Compile Include="Types\BuiltinParserType.cs" />
+    <Compile Include="Members\CalculatorMemberEntry.cs" />
+    <Compile Include="Crc32.cs" />
+    <Compile Include="DefaultSequenceChoiceParser.cs" />
+    <Compile Include="Members\FixedBytesMemberEntry.cs" />
+    <Compile Include="Members\IMemberContainer.cs" />
+    <Compile Include="Members\IMemberReference.cs" />
+    <Compile Include="Int7V.cs" />
+    <Compile Include="Members\IntegerTwentyFourMemberEntry.cs" />
+    <Compile Include="Members\ReferenceLengthSequenceArrayMemberEntry.cs" />
+    <Compile Include="CodeGen.cs" />
+    <Compile Include="CompileUnitScriptContainer.cs" />
+    <Compile Include="Members\ContainerMemberEntry.cs" />
+    <Compile Include="EvalExpression.cs" />
+    <Compile Include="EvalExpressionTypeConverter.cs" />
+    <Compile Include="ExpressionResolver.cs" />
+    <Compile Include="Members\FixedLengthGenericArrayMemberEntry.cs" />
+    <Compile Include="Members\FloatPrimitiveMemberEntry.cs" />
+    <Compile Include="Members\IMemberReaderWriter.cs" />
+    <Compile Include="Members\IntegerPrimitiveMemberEntry.cs" />
+    <Compile Include="Members\MemberEntryReference.cs" />
+    <Compile Include="Types\DataStreamParserType.cs" />
+    <Compile Include="DataValueContainer.cs" />
+    <Compile Include="Endian.cs" />
+    <Compile Include="Members\EnumMemberEntry.cs" />
+    <Compile Include="Types\EnumParserType.cs" />
+    <Compile Include="Types\EnumParserTypeEntry.cs" />
+    <Compile Include="Members\FixedLengthPrimitiveArrayMemberEntry.cs" />
+    <Compile Include="Members\FixedLengthStringMemberEntry.cs" />
+    <Compile Include="GenericStreamParser.cs" />
+    <Compile Include="Types\IArrayTypeParser.cs" />
+    <Compile Include="Members\MemberEntryReferenceConverter.cs" />
+    <Compile Include="NameChangedEventArgs.cs" />
+    <Compile Include="Members\NumericPrimitiveMemberEntry.cs" />
+    <Compile Include="ParserUtils.cs" />
+    <Compile Include="Members\PrimitiveMemberEntry.cs" />
+    <Compile Include="IStreamTypeParser.cs" />
+    <Compile Include="ParserType.cs" />
+    <Compile Include="Members\PrimitiveMemberEntryFormat.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\ReadToEndPrimitiveArrayMemberEntry.cs" />
+    <Compile Include="Members\ReadToEndGenericArrayMemberEntry.cs" />
+    <Compile Include="Members\ReadToEndStringMemberEntry.cs" />
+    <Compile Include="Members\ReferenceLengthPrimitiveArrayMemberEntry.cs" />
+    <Compile Include="Members\ReferenceLengthGenericArrayMemberEntry.cs" />
+    <Compile Include="Members\ReferenceLengthStringMemberEntry.cs" />
+    <Compile Include="Types\ScriptParserType.cs" />
+    <Compile Include="SequenceChoice.cs" />
+    <Compile Include="Members\SequenceChoiceMemberEntry.cs" />
+    <Compile Include="Members\SequenceTypeConverter.cs" />
+    <Compile Include="Members\SevenBitVariableIntMemberEntry.cs" />
+    <Compile Include="PySnippet.cs" />
+    <Compile Include="Members\SizedMemberEntry.cs" />
+    <Compile Include="StateDictionary.cs" />
+    <Compile Include="BaseParser.cs" />
+    <Compile Include="Types\StreamParserType.cs" />
+    <Compile Include="Members\StringMemberEntry.cs" />
+    <Compile Include="Members\SequenceMemberEntry.cs" />
+    <Compile Include="Types\SequenceParserType.cs" />
+    <Compile Include="Members\MemberEntry.cs" />
+    <Compile Include="Types\StringParserType.cs" />
+    <Compile Include="Members\TerminatedGenericArrayMemberEntry.cs" />
+    <Compile Include="Members\TerminatedStringMemberEntry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CANAPE.Scripting\CANAPE.Scripting.csproj">
+      <Project>{D930CADC-7534-42B3-ADFD-E07549C67528}</Project>
+      <Name>CANAPE.Scripting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE\CANAPE.csproj">
+      <Project>{34432D8F-EAD0-48B9-8317-EB9D69D68B95}</Project>
+      <Name>CANAPE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NCalc\NCalc.csproj">
+      <Project>{5f014003-50d8-49e0-8afe-91d38dccc97c}</Project>
+      <Name>NCalc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\CANAPE\canape.snk">
+      <Link>canape.snk</Link>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="newparser.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

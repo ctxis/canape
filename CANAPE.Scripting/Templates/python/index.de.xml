@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<templates>
+  <template id="0" name="Basic Pipeline Node" description="Eine einfache Pipeline Knoten Implementierung" filename="basicpipelinenode.py"/>
+  <template id="1" name="RE Mutator Node" description="Ein einfacher Knoten um einen Wert anhand eines regulären Ausdruckes zu ersetzen" filename="remutator.py" />
+  <template id="2" name="Basic Stream Parser" description="Beispiel eines einfachen Datenparser" filename="basicstreamparser.py"/>
+  <template id="3" name="Basic String Parser" description="Beispiel eines einfachen Stringparser" filename="basicstringparser.py"/>
+  <template id="4" name="Basic Data Endpoint" description="Beispiel eines einfachen Datenendpunktes" filename="basicdataendpoint.py"/>
+</templates>

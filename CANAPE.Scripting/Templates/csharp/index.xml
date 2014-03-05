@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<templates>
+  <template id="0" name="Basic Pipeline Node" description="A simple pipeline node implementation" filename="basicpipelinenode.cs"/>
+  <template id="1" name="Basic Stream Parser" description="An example of a simple stream parser" filename="basicstreamparser.cs"/>
+  <template id="2" name="Basic Array Parser" description="An example of a simple array parser" filename="basicarrayparser.cs"/>
+  <template id="3" name="Basic Data Endpoint" description="An example of a basic data endpoint" filename="basicdataendpoint.cs"/>
+  <template id="4" name="XOR Network Layer" description="An example network layer which xors data" filename="xorlayer.cs"/>
+  <template id="5" name="String/Hex Converter" description="An example string/hex converter for use with the hexeditor" filename="stringhexconv.cs"/>
+  <template id="6" name="Selected Packets Exporter" description="An example exporter for selected packets in a log" filename="packetexport.cs"/>
+</templates>

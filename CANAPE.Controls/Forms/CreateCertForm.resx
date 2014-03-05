@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="groupBoxSigning.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="&gt;&gt;radioButtonSelfSign.Name" xml:space="preserve">
+    <value>radioButtonSelfSign</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSelfSign.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSelfSign.Parent" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSelfSign.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBoxSubject.Name" xml:space="preserve">
+    <value>textBoxSubject</value>
+  </data>
+  <data name="&gt;&gt;textBoxSubject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxSubject.Parent" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;textBoxSubject.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStore.Name" xml:space="preserve">
+    <value>btnLoadStore</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStore.Parent" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStore.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;radioButtonDefaultCA.Name" xml:space="preserve">
+    <value>radioButtonDefaultCA</value>
+  </data>
+  <data name="&gt;&gt;radioButtonDefaultCA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonDefaultCA.Parent" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;radioButtonDefaultCA.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFile.Name" xml:space="preserve">
+    <value>btnLoadFile</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFile.Parent" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFile.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSpecifyCA.Name" xml:space="preserve">
+    <value>radioButtonSpecifyCA</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSpecifyCA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSpecifyCA.Parent" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSpecifyCA.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblSubject.Name" xml:space="preserve">
+    <value>lblSubject</value>
+  </data>
+  <data name="&gt;&gt;lblSubject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSubject.Parent" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;lblSubject.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="groupBoxSigning.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 126</value>
+  </data>
+  <data name="groupBoxSigning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>377, 91</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupBoxSigning.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="groupBoxSigning.Text" xml:space="preserve">
+    <value>Signing Certificate</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSigning.Name" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSigning.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSigning.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSigning.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radioButtonSelfSign.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonSelfSign.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 27</value>
+  </data>
+  <data name="radioButtonSelfSign.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 17</value>
+  </data>
+  <data name="radioButtonSelfSign.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="radioButtonSelfSign.Text" xml:space="preserve">
+    <value>Self</value>
+  </data>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="radioButtonSelfSign.ToolTip" xml:space="preserve">
+    <value>Self sign the certificate</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSelfSign.Name" xml:space="preserve">
+    <value>radioButtonSelfSign</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSelfSign.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSelfSign.Parent" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSelfSign.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBoxSubject.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textBoxSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="textBoxSubject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>318, 20</value>
+  </data>
+  <data name="textBoxSubject.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="textBoxSubject.ToolTip" xml:space="preserve">
+    <value>Shows the specified CA subject name</value>
+  </data>
+  <data name="&gt;&gt;textBoxSubject.Name" xml:space="preserve">
+    <value>textBoxSubject</value>
+  </data>
+  <data name="&gt;&gt;textBoxSubject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxSubject.Parent" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;textBoxSubject.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnLoadStore.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnLoadStore.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnLoadStore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 24</value>
+  </data>
+  <data name="btnLoadStore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnLoadStore.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnLoadStore.Text" xml:space="preserve">
+    <value>Load Store</value>
+  </data>
+  <data name="btnLoadStore.ToolTip" xml:space="preserve">
+    <value>Load CA from the certificate store</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStore.Name" xml:space="preserve">
+    <value>btnLoadStore</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStore.Parent" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStore.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radioButtonDefaultCA.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonDefaultCA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 27</value>
+  </data>
+  <data name="radioButtonDefaultCA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 17</value>
+  </data>
+  <data name="radioButtonDefaultCA.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="radioButtonDefaultCA.Text" xml:space="preserve">
+    <value>Default CA</value>
+  </data>
+  <data name="radioButtonDefaultCA.ToolTip" xml:space="preserve">
+    <value>Check to use default CANAPE CA</value>
+  </data>
+  <data name="&gt;&gt;radioButtonDefaultCA.Name" xml:space="preserve">
+    <value>radioButtonDefaultCA</value>
+  </data>
+  <data name="&gt;&gt;radioButtonDefaultCA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonDefaultCA.Parent" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;radioButtonDefaultCA.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnLoadFile.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnLoadFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 24</value>
+  </data>
+  <data name="btnLoadFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnLoadFile.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnLoadFile.Text" xml:space="preserve">
+    <value>Load File</value>
+  </data>
+  <data name="btnLoadFile.ToolTip" xml:space="preserve">
+    <value>Load CA from a file</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFile.Name" xml:space="preserve">
+    <value>btnLoadFile</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFile.Parent" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFile.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="radioButtonSpecifyCA.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonSpecifyCA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 27</value>
+  </data>
+  <data name="radioButtonSpecifyCA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 17</value>
+  </data>
+  <data name="radioButtonSpecifyCA.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="radioButtonSpecifyCA.Text" xml:space="preserve">
+    <value>Specify CA</value>
+  </data>
+  <data name="radioButtonSpecifyCA.ToolTip" xml:space="preserve">
+    <value>Check to specify a specific CA</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSpecifyCA.Name" xml:space="preserve">
+    <value>radioButtonSpecifyCA</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSpecifyCA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSpecifyCA.Parent" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSpecifyCA.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblSubject.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSubject.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 53</value>
+  </data>
+  <data name="lblSubject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="lblSubject.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblSubject.Text" xml:space="preserve">
+    <value>Subject:</value>
+  </data>
+  <data name="&gt;&gt;lblSubject.Name" xml:space="preserve">
+    <value>lblSubject</value>
+  </data>
+  <data name="&gt;&gt;lblSubject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSubject.Parent" xml:space="preserve">
+    <value>groupBoxSigning</value>
+  </data>
+  <data name="&gt;&gt;lblSubject.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="textBoxCN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 57</value>
+  </data>
+  <data name="textBoxCN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 20</value>
+  </data>
+  <data name="textBoxCN.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="textBoxCN.ToolTip" xml:space="preserve">
+    <value>Specify the common name (normally the domain name) for the certificate</value>
+  </data>
+  <data name="&gt;&gt;textBoxCN.Name" xml:space="preserve">
+    <value>textBoxCN</value>
+  </data>
+  <data name="&gt;&gt;textBoxCN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCN.Parent" xml:space="preserve">
+    <value>groupBoxCert</value>
+  </data>
+  <data name="&gt;&gt;textBoxCN.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="labelCommonName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCommonName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 60</value>
+  </data>
+  <data name="labelCommonName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
+  </data>
+  <data name="labelCommonName.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelCommonName.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="&gt;&gt;labelCommonName.Name" xml:space="preserve">
+    <value>labelCommonName</value>
+  </data>
+  <data name="&gt;&gt;labelCommonName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCommonName.Parent" xml:space="preserve">
+    <value>groupBoxCert</value>
+  </data>
+  <data name="&gt;&gt;labelCommonName.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="buttonCreate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 223</value>
+  </data>
+  <data name="buttonCreate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="buttonCreate.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonCreate.Text" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="&gt;&gt;buttonCreate.Name" xml:space="preserve">
+    <value>buttonCreate</value>
+  </data>
+  <data name="&gt;&gt;buttonCreate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonCreate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonCreate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>231, 223</value>
+  </data>
+  <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;buttonCancel.Name" xml:space="preserve">
+    <value>buttonCancel</value>
+  </data>
+  <data name="&gt;&gt;buttonCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonCancel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnLoadStoreCert.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnLoadStoreCert.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnLoadStoreCert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 11</value>
+  </data>
+  <data name="btnLoadStoreCert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnLoadStoreCert.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btnLoadStoreCert.Text" xml:space="preserve">
+    <value>Load Store</value>
+  </data>
+  <data name="btnLoadStoreCert.ToolTip" xml:space="preserve">
+    <value>Load CA from the certificate store</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStoreCert.Name" xml:space="preserve">
+    <value>btnLoadStoreCert</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStoreCert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStoreCert.Parent" xml:space="preserve">
+    <value>groupBoxCert</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStoreCert.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnLoadFileCert.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnLoadFileCert.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnLoadFileCert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 11</value>
+  </data>
+  <data name="btnLoadFileCert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnLoadFileCert.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="btnLoadFileCert.Text" xml:space="preserve">
+    <value>Load File</value>
+  </data>
+  <data name="btnLoadFileCert.ToolTip" xml:space="preserve">
+    <value>Load CA from a file</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFileCert.Name" xml:space="preserve">
+    <value>btnLoadFileCert</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFileCert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFileCert.Parent" xml:space="preserve">
+    <value>groupBoxCert</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFileCert.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="checkBoxCA.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxCA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 83</value>
+  </data>
+  <data name="checkBoxCA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 17</value>
+  </data>
+  <data name="checkBoxCA.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="checkBoxCA.Text" xml:space="preserve">
+    <value>CA Certificate</value>
+  </data>
+  <data name="checkBoxCA.ToolTip" xml:space="preserve">
+    <value>Adds a CA basic constraint extension to the certificate</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCA.Name" xml:space="preserve">
+    <value>checkBoxCA</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCA.Parent" xml:space="preserve">
+    <value>groupBoxCert</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCA.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="radioButtonSimpleCN.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonSimpleCN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 17</value>
+  </data>
+  <data name="radioButtonSimpleCN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 17</value>
+  </data>
+  <data name="radioButtonSimpleCN.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="radioButtonSimpleCN.Text" xml:space="preserve">
+    <value>Simple CN</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSimpleCN.Name" xml:space="preserve">
+    <value>radioButtonSimpleCN</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSimpleCN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSimpleCN.Parent" xml:space="preserve">
+    <value>groupBoxCert</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSimpleCN.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="comboBoxHash.Location" type="System.Drawing.Point, System.Drawing">
+    <value>271, 81</value>
+  </data>
+  <data name="comboBoxHash.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 21</value>
+  </data>
+  <data name="comboBoxHash.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;comboBoxHash.Name" xml:space="preserve">
+    <value>comboBoxHash</value>
+  </data>
+  <data name="&gt;&gt;comboBoxHash.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxHash.Parent" xml:space="preserve">
+    <value>groupBoxCert</value>
+  </data>
+  <data name="&gt;&gt;comboBoxHash.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblHash.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblHash.Location" type="System.Drawing.Point, System.Drawing">
+    <value>230, 84</value>
+  </data>
+  <data name="lblHash.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="lblHash.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="lblHash.Text" xml:space="preserve">
+    <value>Hash:</value>
+  </data>
+  <data name="&gt;&gt;lblHash.Name" xml:space="preserve">
+    <value>lblHash</value>
+  </data>
+  <data name="&gt;&gt;lblHash.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblHash.Parent" xml:space="preserve">
+    <value>groupBoxCert</value>
+  </data>
+  <data name="&gt;&gt;lblHash.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="comboBoxRsaKeySize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>152, 81</value>
+  </data>
+  <data name="comboBoxRsaKeySize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 21</value>
+  </data>
+  <data name="comboBoxRsaKeySize.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;comboBoxRsaKeySize.Name" xml:space="preserve">
+    <value>comboBoxRsaKeySize</value>
+  </data>
+  <data name="&gt;&gt;comboBoxRsaKeySize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxRsaKeySize.Parent" xml:space="preserve">
+    <value>groupBoxCert</value>
+  </data>
+  <data name="&gt;&gt;comboBoxRsaKeySize.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblKeySize.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblKeySize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 84</value>
+  </data>
+  <data name="lblKeySize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="lblKeySize.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lblKeySize.Text" xml:space="preserve">
+    <value>Key Size:</value>
+  </data>
+  <data name="&gt;&gt;lblKeySize.Name" xml:space="preserve">
+    <value>lblKeySize</value>
+  </data>
+  <data name="&gt;&gt;lblKeySize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblKeySize.Parent" xml:space="preserve">
+    <value>groupBoxCert</value>
+  </data>
+  <data name="&gt;&gt;lblKeySize.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radioButtonSubject.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 37</value>
+  </data>
+  <data name="radioButtonSubject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 17</value>
+  </data>
+  <data name="radioButtonSubject.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="radioButtonSubject.Text" xml:space="preserve">
+    <value>Full Subject</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSubject.Name" xml:space="preserve">
+    <value>radioButtonSubject</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSubject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSubject.Parent" xml:space="preserve">
+    <value>groupBoxCert</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSubject.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="radioButtonTemplate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonTemplate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 17</value>
+  </data>
+  <data name="radioButtonTemplate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 17</value>
+  </data>
+  <data name="radioButtonTemplate.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="radioButtonTemplate.Text" xml:space="preserve">
+    <value>From Template</value>
+  </data>
+  <data name="&gt;&gt;radioButtonTemplate.Name" xml:space="preserve">
+    <value>radioButtonTemplate</value>
+  </data>
+  <data name="&gt;&gt;radioButtonTemplate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonTemplate.Parent" xml:space="preserve">
+    <value>groupBoxCert</value>
+  </data>
+  <data name="&gt;&gt;radioButtonTemplate.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="groupBoxCert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="groupBoxCert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>375, 108</value>
+  </data>
+  <data name="groupBoxCert.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="groupBoxCert.Text" xml:space="preserve">
+    <value>Certificate</value>
+  </data>
+  <data name="&gt;&gt;groupBoxCert.Name" xml:space="preserve">
+    <value>groupBoxCert</value>
+  </data>
+  <data name="&gt;&gt;groupBoxCert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxCert.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxCert.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>401, 251</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Create Certificate</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Name" xml:space="preserve">
+    <value>toolTip</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CreateCertForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

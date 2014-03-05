@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="columnHeaderName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="columnHeaderType.Text" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="columnHeaderSize.Text" xml:space="preserve">
+    <value>Größe</value>
+  </data>
+  <data name="signedByteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Byte</value>
+  </data>
+  <data name="signed16BitIntToolStripMenuItem.Text" xml:space="preserve">
+    <value>16 bit Int</value>
+  </data>
+  <data name="signed24BitIntToolStripMenuItem.Text" xml:space="preserve">
+    <value>24 bit Int</value>
+  </data>
+  <data name="signed32BitIntToolStripMenuItem.Text" xml:space="preserve">
+    <value>32 bit Int</value>
+  </data>
+  <data name="signed64BitIntToolStripMenuItem.Text" xml:space="preserve">
+    <value>64 bit Int</value>
+  </data>
+  <data name="signedToolStripMenuItem.Text" xml:space="preserve">
+    <value>Signed</value>
+  </data>
+  <data name="byteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Byte</value>
+  </data>
+  <data name="unsigned16BitIntToolStripMenuItem.Text" xml:space="preserve">
+    <value>16 bit Int</value>
+  </data>
+  <data name="unsigned24BitIntToolStripMenuItem.Text" xml:space="preserve">
+    <value>24 bit Int</value>
+  </data>
+  <data name="unsigned32BitIntToolStripMenuItem.Text" xml:space="preserve">
+    <value>32 bit Int</value>
+  </data>
+  <data name="unsigned64BitIntToolStripMenuItem.Text" xml:space="preserve">
+    <value>64 bit Int</value>
+  </data>
+  <data name="unsignedToolStripMenuItem.Text" xml:space="preserve">
+    <value>Unsigned</value>
+  </data>
+  <data name="bitVariableIntToolStripMenuItem.Text" xml:space="preserve">
+    <value>7 bit Variable Int</value>
+  </data>
+  <data name="floatToolStripMenuItem.Text" xml:space="preserve">
+    <value>Float</value>
+  </data>
+  <data name="doubleToolStripMenuItem.Text" xml:space="preserve">
+    <value>Double</value>
+  </data>
+  <data name="bitFieldToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bitfeld</value>
+  </data>
+  <data name="addPrimitiveTypeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Primitiven Tüpen hinzufügen</value>
+  </data>
+  <data name="fixedCharLengthToolStripMenuItem.Text" xml:space="preserve">
+    <value>Feste Charlänge</value>
+  </data>
+  <data name="fixedCharLengthToolStripMenuItem.ToolTipText" xml:space="preserve">
+    <value>Feste Charlänge lesen</value>
+  </data>
+  <data name="readToEndToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bis zum Ende lesen</value>
+  </data>
+  <data name="lengthReferenceToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Längenreferenz</value>
+  </data>
+  <data name="terminatedStringToolStripMenuItem.Text" xml:space="preserve">
+    <value>Terminierter String</value>
+  </data>
+  <data name="addStringToolStripMenuItem.Text" xml:space="preserve">
+    <value>String hinzufügen</value>
+  </data>
+  <data name="addSequenceToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sequenz hinzufügen</value>
+  </data>
+  <data name="fixedLengthToolStripMenuItem.Text" xml:space="preserve">
+    <value>Feste Längte</value>
+  </data>
+  <data name="readToEndToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Bis zum Ende lesen</value>
+  </data>
+  <data name="lengthReferenceToolStripMenuItem.Text" xml:space="preserve">
+    <value>Längenreferenz</value>
+  </data>
+  <data name="convertToArrayToolStripMenuItem.Text" xml:space="preserve">
+    <value>Zu Array konvertieren</value>
+  </data>
+  <data name="convertToBooleanToolStripMenuItem.Text" xml:space="preserve">
+    <value>Zu Boolean konvertieren</value>
+  </data>
+  <data name="convertToEnumToolStripMenuItem.Text" xml:space="preserve">
+    <value>Zu Enum konvertieren</value>
+  </data>
+  <data name="convertToBaseToolStripMenuItem.Text" xml:space="preserve">
+    <value>Zu Basis konvertieren</value>
+  </data>
+  <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="renameToolStripMenuItem.Text" xml:space="preserve">
+    <value>Umbenennen</value>
+  </data>
+  <data name="buttonEntryUp.ToolTip" xml:space="preserve">
+    <value>Klicken um ein Feld eine Position höher in der Sequenz zu verschieben</value>
+  </data>
+  <data name="buttonEntryDown.ToolTip" xml:space="preserve">
+    <value>Klicken um ein Feld eine Position tiefer in der Sequenz zu verschieben</value>
+  </data>
+  <data name="listViewEntries.ToolTip" xml:space="preserve">
+    <value>Gibt die Liste der Felder in der Sequenz an</value>
+  </data>
+</root>

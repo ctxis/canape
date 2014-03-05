@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FillBytesForm_EmptyHexString" xml:space="preserve">
+    <value>Der Hexstring darf nicht leer sein</value>
+  </data>
+  <data name="FillBytesForm_InvalidHexString" xml:space="preserve">
+    <value>Der Hexstring ist ungültig</value>
+  </data>
+  <data name="FillBytesForm_MinMaxInvalid" xml:space="preserve">
+    <value>Der minimale Bytewert muss kleiner sein als der maximale Bytewert</value>
+  </data>
+  <data name="FillBytesForm_InvalidHexStringLength" xml:space="preserve">
+    <value>Der Hexstring muss ein Vielfaches von zwei Hexzeichen sein</value>
+  </data>
+  <data name="MessageBox_ErrorString" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="NetGraphDocumentControl_NoDocumentSet" xml:space="preserve">
+    <value>Kein Dokument im Knoten</value>
+  </data>
+  <data name="NetGraphDocumentControl_NoDocumentSetCaption" xml:space="preserve">
+    <value>Neues Dokument?</value>
+  </data>
+  <data name="BinaryDataEditorControl_NoMatch" xml:space="preserve">
+    <value>Es konnte keine Übereinstimmung gefunden werden</value>
+  </data>
+  <data name="BinaryDataEditorControl_NoMatchCaption" xml:space="preserve">
+    <value>Keine Übereinstimmung</value>
+  </data>
+  <data name="TreeDataKeyEditorControl_NoMatch" xml:space="preserve">
+    <value>Es konnte keine Übereinstimmung gefunden werden</value>
+  </data>
+  <data name="TreeDataKeyEditorControl_NoMatchCaption" xml:space="preserve">
+    <value>Keine Übereinstimmung</value>
+  </data>
+  <data name="ScriptSelectForm_Caption" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="ScriptSelectForm_NoClass" xml:space="preserve">
+    <value>Es muss eine Klasse angegeben werden</value>
+  </data>
+  <data name="ScriptSelectForm_NoDocument" xml:space="preserve">
+    <value>Es muss ein Skriptdokument angegeben werden</value>
+  </data>
+  <data name="ChangeTagForm_UseEmptyTag" xml:space="preserve">
+    <value>Wurde ein leeres Tag spezifiziert?</value>
+  </data>
+  <data name="ChangeTagForm_UseEmptyTagCaption" xml:space="preserve">
+    <value>Leeres Tag?</value>
+  </data>
+  <data name="TreeDataKeyEditorControl_ParseError" xml:space="preserve">
+    <value>Parserfehler</value>
+  </data>
+  <data name="TreeDataKeyEditorControl_NoParseResults" xml:space="preserve">
+    <value>Es wurde kein Ergebnis vom Parser zurückgegeben</value>
+  </data>
+  <data name="TreeDataKeyEditorControl_NoParseResultsCaption" xml:space="preserve">
+    <value>Keine Ergebnisse</value>
+  </data>
+  <data name="ScriptDocumentControl_NoMatch" xml:space="preserve">
+    <value>Es konnte keine Übereinstimmung gefunden werden</value>
+  </data>
+  <data name="ScriptDocumentControl_NoMatchCaption" xml:space="preserve">
+    <value>Keine Übereinstimmung</value>
+  </data>
+  <data name="GotoLineForm_Label" xml:space="preserve">
+    <value>Zeilennummer (1 - {0})</value>
+  </data>
+  <data name="ParserDocumentControl_InvalidIdentifier" xml:space="preserve">
+    <value>Der Name '{0}' ist kein gültiger Bezeichner</value>
+  </data>
+  <data name="ParserDocumentControl_InvalidIdentifierCaption" xml:space="preserve">
+    <value>Ungültiger Name</value>
+  </data>
+  <data name="ParserDocumentControl_TypeNameExists" xml:space="preserve">
+    <value>Der Typ {0} existiert bereits. Bitte einen anderen Namen wählen.</value>
+  </data>
+  <data name="ParserDocumentControl_TypeNameExistsCaption" xml:space="preserve">
+    <value>Der Typname existiert bereits</value>
+  </data>
+  <data name="ParserDocumentControl_RemoveType" xml:space="preserve">
+    <value>Wollen Sie {0} löschen?</value>
+  </data>
+  <data name="ParserDocumentControl_RemoveTypeCaption" xml:space="preserve">
+    <value>{0} löschen?</value>
+  </data>
+  <data name="InjectPacketForm_NotSupported" xml:space="preserve">
+    <value>Es konnte nicht an spezifiziertem Knoten injiziert werden</value>
+  </data>
+  <data name="InjectPacketForm_SelectGraph" xml:space="preserve">
+    <value>Es ist keine Verbindungen für die Injizierung vorhanden</value>
+  </data>
+  <data name="ParserDocumentControl_Validation" xml:space="preserve">
+    <value>Der Parser validierte erfolgreich</value>
+  </data>
+  <data name="ParserDocumentControl_ValidationCaption" xml:space="preserve">
+    <value>Validierung erfolgreich</value>
+  </data>
+  <data name="ParserDocumentControl_ValidationError" xml:space="preserve">
+    <value>Fehler bei der Validierung</value>
+  </data>
+  <data name="InjectPacketForm_SelectNode" xml:space="preserve">
+    <value>Es wurde kein Knoten für die Injizierung ausgewählt</value>
+  </data>
+  <data name="SelectBlockForm_EndOffsetLessThanOffset" xml:space="preserve">
+    <value>Der Endoffset muss größer oder gleich dem Anfangsoffset sein</value>
+  </data>
+  <data name="SelectBlockForm_OffsetGreaterThanSize" xml:space="preserve">
+    <value>Das Offset muss kleiner als ({0} Hexbytes sein</value>
+  </data>
+  <data name="HexEditor_InvalidBase64Length" xml:space="preserve">
+    <value>Die ausgewählten Daten haben eine ungültige base64-Länge. Diese muss ein Vielfaches von vier Bytes sein</value>
+  </data>
+  <data name="AllFilesFilter_String" xml:space="preserve">
+    <value>Alle Dateien (*.*)|*.*</value>
+  </data>
+  <data name="PacketLogControl_ClearLog" xml:space="preserve">
+    <value>Soll der Log gelöscht werden?</value>
+  </data>
+  <data name="PacketLogControl_ClearLogCaption" xml:space="preserve">
+    <value>Log löschen?</value>
+  </data>
+  <data name="PacketLogControl_DataColumn" xml:space="preserve">
+    <value>Daten</value>
+  </data>
+  <data name="PacketLogControl_ErrorReadingFile" xml:space="preserve">
+    <value>Fehler beim Lesen der Datei {0}</value>
+  </data>
+  <data name="PacketLogControl_ErrorWritingPackets" xml:space="preserve">
+    <value>Fehler beim Schreiben des Paketes '{0}'</value>
+  </data>
+  <data name="PacketLogControl_HashColumn" xml:space="preserve">
+    <value>Hash</value>
+  </data>
+  <data name="PacketLogControl_LengthColumn" xml:space="preserve">
+    <value>Länge</value>
+  </data>
+  <data name="PacketLogControl_NetworkColumn" xml:space="preserve">
+    <value>Netzwerk</value>
+  </data>
+  <data name="PacketLogControl_NoColumn" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="PacketLogControl_SelectDiffPackets" xml:space="preserve">
+    <value>Es müssen zwei Pakete für das bilden der Differenz ausgewählt werden</value>
+  </data>
+  <data name="PacketLogControl_TagColumn" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="PacketLogControl_TimestampColumn" xml:space="preserve">
+    <value>Zeitstempel</value>
+  </data>
+  <data name="TextFileFilter_String" xml:space="preserve">
+    <value>Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*</value>
+  </data>
+  <data name="SslConfigControl_SpecifyCertPrivateKey" xml:space="preserve">
+    <value>Sie müssen ein Zertifikat mit privatem Schlüssel bereitstellen</value>
+  </data>
+  <data name="InjectPacketControl_CancelButtonText" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="InjectPacketControl_InjectButtonText" xml:space="preserve">
+    <value>Inject</value>
+  </data>
+  <data name="StringConverters_InvalidHexStringLength" xml:space="preserve">
+    <value>Der Hexstring muss ein Vielfaches von zwei Hexzeichen sein</value>
+  </data>
+  <data name="ConfigurePacScriptForm_TestReturned" xml:space="preserve">
+    <value>Der Test gab '{0}' zurück</value>
+  </data>
+  <data name="CreateCertForm_MustSpecifyCA" xml:space="preserve">
+    <value>Das Rootzertifikat muss spezifiziert werden</value>
+  </data>
+  <data name="CreateCertForm_MustSpecifyCN" xml:space="preserve">
+    <value>Das Common Name Feld muss spezifiziert werden</value>
+  </data>
+  <data name="CreateCertForm_CertSelect" xml:space="preserve">
+    <value>Zertifikatsausswahl</value>
+  </data>
+  <data name="CreateCertForm_CertSelectTitle" xml:space="preserve">
+    <value>Es muss ein Zertifikate aus der Liste ausgewählt werden</value>
+  </data>
+  <data name="CreateCertForm_NoStoreCerts" xml:space="preserve">
+    <value>Es konnten keine Zertifikate im privaten Schlüsselspeicher gefunden werden</value>
+  </data>
+  <data name="CreateCertForm_StoreError" xml:space="preserve">
+    <value>Es konnten keine Informationen zu diesem Zertifikat geschrieben werden</value>
+  </data>
+  <data name="EditFilterForm_InvalidRegex" xml:space="preserve">
+    <value>Ungültiger regulärer Ausdruck</value>
+  </data>
+  <data name="EditFilterForm_MustProvideHost" xml:space="preserve">
+    <value>Es muss ein Host angeben werden(* ist Platzhalter)</value>
+  </data>
+  <data name="EditPacketForm_Title" xml:space="preserve">
+    <value>Paket editieren - {0}</value>
+  </data>
+  <data name="FindPacketForm_CancelButtonText" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="FindPacketForm_FindButtonText" xml:space="preserve">
+    <value>Suchen</value>
+  </data>
+  <data name="FindPacketForm_SelectMode" xml:space="preserve">
+    <value>Fehler, der Übereinstimmungsmodus muss gesetzt werden</value>
+  </data>
+  <data name="FindPacketForm_SelectModeEncoding" xml:space="preserve">
+    <value>Der Modus und die Enkodierung muss ausgewählt werden</value>
+  </data>
+  <data name="FindPacketForm_SpecifySearch" xml:space="preserve">
+    <value>Der Suchstring muss angegeben werden</value>
+  </data>
+  <data name="HistogramLogViewerForm_Title" xml:space="preserve">
+    <value>Das Histogram von {0} Paket(en), {1} Byte(s)</value>
+  </data>
+  <data name="LoadCertFromFileForm_CertFilter" xml:space="preserve">
+    <value>PFX Zertifikate (*.pfx;*.p12)|*.pfx;*.p12|Zertifikatdateien (*.cer,*.pem,*.crt,*.der)|*.cer;*.pem;*.crt;*.der|All Files (*.*)|*.*</value>
+  </data>
+  <data name="LoadCertFromFileForm_KeyFilter" xml:space="preserve">
+    <value>Schlüsseldatei (*.key)|*.key|Alle Dateien (*.*)|*.*</value>
+  </data>
+  <data name="LoadCertFromFileForm_NoPrivateKey" xml:space="preserve">
+    <value>Das Zertifikat hat keinen privaten Schlüssel</value>
+  </data>
+  <data name="LoadCertFromFileForm_SpecifyCert" xml:space="preserve">
+    <value>Die Zertifikatdatei muss angegeben werden</value>
+  </data>
+  <data name="LoadCertFromFileForm_SpecifyKey" xml:space="preserve">
+    <value>Die Schlüsseldatei muss angegeben werden</value>
+  </data>
+  <data name="PacketLogViewerForm_ConvertToBytes" xml:space="preserve">
+    <value>Soll dieses Paket in Bytes konvertiert werden?</value>
+  </data>
+  <data name="PacketLogViewerForm_ConvertToBytesCaption" xml:space="preserve">
+    <value>Konvertieren?</value>
+  </data>
+  <data name="PacketLogViewerForm_Header" xml:space="preserve">
+    <value>{0} aus {1} - {2} - {3} - {4}</value>
+  </data>
+  <data name="PacketLogViewerForm_Title" xml:space="preserve">
+    <value>Paketlog</value>
+  </data>
+  <data name="PacketLogViewerForm_TitleReadOnly" xml:space="preserve">
+    <value>Paketlog - Schreibgeschützt</value>
+  </data>
+  <data name="PrimitiveValueEditorForm_InvalidValue" xml:space="preserve">
+    <value>Fehlerhafter Wert - {0}</value>
+  </data>
+  <data name="ProjectExplorer_AssembliesFileFilter" xml:space="preserve">
+    <value>Assemblies (*.dll;*.exe)|*.dll;*.exe|Alle Dateien (*.*)|*.*</value>
+  </data>
+  <data name="ProjectExplorer_CouldntCreateTest" xml:space="preserve">
+    <value>Der Testtyp konnte nicht erstellt werden</value>
+  </data>
+  <data name="ProjectExplorer_DataNodeName" xml:space="preserve">
+    <value>Daten</value>
+  </data>
+  <data name="ProjectExplorer_DeleteDocument" xml:space="preserve">
+    <value>Soll das Dokument '{0}' gelöscht werden?</value>
+  </data>
+  <data name="ProjectExplorer_DeleteDocumentCaption" xml:space="preserve">
+    <value>Löschen?</value>
+  </data>
+  <data name="ProjectExplorer_GraphsNodeName" xml:space="preserve">
+    <value>Graphen</value>
+  </data>
+  <data name="ProjectExplorer_RootNodeName" xml:space="preserve">
+    <value>Projekt</value>
+  </data>
+  <data name="ProjectExplorer_ScriptsNodeName" xml:space="preserve">
+    <value>Skripte</value>
+  </data>
+  <data name="ProjectExplorer_ServicesNodeName" xml:space="preserve">
+    <value>Dienste</value>
+  </data>
+  <data name="ProjectExplorer_TestName" xml:space="preserve">
+    <value>{0} Test</value>
+  </data>
+  <data name="ProjectExplorer_TestsNodeName" xml:space="preserve">
+    <value>Tests</value>
+  </data>
+  <data name="SelectEndointForm_SelectServer" xml:space="preserve">
+    <value>Ein Server muss aus angegeben werden</value>
+  </data>
+  <data name="SelectEndpointForm_SelectClass" xml:space="preserve">
+    <value>Eine Klasse muss angegeben werden</value>
+  </data>
+  <data name="SelectEndpointForm_SelectScript" xml:space="preserve">
+    <value>Ein Skriptdokument muss angegeben werden</value>
+  </data>
+  <data name="SelectLibraryNodeForm_DescriptionColumn" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="SelectLibraryNodeForm_NameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SelectLibraryNodeForm_SelectNode" xml:space="preserve">
+    <value>Ein Knotentyp muss angegeben werden</value>
+  </data>
+  <data name="SelectScriptTemplateForm_EmptyScript" xml:space="preserve">
+    <value>Leer</value>
+  </data>
+  <data name="SelectScriptTemplateForm_EmptyScriptDescription" xml:space="preserve">
+    <value>Eine leere Skriptdatei</value>
+  </data>
+  <data name="SelectTemplateForm_DescriptionColumn" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="SelectTemplateForm_NameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SelectTemplateForm_SpecifyTemplate" xml:space="preserve">
+    <value>Ein Templatetyp muss ausgewählt werden</value>
+  </data>
+  <data name="ConfigurePacScriptForm_CannotUseProxyScript" xml:space="preserve">
+    <value>Es konnte kein Proxyscriptbetrieb erstellt werden</value>
+  </data>
+  <data name="AddReferenceForm_MustSpecifyAnAssemblyName" xml:space="preserve">
+    <value>Ein Assemblername muss für manuelles Laden spezifiziert werden.</value>
+  </data>
+  <data name="CreateCertForm_MustSpecifyTemplate" xml:space="preserve">
+    <value>Ein Templatezertifikat muss angegeben werden</value>
+  </data>
+  <data name="LineContainer_LabelDescription" xml:space="preserve">
+    <value>Ein Label was der Zeile zugewiesen wird. Gibt einem Knoten die Möglichkeit zu spezifizieren, welche Route ein Paket nehmen soll</value>
+  </data>
+  <data name="EditConfigPropertyForm_SelectAType" xml:space="preserve">
+    <value>Ein Eigenschaftstypen muss angegeben werden.</value>
+  </data>
+  <data name="EditConfigPropertyForm_SpecifyAName" xml:space="preserve">
+    <value>Ein gültiger Name muss angegeben werden. Es sind nur Buchstaben, Zahlen, Unterstriche erlaubt und der Name darf nicht mit einer Zahl beginnen</value>
+  </data>
+  <data name="CreateCertForm_SpecifyPassword" xml:space="preserve">
+    <value>Das Zertifikat ist geschützt. Wollen Sie ein Passwort angeben?</value>
+  </data>
+  <data name="CreateCertForm_SpecifyPasswordCaption" xml:space="preserve">
+    <value>Passwordeingabe</value>
+  </data>
+  <data name="SslConfigControl_ErrorLoadingStoreCert" xml:space="preserve">
+    <value>Ein Fehler beim Laden des Zertifikates aus dem Speicher ist aufgetreten: {0}</value>
+  </data>
+  <data name="SslConfigControl_NoPrivateKeyInStore" xml:space="preserve">
+    <value>Es wurden keine verfügbaren Zertifikate mit privatem Schlüssel im Speicher gefunden</value>
+  </data>
+  <data name="LoadCertFromFileForm_InvalidPrivateKeyFile" xml:space="preserve">
+    <value>Es konnte keinen privaten Schlüssel aus der Datei geladen werden</value>
+  </data>
+  <data name="EventLogControl_ClearLog" xml:space="preserve">
+    <value>Soll der Log gelöscht werden?</value>
+  </data>
+  <data name="EventLogControl_ClearLogCaption" xml:space="preserve">
+    <value>Log löschen?</value>
+  </data>
+  <data name="EventLogControl_TextFilesFilter" xml:space="preserve">
+    <value>Text Dateien(*.txt)|*.txt|Alle Dateien (*.*)|*.*"</value>
+  </data>
+  <data name="PacketLogViewerForm_ConfirmSave" xml:space="preserve">
+    <value>Der Log enthält veränderte Daten. Speichern?</value>
+  </data>
+  <data name="PacketLogViewerForm_ConfirmSaveCaption" xml:space="preserve">
+    <value>Speichern?</value>
+  </data>
+  <data name="ParserDocumentControl_RootNodeName" xml:space="preserve">
+    <value>Projekt</value>
+  </data>
+  <data name="ParserDocumentControl_CSSourceFilter" xml:space="preserve">
+    <value>C# Sourcecode Datei (*.cs)|*.cs|Alle Dateien (*.*)|*.*</value>
+  </data>
+  <data name="BinaryFrameDiffControl_NoDifferenceFound" xml:space="preserve">
+    <value>Keine Unterschiede gefunden</value>
+  </data>
+  <data name="BinaryFrameDiffControl_NoDifferenceFoundCaption" xml:space="preserve">
+    <value>Kein Unterschied</value>
+  </data>
+</root>

@@ -1,0 +1,1 @@
+heat dir SourceDir -dr APPLICATIONROOTDIRECTORY -wixvar -projectname canape -template fragment -srd -scom -sreg -gg -cg canapefiles -o canape_files.wxs

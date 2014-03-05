@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="e0299d57-72ad-44e0-a78d-e0a45834b3b3" revisionNumber="1">
+  <developerUIReferenceDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">    
+    <introduction>
+      <para>The CANAPE User Interface is ones of the defining features of the application. It provides easy configuration of network protocols and allows you to generate custom parsers and clients with relative ease.</para>
+    </introduction>    
+    <section address="MainInterface">
+      <title>Main Interface</title>
+      <content>        
+        <para>The main interface to CANAPE is similar to an Integrated Development Environment (IDE) such as Visual Studio. 
+        By default it contains a main window and the project explorer which contains resources. The main window shows a tabbed view of open resources. 
+        To open a new resource double click it in project explorer, and it should show in the main window.</para>
+        <mediaLink><image xlink:href="ui_overview"/></mediaLink>
+        <para>You can move the windows about (even the project explorer) and dock them just like in other IDEs. To do that hold the left mouse button on the tab or the title bar and drag the mouse, you should see some icons appear in the window. 
+        Move the mouse over the icon which indicates what type of docking you want and release the left mouse button. The window should automatically dock.</para>
+        <mediaLink><image xlink:href="ui_docking_icon"/></mediaLink>
+        <param>To close open windows you can do one of two things, either click the (X) to the right of the window, or for tabs you can right click the tab to bring up a menu, you can then select to close that window or all but that window.</param>
+        <mediaLink><image xlink:href="ui_close_window"/></mediaLink>
+      </content>
+    </section>
+    <section address="ProjectExplorer">
+      <title>Project Explorer</title>
+      <content>        
+        <para>The project explorer displays a tree of the current resources for your project, each resource is a document in the project. It is automatically separated into the major types of resources:
+ 	       <list class="bullet">
+  			<listItem><para>Scripts: This is for custom C# and Python scripts as well as Parsers</para></listItem>
+  			<listItem><para>Services: This is for network proxies, servers and clients</para></listItem>
+  			<listItem><para>Graphs: This for network graphs</para></listItem>
+  			<listItem><para>Data: This for data such as text files, binary files and packet logs</para></listItem>
+  			<listItem><para>Test: This for test documents for scripts and graphs</para></listItem>
+  		   </list>
+        </para>
+        <para>
+        You can add new documents to the project by right clicking somewhere in the project explorer tree, then under Add you can select the document you want to add. The following is the currently available options in version 1.3.
+        <list class="bullet">
+  			<listItem><para>NetGraph: Adds a new net graph or state graph</para></listItem>
+  			<listItem><para>Network Service: Adds a new proxy or server</para></listItem>
+  			<listItem><para>Dynamic: Adds a new script or parser</para></listItem>
+  			<listItem><para>Data: Adds a new packet log, text document, binary document or differing document</para></listItem>  			
+  		   </list>
+        </para>
+      </content>
+    </section>
+    <section address="NetGraphEditor">
+      <title>Net Graph Editor</title>
+      <content>        
+        <para>
+        If you open a net graph document you will see this editor window. Where you can edit the graph.
+        </para>        
+        <mediaLink><image xlink:href="ui_graph_editor"/></mediaLink>        
+        <para>
+        The editor consists of the graph itself as a property editor. The property editor if for modifying the properties of the currently selected node or edge. If no selection is made the properties of the graph can be edited.
+        To select an node or edge click with the left mouse button. Right clicking the graph will bring up a menu where new nodes can be added or the current selected object deleted. 
+        To move a node, select it, hold the left mouse button on it then drag the mouse releasing when it reaches the desired location. To add a line between nodes either click and hold the middle mouse button or Right CTRL + left mouse button over the source node, drag mouse to the desintation node and release.         
+        </para>
+        <para>
+        The property editor allows values to be changed by selecting the property in the right hand column and typing the desired value. Some properties need to use specify editors, this is indicated when clicking by a small button to the right containing '...'. Click this button to bring up the editor. 
+        Some values also have pre-determined options, this is indicated by a down arrow button. Click to bring up the options.
+        </para>
+        <mediaLink><image xlink:href="ui_graph_property_edit"/></mediaLink>      
+      </content>
+    </section>
+    <section address="NetworkServiceEditor">
+      <title>Network Service Editor</title>
+      <content>        
+        <para>
+        The network service editor is used when editing a proxy, server or client document. It contains some common functionality and a user interface tailored to specific requirements of service being edited. Everything is accessed through the 
+        tabs at the top of the user interface. The service specific interface is under the first Settings tab. The next tab is the packet log, this is where packets are logged to when they come to the service. See <link xlink:href="#PacketLog">Packet Log</link> for a detailed description of the functionality of this tab.
+        </para>        
+        <mediaLink><image xlink:href="ui_network_service"/></mediaLink>                      
+        <para>
+        Next is the text log. This log is for information purposes and to display errors. Custom code can log text information here. You can select what gets logged by right clicking and specifying the log level. You can also sometimes see more information about a log entry by double clicking it to bring up a viewing window.        
+        </para>
+        <mediaLink><image xlink:href="ui_network_service_text_log"/></mediaLink>
+        <para>
+        Next is the global meta. This contains the list of current, service level meta data. Meta data is information which needs to be shared between different services or connections.
+        </para>
+        <mediaLink><image xlink:href="ui_network_service_global_meta"/></mediaLink>        
+      </content>
+    </section>
+    <section address="ScriptEditor">
+      <title>Script Editor</title>
+      <content>        
+        <para>
+        The script editor is visible when opening a script document. It contains an editing window with syntax highlighting for different languages. Changes are not saved automatically to prevent invalid scripts from causing problems with the network services, after modification you must click the save button or press CTRL+S.         
+        </para> 
+        <mediaLink><image xlink:href="ui_script_editor"/></mediaLink>   
+        <para>
+        Clicking on the configuration button brings up the script configuration editor. From here you can add additional referenced assemblies to the script (say for custom libraries), enable debugging and modifying the script configuration which allows you to specify values to include in net graph editor. 
+        <mediaLink><image xlink:href="ui_script_editor_config"/></mediaLink>   
+        </para>
+        <para>
+        Clicking on the test button creates a new test document, or opens an existing one. Here you can test scripts in isolation. Input packets can be placed in the input log, when the Run button is clicks all packets will be passed through the script and the output reflected in the lower log. The Path box specifies the selection path for the script which determines what part of the packet to manipulate.         
+        </para>
+        <mediaLink><image xlink:href="ui_script_editor_test"/></mediaLink>   
+      </content>
+    </section>
+    <section address="PacketLog">
+      <title>Packet Log</title>
+      <content>        
+        <para>
+        The packet log stores information about a list of captured packets. The main view is a list contains basic information about all packets in the log. You will see this being used in various different places such as in services or the standalone packet log.         
+        </para>        
+        <mediaLink><image xlink:href="ui_network_service_packet_log"/></mediaLink>        
+        <para>
+        Double clicking an entry in the list brings up the individual log view. From here you can view and edit packets, depending on the packet type this might show a hex editor or a tree editor. If you modify a packet you must click the save button, you can undo changes by clicking the undo button (note this undoes all changes since the last save). You can navigate through the log by click the forward and back buttons. 
+        </para>
+        <mediaLink><image xlink:href="ui_packet_log_viewer"/></mediaLink>        
+        <para>
+        The log list can be modified in various different ways. Packets can be copied and pasted in and out of the log. A new empty packet can be created by right clicking and chose Add Packet (only works in writable logs). You can also drag and drop packets from one location to another. 
+        </para>
+      </content>
+    </section>
+    
+</developerUIReferenceDocument>
+</topic>

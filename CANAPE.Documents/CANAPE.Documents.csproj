@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B96A90D-7898-4688-B401-12F56BE1AB47}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CANAPE.Documents</RootNamespace>
+    <AssemblyName>CANAPE.Documents</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\Release\CANAPE.Documents.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\CANAPE\canape.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDocumentObject.cs" />
+    <Compile Include="CANAPEProject.cs" />
+    <Compile Include="Data\AssemblyDocument.cs" />
+    <Compile Include="Data\BaseParserDocument.cs" />
+    <Compile Include="Data\BinaryDocument.cs" />
+    <Compile Include="Data\PacketLogDiffDocument.cs" />
+    <Compile Include="Data\ParserDocument.cs" />
+    <Compile Include="Data\TestDocumentTypeAttribute.cs" />
+    <Compile Include="Data\TextDocument.cs" />
+    <Compile Include="DocumentTypeAttribute.cs" />
+    <Compile Include="Extension\DocumentExtensionAttribute.cs" />
+    <Compile Include="Extension\DocumentExtensionManager.cs" />
+    <Compile Include="Extension\NetworkLayerFactoryAttribute.cs" />
+    <Compile Include="Extension\NetworkLayerFactoryManager.cs" />
+    <Compile Include="InvalidVersionException.cs" />
+    <Compile Include="Net\ConnectionHistory.cs" />
+    <Compile Include="Net\Factories\BaseProxyClientFactory.cs" />
+    <Compile Include="Net\Factories\DataEndpointFactory.cs" />
+    <Compile Include="Net\Factories\DefaultProxyClientFactory.cs" />
+    <Compile Include="Net\Factories\FixedIpProxyClientFactory.cs" />
+    <Compile Include="Net\Factories\HttpNetworkLayerFactory.cs" />
+    <Compile Include="Net\Factories\HttpProxyClientFactory.cs" />
+    <Compile Include="Net\Factories\BaseNetworkLayerFactory.cs" />
+    <Compile Include="Net\Factories\IpProxyListenerFactory.cs" />
+    <Compile Include="Net\Factories\IProxyListenerFactory.cs" />
+    <Compile Include="Net\Factories\IpProxyClientFactory.cs" />
+    <Compile Include="Net\Factories\IpProxyFilterFactory.cs" />
+    <Compile Include="Net\Factories\IProxyClientFactory.cs" />
+    <Compile Include="Net\NodeConfigs\EndpointClassChoiceConverter.cs" />
+    <Compile Include="Net\NodeConfigs\LayerClassChoiceConverter.cs" />
+    <Compile Include="Net\Factories\LibraryDataEndpointFactory.cs" />
+    <Compile Include="Net\Factories\ScriptDataEndpointFactory.cs" />
+    <Compile Include="Net\Factories\ScriptNetworkLayerFactory.cs" />
+    <Compile Include="Net\Factories\ScriptProxyClientFactory.cs" />
+    <Compile Include="Net\Factories\SocksProxyClientFactory.cs" />
+    <Compile Include="Net\Factories\SslNetworkLayerFactory.cs" />
+    <Compile Include="Net\Factories\SystemProxyClientFactory.cs" />
+    <Compile Include="Net\Factories\TcpProxyClientFactory.cs" />
+    <Compile Include="Net\Factories\TcpProxyListenerFactory.cs" />
+    <Compile Include="Net\Factories\UdpProxyListenerFactory.cs" />
+    <Compile Include="Net\FixedProxyDocument.cs" />
+    <Compile Include="Net\FullHttpProxyDocument.cs" />
+    <Compile Include="Net\GenericProxyDocument.cs" />
+    <Compile Include="Net\HttpProxyDocument.cs" />
+    <Compile Include="IDocumentObject.cs" />
+    <Compile Include="Net\HttpReverseProxyDocument.cs" />
+    <Compile Include="Net\LogPacketCollection.cs" />
+    <Compile Include="Net\NetAutoClientDocument.cs" />
+    <Compile Include="Net\NetClientDocument.cs" />
+    <Compile Include="Net\NetGraphDocument.cs" />
+    <Compile Include="Net\NetGraphTestDocument.cs" />
+    <Compile Include="Net\NetServerDocument.cs" />
+    <Compile Include="Net\NetServiceDocument.cs" />
+    <Compile Include="Net\NodeConfigs\BaseNodeConfig.cs" />
+    <Compile Include="Net\NodeConfigs\BaseClassChoiceConverter.cs" />
+    <Compile Include="Net\NodeConfigs\ClientEndpointConfig.cs" />
+    <Compile Include="Net\NodeConfigs\DynamicNodeConfigProperty.cs" />
+    <Compile Include="Net\NodeConfigs\DelayNodeConfig.cs" />
+    <Compile Include="Net\NodeConfigs\DecisionNodeConfig.cs" />
+    <Compile Include="Net\NodeConfigs\DirectNodeConfig.cs" />
+    <Compile Include="Net\NodeConfigs\DocumentChoiceConverter.cs" />
+    <Compile Include="Net\NodeConfigs\DynamicNodeConfig.cs" />
+    <Compile Include="Net\NodeConfigs\EditPacketNodeConfig.cs" />
+    <Compile Include="Net\NodeConfigs\ILinkedNodeConfig.cs" />
+    <Compile Include="Net\NodeConfigs\IScriptProvider.cs" />
+    <Compile Include="Net\NodeConfigs\LayerSectionNodeConfig.cs" />
+    <Compile Include="Net\NodeConfigs\MasterLayerNodeConfig.cs" />
+    <Compile Include="Net\NodeConfigs\NodeClassChoiceConverter.cs" />
+    <Compile Include="Net\NodeConfigs\ScriptDynamicTypeDescriptor.cs" />
+    <Compile Include="Net\NodeConfigs\SlaveLayerNodeConfig.cs" />
+    <Compile Include="Net\NodeConfigs\SslLayerSectionNodeConfig.cs" />
+    <Compile Include="Net\NodeConfigs\LibraryNodeConfig.cs" />
+    <Compile Include="Net\Factories\LibraryNodeFactory.cs" />
+    <Compile Include="Net\NodeConfigs\LineConfig.cs" />
+    <Compile Include="Net\NodeConfigs\LogPacketConfig.cs" />
+    <Compile Include="Net\NodeConfigs\NetGraphContainerConfig.cs" />
+    <Compile Include="Net\NodeConfigs\NodeChoiceConverter.cs" />
+    <Compile Include="Net\NodeConfigs\RegexConverter.cs" />
+    <Compile Include="Net\NodeConfigs\ServerEndpointConfig.cs" />
+    <Compile Include="Net\NodeConfigs\SwitchNodeConfig.cs" />
+    <Compile Include="Data\PacketLogDocument.cs" />
+    <Compile Include="Net\Factories\ProxyFilterFactory.cs" />
+    <Compile Include="Data\ScriptTestDocument.cs" />
+    <Compile Include="Data\TestDocument.cs" />
+    <Compile Include="Net\StateGraphDocument.cs" />
+    <Compile Include="NodeFactories\LayerSectionFilterFactory.cs" />
+    <Compile Include="NodeFactories\LayerSectionMasterNodeFactory.cs" />
+    <Compile Include="NodeFactories\LayerSectionSlaveNodeFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\ScriptDocument.cs" />
+    <Compile Include="Net\SocksProxyDocument.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CANAPE.Extension\CANAPE.Extension.csproj">
+      <Project>{28C043FE-9095-4AC8-A442-70B012950F59}</Project>
+      <Name>CANAPE.Extension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Net.Protocols\CANAPE.Net.Protocols.csproj">
+      <Project>{95645ca2-c918-4516-8cae-9ab6dde41b7d}</Project>
+      <Name>CANAPE.Net.Protocols</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Net\CANAPE.Net.csproj">
+      <Project>{5859BC1C-AF63-4743-B853-144B108545D1}</Project>
+      <Name>CANAPE.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Parser\CANAPE.Parser.csproj">
+      <Project>{98F335B7-61C4-4143-AF03-2012D1374BEC}</Project>
+      <Name>CANAPE.Parser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Scripting\CANAPE.Scripting.csproj">
+      <Project>{D930CADC-7534-42B3-ADFD-E07549C67528}</Project>
+      <Name>CANAPE.Scripting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Security\CANAPE.Security.csproj">
+      <Project>{AB96ACE5-9681-414D-87F7-54ED3BCC24D7}</Project>
+      <Name>CANAPE.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE\CANAPE.csproj">
+      <Project>{34432D8F-EAD0-48B9-8317-EB9D69D68B95}</Project>
+      <Name>CANAPE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NewFileFormat.txt" />
+    <Content Include="Templates\Proxy\index.de.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Server\index.de.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Server\index.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Proxy\basic_socks_proxy.canape">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Proxy\basic_fixed_proxy.canape">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Proxy\basic_http_proxy.canape">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Proxy\http_proxy_http.canape">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Proxy\socks_proxy_http.canape">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Server\basic_https_server.canape">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Server\basic_http_server.canape">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Server\echo_server.canape">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Server\cert_http_server.canape">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="..\CANAPE\canape.snk">
+      <Link>canape.snk</Link>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Templates\Proxy\index.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BaseNodeFactory_Create" xml:space="preserve">
+    <value>Fehler beim Erstellen eines Knotens {0} - {1}</value>
+  </data>
+  <data name="BinaryDataFrameFilterFactory_MatchDescription" xml:space="preserve">
+    <value>Übereinstimmende binäre Daten</value>
+  </data>
+  <data name="ColorValue_InvalidStringFormat" xml:space="preserve">
+    <value>Ungültiges Farbstringformat; dieser muss ein Hexstring in Form von #RRGGBB oder ein X11 Farbname sein</value>
+  </data>
+  <data name="DataFrameFilterExpression_ToString" xml:space="preserve">
+    <value>{0} Filter</value>
+  </data>
+  <data name="DataFrameFilterFactory_EnabledDescription" xml:space="preserve">
+    <value>Wenn wahr, dann ist dieser Filter aktiviert</value>
+  </data>
+  <data name="DataFrameFilterFactory_InvertDescription" xml:space="preserve">
+    <value>Übereinstimmung invertieren</value>
+  </data>
+  <data name="DataFrameFilterFactory_PathDescription" xml:space="preserve">
+    <value>Zu selektierender Datenframepfad, welcher auf das gesamte Paket gesetzt ist</value>
+  </data>
+  <data name="DataFrame_Exception1" xml:space="preserve">
+    <value>Kann aktuellen Knoten nicht auf ein anderes Frame setzen</value>
+  </data>
+  <data name="DataKey_AddSubNodeException" xml:space="preserve">
+    <value>Kann keinen Knoten hinzufügen, der auf ein anderes Frame gesetzt ist</value>
+  </data>
+  <data name="DataKey_AddValueInvalidEncoding" xml:space="preserve">
+    <value>Ungültiger Enkodierungsname {0}</value>
+  </data>
+  <data name="DataKey_InvalidChildNode" xml:space="preserve">
+    <value>Der Kinderknoten ist kein Kind des Schlüssels</value>
+  </data>
+  <data name="DataReader_InvalidBitCount" xml:space="preserve">
+    <value>Kann nur 0 bis 63 Bits des Streams auf einmal lesen</value>
+  </data>
+  <data name="DataReader_InvalidPrimitiveType" xml:space="preserve">
+    <value>Ein ungültiger Primitivtyp wurde bei ReadPrimitive gesetzt- {0}</value>
+  </data>
+  <data name="DataReader_ReadBytesEof" xml:space="preserve">
+    <value>Es konnten nicht alle geforderten Bytes gelesen werden.</value>
+  </data>
+  <data name="DataReader_ReadCharEof" xml:space="preserve">
+    <value>Es konnte keine gültiges Zeichen aus dem Stream gelesen werden</value>
+  </data>
+  <data name="DataWriter_InvalidBitCount" xml:space="preserve">
+    <value>Es können nur 0 bis 63 Bits des Streams auf einmal geschrieben werden</value>
+  </data>
+  <data name="DataWriter_InvalidPrimitiveType" xml:space="preserve">
+    <value>Ein ungültiger Primitivtyp wurde bei WritePrimitive gesetzt - {0}</value>
+  </data>
+  <data name="EnumDataValue_FindValueByName" xml:space="preserve">
+    <value>Ein ungültige Namenswert {0} wurde gefunden</value>
+  </data>
+  <data name="EnumDataValue_FromString" xml:space="preserve">
+    <value>Ein ungültiger Aufzählungsstring {0} wurde gefunden</value>
+  </data>
+  <data name="EnumDataValue_InvalidType" xml:space="preserve">
+    <value>Ein ungültiger unterliegender Typ für Enumerierung wurde gefunden</value>
+  </data>
+  <data name="GeneralUtils_InvalidHexString" xml:space="preserve">
+    <value>Der String darf nur Hex- oder Leerzeichen enthalten</value>
+  </data>
+  <data name="GeneralUtils_InvalidHexStringLength" xml:space="preserve">
+    <value>Der Hexstring muss aus einem vielfachen von zwei Hexwerten bestehen</value>
+  </data>
+  <data name="GenericDataValue_InvalidType" xml:space="preserve">
+    <value>Ein ungültiger Typ für den Wert wurde gefunden</value>
+  </data>
+  <data name="GetConfigDir_ErrorCreatingDir" xml:space="preserve">
+    <value>Ein Fehler ist beim Erstellen des Benutzerkonfigurationspfades aufgetreten</value>
+  </data>
+  <data name="Int24_InvalidCompareObject" xml:space="preserve">
+    <value>Das Objekt welches an CompareTo übergeben wurde ist kein Int24</value>
+  </data>
+  <data name="MissingDataNodeException_DefaultMessage" xml:space="preserve">
+    <value>Es konnte kein Datenknoten finden {0}</value>
+  </data>
+  <data name="NetGraphContainerFactory_MustSpecifyGraph" xml:space="preserve">
+    <value>Ein Graph muss für einen Kontainer spezifiziert werden</value>
+  </data>
+  <data name="NetGraphContainerNode_InvalidGraph" xml:space="preserve">
+    <value>Untergraph muss einen Client- und Serverknoten besitzen</value>
+  </data>
+  <data name="NetGraphFactory_NoClientEndpoint" xml:space="preserve">
+    <value>Muss einen Clientendpunkt von Client zu Server besitzen</value>
+  </data>
+  <data name="NetGraphFactory_NoServerEndpoint" xml:space="preserve">
+    <value>Muss einen Serverendpunkt von Server zu Client besitzen</value>
+  </data>
+  <data name="NetGraph_InvalidEndpointId" xml:space="preserve">
+    <value>Invalide Endpunktid {0}</value>
+  </data>
+  <data name="NodeCountDataFrameFilterFactory_CountDescription" xml:space="preserve">
+    <value>Die Anzahl der zu testenden Knoten</value>
+  </data>
+  <data name="NodeCountDataFrameFilterFactory_DisplayString" xml:space="preserve">
+    <value>{0} {1} ausgewählte Knoten</value>
+  </data>
+  <data name="NodeCountDataFrameFilterFactory_OperationDescription" xml:space="preserve">
+    <value>Vergleichsoperation</value>
+  </data>
+  <data name="PcapReader_InvalidMagic" xml:space="preserve">
+    <value>Ein ungültiger magischer Wert 0x{0:X08} für PCAP</value>
+  </data>
+  <data name="PcapReader_OnlyEthernet" xml:space="preserve">
+    <value>Es werden nur Ethernet PCAPs werden unterstützt</value>
+  </data>
+  <data name="ReadLine_CountNotReadFromStream" xml:space="preserve">
+    <value>Es konnte keine weitere Zeile aus dem Stream gelesen werden</value>
+  </data>
+  <data name="SetDataFrameFilterFactory_SearchModeDescription" xml:space="preserve">
+    <value>Die gesetzte Suchoption, die der Filter verwenden soll, um Übereinstimmungen zu finden</value>
+  </data>
+  <data name="StringDataFrameFilterFactory_CaseSensitiveDescription" xml:space="preserve">
+    <value>Gibt an, ob die Übereinstimmung Groß-/Kleinschreibung beachtet</value>
+  </data>
+  <data name="StringDataFrameFilterFactory_GetEncodigFromTypeException" xml:space="preserve">
+    <value>Ungültiges Enkodierungsformat</value>
+  </data>
+  <data name="StringDataFrameFilterFactory_MatchDescription" xml:space="preserve">
+    <value>Der zu übereinstimmende String</value>
+  </data>
+  <data name="StringDataFrameFilterFactory_StringEncodingDescription" xml:space="preserve">
+    <value>Die Stringenkodierung, wenn Daten nicht bereits im Stringformat definiert sind</value>
+  </data>
+  <data name="ToUnixTime_CannotConvert" xml:space="preserve">
+    <value>Kann {0} nicht zu einem Unixzeitstempel konvertieren, außerhalb des Bereiches</value>
+  </data>
+  <data name="UInt24_InvalidCompareObject" xml:space="preserve">
+    <value>Das Objekt welches an CompareTo  übergeben wurde ist kein UInt24</value>
+  </data>
+  <data name="UnixDateTimeDataValue_OnFromArray" xml:space="preserve">
+    <value>Der Unixzeitstempel muss vier Bytes groß sein</value>
+  </data>
+</root>

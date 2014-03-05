@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95645CA2-C918-4516-8CAE-9AB6DDE41B7D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CANAPE.Net.Protocols</RootNamespace>
+    <AssemblyName>CANAPE.Net.Protocols</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\CANAPE.Net.Protocols.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\CANAPE\canape.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Parser\DNSPacket.cs" />
+    <Compile Include="Parser\HttpDataChunk.cs" />
+    <Compile Include="Parser\HttpDataKey.cs" />
+    <Compile Include="Parser\HttpParser.cs" />
+    <Compile Include="Parser\HttpParserConfig.cs" />
+    <Compile Include="Parser\HttpRequestDataChunk.cs" />
+    <Compile Include="Parser\HttpRequestHeader.cs" />
+    <Compile Include="Parser\HttpResponseDataChunk.cs" />
+    <Compile Include="Parser\HttpResponseHeader.cs" />
+    <Compile Include="Parser\HttpStreamParserException.cs" />
+    <Compile Include="Parser\HttpVersion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\BaseHttpDataServer.cs" />
+    <Compile Include="Server\BaseHttpDataServerRef.cs" />
+    <Compile Include="Server\DynamicHttpDataServer.cs" />
+    <Compile Include="Server\HttpServerResponseData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CANAPE.Parser\CANAPE.Parser.csproj">
+      <Project>{98f335b7-61c4-4143-af03-2012d1374bec}</Project>
+      <Name>CANAPE.Parser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Scripting\CANAPE.Scripting.csproj">
+      <Project>{d930cadc-7534-42b3-adfd-e07549c67528}</Project>
+      <Name>CANAPE.Scripting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE\CANAPE.csproj">
+      <Project>{34432d8f-ead0-48b9-8317-eb9d69d68b95}</Project>
+      <Name>CANAPE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\CANAPE\canape.snk">
+      <Link>canape.snk</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

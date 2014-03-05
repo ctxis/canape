@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnFind.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Encoding:</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;progressBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="checkBoxCaseSensitive.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 61</value>
+  </data>
+  <data name="&gt;&gt;textBoxValue.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;packetLogControl.Name" xml:space="preserve">
+    <value>packetLogControl</value>
+  </data>
+  <data name="&gt;&gt;comboBoxMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBoxValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 20</value>
+  </data>
+  <data name="&gt;&gt;labelValue.Name" xml:space="preserve">
+    <value>labelValue</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="progressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 84</value>
+  </data>
+  <data name="textBoxValue.ToolTip" xml:space="preserve">
+    <value>Specify the value to find, this is usally a string unless searching for hex data</value>
+  </data>
+  <data name="btnFind.Location" type="System.Drawing.Point, System.Drawing">
+    <value>521, 84</value>
+  </data>
+  <data name="labelValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 35</value>
+  </data>
+  <data name="&gt;&gt;labelValue.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="progressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>503, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="comboBoxEncoding.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;labelValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMode.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnFind.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="packetLogControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 120</value>
+  </data>
+  <data name="btnFind.Text" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="checkBoxCaseSensitive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 17</value>
+  </data>
+  <data name="&gt;&gt;comboBoxMode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxEncoding.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxMode.Name" xml:space="preserve">
+    <value>comboBoxMode</value>
+  </data>
+  <data name="&gt;&gt;comboBoxEncoding.Name" xml:space="preserve">
+    <value>comboBoxEncoding</value>
+  </data>
+  <data name="btnFind.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="labelMode.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="progressBar.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="btnFind.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCaseSensitive.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="labelMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 61</value>
+  </data>
+  <data name="&gt;&gt;labelMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="comboBoxEncoding.Location" type="System.Drawing.Point, System.Drawing">
+    <value>366, 57</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="labelMode.Text" xml:space="preserve">
+    <value>Mode:</value>
+  </data>
+  <data name="comboBoxMode.ToolTip" xml:space="preserve">
+    <value>Specify the search mode to use</value>
+  </data>
+  <data name="&gt;&gt;comboBoxEncoding.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;comboBoxMode.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="labelValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="&gt;&gt;progressBar.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelMode.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;checkBoxCaseSensitive.Name" xml:space="preserve">
+    <value>checkBoxCaseSensitive</value>
+  </data>
+  <data name="&gt;&gt;packetLogControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxPath.Name" xml:space="preserve">
+    <value>textBoxPath</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
+  <data name="progressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;textBoxValue.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelValue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboBoxEncoding.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 21</value>
+  </data>
+  <data name="textBoxPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 32</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;progressBar.Name" xml:space="preserve">
+    <value>progressBar</value>
+  </data>
+  <data name="checkBoxCaseSensitive.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="packetLogControl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnFind.ToolTip" xml:space="preserve">
+    <value>Find all matching packets</value>
+  </data>
+  <data name="packetLogControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>607, 240</value>
+  </data>
+  <data name="labelValue.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Name" xml:space="preserve">
+    <value>toolTip</value>
+  </data>
+  <data name="packetLogControl.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboBoxMode.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBoxCaseSensitive.Text" xml:space="preserve">
+    <value>Case Sensitive</value>
+  </data>
+  <data name="&gt;&gt;btnFind.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="textBoxValue.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="textBoxPath.Text" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="&gt;&gt;btnFind.Name" xml:space="preserve">
+    <value>btnFind</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textBoxPath.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="labelValue.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBoxPath.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;packetLogControl.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btnFind.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker.Name" xml:space="preserve">
+    <value>backgroundWorker</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="comboBoxMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 58</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelValue.Text" xml:space="preserve">
+    <value>Value:</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAEBAAAAAAAABoBQAANgAAACAgAAAAAAAAqAgAAJ4FAABAQAAAAAAAACgWAABGDgAAKAAAABAA
+        AAAgAAAAAQAIAAAAAABAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8ALB2+ACMeUwAnHYQAHx4iACod
+        oQAhHjYAJR5nACYdcgAgHiwAKR2XACIeSQAqHasAKx21ACEeQAAoHY4AJh1wACEePwAmHXEAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUFBQUFAAAAAAAAAAAAAAUF
+        AAUFBQUAAAAAAAAAAAAFBQUFBQUFBQAAAAAAAAUFBQURCw0LEwoFAAAAAAUFBQUEAgIGAgIQBQUAAAAF
+        BQUSAgIPBQoRCAUFBQAAAAUFCAILBQUFBQUFBQAAAAAFBRECCwUFBQUFBQUFAAAABQUDAg0FBQoOCAUF
+        BQAABQUFCg4CEAwEAgkFBQAAAAAFBQUSDgICAgIRBQAAAAAABQUFBQoDCAwDBwUAAAAAAAAABQUFBQUF
+        BQUFAAAAAAAAAAAFBQUFAAUFBQAAAAAAAAAAAAUFBQAAAAAAAAAAAAAAAAAFAAUAAAAAAAAA+D8AAPIf
+        AADwDwAAwAcAAIADAACAAQAAwAMAAMABAADAAQAAgAMAAMAHAADABwAA8AcAAPhHAAD8fwAA/X8AACgA
+        AAAgAAAAQAAAAAEACAAAAAAAgAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AC0evwAXD2AACwgwACIX
+        jwARC0gABgQYACcapwAcE3cAAwIMACocswAUDVQAHxWDAA4JPAAIBiQAJRibABkRawAMCDMAGhFtAAMC
+        DQAGBBkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGDQgCCwUTBwAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAKEAICAgICAgICEQAAAAAAAAAAAAAAAAAAAAAAAAAAChACAgICAgICAgICAwAAAAAAAAAA
+        AAAAAAAAAAAAAAAJAgICBQcAAAYQAgIJAAAAAAAAAAAAAAAAAAAAAAAACgICAggUAAAAAAAGAw8AAAAA
+        AAAAAAAAAAAAAAAAAAAGAgICDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMCAgIEAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAwICAgoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAgICBAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYCAgIOAAAAAAAPCwgKAAAAAAAAAAAAAAAAAAAAAAAABwICAgUA
+        AAAAAAkCAgQAAAAAAAAAAAAAAAAAAAAAAAAABQICAgMAAAAPAgICBAAAAAAAAAAAAAAAAAAAAAAAAAAH
+        CwICAggFBQICAgISAAAAAAAAAAAAAAAAAAAAAAAAAAAPCwICAgICAgICAgQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAKCQsCAgILCQICBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8EBwAAFQcAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////5T///6AP//8M
+        D///BA3//wAI//uABH/wAAD/8AAAP/AAAN/wAACP4AAAD+gAAB/4AAAf8AAAH/gAAA/cAAAP7AAAC/gA
+        AB/oAAAf+QAA/+EAAP/4AAB//gAAf/8AAD//wAB//8Bj///gAz//8T////M////3P///////KAAAAEAA
+        AACAAAAAAQAIAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8AYlbPAFBQUACysbsAJBiZAICA
+        gAASDEwA1dPnAFNNkwCJgNsAMDAwADoswwCVk6cAJh9vAAkGJgBLR3AAZl+vAO/v7wDFw9cAICAgAEBA
+        QABgYGAAcHBwACocswAQEBAAj4+PAIN9wwAhG1gAHxWDADImnwAYEGcAVEjLAOLh6wC/v78ApaO3AHxy
+        1wBFRFgADQk3AMvH7wDPz88An5+fAIuHrwADAg8AFQ5ZACcapgDy8fsA39/fANjV8wATEhwAIyIsAMLB
+        ywAbEnMAMzI8AK+vrwAtHr8AKSF7AJiVswBWT58AQ0JMAAYEGwCCgYsAIhePAFBMdwAPCkAAHRN7AAsI
+        MAAXD2AAFA1UACAViAAOCTwAEAtEABkRawAeFH8AEQtIABwTdwAKBikADAgzACMYlgADAgwABgQYACoc
+        sAAHBR0ACAYkACUYmwAnGqQAAwINAAYEGQAOCTsAJxqnAB8VhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        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
+        HUZCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQ
+        U0ZKN0NTUwAAAAAAAAAAAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3AAAAAAAA
+        AAAAAAAAAFQ+AFAAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAABQN0IAAABPAAAAAAAAAAVTUwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAUEtTAFBQT0kAAAAAAABCRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABPTwAAAAAAAAAAADxTAAAAAEIAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASlMAAAAAAAAAAAAAH1MAAE8AAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANzcYQgAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVkoAUwAAADwAADcAADdEAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgAAAAAAAAAAAA3RgAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVwAAAAAAAAAAQgAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAAAAAH0IAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAEZK
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADcAAAAA
+        AABWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////
+        //////////////////////////////////////////////////////////P8+5////////wDD//////9
+        7gIB//////3Aco3//////YB4Gf//////gPAD//////8ANAGf/////wAxAY//////AAABh//////AAAGD
+        ////9+AAAcP////EAAARy////9AAAAAD////0AAAAAD///+IAAAABX///6AAAAAGn///yAAAAAfP///A
+        AAAAAg///4AAEAAAD///iAACAAAP//8YAAAAAD///7AAAAAAH///4AAAAABf///AAAAAAB///+AAAAAA
+        H///4AAAAAAH///gAAAAAGf//vgAAAAAB///+AAAAAAO//84AAAAAA3//zAAAABAjf//8AAAAEDf//+Q
+        AAAAYB///nAAAAAZP//9cYAAAAP////xgAAAB////xmAAAAT////0AAAAAD////0AAAEAv////8AAAAB
+        ////7wAAAgD/////gAACA//////AAEAC//////wAQAH/////+gBwA//////6AHg///////wAMHz/////
+        /AIWfP/////+Al5///////8EH////////w8/////////vz////////+/X////////78f////////////
+        //////////////////////////////////8=
+</value>
+  </data>
+  <data name="&gt;&gt;labelValue.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxPath.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelMode.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FindDataFrameForm</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCaseSensitive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 61</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Find DataFrame</value>
+  </data>
+  <data name="&gt;&gt;packetLogControl.Type" xml:space="preserve">
+    <value>CANAPE.Controls.PacketLogControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Path:</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCaseSensitive.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="comboBoxEncoding.ToolTip" xml:space="preserve">
+    <value>Specify the string encoding to use when searching binary data</value>
+  </data>
+  <data name="comboBoxMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="textBoxValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 6</value>
+  </data>
+  <data name="&gt;&gt;labelMode.Name" xml:space="preserve">
+    <value>labelMode</value>
+  </data>
+  <data name="textBoxPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 20</value>
+  </data>
+  <data name="&gt;&gt;labelMode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="checkBoxCaseSensitive.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="progressBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="checkBoxCaseSensitive.ToolTip" xml:space="preserve">
+    <value>Check to indicate the search should be done case sensitively</value>
+  </data>
+  <data name="&gt;&gt;comboBoxEncoding.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>608, 361</value>
+  </data>
+  <data name="packetLogControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="progressBar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBoxPath.ToolTip" xml:space="preserve">
+    <value>Specify the selection path to apply to packets, using '/' selects the entire packet</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelMode.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnFind.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;progressBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="checkBoxCaseSensitive.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;textBoxValue.Name" xml:space="preserve">
+    <value>textBoxValue</value>
+  </data>
+  <metadata name="labelValue.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="backgroundWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>174, 17</value>
+  </metadata>
+  <metadata name="label2.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+</root>

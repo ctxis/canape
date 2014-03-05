@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toolStripButtonZoomIn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJFSURBVDhPpZJLaBNRFIYHXAUEFUXrIgulIFi7E6UbC12I
+        CxEsUqSgO21VqlkILiviQs2EJLWZanw1iUgN1VbTYrDBiY2SmFczTfOuJmnSdBJb8sAaJxk4zmmnxGpc
+        VH84cO+5//dz5s4lfhVJaqQKNSWTK6k3cjmVWylhjT08E231pVTeayGV1KhiQA+6EQuYPUmwhVgYs7pA
+        axgGPEOPaF8vTEcD+XgErOF4NZQpLYcWyvlYtrzEpJaLHxJZzjhGr4TUnQRHvK3RgcGR+4FQeJFb2NL+
+        ArCC2UqSmecybh9bHhx6BegVsZrwO1VD78ASyWc+JqoRx1w1hPC2znHwpHm/d56ftgXZlMkWBPSKWE14
+        WVqzD1zJSngN3N41CTuvTkFDbxR234xDdJGLWJxRQK+I1YTNwbdT4Etxgd/BXddjsEPYzy5xQdoZ+UuA
+        MJbBZAVbhP2SzFcD6QI/swbOlXhPRigmkUtYJgNAqvonRGxVRqNxE15Mv/YJTHiZ4nS6MMMWeP/Wc+9h
+        c4cJ2BK4Z7PfgnZPtKR/+hLkakonojXJ+/r24C/SG0eBZphiIJX+nCt892PFUtm4U+i9HqfhxjUZQ94d
+        uCJi6yU8kiMYcv+RDmi7E2yfPOBwecHu9oHh2TBQvef5S2daubbDTadF5E/Ve8p3VBrzrYvH3M97DlWo
+        swcAQ1qaG0+JyIbU/fDyfl7duQ9kJ1uL/xHSzCs69kJX+9Gvwr5xtb0xdT/oaeIvHG+rCOt/CiAkEskJ
+        aYP0IEEQxE//b5B1GW13fAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="toolStripButtonZoomIn.Text" xml:space="preserve">
+    <value>Reinzoomen</value>
+  </data>
+  <data name="toolStripButtonZoomOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJLSURBVDhPpZJfaFJhGMYPdOVVRFHrwotiELR2F8VuGuwi
+        uohgIyIGddlWsfIi6HIRXVQeUdc8K/s3NWLJaqttJE1SZqGpx3nm/HN0pXbUHW3rqLTs6Mm38+kJW9nF
+        6gcffN/7Pc/De97zYb+C4zq5SksolGripVJJ5GpL3KMaupNkzVGrb3fgamJSNWIEw4QVLGQSHGEWpu0e
+        0JvGAd0hjSRfD0pHAvzBBNgj8Uo4U1wLL5e4WLa0SjFrhTeJLG+ettVCmnaCWryhM4DJlfuGTJEVfpkp
+        VCH++TuEsuUkleYzXj9bGh17Dkgr2Rqg79SMvQYrzWXeJiq062MlXAvgqkCmhIAvLSw4Qiwz5QgB0kq2
+        BmhYeosfPMlyZHPPU9jSOwNb++Zg+6V5aBmMws5rcYiu8LTVHQWklWwNUHH01Tz4GT74u3HHlRhsE89L
+        q3zI5qb/EiC2ZZqyg4NmPyS5SjCVFxbrM6hCmiuWMkWBpBK5hHUuCLhmeFay1TGbzZvQYIb1D2HWRxUW
+        UvlFNi8Efg6RLYJ3Kfsl5CSjReOjZ6DUEgbJ2kA5NLQL/SKjeRJsFFUIMqn3ufzXAFoxJht3i7UXMza4
+        ellB4bdGLkq29YiP5BAKuXPfADanGxzvSHB5fOD0+sH0eByIwTPC+VOdfNfBtpOS5U+aPeWbGp3l+rkj
+        3icDB8rE6X2AQjraW49Llg3Rf+/CXkHbuwcU3Z2F/whpF1QndkNfz+FP4rm1Xt4Y/XcH2oSzR7vK4v6f
+        AjCZTHZM3iLfj2EY9gMV2p2qULERlAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="toolStripButtonZoomOut.Text" xml:space="preserve">
+    <value>Rauszoomen</value>
+  </data>
+  <data name="serverEndpointToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="serverEndpointToolStripMenuItem.Text" xml:space="preserve">
+    <value>Serverendpunkt</value>
+  </data>
+  <data name="clientEndpointToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="clientEndpointToolStripMenuItem.Text" xml:space="preserve">
+    <value>Clientendpunkt</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 6</value>
+  </data>
+  <data name="editPacketToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="editPacketToolStripMenuItem.Text" xml:space="preserve">
+    <value>Paket bearbeiten</value>
+  </data>
+  <data name="packetLoggerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="packetLoggerToolStripMenuItem.Text" xml:space="preserve">
+    <value>Packetlog</value>
+  </data>
+  <data name="nopToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="netGraphContainerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="netGraphContainerToolStripMenuItem.Text" xml:space="preserve">
+    <value>NetGraphcontainer</value>
+  </data>
+  <data name="decisionNodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="decisionNodeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Entscheidungsknoten</value>
+  </data>
+  <data name="switchNodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="switchNodeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Switchknoten</value>
+  </data>
+  <data name="delayNodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="delayNodeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Verzögerungsknoten</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 6</value>
+  </data>
+  <data name="dynamicNodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="dynamicNodeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Dynamischerknoten</value>
+  </data>
+  <data name="libraryNodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="libraryNodeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bibliotheksknoten</value>
+  </data>
+  <data name="sSLLayerSectionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
+  </data>
+  <data name="sSLLayerSectionToolStripMenuItem.Text" xml:space="preserve">
+    <value>SSL-Layersektion</value>
+  </data>
+  <data name="layerSectionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="layerSectionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Layersectionen</value>
+  </data>
+  <data name="addNodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="addNodeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Knotenhinzufügen</value>
+  </data>
+  <data name="deleteSelectedToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="deleteSelectedToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ausgewählten löschen</value>
+  </data>
+  <data name="toggleEnableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="toggleEnableToolStripMenuItem.Text" xml:space="preserve">
+    <value>ein/ausschalten</value>
+  </data>
+  <data name="copyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="copyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kopieren</value>
+  </data>
+  <data name="cutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="cutToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ausschneiden</value>
+  </data>
+  <data name="pasteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="pasteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Einfügen</value>
+  </data>
+  <data name="copyFiltersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="copyFiltersToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kopieren</value>
+  </data>
+  <data name="pasteFiltersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="pasteFiltersToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ausschneiden</value>
+  </data>
+  <data name="filtersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="filtersToolStripMenuItem.Text" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="copyPropertiesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="copyPropertiesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kopieren</value>
+  </data>
+  <data name="pastePropertiesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="pastePropertiesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Einfügen</value>
+  </data>
+  <data name="propertiesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Eigenschaften</value>
+  </data>
+  <data name="contextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 180</value>
+  </data>
+</root>

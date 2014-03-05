@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CertManager_NullMatch" xml:space="preserve">
+    <value>Es kann kein Zertifikat gefunden werden, wenn die Übereinstimmung null ist</value>
+  </data>
+  <data name="HttpParser_InvalidHeaderException" xml:space="preserve">
+    <value>Es wurde ein ungültiger HTTP Header beim Parsen von '{0}' gefunden</value>
+  </data>
+  <data name="HttpParser_InvalidHttpResponseCode" xml:space="preserve">
+    <value>Der HTTP-Responsewert ist ungültig</value>
+  </data>
+  <data name="HttpParser_InvalidHttpVersionString" xml:space="preserve">
+    <value>Ungültiger HTTP-Versionsstring gefunden</value>
+  </data>
+  <data name="HttpParser_MissingMethodAndPath" xml:space="preserve">
+    <value>Es wurde eine fehlende Methode und Pfad im Frame gefunden</value>
+  </data>
+  <data name="HttpParser_NoVersionResponseException" xml:space="preserve">
+    <value>Es wurde eine fehlende Version und ein fehlender Responsecode im Frame gefunden</value>
+  </data>
+  <data name="HttpParser_RequestHeaderInvalid" xml:space="preserve">
+    <value>Der Requestheader ist ungültig '{0}'</value>
+  </data>
+  <data name="HttpParser_ResponseHeaderInvalid" xml:space="preserve">
+    <value>Der Responseheader ist ungültig '{0}'</value>
+  </data>
+  <data name="HttpProxyClient_ErrorOnConnect" xml:space="preserve">
+    <value>Der HTTP-Proxyserver hat als Antwort zu CONNECT  {1}:{2} Fehler {0} gesendet </value>
+  </data>
+  <data name="HttpProxyClient_InvalidProxyToken" xml:space="preserve">
+    <value>Es wurde ein falsches Token übergeben </value>
+  </data>
+  <data name="HttpProxyClient_InvalidResponse" xml:space="preserve">
+    <value>Fehlerhafte Antwort vom HTTP-Proxy</value>
+  </data>
+  <data name="HttpProxyClient_NoResponse" xml:space="preserve">
+    <value>Der Server hat keine Antwort gesendet</value>
+  </data>
+  <data name="HttpProxyServer_InvalidConnect" xml:space="preserve">
+    <value>Fehlerhafter HTTP CONNECT Port '{0}'</value>
+  </data>
+  <data name="HttpProxyServer_InvalidRequest" xml:space="preserve">
+    <value>Fehlerhafter HTTP-Proxyrequest '{0}'</value>
+  </data>
+  <data name="HttpProxyServer_InvalidUrl" xml:space="preserve">
+    <value>Es wurde eine fehlerhafte URL an HTTP-Request übergeben '{0}'</value>
+  </data>
+  <data name="HttpVersion_InvalidVersionString" xml:space="preserve">
+    <value>Ungültiger Versionsstring</value>
+  </data>
+  <data name="IpProxyClient_InvalidTokenType" xml:space="preserve">
+    <value>Ungültiger Clienttyp im Proxytoken</value>
+  </data>
+  <data name="IpProxyFilter_ToString" xml:space="preserve">
+    <value>Adresse = {0}, Port = {1}</value>
+  </data>
+  <data name="LayerSectionNode_InvalidGraph" xml:space="preserve">
+    <value>Der Untergraph muss einen Benutzer- und Serverknoten besitzen</value>
+  </data>
+  <data name="ManualNetworkListener_CreateLogString" xml:space="preserve">
+    <value>Es wurde eine neue manuelle Verbindung erstellt</value>
+  </data>
+  <data name="NetworkServerService_MultipleServerNodes" xml:space="preserve">
+    <value>Es gibt mehr als einen Serverknoten im Graphen</value>
+  </data>
+  <data name="NetworkServerService_NoServerNode" xml:space="preserve">
+    <value>Es wurde kein Serverknoten spezifiziert</value>
+  </data>
+  <data name="NetworkServiceBase_ConnectionClosed" xml:space="preserve">
+    <value>Die Verbindung {0} geschlossen</value>
+  </data>
+  <data name="NetworkServiceBase_ConnectionEstablished" xml:space="preserve">
+    <value>Die Verbindung {0} erstellt</value>
+  </data>
+  <data name="NetworkServiceBase_CouldNotStartService" xml:space="preserve">
+    <value>Der Service konnte nicht starten</value>
+  </data>
+  <data name="ProxyNetworkService_ConnectionFiltered" xml:space="preserve">
+    <value>Die Proxyverbindung wurde gefiltert</value>
+  </data>
+  <data name="ProxyNetworkService_InvalidGraph" xml:space="preserve">
+    <value>Es wird mindestens eine Benutzer- und Serverknoten zum Verbinden benötigt</value>
+  </data>
+  <data name="ProxyNetworkService_MatchedFilter" xml:space="preserve">
+    <value>Übereinstimmung auf Filter {0}</value>
+  </data>
+  <data name="ScriptProxyClient_InvalidServer" xml:space="preserve">
+    <value>Fehlerhafter Systemproxystring {0}</value>
+  </data>
+  <data name="ScriptProxyClient_InvalidToken" xml:space="preserve">
+    <value>Fehlerhafter Tokentyp</value>
+  </data>
+  <data name="ScriptProxyClient_InvalidType" xml:space="preserve">
+    <value>Fehlerhafter Systemproxytyp {0}</value>
+  </data>
+  <data name="ScriptProxyClient_ScriptReturned" xml:space="preserve">
+    <value>Das Proxyskript gab für die URL '{1}' '{0}' zurück</value>
+  </data>
+  <data name="SocksProxyClient_CouldNotGetHost" xml:space="preserve">
+    <value>Die Adresse oder der Host konnte nicht finden</value>
+  </data>
+  <data name="SocksProxyClient_EosInDomain" xml:space="preserve">
+    <value>Das Ende des Streams wurde erreicht während Domain gelesen wurde</value>
+  </data>
+  <data name="SocksProxyClient_InvalidAddrType" xml:space="preserve">
+    <value>Ein falscher Adresstyp wurde gefunden, daher kann der Rest der SOCKS-Daten nicht gelesen werden</value>
+  </data>
+  <data name="SocksProxyClient_InvalidProxyToken" xml:space="preserve">
+    <value>Es wurde ein fehlerhafter Proxytoken übergeben. Die Adresse ist nicht v4 oder v6</value>
+  </data>
+  <data name="SocksProxyClient_InvalidProxyToken2" xml:space="preserve">
+    <value>Es wurde ein fehlerhaftes Token übergeben. Es konnten keine Verbindungsdaten gesendet werden</value>
+  </data>
+  <data name="SocksProxyClient_InvalidProxyToken3" xml:space="preserve">
+    <value>Es wurde ein fehlerhaftes Token übergeben</value>
+  </data>
+  <data name="SocksProxyClient_InvalidV5Response" xml:space="preserve">
+    <value>Es wurde eine fehlerhafte Antwort vom SOCKSv5-Server erhalten</value>
+  </data>
+  <data name="SocksProxyClient_InvalidV5Response2" xml:space="preserve">
+    <value>Es wurde eine fehlerhafte Antwort vom SOCKSv5-Server erhalten {0:X}/{1:X}</value>
+  </data>
+  <data name="SocksProxyServer_IsSupportedError" xml:space="preserve">
+    <value>IsSupported liefert eine unterstützung der Version zurück, dies ist jedoch nicht richtig</value>
+  </data>
+  <data name="SocksProxyServer_NewV4ConnectionLog" xml:space="preserve">
+    <value>SocksProxy: Neue SOCKSv4 Verbindung</value>
+  </data>
+  <data name="SocksProxyServer_NewV5ConnectionLog" xml:space="preserve">
+    <value>SocksProxy: Neue SOCKSv5 Verbindung</value>
+  </data>
+  <data name="SocksProxyServer_UnsupportedTokenVersion" xml:space="preserve">
+    <value>Es wurde eine nicht unterstützte SOCKS-Version im Token '{0}' gefunden</value>
+  </data>
+  <data name="SocksProxyServer_UnsupportedVersionLog" xml:space="preserve">
+    <value>Es wurde eine nicht unterstützte SOCKS-Version '{0}' gefunden</value>
+  </data>
+  <data name="SocksProxyServer_V4AUsed" xml:space="preserve">
+    <value>Das SOCKv4a Protokoll wird verwendet</value>
+  </data>
+  <data name="SocksProxyServer_V4ConnectionLog" xml:space="preserve">
+    <value>SOCKSv4 Verbindung nach {0}:{1}</value>
+  </data>
+  <data name="SocksProxyServer_V5ConnectionLog" xml:space="preserve">
+    <value>SOCKSv5 Verbindung nach {0}:{1}</value>
+  </data>
+  <data name="SslNetworkLayer_CannotGetServerCertificate" xml:space="preserve">
+    <value>Konnte Serverzertifikat nicht laden</value>
+  </data>
+  <data name="SslNetworkLayer_ClientConnectLog" xml:space="preserve">
+    <value>Verbunden mit SSL Server mit Protokoll {0} Subject '{1}' IsSigned {2} IsMutuallyAuthenticated {3} IsEncrypted {4}</value>
+  </data>
+  <data name="SslNetworkLayer_ClientLogString" xml:space="preserve">
+    <value>Verbunden mit SSL Client mit Protokoll {0} IsSigned {1} IsMutuallyAuthenticated {2} IsEncrypted {3}</value>
+  </data>
+  <data name="TcpNetworkListener_ConnectionLogString" xml:space="preserve">
+    <value>Verbindung erhalten von {0}</value>
+  </data>
+  <data name="UdpNetworkListener_ConnectionLogString" xml:space="preserve">
+    <value>Verbindung erhalten von {0}</value>
+  </data>
+  <data name="UdpNetworkListener_NoUdpConnection" xml:space="preserve">
+    <value>Keine UDP-Verbindungen verfügbar</value>
+  </data>
+</root>

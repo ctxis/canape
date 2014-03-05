@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="toolStripButtonOpen.Text" xml:space="preserve">
+    <value>Öffnen</value>
+  </data>
+  <data name="toolStripButtonOpen.ToolTipText" xml:space="preserve">
+    <value>Externe Datei Öffnen</value>
+  </data>
+  <data name="toolStripButtonSaveToFile.Text" xml:space="preserve">
+    <value>Speichern unter</value>
+  </data>
+  <data name="toolStripButtonSave.Text" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="toolStripButtonParse.Text" xml:space="preserve">
+    <value>Script parsen</value>
+  </data>
+  <data name="cutToolStripButton.Text" xml:space="preserve">
+    <value>&amp;Ausschneiden</value>
+  </data>
+  <data name="copyToolStripButton.Text" xml:space="preserve">
+    <value>&amp;Kopieren</value>
+  </data>
+  <data name="pasteToolStripButton.Text" xml:space="preserve">
+    <value>&amp;Einfügen</value>
+  </data>
+  <data name="toolStripButtonUndo.Text" xml:space="preserve">
+    <value>Rückgänging</value>
+  </data>
+  <data name="toolStripButtonRedo.Text" xml:space="preserve">
+    <value>Wiederholen</value>
+  </data>
+  <data name="toolStripTextBoxSearch.ToolTipText" xml:space="preserve">
+    <value>Gibt den Text an, nach dem gesucht werden soll</value>
+  </data>
+  <data name="toolStripButtonNextSearch.Text" xml:space="preserve">
+    <value>Suchtext</value>
+  </data>
+  <data name="toolStripButtonPreviousSearch.Text" xml:space="preserve">
+    <value>Zuvor Gesuchtes suchen</value>
+  </data>
+  <data name="toolStripButtonOptions.Text" xml:space="preserve">
+    <value>Optionen</value>
+  </data>
+  <data name="toolStripButtonOpenTest.Text" xml:space="preserve">
+    <value>Testdokument öffnen</value>
+  </data>
+  <data name="toolStrip.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="cutToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+X</value>
+  </data>
+  <data name="cutToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ausschneiden</value>
+  </data>
+  <data name="copyToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+C</value>
+  </data>
+  <data name="copyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kopieren</value>
+  </data>
+  <data name="pasteToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+V</value>
+  </data>
+  <data name="pasteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Einfügen</value>
+  </data>
+  <data name="deleteToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Del</value>
+  </data>
+  <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="selectAllToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+A</value>
+  </data>
+  <data name="selectAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Alles auswählen</value>
+  </data>
+  <data name="gotoLineToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl + G</value>
+  </data>
+  <data name="gotoLineToolStripMenuItem.Text" xml:space="preserve">
+    <value>Gehe zu Zeile</value>
+  </data>
+  <data name="columnSeverity.Text" xml:space="preserve">
+    <value>Schwere</value>
+  </data>
+  <data name="columnMessage.Text" xml:space="preserve">
+    <value>Nachricht</value>
+  </data>
+  <data name="columnLine.Text" xml:space="preserve">
+    <value>Zeile</value>
+  </data>
+  <data name="columnColumn.Text" xml:space="preserve">
+    <value>Spalte</value>
+  </data>
+</root>

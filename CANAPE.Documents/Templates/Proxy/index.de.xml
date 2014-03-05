@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<templates>
+  <template id="0" name="Basic SOCKS Proxy" description="Ein einfacher SOCKS Proxy und Graph" filename="basic_socks_proxy.canape"/>
+  <template id="1" name="Basic HTTP Proxy" description="Ein einfacher HTTP Proxy und Graph" filename="basic_http_proxy.canape"/>
+  <template id="2" name="Basic Fixed Proxy" description="Ein einfacher Fixed Proxy und Graph" filename="basic_fixed_proxy.canape"/>
+  <template id="3" name="SOCKS Proxy With HTTP" description="Ein SOCKS Proxy, HTTP parsing Graph und SSL man in the middle" filename="socks_proxy_http.canape"/>
+  <template id="4" name="HTTP Proxy With HTTP" description="Ein HTTP Proxy, HTTP parsing Graph und SSL man in the middle" filename="http_proxy_http.canape"/>
+</templates>

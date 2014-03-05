@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57BE119A-2BBC-4F3D-B25B-935F39B91404}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IronPythonShellExt</RootNamespace>
+    <AssemblyName>IronPythonShellExt</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\Extensions\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\CANAPE\canape.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython">
+      <HintPath>..\packages\IronPython.2.7.4\lib\Net45\IronPython.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IronPython.Modules">
+      <HintPath>..\packages\IronPython.2.7.4\lib\Net45\IronPython.Modules.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IronPython.SQLite">
+      <HintPath>..\packages\IronPython.2.7.4\lib\Net45\IronPython.SQLite.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IronPython.Wpf">
+      <HintPath>..\packages\IronPython.2.7.4\lib\Net45\IronPython.Wpf.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic">
+      <HintPath>..\packages\IronPython.2.7.4\lib\Net45\Microsoft.Dynamic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Scripting">
+      <HintPath>..\packages\IronPython.2.7.4\lib\Net45\Microsoft.Scripting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.AspNet">
+      <HintPath>..\packages\IronPython.2.7.4\lib\Net45\Microsoft.Scripting.AspNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata">
+      <HintPath>..\packages\IronPython.2.7.4\lib\Net45\Microsoft.Scripting.Metadata.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConsoleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConsoleControl.Designer.cs">
+      <DependentUpon>ConsoleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IronPythonShellExtImpl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CANAPE.Controls\CANAPE.Controls.csproj">
+      <Project>{F16F4B25-643F-441E-95DD-B20668F760DA}</Project>
+      <Name>CANAPE.Controls</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Documents\CANAPE.Documents.csproj">
+      <Project>{8B96A90D-7898-4688-B401-12F56BE1AB47}</Project>
+      <Name>CANAPE.Documents</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Extension\CANAPE.Extension.csproj">
+      <Project>{28C043FE-9095-4AC8-A442-70B012950F59}</Project>
+      <Name>CANAPE.Extension</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Net\CANAPE.Net.csproj">
+      <Project>{5859BC1C-AF63-4743-B853-144B108545D1}</Project>
+      <Name>CANAPE.Net</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.NodeLibrary\CANAPE.NodeLibrary.csproj">
+      <Project>{F6D34D6D-1746-43F2-B51C-106C71FF818C}</Project>
+      <Name>CANAPE.NodeLibrary</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Parser\CANAPE.Parser.csproj">
+      <Project>{98F335B7-61C4-4143-AF03-2012D1374BEC}</Project>
+      <Name>CANAPE.Parser</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Scripting\CANAPE.Scripting.csproj">
+      <Project>{D930CADC-7534-42B3-ADFD-E07549C67528}</Project>
+      <Name>CANAPE.Scripting</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Security\CANAPE.Security.csproj">
+      <Project>{AB96ACE5-9681-414D-87F7-54ED3BCC24D7}</Project>
+      <Name>CANAPE.Security</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Gui\CANAPE.Gui.csproj">
+      <Project>{D16E9681-BD04-4DA6-8A37-C55AABC4E7B2}</Project>
+      <Name>CANAPEGui</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE\CANAPE.csproj">
+      <Project>{34432D8F-EAD0-48B9-8317-EB9D69D68B95}</Project>
+      <Name>CANAPE</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConsoleControl.resx">
+      <DependentUpon>ConsoleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\CANAPE\canape.snk">
+      <Link>canape.snk</Link>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

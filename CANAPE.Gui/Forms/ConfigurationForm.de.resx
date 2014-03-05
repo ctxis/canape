@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="checkBoxCompress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 17</value>
+  </data>
+  <data name="checkBoxCompress.Text" xml:space="preserve">
+    <value>Projekt komprimieren</value>
+  </data>
+  <data name="checkBoxCompress.ToolTip" xml:space="preserve">
+    <value>Aktiviere Projektkomprimierung, hierdurch wird das Speichern verlangsamt</value>
+  </data>
+  <data name="checkBoxBackup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 17</value>
+  </data>
+  <data name="checkBoxBackup.Text" xml:space="preserve">
+    <value>Projektdatei sichern</value>
+  </data>
+  <data name="checkBoxBackup.ToolTip" xml:space="preserve">
+    <value>Erstelle immer eine Kopie einer Projektdatei, sofern diese bereits existiert</value>
+  </data>
+  <data name="groupBoxSavingAndLoading.Text" xml:space="preserve">
+    <value>Laden und Speichern</value>
+  </data>
+  <data name="groupBoxSavingAndLoading.ToolTip" xml:space="preserve">
+    <value>Optionen zum Speichern und Laden von Projekten</value>
+  </data>
+  <data name="labelUIOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 13</value>
+  </data>
+  <data name="labelUIOptions.Text" xml:space="preserve">
+    <value>Spezifizieren Sie die Benutzeroberflächenoptionen</value>
+  </data>
+  <data name="labelUIOptions.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnOk.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>206, 353</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="btnCancel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelClientHelp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 15</value>
+  </data>
+  <data name="labelClientHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 13</value>
+  </data>
+  <data name="labelClientHelp.Text" xml:space="preserve">
+    <value>Spezifizieren Sie den Standardclient</value>
+  </data>
+  <data name="labelClientHelp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="proxyClientControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 31</value>
+  </data>
+  <data name="proxyClientControl.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageClient.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 308</value>
+  </data>
+  <data name="tabPageClient.Text" xml:space="preserve">
+    <value>Standardclient</value>
+  </data>
+  <data name="tabPageClient.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBoxShowEOLMarkers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 165</value>
+  </data>
+  <data name="checkBoxShowEOLMarkers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 17</value>
+  </data>
+  <data name="checkBoxShowEOLMarkers.Text" xml:space="preserve">
+    <value>Ende-der-Zeile-Marker anzeigen</value>
+  </data>
+  <data name="checkBoxShowEOLMarkers.ToolTip" xml:space="preserve">
+    <value>Zeige Zeilenende im Skript Editor</value>
+  </data>
+  <data name="checkBoxCSharpCodeCompletion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 188</value>
+  </data>
+  <data name="checkBoxCSharpCodeCompletion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 17</value>
+  </data>
+  <data name="checkBoxCSharpCodeCompletion.Text" xml:space="preserve">
+    <value>C# Codekomplettierung anzeigen (experimentell)</value>
+  </data>
+  <data name="checkBoxCSharpCodeCompletion.ToolTip" xml:space="preserve">
+    <value>Aktiviere einfache C# Codekomplettierung, dies funktioniert nur beim Benutzen des '.' Zeichens, um Objekte und Eigenschaften zu erhalten. (experimentell)</value>
+  </data>
+  <data name="checkBoxShowLineNumbers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 142</value>
+  </data>
+  <data name="checkBoxShowLineNumbers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 17</value>
+  </data>
+  <data name="checkBoxShowLineNumbers.Text" xml:space="preserve">
+    <value>Zeilennummern anzeigen</value>
+  </data>
+  <data name="checkBoxShowLineNumbers.ToolTip" xml:space="preserve">
+    <value>Zeige Zeilenzahl im Skripteditor</value>
+  </data>
+  <data name="labelScriptHelp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 19</value>
+  </data>
+  <data name="labelScriptHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 39</value>
+  </data>
+  <data name="labelScriptHelp.Text" xml:space="preserve">
+    <value>Spezifizieren Sie Optionen für den Editor. Sie werden 
+bereits existierende Skriptfenster schließen 
+müssen, damit die Änderungen übernommen werden.</value>
+  </data>
+  <data name="labelScriptHelp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBoxShowTabs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 96</value>
+  </data>
+  <data name="checkBoxShowTabs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 17</value>
+  </data>
+  <data name="checkBoxShowTabs.Text" xml:space="preserve">
+    <value>Tabs anzeigen</value>
+  </data>
+  <data name="checkBoxShowTabs.ToolTip" xml:space="preserve">
+    <value>Zeige Tabs innerhalb des Skripteditors</value>
+  </data>
+  <data name="checkBoxConvertTabsToSpaces.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 119</value>
+  </data>
+  <data name="checkBoxConvertTabsToSpaces.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 17</value>
+  </data>
+  <data name="checkBoxConvertTabsToSpaces.Text" xml:space="preserve">
+    <value>Tabs zu Leerzeichen konvertieren</value>
+  </data>
+  <data name="checkBoxConvertTabsToSpaces.ToolTip" xml:space="preserve">
+    <value>Automatisch Tabs in Leerzeichen konvertieren</value>
+  </data>
+  <data name="checkBoxShowSpaces.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 74</value>
+  </data>
+  <data name="checkBoxShowSpaces.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 17</value>
+  </data>
+  <data name="checkBoxShowSpaces.Text" xml:space="preserve">
+    <value>Leerzeichen anzeigen</value>
+  </data>
+  <data name="checkBoxShowSpaces.ToolTip" xml:space="preserve">
+    <value>Zeige Leerzeichen innerhalb des Skripteditors</value>
+  </data>
+  <data name="tabPageScriptEditor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 308</value>
+  </data>
+  <data name="tabPageScriptEditor.Text" xml:space="preserve">
+    <value>Skript Editor</value>
+  </data>
+  <data name="tabPageScriptEditor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBoxCheckUpdates.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 17</value>
+  </data>
+  <data name="checkBoxCheckUpdates.Text" xml:space="preserve">
+    <value>Automatisch nach Aktualisierungen suchen</value>
+  </data>
+  <data name="checkBoxCheckUpdates.ToolTip" xml:space="preserve">
+    <value>Aktiviere automatische Aktualisierung</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Sonstige Optionen</value>
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageOthers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 308</value>
+  </data>
+  <data name="tabPageOthers.Text" xml:space="preserve">
+    <value>Sonstiges</value>
+  </data>
+  <data name="tabPageOthers.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboBoxLanguage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 240</value>
+  </data>
+  <data name="comboBoxLanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 21</value>
+  </data>
+  <data name="comboBoxLanguage.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="lblLanguage.Text" xml:space="preserve">
+    <value>Sprache:</value>
+  </data>
+  <data name="lblLanguage.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Loganzeiger bestätigen</value>
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboBoxLogConfirm.Items" xml:space="preserve">
+    <value>Speichern bestätigen</value>
+  </data>
+  <data name="comboBoxLogConfirm.Items1" xml:space="preserve">
+    <value>Automatisches Speichern</value>
+  </data>
+  <data name="comboBoxLogConfirm.Items2" xml:space="preserve">
+    <value>Automatisches Zurücknehmen</value>
+  </data>
+  <data name="comboBoxLogConfirm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 213</value>
+  </data>
+  <data name="comboBoxLogConfirm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 21</value>
+  </data>
+  <data name="comboBoxLogConfirm.ToolTip" xml:space="preserve">
+    <value>Spezifiziere die Bestätigung, wenn ein Logbetrachter mit modifizierten Paketen geschlossen wird</value>
+  </data>
+  <data name="checkBoxRequireEventLogClearConfirm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 17</value>
+  </data>
+  <data name="checkBoxRequireEventLogClearConfirm.Text" xml:space="preserve">
+    <value>Bestätigung zum Eventlog löschen</value>
+  </data>
+  <data name="checkBoxRequireEventLogClearConfirm.ToolTip" xml:space="preserve">
+    <value>Wählen, für eine Bestätigung vor dem Löschen des Ereignislog</value>
+  </data>
+  <data name="checkBoxRequirePacketLogClearConfirm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 17</value>
+  </data>
+  <data name="checkBoxRequirePacketLogClearConfirm.Text" xml:space="preserve">
+    <value>Bestätigung um Packetlog zu löschen</value>
+  </data>
+  <data name="checkBoxRequirePacketLogClearConfirm.ToolTip" xml:space="preserve">
+    <value>Wählen, für eine Bestätigung vor dem Löschen eines Ereignislog</value>
+  </data>
+  <data name="checkBoxNewStyle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 17</value>
+  </data>
+  <data name="checkBoxNewStyle.Text" xml:space="preserve">
+    <value>Log im neuen Stil anzeigen</value>
+  </data>
+  <data name="checkBoxNewStyle.ToolTip" xml:space="preserve">
+    <value>Neuen Loganzeigemodus verwenden, überschreibt die Veränderbarkeit des Paketlogs</value>
+  </data>
+  <data name="checkBoxConfirmClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 17</value>
+  </data>
+  <data name="checkBoxConfirmClose.Text" xml:space="preserve">
+    <value>Beim Schließen bestätigen</value>
+  </data>
+  <data name="checkBoxConfirmClose.ToolTip" xml:space="preserve">
+    <value>Erfordere Bestätigung um Canape zu schließen</value>
+  </data>
+  <data name="btnClearHistory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 23</value>
+  </data>
+  <data name="btnClearHistory.Text" xml:space="preserve">
+    <value>Verlauf löschen</value>
+  </data>
+  <data name="btnClearHistory.ToolTip" xml:space="preserve">
+    <value>Lösche den aktuellen Projektverlauf</value>
+  </data>
+  <data name="checkBoxPacketLogMutable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 17</value>
+  </data>
+  <data name="checkBoxPacketLogMutable.Text" xml:space="preserve">
+    <value>Veränderbares Servicepaketlog</value>
+  </data>
+  <data name="checkBoxPacketLogMutable.ToolTip" xml:space="preserve">
+    <value>Wählen, um Netzwerkpaketlogs standardmäßig veränderbar zu machen</value>
+  </data>
+  <data name="checkBoxShowStartupForm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 17</value>
+  </data>
+  <data name="checkBoxShowStartupForm.Text" xml:space="preserve">
+    <value>Startdialog anzeigen</value>
+  </data>
+  <data name="checkBoxShowStartupForm.ToolTip" xml:space="preserve">
+    <value>Zeige die Templateauswahl beim Starten</value>
+  </data>
+  <data name="checkBoxShowSplash.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 17</value>
+  </data>
+  <data name="checkBoxShowSplash.Text" xml:space="preserve">
+    <value>Startbild anzeigen</value>
+  </data>
+  <data name="checkBoxShowSplash.ToolTip" xml:space="preserve">
+    <value>Zeige das Splash Bild beim Starten</value>
+  </data>
+  <data name="tabPageUI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 308</value>
+  </data>
+  <data name="tabPageUI.Text" xml:space="preserve">
+    <value>Benutzeroberfläche</value>
+  </data>
+  <data name="tabPageUI.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>330, 334</value>
+  </data>
+  <data name="tabControl.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>352, 388</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>CANAPE Konfiguration</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

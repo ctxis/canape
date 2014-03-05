@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+  <Product Id="*" UpgradeCode="{3734A67D-1891-4014-8166-8615E357A005}" Version="1.3.0" Language="1033" Name="CANAPE" Manufacturer="Context Information Security">
+    <Package InstallerVersion="310" Compressed="yes"/>
+    <Media Id="1" Cabinet="canape.cab" EmbedCab="yes" />    
+    <PropertyRef Id="NETFRAMEWORK45"/>
+	<Property Id="ALLUSERS">1</Property>
+    
+    <UIRef Id="WixUI_InstallDir" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+    <WixVariable Id="WixUILicenseRtf" Value="SourceDir\eula.rtf" />
+    <WixVariable Id="WixUIBannerBmp" Value="banner.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="dialog.bmp" />
+    
+    <Condition Message="This application requires .NET Framework 4.5. Please install the .NET Framework then run this installer again.">
+      <![CDATA[Installed OR NETFRAMEWORK45]]>
+    </Condition>
+    <Property Id="WIXUI_INSTALLDIR">APPLICATIONROOTDIRECTORY</Property>
+
+    <Upgrade Id="{3734A67D-1891-4014-8166-8615E357A005}">
+      <UpgradeVersion Minimum="1.3.0" IncludeMinimum="no" OnlyDetect="yes" Property="NEWERVERSIONDETECTED" />
+      <UpgradeVersion Minimum="0.0.0" Maximum="1.2.0" IncludeMinimum="yes" IncludeMaximum="yes" Property="OLDERVERSIONBEINGUPGRADED" />
+    </Upgrade>
+
+    <InstallExecuteSequence>
+      <RemoveExistingProducts After="InstallInitialize" />
+      <Custom Action="NewerVersion" After="FindRelatedProducts">NEWERVERSIONDETECTED</Custom>
+    </InstallExecuteSequence>
+
+    <CustomAction Id="NewerVersion" Error="A later version of [ProductName] is already installed." />
+    
+    <Icon Id="canape.ico" SourceFile="SourceDir\canape.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="canape.ico" />
+    
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="COMPANYDIRECTORY" Name="Context Information Security">
+          <Directory Id="APPLICATIONROOTDIRECTORY" Name="Canape"/>
+        </Directory>
+        <Directory Id="ProgramMenuFolder">          
+          <Directory Id="ApplicationProgramsFolder" Name="Canape"/>          
+        </Directory>
+      </Directory>      
+    </Directory>
+
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="{EB8E7BEE-D909-4BDF-A720-0383D7D9E7C6}">
+        <Shortcut Id="ApplicationStartMenuShortcut"
+             Name="CANAPE"
+           Description="CANAPE Version 1.3"
+            Target="[APPLICATIONROOTDIRECTORY]CANAPE.Gui.exe"
+                  WorkingDirectory="APPLICATIONROOTDIRECTORY"/>
+        <Shortcut Id="ApiHelpStartMenuShortcut"
+             Name="API Help File"
+           Description="CANAPE API Help"
+            Target="[APPLICATIONROOTDIRECTORY]Help\CANAPE_Documentation.chm"
+                  WorkingDirectory="APPLICATIONROOTDIRECTORY"/>
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\Context Information Security\Canape" Type="string" Value="" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+
+    <Feature Id='Complete' Title='Canape 1.3' Description='Canape 1.3'
+      Display='expand' Level='1' ConfigurableDirectory='APPLICATIONROOTDIRECTORY'>
+      <Feature Id="MainApplication" Title="Main Application" Level="1">
+        <ComponentGroupRef Id="canapefiles" />
+        <ComponentRef Id="ApplicationShortcut"/>
+      </Feature>
+    </Feature>
+  </Product>
+</Wix>

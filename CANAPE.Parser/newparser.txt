@@ -1,0 +1,85 @@
+﻿Use C# to implement our code, but actually use a special script engine which compiles the code once using the C# parser then generates the
+final script using something else.
+
+so something like
+
+// Create a parser for this sequence, default little endian
+[Parser("Name"), Endian(true)]
+class SequenceClass
+{
+    // 
+    [Member(0), Endian(true), Reader("func"), Writer("func2"), Gen("func3")]
+    int A;
+
+	[Member(1), Fixed(100)]
+	int[] Data;
+
+	[Member(2), ReadToEnd(10)] // Read to end minus 10 bytes
+	Sequence2[] Sequences;
+
+	[Member(2), Optional("expression")]
+	int Value;
+
+	[Func("func", "python")]
+	string _func @"....";
+}
+
+class Sequence2
+{
+}
+
+
+
+// Extra stuff
+
+Add a terminated array format, which takes a generic entry and then applies an expression to determine the termination point
+
+
+// 
+
+Each member to read has a member attribute which indicates the order
+
+Attributes:
+
+MemberAttribute - Indicates the order number
+
+* int order
+
+Fixed - Indicates a fixed array or string, with a set size, either bytes or elements
+
+* int size
+* bool byteLength
+
+ReadToEnd - Indicates a read to end array or string
+
+* int fromEnd - Remove this number of elements from the end
+* bool byteLength
+
+Optional - Indicates this is an optional field
+
+* string expr - An expression to determine if this field should be read, if not present then indicates field is optional 
+                from the point of view of EOF
+
+Ref - Indicates an array or string with a length relative to a sequence
+
+* string expr - The expression used to calculate the length
+* bool byteLength 
+
+Bool - Reads a boolean
+
+So for example
+
+ReaderAttribute
+{
+	object Read(DataReader r);
+	void Write(object value, DataWriter r);
+	int GetLength()
+}
+
+FixedAttribute
+{
+}
+
+RefAttribute
+{
+}

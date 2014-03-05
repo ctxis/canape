@@ -1,0 +1,981 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="label1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 17</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Net Graph:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>tabPageSettings</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnStart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>403, 6</value>
+  </data>
+  <data name="btnStart.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 30</value>
+  </data>
+  <data name="btnStart.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnStart.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>347, 17</value>
+  </metadata>
+  <data name="btnStart.ToolTip" xml:space="preserve">
+    <value>Start the network service</value>
+  </data>
+  <data name="&gt;&gt;btnStart.Name" xml:space="preserve">
+    <value>btnStart</value>
+  </data>
+  <data name="&gt;&gt;btnStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnStart.Parent" xml:space="preserve">
+    <value>tabPageSettings</value>
+  </data>
+  <data name="&gt;&gt;btnStart.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="comboBoxNetgraph.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 8</value>
+  </data>
+  <data name="comboBoxNetgraph.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="comboBoxNetgraph.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 25</value>
+  </data>
+  <data name="comboBoxNetgraph.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="comboBoxNetgraph.ToolTip" xml:space="preserve">
+    <value>Select default netgraph for connections</value>
+  </data>
+  <data name="&gt;&gt;comboBoxNetgraph.Name" xml:space="preserve">
+    <value>comboBoxNetgraph</value>
+  </data>
+  <data name="&gt;&gt;comboBoxNetgraph.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxNetgraph.Parent" xml:space="preserve">
+    <value>tabPageSettings</value>
+  </data>
+  <data name="&gt;&gt;comboBoxNetgraph.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panelSettings.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="panelSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 40</value>
+  </data>
+  <data name="panelSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>850, 413</value>
+  </data>
+  <data name="panelSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panelSettings.Name" xml:space="preserve">
+    <value>panelSettings</value>
+  </data>
+  <data name="&gt;&gt;panelSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelSettings.Parent" xml:space="preserve">
+    <value>tabPageSettings</value>
+  </data>
+  <data name="&gt;&gt;panelSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tabPageSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>849, 453</value>
+  </data>
+  <data name="tabPageSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageSettings.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="&gt;&gt;tabPageSettings.Name" xml:space="preserve">
+    <value>tabPageSettings</value>
+  </data>
+  <data name="&gt;&gt;tabPageSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageSettings.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPageSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="packetLogControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="packetLogControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="packetLogControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="packetLogControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>841, 445</value>
+  </data>
+  <data name="packetLogControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;packetLogControl.Name" xml:space="preserve">
+    <value>packetLogControl</value>
+  </data>
+  <data name="&gt;&gt;packetLogControl.Type" xml:space="preserve">
+    <value>CANAPE.Controls.PacketLogControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+  </data>
+  <data name="&gt;&gt;packetLogControl.Parent" xml:space="preserve">
+    <value>tabPagePacketLog</value>
+  </data>
+  <data name="&gt;&gt;packetLogControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPagePacketLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tabPagePacketLog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPagePacketLog.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPagePacketLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>849, 453</value>
+  </data>
+  <data name="tabPagePacketLog.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPagePacketLog.Text" xml:space="preserve">
+    <value>Packet Log</value>
+  </data>
+  <data name="&gt;&gt;tabPagePacketLog.Name" xml:space="preserve">
+    <value>tabPagePacketLog</value>
+  </data>
+  <data name="&gt;&gt;tabPagePacketLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPagePacketLog.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPagePacketLog.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="eventLogControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="eventLogControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="eventLogControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="eventLogControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>841, 445</value>
+  </data>
+  <data name="eventLogControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;eventLogControl.Name" xml:space="preserve">
+    <value>eventLogControl</value>
+  </data>
+  <data name="&gt;&gt;eventLogControl.Type" xml:space="preserve">
+    <value>CANAPE.Controls.EventLogControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+  </data>
+  <data name="&gt;&gt;eventLogControl.Parent" xml:space="preserve">
+    <value>tabPageEvents</value>
+  </data>
+  <data name="&gt;&gt;eventLogControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageEvents.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tabPageEvents.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageEvents.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageEvents.Size" type="System.Drawing.Size, System.Drawing">
+    <value>849, 453</value>
+  </data>
+  <data name="tabPageEvents.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPageEvents.Text" xml:space="preserve">
+    <value>Text Log</value>
+  </data>
+  <data name="&gt;&gt;tabPageEvents.Name" xml:space="preserve">
+    <value>tabPageEvents</value>
+  </data>
+  <data name="&gt;&gt;tabPageEvents.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageEvents.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPageEvents.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="checkBoxClearOnStart.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxClearOnStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 13</value>
+  </data>
+  <data name="checkBoxClearOnStart.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="checkBoxClearOnStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="checkBoxClearOnStart.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="checkBoxClearOnStart.Text" xml:space="preserve">
+    <value>Clear On Start</value>
+  </data>
+  <data name="&gt;&gt;checkBoxClearOnStart.Name" xml:space="preserve">
+    <value>checkBoxClearOnStart</value>
+  </data>
+  <data name="&gt;&gt;checkBoxClearOnStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxClearOnStart.Parent" xml:space="preserve">
+    <value>tabPageGlobalMeta</value>
+  </data>
+  <data name="&gt;&gt;checkBoxClearOnStart.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="metaEditorControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="metaEditorControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="metaEditorControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="metaEditorControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>841, 445</value>
+  </data>
+  <data name="metaEditorControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;metaEditorControl.Name" xml:space="preserve">
+    <value>metaEditorControl</value>
+  </data>
+  <data name="&gt;&gt;metaEditorControl.Type" xml:space="preserve">
+    <value>CANAPE.Controls.MetaEditorControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+  </data>
+  <data name="&gt;&gt;metaEditorControl.Parent" xml:space="preserve">
+    <value>tabPageGlobalMeta</value>
+  </data>
+  <data name="&gt;&gt;metaEditorControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPageGlobalMeta.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tabPageGlobalMeta.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageGlobalMeta.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageGlobalMeta.Size" type="System.Drawing.Size, System.Drawing">
+    <value>849, 453</value>
+  </data>
+  <data name="tabPageGlobalMeta.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tabPageGlobalMeta.Text" xml:space="preserve">
+    <value>Global Meta</value>
+  </data>
+  <data name="&gt;&gt;tabPageGlobalMeta.Name" xml:space="preserve">
+    <value>tabPageGlobalMeta</value>
+  </data>
+  <data name="&gt;&gt;tabPageGlobalMeta.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageGlobalMeta.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPageGlobalMeta.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="columnId.Text" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="columnDescription.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="columnDescription.Width" type="System.Int32, mscorlib">
+    <value>413</value>
+  </data>
+  <data name="columnConnectTime.Text" xml:space="preserve">
+    <value>Connect Time</value>
+  </data>
+  <data name="columnConnectTime.Width" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <metadata name="contextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>437, 17</value>
+  </metadata>
+  <data name="killConnectionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 24</value>
+  </data>
+  <data name="killConnectionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kill Connection</value>
+  </data>
+  <data name="refreshToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 24</value>
+  </data>
+  <data name="refreshToolStripMenuItem.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="contextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 52</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip.Name" xml:space="preserve">
+    <value>contextMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listViewConns.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="listViewConns.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="listViewConns.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="listViewConns.Size" type="System.Drawing.Size, System.Drawing">
+    <value>841, 445</value>
+  </data>
+  <data name="listViewConns.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="listViewConns.ToolTip" xml:space="preserve">
+    <value>Current active network connections</value>
+  </data>
+  <data name="&gt;&gt;listViewConns.Name" xml:space="preserve">
+    <value>listViewConns</value>
+  </data>
+  <data name="&gt;&gt;listViewConns.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listViewConns.Parent" xml:space="preserve">
+    <value>tabPageConns</value>
+  </data>
+  <data name="&gt;&gt;listViewConns.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageConns.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tabPageConns.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageConns.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageConns.Size" type="System.Drawing.Size, System.Drawing">
+    <value>849, 453</value>
+  </data>
+  <data name="tabPageConns.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabPageConns.Text" xml:space="preserve">
+    <value>Conns</value>
+  </data>
+  <data name="&gt;&gt;tabPageConns.Name" xml:space="preserve">
+    <value>tabPageConns</value>
+  </data>
+  <data name="&gt;&gt;tabPageConns.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageConns.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPageConns.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="networkHistoryControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="networkHistoryControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="networkHistoryControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="networkHistoryControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>841, 445</value>
+  </data>
+  <data name="networkHistoryControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;networkHistoryControl.Name" xml:space="preserve">
+    <value>networkHistoryControl</value>
+  </data>
+  <data name="&gt;&gt;networkHistoryControl.Type" xml:space="preserve">
+    <value>CANAPE.Controls.ConnectionHistoryControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+  </data>
+  <data name="&gt;&gt;networkHistoryControl.Parent" xml:space="preserve">
+    <value>tabPageHistory</value>
+  </data>
+  <data name="&gt;&gt;networkHistoryControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageHistory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tabPageHistory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageHistory.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageHistory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>849, 453</value>
+  </data>
+  <data name="tabPageHistory.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="tabPageHistory.Text" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="&gt;&gt;tabPageHistory.Name" xml:space="preserve">
+    <value>tabPageHistory</value>
+  </data>
+  <data name="&gt;&gt;tabPageHistory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageHistory.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPageHistory.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="netGraphNodesControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="netGraphNodesControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="netGraphNodesControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="netGraphNodesControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>841, 445</value>
+  </data>
+  <data name="netGraphNodesControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;netGraphNodesControl.Name" xml:space="preserve">
+    <value>netGraphNodesControl</value>
+  </data>
+  <data name="&gt;&gt;netGraphNodesControl.Type" xml:space="preserve">
+    <value>CANAPE.Controls.ActiveNetgraphControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+  </data>
+  <data name="&gt;&gt;netGraphNodesControl.Parent" xml:space="preserve">
+    <value>tabPageNetGraphs</value>
+  </data>
+  <data name="&gt;&gt;netGraphNodesControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageNetGraphs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tabPageNetGraphs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageNetGraphs.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageNetGraphs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>849, 453</value>
+  </data>
+  <data name="tabPageNetGraphs.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tabPageNetGraphs.Text" xml:space="preserve">
+    <value>Active Graphs</value>
+  </data>
+  <data name="&gt;&gt;tabPageNetGraphs.Name" xml:space="preserve">
+    <value>tabPageNetGraphs</value>
+  </data>
+  <data name="&gt;&gt;tabPageNetGraphs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageNetGraphs.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPageNetGraphs.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="injectPacketControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="injectPacketControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="injectPacketControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="injectPacketControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>841, 445</value>
+  </data>
+  <data name="injectPacketControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;injectPacketControl.Name" xml:space="preserve">
+    <value>injectPacketControl</value>
+  </data>
+  <data name="&gt;&gt;injectPacketControl.Type" xml:space="preserve">
+    <value>CANAPE.Controls.InjectPacketControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+  </data>
+  <data name="&gt;&gt;injectPacketControl.Parent" xml:space="preserve">
+    <value>tabPageInjector</value>
+  </data>
+  <data name="&gt;&gt;injectPacketControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageInjector.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tabPageInjector.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageInjector.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageInjector.Size" type="System.Drawing.Size, System.Drawing">
+    <value>849, 453</value>
+  </data>
+  <data name="tabPageInjector.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tabPageInjector.Text" xml:space="preserve">
+    <value>Injector</value>
+  </data>
+  <data name="&gt;&gt;tabPageInjector.Name" xml:space="preserve">
+    <value>tabPageInjector</value>
+  </data>
+  <data name="&gt;&gt;tabPageInjector.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageInjector.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPageInjector.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="redirectLogControl.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="redirectLogControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 38</value>
+  </data>
+  <data name="redirectLogControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="redirectLogControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>656, 153</value>
+  </data>
+  <data name="redirectLogControl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;redirectLogControl.Name" xml:space="preserve">
+    <value>redirectLogControl</value>
+  </data>
+  <data name="&gt;&gt;redirectLogControl.Type" xml:space="preserve">
+    <value>CANAPE.Controls.RedirectLogControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+  </data>
+  <data name="&gt;&gt;redirectLogControl.Parent" xml:space="preserve">
+    <value>tabPageRedirectLog</value>
+  </data>
+  <data name="&gt;&gt;redirectLogControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBoxRedirect.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxRedirect.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxRedirect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
+  </data>
+  <data name="checkBoxRedirect.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="checkBoxRedirect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 21</value>
+  </data>
+  <data name="checkBoxRedirect.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBoxRedirect.Text" xml:space="preserve">
+    <value>Enable Redirect</value>
+  </data>
+  <data name="checkBoxRedirect.ToolTip" xml:space="preserve">
+    <value>Enable redirection of the live packet log</value>
+  </data>
+  <data name="&gt;&gt;checkBoxRedirect.Name" xml:space="preserve">
+    <value>checkBoxRedirect</value>
+  </data>
+  <data name="&gt;&gt;checkBoxRedirect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxRedirect.Parent" xml:space="preserve">
+    <value>tabPageRedirectLog</value>
+  </data>
+  <data name="&gt;&gt;checkBoxRedirect.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPageRedirectLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tabPageRedirectLog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageRedirectLog.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageRedirectLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>849, 453</value>
+  </data>
+  <data name="tabPageRedirectLog.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="tabPageRedirectLog.Text" xml:space="preserve">
+    <value>Redirect Log</value>
+  </data>
+  <data name="&gt;&gt;tabPageRedirectLog.Name" xml:space="preserve">
+    <value>tabPageRedirectLog</value>
+  </data>
+  <data name="&gt;&gt;tabPageRedirectLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageRedirectLog.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPageRedirectLog.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="credentialsEditorControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="credentialsEditorControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="credentialsEditorControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="credentialsEditorControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>841, 445</value>
+  </data>
+  <data name="credentialsEditorControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;credentialsEditorControl.Name" xml:space="preserve">
+    <value>credentialsEditorControl</value>
+  </data>
+  <data name="&gt;&gt;credentialsEditorControl.Type" xml:space="preserve">
+    <value>CANAPE.Controls.CredentialsEditorControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+  </data>
+  <data name="&gt;&gt;credentialsEditorControl.Parent" xml:space="preserve">
+    <value>tabPageCredentials</value>
+  </data>
+  <data name="&gt;&gt;credentialsEditorControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageCredentials.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="tabPageCredentials.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageCredentials.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPageCredentials.Size" type="System.Drawing.Size, System.Drawing">
+    <value>849, 453</value>
+  </data>
+  <data name="tabPageCredentials.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="tabPageCredentials.Text" xml:space="preserve">
+    <value>Credentials</value>
+  </data>
+  <data name="&gt;&gt;tabPageCredentials.Name" xml:space="preserve">
+    <value>tabPageCredentials</value>
+  </data>
+  <data name="&gt;&gt;tabPageCredentials.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageCredentials.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPageCredentials.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="tabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>857, 483</value>
+  </data>
+  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 17</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>857, 483</value>
+  </data>
+  <data name="&gt;&gt;columnId.Name" xml:space="preserve">
+    <value>columnId</value>
+  </data>
+  <data name="&gt;&gt;columnId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnDescription.Name" xml:space="preserve">
+    <value>columnDescription</value>
+  </data>
+  <data name="&gt;&gt;columnDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnConnectTime.Name" xml:space="preserve">
+    <value>columnConnectTime</value>
+  </data>
+  <data name="&gt;&gt;columnConnectTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;killConnectionToolStripMenuItem.Name" xml:space="preserve">
+    <value>killConnectionToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;killConnectionToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;refreshToolStripMenuItem.Name" xml:space="preserve">
+    <value>refreshToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;refreshToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Name" xml:space="preserve">
+    <value>toolTip</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>NetServiceDocumentControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

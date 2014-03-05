@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="copyPathToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kopiere Pfad</value>
+  </data>
+  <data name="importFromFileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Importiere aus Datei</value>
+  </data>
+  <data name="exportToFileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exportiere in Datei</value>
+  </data>
+  <data name="copyAsFilterToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kopiere als Filter</value>
+  </data>
+  <data name="libraryParserToolStripMenuItem.Text" xml:space="preserve">
+    <value>Library Parser</value>
+  </data>
+  <data name="scriptToolStripMenuItem.Text" xml:space="preserve">
+    <value>Skript</value>
+  </data>
+  <data name="parseWithToolStripMenuItem.Text" xml:space="preserve">
+    <value>Parse mit</value>
+  </data>
+  <data name="convertToBytesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bytes</value>
+  </data>
+  <data name="convertToBinaryStringToolStripMenuItem.Text" xml:space="preserve">
+    <value>Binärer String</value>
+  </data>
+  <data name="convertToUTF8ToolStripMenuItem.Text" xml:space="preserve">
+    <value>UTF8</value>
+  </data>
+  <data name="convertToUTF16LEToolStripMenuItem.Text" xml:space="preserve">
+    <value>UTF16-LE</value>
+  </data>
+  <data name="convertToUTF16BEToolStripMenuItem.Text" xml:space="preserve">
+    <value>UTF16-BE</value>
+  </data>
+  <data name="convertToUTF32LEToolStripMenuItem.Text" xml:space="preserve">
+    <value>UTF32-LE</value>
+  </data>
+  <data name="convertToUTF32BEToolStripMenuItem.Text" xml:space="preserve">
+    <value>UTF32-BE</value>
+  </data>
+  <data name="convertToUTF7ToolStripMenuItem.Text" xml:space="preserve">
+    <value>UTF7</value>
+  </data>
+  <data name="convertToUnicodeStringToolStripMenuItem.Text" xml:space="preserve">
+    <value>Unicode String</value>
+  </data>
+  <data name="convertToToolStripMenuItem.Text" xml:space="preserve">
+    <value>Konvertiere nach</value>
+  </data>
+  <data name="expandNodeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Erweitere Knoten</value>
+  </data>
+  <data name="collapseNodeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Minimiere Knoten</value>
+  </data>
+</root>

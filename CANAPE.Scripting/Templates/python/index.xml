@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<templates>
+  <template id="0" name="Basic Pipeline Node" description="A simple pipeline node implementation" filename="basicpipelinenode.py"/>
+  <template id="1" name="RE Mutator Node" description="A simple node to replace a value based on a regular expression" filename="remutator.py" />
+  <template id="2" name="Basic Stream Parser" description="An example of a simple stream parser" filename="basicstreamparser.py"/>
+  <template id="3" name="Basic String Parser" description="An example of a simple string parser" filename="basicstringparser.py"/>
+  <template id="4" name="Basic Data Endpoint" description="An example of a basic data endpoint" filename="basicdataendpoint.py"/>
+  <template id="5" name="Basic HTTP Server" description="An example of a basic http server" filename="httpserver.py"/>
+  <template id="6" name="XOR Network Layer" description="An example network layer which xors data" filename="xorlayer.py"/>
+  <template id="7" name="String/Hex Converter" description="An example string/hex converter for use with the hexeditor" filename="stringhexconv.py"/>
+  <template id="8" name="Selected Packets Exporter" description="An example exporter for selected packets in a log" filename="packetexport.py"/>
+</templates>

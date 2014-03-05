@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<templates>
+  <template id="0" name="Basic Pipeline Node" description="Eine einfache Pipeline Knoten Implementierung" filename="basicpipelinenode.cs"/>
+  <template id="1" name="Basic Stream Parser" description="Beispiel eines einfachen Datenparser" filename="basicstreamparser.cs"/>
+  <template id="2" name="Basic Array Parser" description="Beispiel eines einfachen Arrayparser" filename="basicarrayparser.cs"/>
+  <template id="3" name="Basic Data Endpoint" description="Beispiel eines einfachen Datenendpunktes" filename="basicdataendpoint.cs"/>
+</templates>

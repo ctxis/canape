@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="addFilterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 22</value>
+  </data>
+  <data name="addFilterToolStripMenuItem.Text" xml:space="preserve">
+    <value>Filter hinzufügen</value>
+  </data>
+  <data name="deleteFilterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 22</value>
+  </data>
+  <data name="deleteFilterToolStripMenuItem.Text" xml:space="preserve">
+    <value>Filter löschen</value>
+  </data>
+  <data name="moveFilterUpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 22</value>
+  </data>
+  <data name="moveFilterUpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Filter hochschieben</value>
+  </data>
+  <data name="moveFilterDownToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 22</value>
+  </data>
+  <data name="moveFilterDownToolStripMenuItem.Text" xml:space="preserve">
+    <value>Filter runterschieben</value>
+  </data>
+  <data name="editFilterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 22</value>
+  </data>
+  <data name="editFilterToolStripMenuItem.Text" xml:space="preserve">
+    <value>Filter bearbeiten</value>
+  </data>
+  <data name="toggleEnabledToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 22</value>
+  </data>
+  <data name="toggleEnabledToolStripMenuItem.Text" xml:space="preserve">
+    <value>ein/ausschalten</value>
+  </data>
+  <data name="contextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 136</value>
+  </data>
+  <data name="btnEdit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAARRJREFUOE+9zr9LAmEcx/H7l4L+hCgJnBqaghsES+h0ECKuDCytqyMJuhMLGo6i
+        IvBMENFqqChuChyOfpD9nDJpKE5seodhc/c09N6+PLw+PNK/d6KqHIRCdE+xHOeM60WNujJOPhgUGxlN
+        hVnaytB4aeDmcpQVxf9AbVemUtykJ95H0kxi23n/+HxjmA93Hjj+Hun8pPv0e4fGEG8XSWjbeE8aeqTX
+        Py5qgzSdKfB2aD2kxfHzURRaFu37GTFsqf3clSPQXMG7nRTDldUYlwUZXnU+rxQxfLqd4GY/Do8ZPDcs
+        hjvVCwmorfNenWVvbkQMl8wJcJZxsmNYekwMZ02DqhFlbVoWgz8NBAIspFN/w5IkfQFnQLd0mHS/QgAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnEdit.ToolTip" xml:space="preserve">
+    <value>Den ausgewählten Filter bearbeiten</value>
+  </data>
+  <data name="btnDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAU5JREFUOE9joAr4uWTa/5fNRf9fzuz9DxXCC95P7vm/KjMVofZCUer/HzM6//+a
+        1v7/W1fV/zud9VgN+jG54/+lvGTslhycOvH/s+rc/z+zQv5/DXf4fzPUCUXhV1fd/5v9nAm7cF9azP8n
+        xhL/X6uz/7/ioP3/ekHa/4tynP93e1gT1owMLumI/L+txPn/sgzz/5OeVqRpBoEDZkr/L6vx/n+ozff/
+        XKgbaQZctlD8/8BC7v+GlNj/27MS/382Ev1/OB8p1PGBC2by/2/pCf1fHR0K13CoovD/OzNpwgbc9TEB
+        a97uaIqhGBS4oECFcjHBpeSQ/zeMxP6fNpDCqeiyh+n/PU3VmPKf5s38D7L9rrkMweg67YTpOoZn1YX/
+        H0e4/7/rZvj/VlkmXgMOVVdgyl+pyPv/Jsbt/0UzBbya8QKQC44lBJFvAHmAgQEAbG+sSUvJLEEAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="btnDelete.ToolTip" xml:space="preserve">
+    <value>Den ausgewählten Filter löschen</value>
+  </data>
+  <data name="btnAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAVVJREFUOE+NkTFLw2AQhr9FcRAXd3cnFwd/gEpBwTq4uOgkqOBUKgQn66BFMIti
+        IwhFcLBrxHaQZskSQRBExMGIaAludajZzryXfKVpvrQ9eMhB7n24S4RlWQRs22a6+3rdItGrMOT7f6k4
+        jkO1Wi1dMojAb7XSJXihCkpwQrV6xygl/QTgt9mkD9dVC2BWhVQoBeatyTeqApJFc57GLoeZhaCPomHd
+        VCqhoIcEwezTJG29ZriPomHFBCmSUWOItt/mqPi1kRSUy1f8kWKSAKyKYYTxRNjwNO4ly/cZEiWjxIJu
+        CQZWn6cp/56l4+9NuvjZY868HB18rvNG49cjJE50PSFAD4HmrpDe2KFzb5dOGzneAsK1lxmafZgIBYfF
+        o5iAn8Hd8gSAQRlGL+ET9guFtqCTThmGEcZJ6KPPF5amadQPhPALlx6nkoJBCqsiCHjtdgnxD6xhdB4P
+        G4d5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnAdd.ToolTip" xml:space="preserve">
+    <value>Einen neuen Filter zur Liste hinzufügen</value>
+  </data>
+  <data name="buttonFilterDown.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA68AAAOvAGVvHJJAAABMElE
+        QVQ4T2PABhyWiv1Hx1ApwgCkuOp8FhiXX0n9n3Mt5H/f45r/kTv0iTMEZEDqef//kadc/vucMfzvfknr
+        /+TnDaQbEH3B+b/Hde3//jcN/09910SaASBnR193/O93z/B/4H1j0g0ouhv1P/qu3f/QJ2ZgTLIBBY+j
+        4JrJMiDvaQjxBtQfTsaI84SnzigGTHhZBzYAGXeezkUYGLxZ8/+c951gmwtehv6PfQbxPygAPW7ogAO0
+        7V7p/4brBf9n3unD7hqQIfM+df/Pexn8P+yRBTgGQJqdL6n/tzqp8N9wvwRuzTAAMgTkX7BmYBpwOKf6
+        3/K4/H+DfeKENcMAyJCaRxlgzeZHZf/r7xElXjMMgAwpuh4P1xy4SY14zTAADpM7k8nTDAMgQ6BMHICB
+        AQDYqBx6cWjLcgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="buttonFilterDown.ToolTip" xml:space="preserve">
+    <value>Den Filter in der Liste eine Position tiefer verschieben</value>
+  </data>
+  <data name="buttonFilterUp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA68AAAOvAGVvHJJAAABMklE
+        QVQ4T2PAB6xniPyHMkkHIM1zXvX891mqRrohMM3lzxP+b/iymDRDkDXXvEv6X/sh+f/KrzP/B63SJmwI
+        TDNIIwyDDEh57f5/wcc+/Ibg0pz9Iuh/wguX/1GP7P7PfNmJ3RB0zSCNIAxigzQveD8RLD/laev/nhv1
+        qIbUH07+H7zU+L/bQnk4hmkG2R76wAqsOWK7Hhwn7LT833k6F7t3QCEO0lz2Kv5/zEOn//7XTf9Pf9IJ
+        1ghVgh+ADCh/mfA/53EIWLPrOd3/k+61kGZA0ZPo/zE3ncGabQ+rgf1NkgFZd4P/e58zAWs23CH9v/VS
+        JWkGxF52h2vWWifyv/FsOWkGBJ2w/W+4HaJZabnA/9qTxaQZMOfuRLCzQTaDNNccLyLeABAAKUbHUCk0
+        wMAAAGA7Jf3LKU8lAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="buttonFilterUp.ToolTip" xml:space="preserve">
+    <value>Den Filter in der Liste eine Position höher verschieben</value>
+  </data>
+  <data name="listViewFilters.ToolTip" xml:space="preserve">
+    <value>Die Filterliste für den Netzwerkproxy anzeigen</value>
+  </data>
+  <data name="btnAdvancedOptions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 36</value>
+  </data>
+  <data name="btnAdvancedOptions.Text" xml:space="preserve">
+    <value>Erweiterte Optionen</value>
+  </data>
+  <data name="btnAdvancedOptions.ToolTip" xml:space="preserve">
+    <value>Die Erweiterten Optionen für diese Proxykonfiguration anzeigen</value>
+  </data>
+  <data name="checkBoxIpv6.ToolTip" xml:space="preserve">
+    <value>Setzen wenn sowohl an IPv6 als auch an IPv4 Adressen gebunden werden soll</value>
+  </data>
+  <data name="numTcpPort.ToolTip" xml:space="preserve">
+    <value>Lokale Portnummer angeben</value>
+  </data>
+  <data name="checkBoxGlobal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 17</value>
+  </data>
+  <data name="checkBoxGlobal.Text" xml:space="preserve">
+    <value>An alle Netzwerke binden</value>
+  </data>
+  <data name="checkBoxGlobal.ToolTip" xml:space="preserve">
+    <value>Setzen wenn an alle Schnittstellen gebunden werden soll</value>
+  </data>
+  <data name="labelLocalPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="labelLocalPort.Text" xml:space="preserve">
+    <value>Lokaler Port</value>
+  </data>
+</root>

@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BitFieldMemberEntry_BitsDescription" xml:space="preserve">
+    <value>Die Anzahl der Bits beim Benutzen eines Bitbereiches</value>
+  </data>
+  <data name="BitField_InvalidSize" xml:space="preserve">
+    <value>Der Bitbereich muss zwischen 0 and 64 Bits groß sein</value>
+  </data>
+  <data name="BooleanMemberEntry_FalseValueDescription" xml:space="preserve">
+    <value>Der Wert, der bei Falsch genutzt wird</value>
+  </data>
+  <data name="BooleanMemberEntry_InvalidValue" xml:space="preserve">
+    <value>Der Wert {0} kann in einem {1} nicht angezeigt werden</value>
+  </data>
+  <data name="BooleanMemberEntry_TrueValueDescription" xml:space="preserve">
+    <value>Der Wert, der bei Wahr genutzt wird</value>
+  </data>
+  <data name="CharMemberEntry_StringEncodingDescription" xml:space="preserve">
+    <value>Die für den String gewählte Encodierung</value>
+  </data>
+  <data name="ContainerMemberEntry_BaseTypeDescription" xml:space="preserve">
+    <value>Der Basis Benutzertyp</value>
+  </data>
+  <data name="EnumMemberEntry_EnumTypeDescription" xml:space="preserve">
+    <value>Der Aufzählungstyp für diesen Eintrag</value>
+  </data>
+  <data name="EnumParserType_IsFlagsDescription" xml:space="preserve">
+    <value>Zeigt ob die Aufzählung aus Flags oder Werten besteht</value>
+  </data>
+  <data name="FixedLengthGenericArrayMemberEntry_LengthDescription" xml:space="preserve">
+    <value>Länge des festgelegten Arrays in Elementen</value>
+  </data>
+  <data name="FixedLengthPrimitiveArrayMemberEntry_IsByteLengthDescription" xml:space="preserve">
+    <value>Zeigt, ob die Feldlänge der Länge der Elemente oder Bytes entspricht</value>
+  </data>
+  <data name="FixedLengthPrimitiveArrayMemberEntry_LengthDescription" xml:space="preserve">
+    <value>Die Länge des festgelegten Arrays in Elementen</value>
+  </data>
+  <data name="FixedLengthStringMemberEntry_Description" xml:space="preserve">
+    <value>Ein String mit angepasster Länge</value>
+  </data>
+  <data name="FixedLengthStringMemberEntry_IsByteLengthDescription" xml:space="preserve">
+    <value>Zeigt, ob die Feldlänge der Länge der Elemente oder Bytes entspricht</value>
+  </data>
+  <data name="FixedLengthStringMemberEntry_LengthDescription" xml:space="preserve">
+    <value>Länge des Textes in Buchstaben</value>
+  </data>
+  <data name="FixedLengthStringMemberEntry_PaddingDescription" xml:space="preserve">
+    <value>Ein Zeichen, welches als Padding genutzt wird, sofern der String zu kurz ist</value>
+  </data>
+  <data name="FixedLengthStringMemberEntry_StringLengthInvalid" xml:space="preserve">
+    <value>Die Länge des Strings muss größer oder gleich 0 sein</value>
+  </data>
+  <data name="FloatPrimitiveMemberEntry_InvalidType" xml:space="preserve">
+    <value>Der Typ muss float oder double sein</value>
+  </data>
+  <data name="GenericStreamParser_ReadException" xml:space="preserve">
+    <value>Ausnahme '{0}' beim Lesen des Types {1}</value>
+  </data>
+  <data name="GenericStreamParser_WriteException" xml:space="preserve">
+    <value>Ausnahme '{0}' beim Schreiben des Types {1}</value>
+  </data>
+  <data name="IntegerMemberEntry_InvalidType" xml:space="preserve">
+    <value>Der Typ muss primitiv sein</value>
+  </data>
+  <data name="IntegerPrimitiveMemberEntry_FormatDescription" xml:space="preserve">
+    <value>Spezifiziere das Anzeigeformat für die Mitglieder</value>
+  </data>
+  <data name="IntegerPrimitiveMemberEntry_InvalidType" xml:space="preserve">
+    <value>Der Typ muss ein Integer sein</value>
+  </data>
+  <data name="MemberEntryReference_CouldNotFindMember" xml:space="preserve">
+    <value>Das Mitglied {0} konnte in der Referenzkette nicht gefunden werden</value>
+  </data>
+  <data name="MemberEntryReference_InvalidChain" xml:space="preserve">
+    <value>Die Referenzkette ist ungültig</value>
+  </data>
+  <data name="MemberEntryReference_InvalidChainMustEndWithTypes" xml:space="preserve">
+    <value>Ketten müssen mit eingebauten Typen enden</value>
+  </data>
+  <data name="MemberEntryReference_InvalidChainMustStartWithSequences" xml:space="preserve">
+    <value>Ketten mit mehreren Items müssen mit einer Sequenz starten</value>
+  </data>
+  <data name="MemberEntry_DescriptionDescription" xml:space="preserve">
+    <value>Es muss eine Textbeschreibung für das Mitglied angegeben werden</value>
+  </data>
+  <data name="MemberEntry_DisplayClassDescription" xml:space="preserve">
+    <value>Es muss eine Anleitung angegeben werden, wie der Knoten editiert und angezeigt werden soll</value>
+  </data>
+  <data name="MemberEntry_HiddenDescription" xml:space="preserve">
+    <value>Wenn das Mitglied nicht in der letzten Ausgabe ist</value>
+  </data>
+  <data name="MemberEntry_InvalidFieldReference" xml:space="preserve">
+    <value>Ungültige Feldreferenz</value>
+  </data>
+  <data name="MemberEntry_InvalidName" xml:space="preserve">
+    <value>Der Name '{0}' ist kein gültiger Identifizierer</value>
+  </data>
+  <data name="MemberEntry_InvalidReference" xml:space="preserve">
+    <value>{0} existiert nicht als Referenz</value>
+  </data>
+  <data name="MemberEntry_NameAlreadyExists" xml:space="preserve">
+    <value>Der Name '{0}' existiert bereits in dieser Referenz</value>
+  </data>
+  <data name="MemberEntry_NameDescription" xml:space="preserve">
+    <value>Der Name des Mitgliedeintrages</value>
+  </data>
+  <data name="MemberEntry_ReadOnlyDescription" xml:space="preserve">
+    <value>Wenn gesetzt, ist das Mitglied nur lesbar in der finalen Struktur</value>
+  </data>
+  <data name="MemberEntry_TypeNameDescription" xml:space="preserve">
+    <value>Name des Typ</value>
+  </data>
+  <data name="MemberEntry_UuidDescription" xml:space="preserve">
+    <value>Einzigartige ID des Typ</value>
+  </data>
+  <data name="NumericPrimitiveMemberEntry_CustomFormatDescription" xml:space="preserve">
+    <value>Gebe einen beliebigen String für die Daten an(überschreibt alles andere)</value>
+  </data>
+  <data name="NumericPrimitiveMemberEntry_EndianDescription" xml:space="preserve">
+    <value>Die Endianness des Typen fürs Parsing (nicht auf Bytes anwendbar)</value>
+  </data>
+  <data name="ObjectConverter_GetObjectAbstract" xml:space="preserve">
+    <value>Die abstrakte Klasse {0} konnte nicht erstellt werden</value>
+  </data>
+  <data name="ObjectConverter_GetObjectArray" xml:space="preserve">
+    <value>Array Typen müssen durch einen Datenschlüssel repräsentiert werden</value>
+  </data>
+  <data name="ObjectConverter_GetObjectComplex" xml:space="preserve">
+    <value>Komplexe Typen müssen durch einen Datenschlüssel repräsentiert werden</value>
+  </data>
+  <data name="ObjectConverter_GetObjectCouldntCreate" xml:space="preserve">
+    <value>Es konnte keine Instanz des Typen {0} erstellt werden</value>
+  </data>
+  <data name="ObjectConverter_GetObjectDateTime" xml:space="preserve">
+    <value>DateTime Formate müssen durch einen DateTimeDataValue Wert dargestellt werden</value>
+  </data>
+  <data name="ObjectConverter_GetObjectEnum" xml:space="preserve">
+    <value>Aufzählungen müssen entweder aus einer transportierbaren Aufzählung, einem primitiven Typ oder einem String bestehen</value>
+  </data>
+  <data name="ObjectConverter_GetObjectInt24" xml:space="preserve">
+    <value>Int24 Typen müssen durch einen DataValue Wert repräsentiert werden</value>
+  </data>
+  <data name="ObjectConverter_GetObjectPrimitive" xml:space="preserve">
+    <value>Primitive Typen müssen durch einen DataValue Wert repräsentiert werden</value>
+  </data>
+  <data name="ObjectConverter_GetObjectUInt24" xml:space="preserve">
+    <value>UInt24 Typen müssen durch einen DataValue Wert repräsentiert werden</value>
+  </data>
+  <data name="ObjectConverter_GetTypeFromNode" xml:space="preserve">
+    <value>Die Instanz vom Typ {0} konnte nicht an {1} zugewiesen werden</value>
+  </data>
+  <data name="ParserType_DescriptionDescription" xml:space="preserve">
+    <value>Es muss eine Textbeschreibung für diesen Typen angegeben werden</value>
+  </data>
+  <data name="ParserType_DisplayClassDescription" xml:space="preserve">
+    <value>Es muss eine Anleitung angegeben werden, wie der Knoten editiert und angezeigt werden soll</value>
+  </data>
+  <data name="ParserType_UuidDescription" xml:space="preserve">
+    <value>Einzigartige ID des Typ</value>
+  </data>
+  <data name="ParserUtils_InvalidPrimitiveType" xml:space="preserve">
+    <value>Ungültiger primitiver Typ</value>
+  </data>
+  <data name="ReferenceLengthGenericArrayMemberEntry_AdjustmentDescription" xml:space="preserve">
+    <value>Es muss ein Anpassungswert angegeben werden, welcher bei der Deserialisierung entfernt und bei der Serialisierung hinzugefügt wird</value>
+  </data>
+  <data name="ReferenceLengthGenericArrayMemberEntry_IsByteLengthDescription" xml:space="preserve">
+    <value>Gibt an, ob die Feldlänge der Länge der Elemente oder Bytes entspricht</value>
+  </data>
+  <data name="ReferenceLengthGenericArrayMemberEntry_ReferenceDescription" xml:space="preserve">
+    <value>Definition der Mitgliederreferenz, aus welcher die Länge geladen wird</value>
+  </data>
+  <data name="ReferenceLengthPrimitiveArrayMemberEntry_AdjustmentDescription" xml:space="preserve">
+    <value>Es muss ein Anpassungswert angegeben werden, welcher bei der Deserialisierung entfernt und bei der Serialisierung hinzugefügt wird</value>
+  </data>
+  <data name="ReferenceLengthPrimitiveArrayMemberEntry_IsByteLengthDescription" xml:space="preserve">
+    <value>Gibt an, ob die Feldlänge der Länge der Elemente oder Bytes entspricht</value>
+  </data>
+  <data name="ReferenceLengthPrimitiveArrayMemberEntry_ReferenceDescription" xml:space="preserve">
+    <value>Definiere die Mitgliederreferenz, aus welcher die Länge geladen wird</value>
+  </data>
+  <data name="ReferenceLengthStringMemberEntry_AdjustmentDescription" xml:space="preserve">
+    <value>s muss ein Anpassungswert angegeben werden, welcher bei der Deserialisierung entfernt und bei der Serialisierung hinzugefügt wird</value>
+  </data>
+  <data name="ReferenceLengthStringMemberEntry_IsByteLengthDescription" xml:space="preserve">
+    <value>Gibt an, ob die Feldlänge der Länge der Elemente oder Bytes entspricht</value>
+  </data>
+  <data name="ReferenceLengthStringMemberEntry_ReferenceDescription" xml:space="preserve">
+    <value>Definiere die Mitgliederreferenz, aus welcher die Länge geladen wird</value>
+  </data>
+  <data name="SequenceParserType_DefaultEndian" xml:space="preserve">
+    <value>Die Endianness des Integertypen fürs Parsing</value>
+  </data>
+  <data name="SequenceParserType_MemberAlreadyParented" xml:space="preserve">
+    <value>{0} ist bereits Mitglied eines anderen Types</value>
+  </data>
+  <data name="SequenceParserType_NameExists" xml:space="preserve">
+    <value>{0} ist bereits Mitglied</value>
+  </data>
+  <data name="SequenceParserType_NotOurMember" xml:space="preserve">
+    <value>Übergebenes Mitglied ist kein Mitglied des Sequenztypes</value>
+  </data>
+  <data name="StreamParserType_FormatStringDescription" xml:space="preserve">
+    <value>Gebe einen formatierten String an, hierbei sollte eine ähnliche Syntax wie bei einer Ersetzung in Perl genutzt werden, z.B. "Format $var" würde den Wert von 'var' auslesen und ersetzen </value>
+  </data>
+  <data name="StringMemberEntry_StringEncodingDescription" xml:space="preserve">
+    <value>Die für den String benutzte Encodierung</value>
+  </data>
+  <data name="TerminatedStringMemberEntry_TermCharDescription" xml:space="preserve">
+    <value>Ein Zeichen, welches das Ende des Strings kennzeichnet</value>
+  </data>
+</root>

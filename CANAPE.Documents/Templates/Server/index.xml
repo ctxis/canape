@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<templates>
+  <template id="0" name="Basic HTTP Server" description="A basic HTTP server" filename="basic_http_server.canape"/>
+  <template id="1" name="Basic HTTPS Server" description="A basic HTTPS server" filename="basic_https_server.canape"/>
+  <template id="2" name="Echo Server" description="A server which echos its input" filename="echo_server.canape"/>
+  <template id="3" name="HTTP CA Server" description="A simple HTTP server which returns the current CANAPE root CA when /canape.cer is requested" filename="cert_http_server.canape"/>
+</templates>

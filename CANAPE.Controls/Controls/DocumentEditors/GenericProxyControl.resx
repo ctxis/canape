@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="columnHost.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="columnHost.Text" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="columnHost.Width" type="System.Int32, mscorlib">
+    <value>248</value>
+  </data>
+  <metadata name="contextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="addFilterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="addFilterToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add Filter</value>
+  </data>
+  <data name="deleteFilterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="deleteFilterToolStripMenuItem.Text" xml:space="preserve">
+    <value>Delete Filter</value>
+  </data>
+  <data name="moveFilterUpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="moveFilterUpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Move Filter Up</value>
+  </data>
+  <data name="moveFilterDownToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="moveFilterDownToolStripMenuItem.Text" xml:space="preserve">
+    <value>Move Filter Down</value>
+  </data>
+  <data name="editFilterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="editFilterToolStripMenuItem.Text" xml:space="preserve">
+    <value>Edit Filter</value>
+  </data>
+  <data name="toggleEnabledToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="toggleEnabledToolStripMenuItem.Text" xml:space="preserve">
+    <value>Toggle Enabled</value>
+  </data>
+  <data name="sSLPort443ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 22</value>
+  </data>
+  <data name="sSLPort443ToolStripMenuItem.Text" xml:space="preserve">
+    <value>SSL/Port 443</value>
+  </data>
+  <data name="hTTPPort80ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 22</value>
+  </data>
+  <data name="hTTPPort80ToolStripMenuItem.Text" xml:space="preserve">
+    <value>HTTP/Port 80</value>
+  </data>
+  <data name="hTTPSSLPort443ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 22</value>
+  </data>
+  <data name="hTTPSSLPort443ToolStripMenuItem.Text" xml:space="preserve">
+    <value>HTTP+SSL/Port 443</value>
+  </data>
+  <data name="sSLAllPortsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 22</value>
+  </data>
+  <data name="sSLAllPortsToolStripMenuItem.Text" xml:space="preserve">
+    <value>SSL All Ports</value>
+  </data>
+  <data name="hTTPAllPortsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 22</value>
+  </data>
+  <data name="hTTPAllPortsToolStripMenuItem.Text" xml:space="preserve">
+    <value>HTTP All Ports</value>
+  </data>
+  <data name="templatesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="templatesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Templates</value>
+  </data>
+  <data name="contextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 158</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip.Name" xml:space="preserve">
+    <value>contextMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="proxyClientControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="proxyClientControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="proxyClientControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 193</value>
+  </data>
+  <data name="proxyClientControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;proxyClientControl.Name" xml:space="preserve">
+    <value>proxyClientControl</value>
+  </data>
+  <data name="&gt;&gt;proxyClientControl.Type" xml:space="preserve">
+    <value>CANAPE.Controls.ProxyClientControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+  </data>
+  <data name="&gt;&gt;proxyClientControl.Parent" xml:space="preserve">
+    <value>tabClient</value>
+  </data>
+  <data name="&gt;&gt;proxyClientControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabClient.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabClient.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabClient.Size" type="System.Drawing.Size, System.Drawing">
+    <value>429, 199</value>
+  </data>
+  <data name="tabClient.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabClient.Text" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="&gt;&gt;tabClient.Name" xml:space="preserve">
+    <value>tabClient</value>
+  </data>
+  <data name="&gt;&gt;tabClient.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabClient.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabClient.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnEdit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnEdit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAARRJREFUOE+9zr9LAmEcx/H7l4L+hCgJnBqaghsES+h0ECKuDCytqyMJuhMLGo6i
+        IvBMENFqqChuChyOfpD9nDJpKE5seodhc/c09N6+PLw+PNK/d6KqHIRCdE+xHOeM60WNujJOPhgUGxlN
+        hVnaytB4aeDmcpQVxf9AbVemUtykJ95H0kxi23n/+HxjmA93Hjj+Hun8pPv0e4fGEG8XSWjbeE8aeqTX
+        Py5qgzSdKfB2aD2kxfHzURRaFu37GTFsqf3clSPQXMG7nRTDldUYlwUZXnU+rxQxfLqd4GY/Do8ZPDcs
+        hjvVCwmorfNenWVvbkQMl8wJcJZxsmNYekwMZ02DqhFlbVoWgz8NBAIspFN/w5IkfQFnQLd0mHS/QgAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnEdit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 122</value>
+  </data>
+  <data name="btnEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 23</value>
+  </data>
+  <data name="btnEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>166, 17</value>
+  </metadata>
+  <data name="btnEdit.ToolTip" xml:space="preserve">
+    <value>Edit the selected filter</value>
+  </data>
+  <data name="&gt;&gt;btnEdit.Name" xml:space="preserve">
+    <value>btnEdit</value>
+  </data>
+  <data name="&gt;&gt;btnEdit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEdit.Parent" xml:space="preserve">
+    <value>tabPageFilter</value>
+  </data>
+  <data name="&gt;&gt;btnEdit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAU5JREFUOE9joAr4uWTa/5fNRf9fzuz9DxXCC95P7vm/KjMVofZCUer/HzM6//+a
+        1v7/W1fV/zud9VgN+jG54/+lvGTslhycOvH/s+rc/z+zQv5/DXf4fzPUCUXhV1fd/5v9nAm7cF9azP8n
+        xhL/X6uz/7/ioP3/ekHa/4tynP93e1gT1owMLumI/L+txPn/sgzz/5OeVqRpBoEDZkr/L6vx/n+ozff/
+        XKgbaQZctlD8/8BC7v+GlNj/27MS/382Ev1/OB8p1PGBC2by/2/pCf1fHR0K13CoovD/OzNpwgbc9TEB
+        a97uaIqhGBS4oECFcjHBpeSQ/zeMxP6fNpDCqeiyh+n/PU3VmPKf5s38D7L9rrkMweg67YTpOoZn1YX/
+        H0e4/7/rZvj/VlkmXgMOVVdgyl+pyPv/Jsbt/0UzBbya8QKQC44lBJFvAHmAgQEAbG+sSUvJLEEAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="btnDelete.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 93</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 23</value>
+  </data>
+  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnDelete.ToolTip" xml:space="preserve">
+    <value>Delete the selected filter</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+    <value>tabPageFilter</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnAdd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAVVJREFUOE+NkTFLw2AQhr9FcRAXd3cnFwd/gEpBwTq4uOgkqOBUKgQn66BFMIti
+        IwhFcLBrxHaQZskSQRBExMGIaAludajZzryXfKVpvrQ9eMhB7n24S4RlWQRs22a6+3rdItGrMOT7f6k4
+        jkO1Wi1dMojAb7XSJXihCkpwQrV6xygl/QTgt9mkD9dVC2BWhVQoBeatyTeqApJFc57GLoeZhaCPomHd
+        VCqhoIcEwezTJG29ZriPomHFBCmSUWOItt/mqPi1kRSUy1f8kWKSAKyKYYTxRNjwNO4ly/cZEiWjxIJu
+        CQZWn6cp/56l4+9NuvjZY868HB18rvNG49cjJE50PSFAD4HmrpDe2KFzb5dOGzneAsK1lxmafZgIBYfF
+        o5iAn8Hd8gSAQRlGL+ET9guFtqCTThmGEcZJ6KPPF5amadQPhPALlx6nkoJBCqsiCHjtdgnxD6xhdB4P
+        G4d5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnAdd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 64</value>
+  </data>
+  <data name="btnAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 23</value>
+  </data>
+  <data name="btnAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnAdd.ToolTip" xml:space="preserve">
+    <value>Add a new filter to the end of the list</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Name" xml:space="preserve">
+    <value>btnAdd</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Parent" xml:space="preserve">
+    <value>tabPageFilter</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonFilterDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="buttonFilterDown.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA68AAAOvAGVvHJJAAABMElE
+        QVQ4T2PABhyWiv1Hx1ApwgCkuOp8FhiXX0n9n3Mt5H/f45r/kTv0iTMEZEDqef//kadc/vucMfzvfknr
+        /+TnDaQbEH3B+b/Hde3//jcN/09910SaASBnR193/O93z/B/4H1j0g0ouhv1P/qu3f/QJ2ZgTLIBBY+j
+        4JrJMiDvaQjxBtQfTsaI84SnzigGTHhZBzYAGXeezkUYGLxZ8/+c951gmwtehv6PfQbxPygAPW7ogAO0
+        7V7p/4brBf9n3unD7hqQIfM+df/Pexn8P+yRBTgGQJqdL6n/tzqp8N9wvwRuzTAAMgTkX7BmYBpwOKf6
+        3/K4/H+DfeKENcMAyJCaRxlgzeZHZf/r7xElXjMMgAwpuh4P1xy4SY14zTAADpM7k8nTDAMgQ6BMHICB
+        AQDYqBx6cWjLcgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="buttonFilterDown.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonFilterDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 35</value>
+  </data>
+  <data name="buttonFilterDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 23</value>
+  </data>
+  <data name="buttonFilterDown.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="buttonFilterDown.ToolTip" xml:space="preserve">
+    <value>Move a filter down in the list</value>
+  </data>
+  <data name="&gt;&gt;buttonFilterDown.Name" xml:space="preserve">
+    <value>buttonFilterDown</value>
+  </data>
+  <data name="&gt;&gt;buttonFilterDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonFilterDown.Parent" xml:space="preserve">
+    <value>tabPageFilter</value>
+  </data>
+  <data name="&gt;&gt;buttonFilterDown.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonFilterUp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="buttonFilterUp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA68AAAOvAGVvHJJAAABMklE
+        QVQ4T2PAB6xniPyHMkkHIM1zXvX891mqRrohMM3lzxP+b/iymDRDkDXXvEv6X/sh+f/KrzP/B63SJmwI
+        TDNIIwyDDEh57f5/wcc+/Ibg0pz9Iuh/wguX/1GP7P7PfNmJ3RB0zSCNIAxigzQveD8RLD/laev/nhv1
+        qIbUH07+H7zU+L/bQnk4hmkG2R76wAqsOWK7Hhwn7LT833k6F7t3QCEO0lz2Kv5/zEOn//7XTf9Pf9IJ
+        1ghVgh+ADCh/mfA/53EIWLPrOd3/k+61kGZA0ZPo/zE3ncGabQ+rgf1NkgFZd4P/e58zAWs23CH9v/VS
+        JWkGxF52h2vWWifyv/FsOWkGBJ2w/W+4HaJZabnA/9qTxaQZMOfuRLCzQTaDNNccLyLeABAAKUbHUCk0
+        wMAAAGA7Jf3LKU8lAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="buttonFilterUp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonFilterUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 6</value>
+  </data>
+  <data name="buttonFilterUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 23</value>
+  </data>
+  <data name="buttonFilterUp.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonFilterUp.ToolTip" xml:space="preserve">
+    <value>Move a filter up in the list</value>
+  </data>
+  <data name="&gt;&gt;buttonFilterUp.Name" xml:space="preserve">
+    <value>buttonFilterUp</value>
+  </data>
+  <data name="&gt;&gt;buttonFilterUp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonFilterUp.Parent" xml:space="preserve">
+    <value>tabPageFilter</value>
+  </data>
+  <data name="&gt;&gt;buttonFilterUp.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="listViewFilters.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="listViewFilters.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="listViewFilters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>388, 193</value>
+  </data>
+  <data name="listViewFilters.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="listViewFilters.ToolTip" xml:space="preserve">
+    <value>List of filters for network proxy</value>
+  </data>
+  <data name="&gt;&gt;listViewFilters.Name" xml:space="preserve">
+    <value>listViewFilters</value>
+  </data>
+  <data name="&gt;&gt;listViewFilters.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listViewFilters.Parent" xml:space="preserve">
+    <value>tabPageFilter</value>
+  </data>
+  <data name="&gt;&gt;listViewFilters.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tabPageFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPageFilter.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>429, 199</value>
+  </data>
+  <data name="tabPageFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPageFilter.Text" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="&gt;&gt;tabPageFilter.Name" xml:space="preserve">
+    <value>tabPageFilter</value>
+  </data>
+  <data name="&gt;&gt;tabPageFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageFilter.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPageFilter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnAdvancedOptions.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAdvancedOptions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>252, 13</value>
+  </data>
+  <data name="btnAdvancedOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 37</value>
+  </data>
+  <data name="btnAdvancedOptions.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnAdvancedOptions.Text" xml:space="preserve">
+    <value>Advanced Options</value>
+  </data>
+  <data name="btnAdvancedOptions.ToolTip" xml:space="preserve">
+    <value>View advanced options for this proxy configuration</value>
+  </data>
+  <data name="&gt;&gt;btnAdvancedOptions.Name" xml:space="preserve">
+    <value>btnAdvancedOptions</value>
+  </data>
+  <data name="&gt;&gt;btnAdvancedOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAdvancedOptions.Parent" xml:space="preserve">
+    <value>tabPageDetails</value>
+  </data>
+  <data name="&gt;&gt;btnAdvancedOptions.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBoxIpv6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxIpv6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxIpv6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 36</value>
+  </data>
+  <data name="checkBoxIpv6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 17</value>
+  </data>
+  <data name="checkBoxIpv6.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="checkBoxIpv6.Text" xml:space="preserve">
+    <value>IPv6</value>
+  </data>
+  <data name="checkBoxIpv6.ToolTip" xml:space="preserve">
+    <value>Check to bind to IPv6 as well as IPv4 local addresses</value>
+  </data>
+  <data name="&gt;&gt;checkBoxIpv6.Name" xml:space="preserve">
+    <value>checkBoxIpv6</value>
+  </data>
+  <data name="&gt;&gt;checkBoxIpv6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxIpv6.Parent" xml:space="preserve">
+    <value>tabPageDetails</value>
+  </data>
+  <data name="&gt;&gt;checkBoxIpv6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numTcpPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 12</value>
+  </data>
+  <data name="numTcpPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="numTcpPort.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="numTcpPort.ToolTip" xml:space="preserve">
+    <value>Specify local port number</value>
+  </data>
+  <data name="&gt;&gt;numTcpPort.Name" xml:space="preserve">
+    <value>numTcpPort</value>
+  </data>
+  <data name="&gt;&gt;numTcpPort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numTcpPort.Parent" xml:space="preserve">
+    <value>tabPageDetails</value>
+  </data>
+  <data name="&gt;&gt;numTcpPort.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="checkBoxGlobal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxGlobal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxGlobal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 13</value>
+  </data>
+  <data name="checkBoxGlobal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 17</value>
+  </data>
+  <data name="checkBoxGlobal.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="checkBoxGlobal.Text" xml:space="preserve">
+    <value>Any Bind</value>
+  </data>
+  <data name="checkBoxGlobal.ToolTip" xml:space="preserve">
+    <value>Check to bind to all interfaces not just localhost</value>
+  </data>
+  <data name="&gt;&gt;checkBoxGlobal.Name" xml:space="preserve">
+    <value>checkBoxGlobal</value>
+  </data>
+  <data name="&gt;&gt;checkBoxGlobal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxGlobal.Parent" xml:space="preserve">
+    <value>tabPageDetails</value>
+  </data>
+  <data name="&gt;&gt;checkBoxGlobal.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelLocalPort.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLocalPort.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLocalPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 14</value>
+  </data>
+  <data name="labelLocalPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="labelLocalPort.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelLocalPort.Text" xml:space="preserve">
+    <value>Local Port</value>
+  </data>
+  <data name="&gt;&gt;labelLocalPort.Name" xml:space="preserve">
+    <value>labelLocalPort</value>
+  </data>
+  <data name="&gt;&gt;labelLocalPort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLocalPort.Parent" xml:space="preserve">
+    <value>tabPageDetails</value>
+  </data>
+  <data name="&gt;&gt;labelLocalPort.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tabPageDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPageDetails.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>429, 199</value>
+  </data>
+  <data name="tabPageDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageDetails.Text" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="&gt;&gt;tabPageDetails.Name" xml:space="preserve">
+    <value>tabPageDetails</value>
+  </data>
+  <data name="&gt;&gt;tabPageDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageDetails.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPageDetails.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>437, 225</value>
+  </data>
+  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>437, 225</value>
+  </data>
+  <data name="&gt;&gt;columnHost.Name" xml:space="preserve">
+    <value>columnHost</value>
+  </data>
+  <data name="&gt;&gt;columnHost.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addFilterToolStripMenuItem.Name" xml:space="preserve">
+    <value>addFilterToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;addFilterToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteFilterToolStripMenuItem.Name" xml:space="preserve">
+    <value>deleteFilterToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;deleteFilterToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveFilterUpToolStripMenuItem.Name" xml:space="preserve">
+    <value>moveFilterUpToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;moveFilterUpToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveFilterDownToolStripMenuItem.Name" xml:space="preserve">
+    <value>moveFilterDownToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;moveFilterDownToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editFilterToolStripMenuItem.Name" xml:space="preserve">
+    <value>editFilterToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;editFilterToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toggleEnabledToolStripMenuItem.Name" xml:space="preserve">
+    <value>toggleEnabledToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;toggleEnabledToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;templatesToolStripMenuItem.Name" xml:space="preserve">
+    <value>templatesToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;templatesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sSLPort443ToolStripMenuItem.Name" xml:space="preserve">
+    <value>sSLPort443ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;sSLPort443ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Name" xml:space="preserve">
+    <value>toolTip</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hTTPPort80ToolStripMenuItem.Name" xml:space="preserve">
+    <value>hTTPPort80ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;hTTPPort80ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hTTPSSLPort443ToolStripMenuItem.Name" xml:space="preserve">
+    <value>hTTPSSLPort443ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;hTTPSSLPort443ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sSLAllPortsToolStripMenuItem.Name" xml:space="preserve">
+    <value>sSLAllPortsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;sSLAllPortsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hTTPAllPortsToolStripMenuItem.Name" xml:space="preserve">
+    <value>hTTPAllPortsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;hTTPAllPortsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>GenericProxyControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

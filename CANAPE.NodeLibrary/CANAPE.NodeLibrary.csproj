@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6D34D6D-1746-43F2-B51C-106C71FF818C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CANAPE.NodeLibrary</RootNamespace>
+    <AssemblyName>CANAPE.NodeLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\CANAPE\canape.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\DuplicatorNode.cs" />
+    <Compile Include="Control\FilterNode.cs" />
+    <Compile Include="Control\LogToPacketLogNode.cs" />
+    <Compile Include="Control\SetMetaStateNode.cs" />
+    <Compile Include="Control\SplitterNode.cs" />
+    <Compile Include="Control\StripperNode.cs" />
+    <Compile Include="Endpoint\SequentialReplayEndpoint.cs" />
+    <Compile Include="Endpoint\SimpleReplayByTagEndpoint.cs" />
+    <Compile Include="Fuzzer\BaseRandomArrayFuzzer.cs" />
+    <Compile Include="Fuzzer\BinaryIntegerFuzzerNode.cs" />
+    <Compile Include="Fuzzer\FuzzerUtils.cs" />
+    <Compile Include="Fuzzer\PatternStringFuzzerNode.cs" />
+    <Compile Include="Fuzzer\RandomBitFuzzerNode.cs" />
+    <Compile Include="Fuzzer\RandomCharArrayFuzzerNode.cs" />
+    <Compile Include="Fuzzer\BaseStringFuzzerNode.cs" />
+    <Compile Include="Fuzzer\RandomStringFuzzerNode.cs" />
+    <Compile Include="Fuzzer\NumericStringFuzzerNode.cs" />
+    <Compile Include="Fuzzer\TextListFuzzerNode.cs" />
+    <Compile Include="Mutator\FrameFilterMutatorNode.cs" />
+    <Compile Include="Mutator\StringConverterNode.cs" />
+    <Compile Include="Fuzzer\RandomByteFuzzerNode.cs" />
+    <Compile Include="Fuzzer\RandomLengthStringFuzzerNode.cs" />
+    <Compile Include="IPAddressConverter.cs" />
+    <Compile Include="Mutator\BinaryMutatorNode.cs" />
+    <Compile Include="Mutator\RegexMutatorNode.cs" />
+    <Compile Include="NodeLibraryClassCategory.cs" />
+    <Compile Include="NodeLibraryManager.cs" />
+    <Compile Include="Parser\Asn1Parser.cs" />
+    <Compile Include="Parser\BinaryVectorParser.cs" />
+    <Compile Include="Parser\DNSParser.cs" />
+    <Compile Include="Parser\HTTPData.cs" />
+    <Compile Include="Parser\HTTPDataRequest.cs" />
+    <Compile Include="Parser\HTTPDataResponse.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\DnsDataServer.cs" />
+    <Compile Include="Endpoint\EchoDataEndpoint.cs" />
+    <Compile Include="Parser\HTTPCookieParser.cs" />
+    <Compile Include="Parser\HttpRequestStreamParser.cs" />
+    <Compile Include="Parser\HttpResponseStreamParser.cs" />
+    <Compile Include="Control\InjectorNode.cs" />
+    <Compile Include="NodeLibraryAttribute.cs" />
+    <Compile Include="NodeLibraryClassAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Control\SelectorNode.cs" />
+    <Compile Include="Parser\WcfXmlMessage.cs" />
+    <Compile Include="Endpoint\NullDataEndpoint.cs" />
+    <Compile Include="Endpoint\ReplayByTagDataEndpoint.cs" />
+    <Compile Include="Endpoint\SimpleReplayDataEndpoint.cs" />
+    <Compile Include="Server\HttpDataServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CANAPE.Documents\CANAPE.Documents.csproj">
+      <Project>{8B96A90D-7898-4688-B401-12F56BE1AB47}</Project>
+      <Name>CANAPE.Documents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Extension\CANAPE.Extension.csproj">
+      <Project>{28C043FE-9095-4AC8-A442-70B012950F59}</Project>
+      <Name>CANAPE.Extension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Net.Protocols\CANAPE.Net.Protocols.csproj">
+      <Project>{95645ca2-c918-4516-8cae-9ab6dde41b7d}</Project>
+      <Name>CANAPE.Net.Protocols</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Net\CANAPE.Net.csproj">
+      <Project>{5859bc1c-af63-4743-b853-144b108545d1}</Project>
+      <Name>CANAPE.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Parser\CANAPE.Parser.csproj">
+      <Project>{98F335B7-61C4-4143-AF03-2012D1374BEC}</Project>
+      <Name>CANAPE.Parser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE.Scripting\CANAPE.Scripting.csproj">
+      <Project>{D930CADC-7534-42B3-ADFD-E07549C67528}</Project>
+      <Name>CANAPE.Scripting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CANAPE\CANAPE.csproj">
+      <Project>{34432D8F-EAD0-48B9-8317-EB9D69D68B95}</Project>
+      <Name>CANAPE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\CANAPE\canape.snk">
+      <Link>canape.snk</Link>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BinaryIntegerFuzzerNode_InvalidIncrement" xml:space="preserve">
+    <value>Increment cannot be 0</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNode_InvalidLength" xml:space="preserve">
+    <value>Length must be between 1 and 8 bytes</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNode_NegativeInvalidMaxValue" xml:space="preserve">
+    <value>Maximum value must be less than minimum for negative increments</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNode_PositiveInvalidMaxValue" xml:space="preserve">
+    <value>Maximum value must be greater than minimum for positive increments</value>
+  </data>
+  <data name="ByteFuzzer_IgnoringNode" xml:space="preserve">
+    <value>Ignoring node {0}, not a byte value</value>
+  </data>
+  <data name="DuplicatorNodeConfig_DuplicationCount" xml:space="preserve">
+    <value>The number of times to duplicate the matching packet, 0 means the packet will be discarded</value>
+  </data>
+  <data name="DuplicatorNode_Description" xml:space="preserve">
+    <value>A node to duplicate all incoming packets a set number of times</value>
+  </data>
+  <data name="DuplicatorNode_Name" xml:space="preserve">
+    <value>Duplicator Node</value>
+  </data>
+  <data name="DuplicatorNode_NodeName" xml:space="preserve">
+    <value>Duplicator</value>
+  </data>
+  <data name="FilterNode_Description" xml:space="preserve">
+    <value>A node to filter out packets based on specific filters</value>
+  </data>
+  <data name="FilterNode_Name" xml:space="preserve">
+    <value>Filter Node</value>
+  </data>
+  <data name="FilterNode_NodeName" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="InjectorNodeConfig_DropTrigger" xml:space="preserve">
+    <value>If true then the triggering packet is droppped</value>
+  </data>
+  <data name="InjectorNodeConfig_PacketLog" xml:space="preserve">
+    <value>Log of packets to inject from</value>
+  </data>
+  <data name="InjectorNodeConfig_Prefix" xml:space="preserve">
+    <value>If true sends the packets before the triggering packet</value>
+  </data>
+  <data name="InjectorNodeConfig_Repeat" xml:space="preserve">
+    <value>If true then the packets will be resent each time the node fires, otherwise it will stop</value>
+  </data>
+  <data name="InjectorNodeConfig_Sequential" xml:space="preserve">
+    <value>If true then each packet in the log is sent everytime the node fires, otherwise it sends all packets</value>
+  </data>
+  <data name="InjectorNode_Description" xml:space="preserve">
+    <value>A node to inject packets into the network from a packet log when the node filters match</value>
+  </data>
+  <data name="InjectorNode_Name" xml:space="preserve">
+    <value>Injector Node</value>
+  </data>
+  <data name="InjectorNode_NodeName" xml:space="preserve">
+    <value>Injector</value>
+  </data>
+  <data name="LogToPacketLogNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Colour of logged packet</value>
+  </data>
+  <data name="LogToPacketLogNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Convert packet to bytes before logging</value>
+  </data>
+  <data name="LogToPacketLogNodeConfig_PacketLogDescription" xml:space="preserve">
+    <value>The packet log to log packets to</value>
+  </data>
+  <data name="LogToPacketLogNodeConfig_TagDescription" xml:space="preserve">
+    <value>Tag to apply to packets</value>
+  </data>
+  <data name="LogToPacketLogNode_Description" xml:space="preserve">
+    <value>A node to log packets to a packet log document instead of to the current service</value>
+  </data>
+  <data name="LogToPacketLogNode_Name" xml:space="preserve">
+    <value>Log To Packet Log Node</value>
+  </data>
+  <data name="LogToPacketLogNode_NodeName" xml:space="preserve">
+    <value>Packet Log</value>
+  </data>
+  <data name="LogToPacketLogNode_PacketLogIsNull" xml:space="preserve">
+    <value>Must specify a packet log</value>
+  </data>
+  <data name="ReplayByTagDataServer_PacketLogIsNull" xml:space="preserve">
+    <value>Must specify a packet log</value>
+  </data>
+  <data name="SelectorNodeConfig_PathName" xml:space="preserve">
+    <value>The path name to select on</value>
+  </data>
+  <data name="SelectorNode_Description" xml:space="preserve">
+    <value>A node to set the current node on the frame to a selected path</value>
+  </data>
+  <data name="SelectorNode_Name" xml:space="preserve">
+    <value>Selector Node</value>
+  </data>
+  <data name="SelectorNode_NodeName" xml:space="preserve">
+    <value>Selector</value>
+  </data>
+  <data name="SetMetaStateNodeConfig_ConvertSelectionToString" xml:space="preserve">
+    <value>When UseSelection is true specify whether to convert the value to a string</value>
+  </data>
+  <data name="SetMetaStateNodeConfig_Global" xml:space="preserve">
+    <value>Whether to set the value in the global or local state</value>
+  </data>
+  <data name="SetMetaStateNodeConfig_MetaName" xml:space="preserve">
+    <value>The name of the meta value to set</value>
+  </data>
+  <data name="SetMetaStateNodeConfig_Private" xml:space="preserve">
+    <value>Whether to set the value as private or public</value>
+  </data>
+  <data name="SetMetaStateNodeConfig_ResetStateOnMatch" xml:space="preserve">
+    <value>Reset the specified meta value when a filter matches, depends on whether the value is already present</value>
+  </data>
+  <data name="SetMetaStateNodeConfig_UseSelection" xml:space="preserve">
+    <value>If true then will use the selection path to extract a value for the meta</value>
+  </data>
+  <data name="SetMetaStateNodeConfig_Value" xml:space="preserve">
+    <value>The value to set the meta to</value>
+  </data>
+  <data name="SetMetaStateNode_Description" xml:space="preserve">
+    <value>A node to set a meta value when the node filters match</value>
+  </data>
+  <data name="SetMetaStateNode_Name" xml:space="preserve">
+    <value>Set Meta Node</value>
+  </data>
+  <data name="SetMetaStateNode_NodeName" xml:space="preserve">
+    <value>SetState</value>
+  </data>
+  <data name="SimpleReplayDataEndpoint_PacketLogIsNull" xml:space="preserve">
+    <value>Must specify a packet log</value>
+  </data>
+  <data name="EchoDataEndpointConfig_ConvertToBasicDescription" xml:space="preserve">
+    <value>If true then echo packets are converted back to a basic byte form before sending</value>
+  </data>
+  <data name="EchoDataEndpoint_Name" xml:space="preserve">
+    <value>Echo Endpoint</value>
+  </data>
+  <data name="EchoDataEndpoint_Description" xml:space="preserve">
+    <value>A simple endpoint which echos its input</value>
+  </data>
+  <data name="EchoDataEndpoint_NodeName" xml:space="preserve">
+    <value>Echo Endpoint</value>
+  </data>
+  <data name="DnsDataServerConfig_ResponseAddressDescription" xml:space="preserve">
+    <value>Respond to all A requests with this IP address. Setting to 0.0.0.0 disables.</value>
+  </data>
+  <data name="DnsDataServerConfig_ResponseAddress6Description" xml:space="preserve">
+    <value>Respond to all AAAA requests with this IP address. Setting to :: disables</value>
+  </data>
+  <data name="DnsDataServerConfig_ReverseDnsDescription" xml:space="preserve">
+    <value>Specify a string which indicates a reverse name when requesting PTR records</value>
+  </data>
+  <data name="DnsDataServerConfig_TimeToLiveDescription" xml:space="preserve">
+    <value>Set the response TTL</value>
+  </data>
+  <data name="DnsDataServer_Name" xml:space="preserve">
+    <value>Simple DNS Server</value>
+  </data>
+  <data name="DnsDataServer_Description" xml:space="preserve">
+    <value>A simple DNS server</value>
+  </data>
+  <data name="DnsDataServer_NodeName" xml:space="preserve">
+    <value>DNS Server</value>
+  </data>
+  <data name="Asn1ParserConfig_NoVerifyDescription" xml:space="preserve">
+    <value>Do not verify the ASN1 objects before serializing back to bytes in sequences, sets and tagged objects</value>
+  </data>
+  <data name="Asn1ParserConfig_IgnoreSequencesDescription" xml:space="preserve">
+    <value>Ignore sequences and leave as DER encoded bytes</value>
+  </data>
+  <data name="Asn1ParserConfig_IgnoreSetsDescription" xml:space="preserve">
+    <value>Ignore sets and leave as DER encoded bytes</value>
+  </data>
+  <data name="Asn1ParserConfig_IgnoreTaggedObjectsDescription" xml:space="preserve">
+    <value>Ignore tagged objects and leave as DER encoded bytes</value>
+  </data>
+  <data name="Asn1ParserConfig_NoDecodeDescription" xml:space="preserve">
+    <value>Do not decode leaf values leave as DER encoded bytes</value>
+  </data>
+  <data name="Asn1Parser_Name" xml:space="preserve">
+    <value>ASN1 Parser</value>
+  </data>
+  <data name="Asn1Parser_Description" xml:space="preserve">
+    <value>Parses an ASN1 DER byte stream into separate objects and decodes the results</value>
+  </data>
+  <data name="Asn1Parser_NodeName" xml:space="preserve">
+    <value>ASN1 Parser</value>
+  </data>
+  <data name="BinaryVectorConfig_LittleEndianDescription" xml:space="preserve">
+    <value>True to read as Little Endian, false for Big Endian</value>
+  </data>
+  <data name="BinaryVectorConfig_LengthTypeDescription" xml:space="preserve">
+    <value>Type of length variable to read</value>
+  </data>
+  <data name="BinaryVectorConfig_InclusiveDescription" xml:space="preserve">
+    <value>Indicates whether the length field's size is included in the field</value>
+  </data>
+  <data name="BinaryVectorConfig_StrideDescription" xml:space="preserve">
+    <value>Indicates the number of bytes per item</value>
+  </data>
+  <data name="BinaryVectorConfig_AdjustmentDescription" xml:space="preserve">
+    <value>Indicates a pre and post adjustment value in bytes to the length to account for uncounted fields</value>
+  </data>
+  <data name="BinaryVectorConfig_PrefixLenDescription" xml:space="preserve">
+    <value>If the data has a fixed prefix then specify how many bytes there are</value>
+  </data>
+  <data name="BinaryVectorParser_Name" xml:space="preserve">
+    <value>Binary Vector Parser</value>
+  </data>
+  <data name="BinaryVectorParser_Description" xml:space="preserve">
+    <value>Parses a length field and reads the required byte length</value>
+  </data>
+  <data name="BinaryVectorParser_NodeName" xml:space="preserve">
+    <value>Vector</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Specify that the fuzzed value should be logged as text</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Specify that the packets are logged before and after fuzzing</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Specify the log color to use</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Specify the starting string position to fuzz</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Specify the length to fuzz from the start position, less than 0 means string.length - fuzzlength + 1</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Specify that logged packets should be converted to bytes before logging</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_BinaryEncodingDescription" xml:space="preserve">
+    <value>Specify the encoding to use if the nodes are not strings</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Do not convert nodes to strings for fuzzing, just ignore them</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_RegexMatchDescription" xml:space="preserve">
+    <value>Specify a regex match to use to determine parts to fuzz. Replaces any matches within the selected range</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_CaseSensitiveDescription" xml:space="preserve">
+    <value>Specify the regex is casesensitive</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_MultilineDescription" xml:space="preserve">
+    <value>Specify the regex is multiline</value>
+  </data>
+  <data name="BaseStringFuzzerNodeConfig_MaxReplacementsDescription" xml:space="preserve">
+    <value>Specify the maximum number of replacements when using a regular expression, -1 means all</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_DocumentDescription" xml:space="preserve">
+    <value>Specify a document to get fuzz text from, if specified will be combined with FuzzTextList</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_FuzzTextListDescription" xml:space="preserve">
+    <value>List of fuzz text values</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_SelectRandomDescription" xml:space="preserve">
+    <value>Select the text value at random</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_StoreLocalPositionDescription" xml:space="preserve">
+    <value>Store the current fuzz position as a local value, it will not persist between connections</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Specify that the fuzzed value should be logged as text</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Specify that the packets are logged before and after fuzzing</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Specify the log color to use</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Specify the starting string position to fuzz</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Specify the length to fuzz from the start position, less than 0 means string.length - fuzzlength + 1</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Specify that logged packets should be converted to bytes before logging</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_BinaryEncodingDescription" xml:space="preserve">
+    <value>Specify the encoding to use if the nodes are not strings</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Do not convert nodes to strings for fuzzing, just ignore them</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_RegexMatchDescription" xml:space="preserve">
+    <value>Specify a regex match to use to determine parts to fuzz. Replaces any matches within the selected range</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_CaseSensitiveDescription" xml:space="preserve">
+    <value>Specify the regex is casesensitive</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_MultilineDescription" xml:space="preserve">
+    <value>Specify the regex is multiline</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_MaxReplacementsDescription" xml:space="preserve">
+    <value>Specify the maximum number of replacements when using a regular expression, -1 means all</value>
+  </data>
+  <data name="TextListFuzzerNode_Name" xml:space="preserve">
+    <value>Text List Fuzzer Node</value>
+  </data>
+  <data name="TextListFuzzerNode_Description" xml:space="preserve">
+    <value>A node to fuzz parts of a string using a list of text values</value>
+  </data>
+  <data name="TextListFuzzerNode_NodeName" xml:space="preserve">
+    <value>Text List Fuzzer</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_MaxFuzzPointsDescription" xml:space="preserve">
+    <value>The maximum number of points to fuzz in the binary, if 0 then the max is the length of the packet</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_RandomFuzzPointCountDescription" xml:space="preserve">
+    <value>If true then will generate a random number of fuzz bytes to change, otherwise will generate exact number</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_CombinationModeDescription" xml:space="preserve">
+    <value>Specify the way in which bytes are modified when fuzzing. If Random then will choose one of the other methods</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Specify that the fuzzed bytes should be logged as text</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Specify that the packets are logged before and after fuzzing</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Specify that logged packets should be converted to bytes before logging</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_ColorDescription" xml:space="preserve">
+    <value>Specify the log color to use</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Specify the starting byte position to fuzz</value>
+  </data>
+  <data name="BaseRandomArrayFuzzerConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Specify the length to fuzz from the start position, less than 0 means array.length - fuzzlength + 1</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_MinValueDescription" xml:space="preserve">
+    <value>Specifies the minimum char value to use for fuzzing</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_MaxValueDescription" xml:space="preserve">
+    <value>Specified the maximum char value to use for fuzzing</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Do not convert nodes to byte arrays for fuzzing, just ignore them</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_StringEncodingDescription" xml:space="preserve">
+    <value>Specify the text encoding to use if the node is not a string/char array</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_MaxFuzzPointsDescription" xml:space="preserve">
+    <value>The maximum number of points to fuzz in the binary, if 0 then the max is the length of the packet</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_RandomFuzzPointCountDescription" xml:space="preserve">
+    <value>If true then will generate a random number of fuzz bytes to change, otherwise will generate exact number</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_CombinationModeDescription" xml:space="preserve">
+    <value>Specify the way in which bytes are modified when fuzzing. If Random then will choose one of the other methods</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Specify that the fuzzed bytes should be logged as text</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Specify that the packets are logged before and after fuzzing</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Specify that logged packets should be converted to bytes before logging</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Specify the log color to use</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Specify the starting byte position to fuzz</value>
+  </data>
+  <data name="RandomCharArrayFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Specify the length to fuzz from the start position, less than 0 means array.length - fuzzlength + 1</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_ConvertToBasicDescription" xml:space="preserve">
+    <value>If true then the packets are converted back to a basic byte form before sending</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_PacketsDescription" xml:space="preserve">
+    <value>The log of packets to send</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_CloseAfterMatchDescription" xml:space="preserve">
+    <value>Indicates whether to close the connection after matching the filters and sending the packets</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_CloseAfterNonMatchDescription" xml:space="preserve">
+    <value>Indicates whether to close the connection after not matching the filters and sending the packets</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_FiltersDescription" xml:space="preserve">
+    <value>List of filters to apply to incoming packets to determine whether to send the packets</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_MatchAllFiltersDescription" xml:space="preserve">
+    <value>Indicates all filters must match</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_TagOnMatchDescription" xml:space="preserve">
+    <value>Specifies the packet tag to send when the filters match</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_RepeatOnMatchDescription" xml:space="preserve">
+    <value>Specifies the number of times to send the on match packets</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_TagOnNonMatchDescription" xml:space="preserve">
+    <value>Specifies the packet tag to send when the filters do not match</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_RepeatOnNonMatchDescription" xml:space="preserve">
+    <value>Specifies the number of times to send the on non-match packets</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_TagOnStartDescription" xml:space="preserve">
+    <value>Specifies the packet tag to send when the endpoint starts, if empty then no packets sent</value>
+  </data>
+  <data name="SimpleReplayByTagEndpointConfig_RepeatOnStartDescription" xml:space="preserve">
+    <value>Specifies the number of times to send the start packets</value>
+  </data>
+  <data name="SimpleReplayByTagEndpoint_Name" xml:space="preserve">
+    <value>Simple Replay by Tag Endpoint</value>
+  </data>
+  <data name="SimpleReplayByTagEndpoint_Description" xml:space="preserve">
+    <value>A simple replay endpoint which returns specifically tagged packets in a log in response to an incoming packet</value>
+  </data>
+  <data name="SimpleReplayByTagEndpoint_NodeName" xml:space="preserve">
+    <value>Tag Replay Endpoint</value>
+  </data>
+  <data name="ReplayByTagDataEndpointConfig_ConvertToBasicDescription" xml:space="preserve">
+    <value>If true then the packets are converted back to a basic byte form before sending</value>
+  </data>
+  <data name="ReplayByTagDataEndpointConfig_PacketsDescription" xml:space="preserve">
+    <value>The log of packets to use when sending packets</value>
+  </data>
+  <data name="ReplayByTagDataEndpointConfig_ReplayEntriesDescription" xml:space="preserve">
+    <value>A set of replay entries which define the matching conditions and the tag to send</value>
+  </data>
+  <data name="ReplayByTagDataEndpointConfig_TagOnStartDescription" xml:space="preserve">
+    <value>Tag of packets to send on initial connection, if empty then no packets sent</value>
+  </data>
+  <data name="ReplayByTagEntryFactory_TagDescription" xml:space="preserve">
+    <value>The tag to match to determine what packets to send</value>
+  </data>
+  <data name="ReplayByTagEntryFactory_CloseAfterSendDescription" xml:space="preserve">
+    <value>Indicates whether to close the connection after sending the packets</value>
+  </data>
+  <data name="ReplayByTagEntryFactory_FiltersDescription" xml:space="preserve">
+    <value>List of filters to apply to incoming packets to determine whether to send the packets</value>
+  </data>
+  <data name="ReplayByTagEntryFactory_MatchAllFiltersDescription" xml:space="preserve">
+    <value>Indicates all filters must match</value>
+  </data>
+  <data name="ReplayByTagEntryFactory_RepeatCountDescription" xml:space="preserve">
+    <value>Indicates the number of times to send the tagged packets</value>
+  </data>
+  <data name="ReplayByTagDataEndpoint_Name" xml:space="preserve">
+    <value>Full Replay by Tag Endpoint</value>
+  </data>
+  <data name="ReplayByTagDataEndpoint_Description" xml:space="preserve">
+    <value>A replay endpoint which returns specifically tagged packets in a log in response to an incoming packet</value>
+  </data>
+  <data name="ReplayByTagDataEndpoint_NodeName" xml:space="preserve">
+    <value>Tag Replay Endpoint</value>
+  </data>
+  <data name="HttpResponseStreamParser_Name" xml:space="preserve">
+    <value>HTTP Response Parser</value>
+  </data>
+  <data name="HttpResponseStreamParser_Description" xml:space="preserve">
+    <value>This is a HTTP response parser to apply to a stream</value>
+  </data>
+  <data name="HttpResponseStreamParser_NodeName" xml:space="preserve">
+    <value>HTTP Response</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_StartValueDescription" xml:space="preserve">
+    <value>Specify the starting value for the fuzz</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_EndValueDescription" xml:space="preserve">
+    <value>Specify the ending value for the fuzz</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_IncrementDescription" xml:space="preserve">
+    <value>Specify the increment between values</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_FormatDescription" xml:space="preserve">
+    <value>Specify basic format, unless CustomFormat is specified</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_CustomFormatDescription" xml:space="preserve">
+    <value>Specify a custom .NET format string for the value</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_StoreLocalPositionDescription" xml:space="preserve">
+    <value>Store the current fuzz position as a local value, it will not persist between connections</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Specify that the fuzzed value should be logged as text</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Specify that the packets are logged before and after fuzzing</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Specify the log color to use</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Specify the starting string position to fuzz</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Specify the length to fuzz from the start position, less than 0 means string.length - fuzzlength + 1</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Specify that logged packets should be converted to bytes before logging</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_BinaryEncodingDescription" xml:space="preserve">
+    <value>Specify the encoding to use if the nodes are not strings</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Do not convert nodes to strings for fuzzing, just ignore them</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_RegexMatchDescription" xml:space="preserve">
+    <value>Specify a regex match to use to determine parts to fuzz. Replaces any matches within the selected range</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_CaseSensitiveDescription" xml:space="preserve">
+    <value>Specify the regex is casesensitive</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_MultilineDescription" xml:space="preserve">
+    <value>Specify the regex is multiline</value>
+  </data>
+  <data name="NumericStringFuzzerNodeConfig_MaxReplacementsDescription" xml:space="preserve">
+    <value>Specify the maximum number of replacements when using a regular expression, -1 means all</value>
+  </data>
+  <data name="NumericStringFuzzerNode_Name" xml:space="preserve">
+    <value>Numeric String Fuzzer Node</value>
+  </data>
+  <data name="NumericStringFuzzerNode_Description" xml:space="preserve">
+    <value>A node to fuzz parts of a string with an incrementing value</value>
+  </data>
+  <data name="NumericStringFuzzerNode_NodeName" xml:space="preserve">
+    <value>Numeric String Fuzzer</value>
+  </data>
+  <data name="SplitterNode_Name" xml:space="preserve">
+    <value>Splitter Node</value>
+  </data>
+  <data name="SplitterNode_Description" xml:space="preserve">
+    <value>A node to split a packet up based on a selection path into multiple packets</value>
+  </data>
+  <data name="SplitterNode_NodeName" xml:space="preserve">
+    <value>Splitter</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNodeConfig_MinLengthDescription" xml:space="preserve">
+    <value>Minimum length of fuzz string</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNodeConfig_MaxLengthDescription" xml:space="preserve">
+    <value>Maximum length of fuzz string</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNodeConfig_ModeDescription" xml:space="preserve">
+    <value>How the fuzzer should generate the characters</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNodeConfig_PatternDescription" xml:space="preserve">
+    <value>When Mode is RepeatingPattern this is the string pattern to use</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNodeConfig_MinRandomCharDescription" xml:space="preserve">
+    <value>When Mode is RandomCharacters this is the minimum character number allowed</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNodeConfig_MaxRandomCharDescription" xml:space="preserve">
+    <value>When Mode is RandomCharacters this is the maximum character number allowed</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNodeConfig_AppendFuzzDescription" xml:space="preserve">
+    <value>Whether to append the fuzz case to the end of the existing string</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNode_Name" xml:space="preserve">
+    <value>Random Length String Fuzzer Node</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNode_Description" xml:space="preserve">
+    <value>A node to generate random length strings</value>
+  </data>
+  <data name="RandomLengthStringFuzzerNode_NodeName" xml:space="preserve">
+    <value>String Length Fuzzer</value>
+  </data>
+  <data name="HttpDataServerConfig_HttpPathDescription" xml:space="preserve">
+    <value>A glob string to match the path against, if it matches then sends the contents, otherwise it sends the 404</value>
+  </data>
+  <data name="HttpDataServerConfig_ValidResponseDataDescription" xml:space="preserve">
+    <value>The response data to send if the HttpPath matches</value>
+  </data>
+  <data name="HttpDataServerConfig_NotFoundResponseDataDescription" xml:space="preserve">
+    <value>The response data to send if the HttpPath does not match</value>
+  </data>
+  <data name="HttpDataServerConfig_CloseAfterSendingDescription" xml:space="preserve">
+    <value>Specify that the connection should be closed after sending</value>
+  </data>
+  <data name="HttpDataServerConfig_ContentTypeDescription" xml:space="preserve">
+    <value>Specify the content type for the valid data</value>
+  </data>
+  <data name="HttpDataServer_Name" xml:space="preserve">
+    <value>Simple HTTP Server</value>
+  </data>
+  <data name="HttpDataServer_Description" xml:space="preserve">
+    <value>A simple HTTP server</value>
+  </data>
+  <data name="HttpDataServer_NodeName" xml:space="preserve">
+    <value>HTTP Server</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Specify the starting byte position to fuzz</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Specify the length to fuzz from the start position, must be between 1 and 8 bytes</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Do not convert nodes to byte arrays for fuzzing, just ignore them</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_MinValueDescription" xml:space="preserve">
+    <value>Minimum integer value</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_MaxValueDescription" xml:space="preserve">
+    <value>Maximum integer value</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_IncrementDescription" xml:space="preserve">
+    <value>The increment value</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_LittleEndianDescription" xml:space="preserve">
+    <value>Specify whether the integer is little endian or big</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Specify that the fuzzed bytes should be logged as text</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Specify that the packets are logged before and after fuzzing</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Specify that logged packets should be converted to bytes before logging</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Specify the log color to use</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNode_Name" xml:space="preserve">
+    <value>Binary Integer Fuzzer Node</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNode_Description" xml:space="preserve">
+    <value>A node to fuzz binary part using an incrementing value</value>
+  </data>
+  <data name="BinaryIntegerFuzzerNode_NodeName" xml:space="preserve">
+    <value>Binary Integer Fuzzer</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_MinByteValueDescription" xml:space="preserve">
+    <value>Specifies the minimum byte value to use for fuzzing</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_MaxByteValueDescription" xml:space="preserve">
+    <value>Specified the maximum byte value to use for fuzzing</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Do not convert nodes to byte arrays for fuzzing, just ignore them</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_MaxFuzzPointsDescription" xml:space="preserve">
+    <value>The maximum number of points to fuzz in the binary, if 0 then the max is the length of the packet</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_RandomFuzzPointCountDescription" xml:space="preserve">
+    <value>If true then will generate a random number of fuzz bytes to change, otherwise will generate exact number</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_CombinationModeDescription" xml:space="preserve">
+    <value>Specify the way in which bytes are modified when fuzzing. If Random then will choose one of the other methods</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Specify that the fuzzed bytes should be logged as text</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Specify that the packets are logged before and after fuzzing</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Specify that logged packets should be converted to bytes before logging</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Specify the log color to use</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Specify the starting byte position to fuzz</value>
+  </data>
+  <data name="RandomByteFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Specify the length to fuzz from the start position, less than 0 means array.length - fuzzlength + 1</value>
+  </data>
+  <data name="RandomByteFuzzerNode_Name" xml:space="preserve">
+    <value>Random Byte Fuzzer Node</value>
+  </data>
+  <data name="RandomByteFuzzerNode_Description" xml:space="preserve">
+    <value>A node to randomly fuzz binary parts of packets</value>
+  </data>
+  <data name="RandomByteFuzzerNode_NodeName" xml:space="preserve">
+    <value>Byte Fuzzer</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Do not convert nodes to byte arrays for fuzzing, just ignore them</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_MaxFuzzPointsDescription" xml:space="preserve">
+    <value>The maximum number of points to fuzz in the binary, if 0 then the max is the length of the packet</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_RandomFuzzPointCountDescription" xml:space="preserve">
+    <value>If true then will generate a random number of fuzz bytes to change, otherwise will generate exact number</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_CombinationModeDescription" xml:space="preserve">
+    <value>Specify the way in which bytes are modified when fuzzing. If Random then will choose one of the other methods</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Specify that the fuzzed bytes should be logged as text</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Specify that the packets are logged before and after fuzzing</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Specify that logged packets should be converted to bytes before logging</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Specify the log color to use</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Specify the starting byte position to fuzz</value>
+  </data>
+  <data name="RandomBitFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Specify the length to fuzz from the start position, less than 0 means array.length - fuzzlength + 1</value>
+  </data>
+  <data name="RandomBitFuzzerNode_Name" xml:space="preserve">
+    <value>Random Bit Fuzzer Node</value>
+  </data>
+  <data name="RandomBitFuzzerNode_Description" xml:space="preserve">
+    <value>A node to randomly fuzz bit parts of packets</value>
+  </data>
+  <data name="RandomBitFuzzerNode_NodeName" xml:space="preserve">
+    <value>Bit Fuzzer</value>
+  </data>
+  <data name="BinaryMutatorNodeConfig_MatchDescription" xml:space="preserve">
+    <value>The array of bytes to match</value>
+  </data>
+  <data name="BinaryMutatorNodeConfig_ReplacementDescription" xml:space="preserve">
+    <value>The array of bytes to replace the match with</value>
+  </data>
+  <data name="BinaryMutatorNode_Name" xml:space="preserve">
+    <value>Binary Mutator Node</value>
+  </data>
+  <data name="BinaryMutatorNode_Description" xml:space="preserve">
+    <value>A node to replace values based on a binary match</value>
+  </data>
+  <data name="BinaryMutatorNode_NodeName" xml:space="preserve">
+    <value>Binary Mutator</value>
+  </data>
+  <data name="SimpleReplayEndpointConfig_ConvertToBasicDescription" xml:space="preserve">
+    <value>If true then the packets are converted back to a basic byte form before sending</value>
+  </data>
+  <data name="SimpleReplayEndpointConfig_PacketsDescription" xml:space="preserve">
+    <value>The log of packets to send when receiving an input packet</value>
+  </data>
+  <data name="SimpleReplayEndpointConfig_CloseAfterSendDescription" xml:space="preserve">
+    <value>Indicates whether to close the connection after sending the packets</value>
+  </data>
+  <data name="SimpleReplayEndpointConfig_CloseAfterRecvDescription" xml:space="preserve">
+    <value>Indicates whether to close after receiving a packet</value>
+  </data>
+  <data name="SimpleReplayEndpointConfig_SendAtStartDescription" xml:space="preserve">
+    <value>Indicates whether to also send the packets at connection start</value>
+  </data>
+  <data name="SimpleReplayDataEndpoint_Name" xml:space="preserve">
+    <value>Simple Replay Endpoint</value>
+  </data>
+  <data name="SimpleReplayDataEndpoint_Description" xml:space="preserve">
+    <value>A simple replay endpoint which returns all packets in a log in response to an incoming packet</value>
+  </data>
+  <data name="SimpleReplayDataEndpoint_NodeName" xml:space="preserve">
+    <value>Simple Replay Endpoint</value>
+  </data>
+  <data name="DNSParser_Name" xml:space="preserve">
+    <value>DNS Parser</value>
+  </data>
+  <data name="DNSParser_Description" xml:space="preserve">
+    <value>This is a array parser for DNS packets</value>
+  </data>
+  <data name="DNSParser_NodeName" xml:space="preserve">
+    <value>DNS Parser</value>
+  </data>
+  <data name="StringConverterNodeConfig_EncodingDescription" xml:space="preserve">
+    <value>The binary encoding with which to process the string</value>
+  </data>
+  <data name="StringConverterNode_Name" xml:space="preserve">
+    <value>String Converter</value>
+  </data>
+  <data name="StringConverterNode_Description" xml:space="preserve">
+    <value>Converts byte data to a string in a specified encoding</value>
+  </data>
+  <data name="StringConverterNode_NodeName" xml:space="preserve">
+    <value>String Converter</value>
+  </data>
+  <data name="WcfXmlMessageConfig_NoEncodeDescription" xml:space="preserve">
+    <value>Do not encode the output XML back to binary data</value>
+  </data>
+  <data name="WcfXmlMessageConfig_NoDecodeDescription" xml:space="preserve">
+    <value>Do not decode the input from binary data to XML</value>
+  </data>
+  <data name="WcfXmlMessage_Name" xml:space="preserve">
+    <value>WCF Binary Parser</value>
+  </data>
+  <data name="WcfXmlMessage_Description" xml:space="preserve">
+    <value>Parses a binary WCF message into XML and converts it back again</value>
+  </data>
+  <data name="WcfXmlMessage_NodeName" xml:space="preserve">
+    <value>WCF Binary</value>
+  </data>
+  <data name="HttpRequestStreamParser_Name" xml:space="preserve">
+    <value>HTTP Request Parser</value>
+  </data>
+  <data name="HttpRequestStreamParser_Description" xml:space="preserve">
+    <value>This is a HTTP request parser to apply to a stream</value>
+  </data>
+  <data name="HttpRequestStreamParser_NodeName" xml:space="preserve">
+    <value>HTTP Request</value>
+  </data>
+  <data name="HTTPCookieParser_Name" xml:space="preserve">
+    <value>HTTP Cookie Parser</value>
+  </data>
+  <data name="HTTPCookieParser_Description" xml:space="preserve">
+    <value>Parser for HTTP style cookie strings. Make sure to specify the nodes to parse when configuring the graph</value>
+  </data>
+  <data name="HTTPCookieParser_NodeName" xml:space="preserve">
+    <value>Cookie Parser</value>
+  </data>
+  <data name="NullDataEndpoint_Name" xml:space="preserve">
+    <value>Null Server</value>
+  </data>
+  <data name="NullDataEndpoint_Description" xml:space="preserve">
+    <value>A simple server which discards its input</value>
+  </data>
+  <data name="NullDataEndpoint_NodeName" xml:space="preserve">
+    <value>Null Server</value>
+  </data>
+  <data name="RegexMutatorNodeConfig_RegexDescription" xml:space="preserve">
+    <value>The regular expression to match on</value>
+  </data>
+  <data name="RegexMutatorNodeConfig_ReplacementDescription" xml:space="preserve">
+    <value>The replacement string to use on match</value>
+  </data>
+  <data name="RegexMutatorNodeConfig_CaseSensitiveDescription" xml:space="preserve">
+    <value>Indicates whether the match should be case sensitive</value>
+  </data>
+  <data name="RegexMutatorNodeConfig_MultiLineDescription" xml:space="preserve">
+    <value>Indicates whether the match should ignore line breaks</value>
+  </data>
+  <data name="RegexMutatorNodeConfig_StringEncodingDescription" xml:space="preserve">
+    <value>The string encoding to use if the selected nodes are not strings</value>
+  </data>
+  <data name="RegexMutatorNode_Name" xml:space="preserve">
+    <value>Regex Node</value>
+  </data>
+  <data name="RegexMutatorNode_Description" xml:space="preserve">
+    <value>A node to replace values based on a regular expression</value>
+  </data>
+  <data name="RegexMutatorNode_NodeName" xml:space="preserve">
+    <value>Regex</value>
+  </data>
+  <data name="FrameFilterMutatorNode_Name" xml:space="preserve">
+    <value>Frame Filter Mutator Node</value>
+  </data>
+  <data name="FrameFilterMutatorNode_Description" xml:space="preserve">
+    <value>A node to filter out specific nodes of a frame</value>
+  </data>
+  <data name="FrameFilterMutatorNode_NodeName" xml:space="preserve">
+    <value>Frame Filter Mutator</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_MinLengthDescription" xml:space="preserve">
+    <value>Minimum length of fuzz string</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_MaxLengthDescription" xml:space="preserve">
+    <value>Maximum length of fuzz string</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_FixedLengthDescription" xml:space="preserve">
+    <value>Specify that the string is just a fixed length string at MaxLength</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_MinRandomCharDescription" xml:space="preserve">
+    <value>Specify the the minimum character number allowed</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_MaxRandomCharDescription" xml:space="preserve">
+    <value>Specify the maximum character number allowed</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Specify that the fuzzed value should be logged as text</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Specify that the packets are logged before and after fuzzing</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Specify the log color to use</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Specify the starting string position to fuzz</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Specify the length to fuzz from the start position, less than 0 means string.length - fuzzlength + 1</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Specify that logged packets should be converted to bytes before logging</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_BinaryEncodingDescription" xml:space="preserve">
+    <value>Specify the encoding to use if the nodes are not strings</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Do not convert nodes to strings for fuzzing, just ignore them</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_RegexMatchDescription" xml:space="preserve">
+    <value>Specify a regex match to use to determine parts to fuzz. Replaces any matches within the selected range</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_CaseSensitiveDescription" xml:space="preserve">
+    <value>Specify the regex is casesensitive</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_MultilineDescription" xml:space="preserve">
+    <value>Specify the regex is multiline</value>
+  </data>
+  <data name="RandomStringFuzzerNodeConfig_MaxReplacementsDescription" xml:space="preserve">
+    <value>Specify the maximum number of replacements when using a regular expression, -1 means all</value>
+  </data>
+  <data name="RandomStringFuzzerNode_Name" xml:space="preserve">
+    <value>Random String Fuzzer Node</value>
+  </data>
+  <data name="RandomStringFuzzerNode_Description" xml:space="preserve">
+    <value>A node to fuzz parts of a string with random data</value>
+  </data>
+  <data name="RandomStringFuzzerNode_NodeName" xml:space="preserve">
+    <value>Random String Fuzzer</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_MinLengthDescription" xml:space="preserve">
+    <value>Minimum length of fuzz string</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_MaxLengthDescription" xml:space="preserve">
+    <value>Maximum length of fuzz string</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_PatternDescription" xml:space="preserve">
+    <value>Specify the the string pattern to use</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_FixedLengthDescription" xml:space="preserve">
+    <value>Specify that the string is just a fixed length string at MaxLength</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_LogFuzzTextDescription" xml:space="preserve">
+    <value>Specify that the fuzzed value should be logged as text</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_LogPacketsDescription" xml:space="preserve">
+    <value>Specify that the packets are logged before and after fuzzing</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_ColorDescription" xml:space="preserve">
+    <value>Specify the log color to use</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_FuzzStartDescription" xml:space="preserve">
+    <value>Specify the starting string position to fuzz</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_FuzzLengthDescription" xml:space="preserve">
+    <value>Specify the length to fuzz from the start position, less than 0 means string.length - fuzzlength + 1</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_ConvertToBytesDescription" xml:space="preserve">
+    <value>Specify that logged packets should be converted to bytes before logging</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_BinaryEncodingDescription" xml:space="preserve">
+    <value>Specify the encoding to use if the nodes are not strings</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_NoConversionDescription" xml:space="preserve">
+    <value>Do not convert nodes to strings for fuzzing, just ignore them</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_RegexMatchDescription" xml:space="preserve">
+    <value>Specify a regex match to use to determine parts to fuzz. Replaces any matches within the selected range</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_CaseSensitiveDescription" xml:space="preserve">
+    <value>Specify the regex is casesensitive</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_MultilineDescription" xml:space="preserve">
+    <value>Specify the regex is multiline</value>
+  </data>
+  <data name="PatternStringFuzzerNodeConfig_MaxReplacementsDescription" xml:space="preserve">
+    <value>Specify the maximum number of replacements when using a regular expression, -1 means all</value>
+  </data>
+  <data name="PatternStringFuzzerNode_Name" xml:space="preserve">
+    <value>Pattern String Fuzzer Node</value>
+  </data>
+  <data name="PatternStringFuzzerNode_Description" xml:space="preserve">
+    <value>A node to fuzz parts of a string with patterned data</value>
+  </data>
+  <data name="PatternStringFuzzerNode_NodeName" xml:space="preserve">
+    <value>Pattern String Fuzzer</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_CloseAfterSendDescription" xml:space="preserve">
+    <value>If true then the connection is closed after sending all the packets</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_ConvertToBasicDescription" xml:space="preserve">
+    <value>If true then the packets are converted back to a basic byte form before sending</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_FiltersDescription" xml:space="preserve">
+    <value>Specify a list of filters to filter out incoming packets for response</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_MatchAllFiltersDescription" xml:space="preserve">
+    <value>Indicates all filters must match</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_PacketsDescription" xml:space="preserve">
+    <value>The log of packets to send when receiving an input packet</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_RepeatCountDescription" xml:space="preserve">
+    <value>Specify the number of times to send the packets</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_Tag" xml:space="preserve">
+    <value>Specify the tag to send, if not set then all packets will be sent</value>
+  </data>
+  <data name="SequentialReplayEndpoint_Description" xml:space="preserve">
+    <value>An endpoint which replays packets from a log sequentially on receiving </value>
+  </data>
+  <data name="SequentialReplayEndpoint_Name" xml:space="preserve">
+    <value>Sequential Replay Endpoint</value>
+  </data>
+  <data name="SequentialReplayEndpoint_NodeName" xml:space="preserve">
+    <value>Sequential Replay</value>
+  </data>
+  <data name="SequentialReplayEndpoint_PacketLogIsNull" xml:space="preserve">
+    <value>Must specify a packet log</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_SendAtStartDescription" xml:space="preserve">
+    <value>Indicates whether to send a packet at connection start</value>
+  </data>
+  <data name="SequentialReplayEndpointConfig_WaitForResponseOnCloseDescription" xml:space="preserve">
+    <value>If true wait for a reponse before closing the connection if CloseOnSend is set</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_CommentStringDescription" xml:space="preserve">
+    <value>Specifies a string which if matched at the beginning indicates a comment</value>
+  </data>
+  <data name="TextListFuzzerNodeConfig_IgnoreEmptyLines" xml:space="preserve">
+    <value>Specifies that the fuzzer ignores empty lines in the documents</value>
+  </data>
+  <data name="TextListFuzzerNode_MaxRandomCheckExceeded" xml:space="preserve">
+    <value>Maximum number of random strings exceeded, try disabling comments or empty line handling</value>
+  </data>
+  <data name="TextListFuzzerNode_NoMoreLines" xml:space="preserve">
+    <value>No more text lines to fuzz</value>
+  </data>
+  <data name="StripperNodeConfig_ExclusiveDescription" xml:space="preserve">
+    <value>Specify whether the output packet will include the selected nodes (set to false) or exclude them</value>
+  </data>
+  <data name="StripperNode_Description" xml:space="preserve">
+    <value>A node to strip out parts of a packet based on the selection path</value>
+  </data>
+  <data name="StripperNode_Name" xml:space="preserve">
+    <value>Stripper Node</value>
+  </data>
+  <data name="StripperNode_NodeName" xml:space="preserve">
+    <value>Stripper</value>
+  </data>
+  <data name="BaseRandomArrayFuzzer_FuzzCount" xml:space="preserve">
+    <value>Fuzzing {0} points</value>
+  </data>
+  <data name="BaseRandomArrayFuzzer_FuzzInfo" xml:space="preserve">
+    <value>Fuzzing position {0} original {1} new {2}</value>
+  </data>
+  <data name="BaseRandomArrayFuzzer_IgnoringData" xml:space="preserve">
+    <value>Ignoring node {0}, cannot convert to correct type</value>
+  </data>
+  <data name="BaseRandomArrayFuzzer_PostFuzzInfo" xml:space="preserve">
+    <value>{0}: Post-fuzz</value>
+  </data>
+  <data name="BaseRandomArrayFuzzer_PreFuzzInfo" xml:space="preserve">
+    <value>{0}: Pre-fuzz</value>
+  </data>
+  <data name="NumericStringFuzzerNode_InvalidIncrement" xml:space="preserve">
+    <value>Increment cannot be zero</value>
+  </data>
+  <data name="NumericStringFuzzerNode_InvalidNegativeIncrement" xml:space="preserve">
+    <value>If negative increment end value must be less than start</value>
+  </data>
+  <data name="NumericStringFuzzerNode_InvalidPositiveIncrement" xml:space="preserve">
+    <value>If positive increment end value must be greater than start</value>
+  </data>
+  <data name="NumericStringFuzzerNode_InvalidStringFormat" xml:space="preserve">
+    <value>Invalid string format</value>
+  </data>
+  <data name="PatternStringFuzzerNode_InvalidLength" xml:space="preserve">
+    <value>MinLength must be greater than 0 and MaxLength must be greater or equal</value>
+  </data>
+  <data name="PatternStringFuzzerNode_InvalidPattern" xml:space="preserve">
+    <value>Cannot specify an empty pattern</value>
+  </data>
+  <data name="RandomByteFuzzerNode_ConfigError" xml:space="preserve">
+    <value>Max byte value must be greater than minimum</value>
+  </data>
+</root>

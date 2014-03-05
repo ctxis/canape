@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="5a9b07b9-23c7-4bdd-a21c-9dc349bc9d76" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>The following is a changelog for CANAPE over the previous versions.</para>
+    </introduction>    
+    <section address="Canape13">
+      <title>Version 1.3 5/12/2013</title>
+      <content>        
+        <para>
+        <list class="bullet">            
+        <listItem><para>Breaking change, now requires .NET 4.5 to run. This removes XP support unfortunately.</para></listItem>            
+            <listItem><para>Significant updates to parser editor:            	
+			<list class="bullet">
+				<listItem><para>Support for custom expressions to calculate optional conditions, recalculate values</para></listItem>
+  				<listItem><para>Support for sequence unions to parse a sub-sequence based on an expression</para></listItem>
+  				<listItem><para>Support for simple python scripts to recalculate more complex values</para></listItem>
+			</list>
+            </para></listItem>
+            <listItem><para>Protocol layers now exposed to user through GUI, basic support for SSL and HTTP layers with custom scripted layers possible (template code for C# and Python)</para></listItem>            
+            <listItem><para>Instances of old SSL dialog now replaced with layers editor, including in state graphs</para></listItem>            
+        	<listItem><para>New HTTP parser and HTTP proxy implementation with support for HTTP streaming and stream to chunk conversion</para></listItem>
+        	<listItem><para>Added a HTTP reverse proxy</para></listItem>
+        	<listItem><para>Updates to certificate generator, allows user to specify RSA key size and hashing algorithm</para></listItem>
+        	<listItem><para>Loading previous file versions now warn the user</para></listItem>
+        	<listItem><para>Updated binary differencing tool, now tries to do a resynchronizing difference showing delete, modified and added sections. Also supports text line mode.</para></listItem>
+        	<listItem><para>New packet differencing document, allows you to compare two lists of packets then drill down into changes in individual packets</para></listItem>
+        	<listItem><para>Script editor now has per-language configuration for formatting as well as ability to select the desired font</para></listItem>        	
+        	<listItem><para>Packet log viewer now can have its columns configured, including custom column based on selected part of a packet and abilty to set the font (right click log and select Change Columns)</para></listItem>
+        	<listItem><para>IronPython shell extension now included with official distribution</para></listItem>
+        	<listItem><para>Support for scripted Hex/String converters in binary editor, including simple XOR template</para></listItem>
+        	<listItem><para>Added auto-backup feature to automatically save project a selected intervals</para></listItem>
+        	<listItem><para>Added history support which allows you to inspect the properties and packets associated with a closed connection</para></listItem>
+        	<listItem><para>Added credentials API and UI to request and cache user-inputted credentials, queried through calling <codeInline>Graph.ServiceProvider.GetService(typeof(CredentialsManagerService))</codeInline></para></listItem>
+        	<listItem><para>Added flag for global meta to reset when the service is restarted</para></listItem>
+        	<listItem><para>DataKeys now support dynamic dispatch, allows you to use <codeInline>key.Name.Value = X</codeInline> like syntax in scripts</para></listItem>
+        	<listItem><para>Added scriptable packet exporter with template in C# and Python</para></listItem>
+        	<listItem><para>Added new statistics window show more properties about a packet log, also used with history viewer</para></listItem>
+        	<listItem><para>Added selection path support to logging node to only log a subset of a packet</para></listItem>
+        	<listItem><para>Single packet viewer (in log or edit window) has a paste button to replace the current packet with one from the clipboard</para></listItem>     
+        	<listItem><para>Added API support to bind sub-services to the current one to allow for bound connections (think FTP)</para></listItem>     
+        	<listItem><para>Current running service object can now be queried through calling <codeInline>Graph.ServiceProvider.GetService(typeof(ProxyNetworkService))</codeInline></para></listItem>     
+        	<listItem><para>Various Bug Fixes:<list class="bullet">
+					<listItem><para>Fixed issue with serialization of script code</para></listItem>			
+					<listItem><para>Few misc crashes</para></listItem>
+					</list></para>
+			</listItem>					        
+        </list>        
+        </para>
+      </content>
+    </section>
+    <section address="Canape12">
+      <title>Version 1.2 - 5/1/2013</title>
+      <content>
+      <para>
+      <list class="bullet">
+      <listItem><para>Added new style log viewer, packets can always be modified even in a service, you then can save or revert the packet</para></listItem>
+		<listItem><para>Added option to open a separate view of a packetlog in another window which can be docked</para></listItem>
+		<listItem><para>Added option to toggle readonly property on packetlog</para></listItem>
+		<listItem><para>Added support for modifying referenced assemblies in scripts</para></listItem>
+		<listItem><para>Added support for custom script configuration settings exposed via the dynamic node when configured in a graph</para></listItem>
+		<listItem><para>Added current network service as a property of the graph</para></listItem>
+		<listItem><para>Network client will now auto stop after making its set number of connections</para></listItem>
+		<listItem><para>Added a simple sequential library endpoint</para></listItem>
+		<listItem><para>Added options to disable confirmation on clearing text and packet logs</para></listItem>
+		<listItem><para>Added python and ruby search paths to user directory so scripts can be added without writing to program files</para></listItem>
+		<listItem><para>German translation (can be selectively enabled, also used as default language on german systems)</para></listItem>
+		<listItem><para>Added mustaine hessian python library</para></listItem>
+		<listItem><para>Added general create certificate tool accessible from main window</para></listItem>
+		<listItem><para>Added support for single file OpenSSL certificate/keys</para></listItem>
+		<listItem><para>Various Bug Fixes:<list class="bullet">
+			<listItem><para>Fixed issue with project explorer not populating if loaded after project</para></listItem>
+			<listItem><para>Fixed issues accessing smartcard certs</para></listItem>
+			<listItem><para>Filtered out slave layer nodes from the injector selection box</para></listItem>
+			<listItem><para>Updated version of window docking library which fixes display issues on Win7+</para></listItem>
+			<listItem><para>Few misc crashes</para></listItem></list>
+	</para></listItem>	
+ </list>
+ </para>
+ </content> 
+ </section>
+ <section address="Canape11">
+ <title>Version 1.1 - 12/10/2012</title>
+ <content>
+      <para>
+      <list class="bullet">
+      <listItem><para>Release</para></listItem>
+      </list>
+      </para>
+ </content>
+ </section>
+  <section address="Canape11RC">
+ <title>Version 1.1 RC - 3/9/2012</title>
+ <content>
+      <para>
+      <list class="bullet">      
+      <listItem><para>Added tooltips to the user interface to aid in working out what a feature does</para></listItem>
+<listItem><para>Add an option to make network logs in services mutable, rather than the current readonly default</para></listItem>
+<listItem><para>Added support for Proxy Auto Configuration files, either by explictly specifying or as part of the system configuration. Be careful though as the code will run with full trust :)</para></listItem>
+<listItem><para>Added option to proxy filters to allow them to be disabled without deleting them, makes it easier to turn them on and off</para></listItem>
+<listItem><para>Added option in cert creation form to specify the signing certificate</para></listItem>
+<listItem><para>Added global meta object to project to allow easier sharing of data between services</para></listItem>
+<listItem><para>Added new view options in packet log, allows you to view a single connection in one step rather than select first then view.</para></listItem>
+<listItem><para>Various Bug Fixes:<list class="bullet">
+	<listItem><para>Fixed a font rendering issue in the hex editor on Windows 8</para></listItem>
+	<listItem><para>Fixed HTTP parser to not read data on 304 responses</para></listItem>
+	<listItem><para>Setup properties for scripted endpoints</para></listItem>
+	<listItem><para>Fixed a few crashes</para></listItem></list>
+	</para></listItem>	
+      </list>
+      </para>
+ </content>
+ </section>
+ 
+ <section address="Canape11Beta3">
+ <title>Version 1.1 Beta 3 - 20/8/2012</title>
+ <content>
+      <para>
+      <list class="bullet">      
+      <listItem><para>Complex packet viewer now remembers what node was selected for individual packets</para></listItem>      
+      <listItem><para>SSL Layer Sections, allows you to specify a mechanism to force an upgrade of a protocol to SSL through a netgraph, next version will allow you to specify your own layers. Changed State Graph to use layer sections.</para></listItem>
+<listItem><para>Addition of linked nodes to the netgraph container</para></listItem>
+<listItem><para>Basic code-completion for C# scripts, only works for finding method names for an object (started when pressing '.'). Must be enabled from View->Configuration dialog</para></listItem>
+<listItem><para>More SSL options:<list class="bullet">
+   <listItem><para>Can specify SSL version for individual directions</para></listItem>
+   <listItem><para>Can use TLS1.1 and 1.2 if .NET 4.5 is installed</para></listItem>
+   <listItem><para>Can enforce client certificate, also can verify client cert and server cert and reject if invalid</para></listItem>   
+   </list>  
+   </para></listItem>
+   
+<listItem><para>All nodes in a graph can now log packets on their input and output to aid in debugging</para></listItem>
+<listItem><para>Edit live packet dialog no longer blocks the rest of the GUI</para></listItem>
+<listItem><para>Graph now has a ConnectionProperties object which maintains a list of read-only information about
+the current connection including source and destination addresses and SSL negotiation. Can be accessed in filters by using the '~name' selection path or by looking in the activeconnections properties state</para></listItem>
+<listItem><para>Added advanced options to injector, ability to specify a script to process packets before injection (say for fuzzing) and packet delaying</para></listItem>
+<listItem><para>Added couple of basic converters to hexeditor and text editor to convert between Base64/Hex encoded data</para></listItem>
+<listItem><para>More extensibility points, can create new documents and editor controls, can add new Hexeditor inspectors and converters. Cannot currently be extended through in-built scripts however.</para></listItem>
+<listItem><para>Various additional APIs and utility functions to simplify development.</para></listItem>
+<listItem><para>Added a redirect to file tab for the network services</para></listItem>
+<listItem><para>Various Bug Fixes:<list class="bullet">
+   <listItem><para>Issues with large projects failing to correctly populate the project tree</para></listItem>
+   <listItem><para>Correct handling of OpenSSL certificates and keys so they work</para></listItem>
+   <listItem><para>Fixed some race conditions in network graphs</para></listItem>
+   <listItem><para>DataNode names are now converted to valid XML names, possible to end up with unselectable nodes otherwise</para></listItem>
+   <listItem><para>Added resolve handler for assemblies so can be loaded from standard extension directories</para></listItem>
+   <listItem><para>Fixed bug in SSL certificate cloning which meant Firefox would sometimes ignore certs</para></listItem>
+   <listItem><para>Made SSL client send destination hostname where known to handle servers which select certificates based on the extension</para></listItem>
+ </list>     
+ </para></listItem>
+      
+ </list>
+ </para>
+ </content>
+ </section>
+ 
+ <section address="Canape10">
+ <title>Version 1.0 - 12/3/2012</title>
+ <content>
+      <para>
+      <list class="bullet">
+      <listItem><para>Release</para></listItem>
+      </list>
+      </para>  
+ </content>
+ </section>
+  </developerConceptualDocument>
+</topic>

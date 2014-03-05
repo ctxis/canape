@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{34432D8F-EAD0-48B9-8317-EB9D69D68B95}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CANAPE</RootNamespace>
+    <AssemblyName>CANAPE</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\CANAPE.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\Release\CANAPE.xml</DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>canape.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAdapters\BaseDataAdapter.cs" />
+    <Compile Include="DataAdapters\DataFrameExtensions.cs" />
+    <Compile Include="DataAdapters\DelegateDataAdapter.cs" />
+    <Compile Include="DataAdapters\CoupledDataAdapter.cs" />
+    <Compile Include="DataAdapters\DataAdapterToStream.cs" />
+    <Compile Include="DataAdapters\EnumerableDataAdapter.cs" />
+    <Compile Include="DataAdapters\IDataAdapter.cs" />
+    <Compile Include="DataAdapters\NamespaceDoc.cs" />
+    <Compile Include="DataAdapters\NullDataAdapter.cs" />
+    <Compile Include="DataAdapters\PrefixedDataAdapter.cs" />
+    <Compile Include="DataAdapters\QueuedDataAdapter.cs" />
+    <Compile Include="DataAdapters\StreamDataAdapter.cs" />
+    <Compile Include="DataFrames\BasicDataFrameEqualityComparer.cs" />
+    <Compile Include="DataFrames\BigIntegerDataValue.cs" />
+    <Compile Include="DataFrames\DataFrameEqualityComparer.cs" />
+    <Compile Include="DataFrames\DataNodeEqualityComparer.cs" />
+    <Compile Include="DataFrames\DateTimeDataValue.cs" />
+    <Compile Include="DataFrames\DynamicDataValue.cs" />
+    <Compile Include="DataFrames\Filters\DataFrameFilterSearchMode.cs" />
+    <Compile Include="DataFrames\DataNodeClasses.cs" />
+    <Compile Include="DataFrames\EnumDataValue.cs" />
+    <Compile Include="DataFrames\Filters\BinaryDataFrameFilter.cs" />
+    <Compile Include="DataFrames\ByteArrayDataValue.cs" />
+    <Compile Include="DataFrames\Filters\BaseDataFrameFilter.cs" />
+    <Compile Include="DataFrames\DataKey.cs" />
+    <Compile Include="DataFrames\DataFrame.cs" />
+    <Compile Include="DataFrames\DataNode.cs" />
+    <Compile Include="DataFrames\DataReader.cs" />
+    <Compile Include="DataFrames\DataValue.cs" />
+    <Compile Include="DataFrames\DataWriter.cs" />
+    <Compile Include="DataFrames\Filters\ComparisonOperator.cs" />
+    <Compile Include="DataFrames\Filters\DataFrameFilterExpression.cs" />
+    <Compile Include="DataFrames\Filters\DataFrameFilterRange.cs" />
+    <Compile Include="DataFrames\Filters\IDataFrameFilter.cs" />
+    <Compile Include="DataFrames\Filters\NodeCountDataFrameFilter.cs" />
+    <Compile Include="DataFrames\Filters\RegexDataFrameFilter.cs" />
+    <Compile Include="DataFrames\Filters\SetDataFrameFilter.cs" />
+    <Compile Include="DataFrames\Filters\StringDataFrameFilter.cs" />
+    <Compile Include="DataFrames\GenericDataValue.cs" />
+    <Compile Include="DataFrames\IPrimitiveValue.cs" />
+    <Compile Include="DataFrames\IPAddressDataValue.cs" />
+    <Compile Include="NodeFactories\DelayNodeFactory.cs" />
+    <Compile Include="Nodes\BaseDecoupledPipelineNode.cs" />
+    <Compile Include="Nodes\DelayPipelineNode.cs" />
+    <Compile Include="Nodes\IPersistNode.cs" />
+    <Compile Include="Nodes\IPipelineEndpoint.cs" />
+    <Compile Include="Nodes\MetaDictionary.cs" />
+    <Compile Include="DataFrames\MissingDataNodeException.cs" />
+    <Compile Include="DataFrames\NamespaceDoc.cs" />
+    <Compile Include="DataFrames\PrimitiveDataValue.cs" />
+    <Compile Include="DataFrames\StringDataValue.cs" />
+    <Compile Include="DataFrames\TextLineEnding.cs" />
+    <Compile Include="DataFrames\TwentyFourBitIntegers.cs" />
+    <Compile Include="DataFrames\UnixDateTimeDataValue.cs" />
+    <Compile Include="DataFrames\XPathDataNavigator.cs" />
+    <Compile Include="NodeFactories\BaseNodeFactory.cs" />
+    <Compile Include="NodeFactories\BinaryDataFrameFilterFactory.cs" />
+    <Compile Include="NodeFactories\ClientEndpointFactory.cs" />
+    <Compile Include="NodeFactories\DataFrameFilterFactory.cs" />
+    <Compile Include="NodeFactories\DecisionNodeFactory.cs" />
+    <Compile Include="NodeFactories\DirectNodeFactory.cs" />
+    <Compile Include="NodeFactories\EditPacketNodeFactory.cs" />
+    <Compile Include="NodeFactories\LogPacketNodeFactory.cs" />
+    <Compile Include="NodeFactories\NamespaceDoc.cs" />
+    <Compile Include="NodeFactories\NetGraphContainerNodeFactory.cs" />
+    <Compile Include="NodeFactories\NetGraphFactory.cs" />
+    <Compile Include="NodeFactories\NodeCountDataFrameFilterFactory.cs" />
+    <Compile Include="NodeFactories\NodeFactoryException.cs" />
+    <Compile Include="NodeFactories\PipelineEndpointFactory.cs" />
+    <Compile Include="NodeFactories\RegexDataFrameFilterFactory.cs" />
+    <Compile Include="NodeFactories\ServerEndpointFactory.cs" />
+    <Compile Include="NodeFactories\SetDataFrameFilterFactory.cs" />
+    <Compile Include="NodeFactories\StringDataFrameFilterFactory.cs" />
+    <Compile Include="NodeFactories\SwitchNodeFactory.cs" />
+    <Compile Include="Nodes\BasePipelineNode.cs" />
+    <Compile Include="Nodes\BaseStreamPipelineNode.cs" />
+    <Compile Include="Nodes\DecisionNode.cs" />
+    <Compile Include="Nodes\DirectPipelineNode.cs" />
+    <Compile Include="Nodes\EditPacketPipelineNode.cs" />
+    <Compile Include="Nodes\LogPacket.cs" />
+    <Compile Include="Nodes\NamespaceDoc.cs" />
+    <Compile Include="Nodes\NetGraphContainerNode.cs" />
+    <Compile Include="Nodes\PersistNodeImpl.cs" />
+    <Compile Include="Nodes\PipelineEndpoint.cs" />
+    <Compile Include="Nodes\SwitchNode.cs" />
+    <Compile Include="Nodes\SwitchNodeSelectionMode.cs" />
+    <Compile Include="Parser\DisplayClassAttribute.cs" />
+    <Compile Include="Parser\FormatStringAttribute.cs" />
+    <Compile Include="Parser\HiddenMemberAttribute.cs" />
+    <Compile Include="Parser\IChildObject.cs" />
+    <Compile Include="Parser\KeyDataPair.cs" />
+    <Compile Include="Parser\ObjectConverter.cs" />
+    <Compile Include="Parser\ReadOnlyMemberAttribute.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\BinaryEncoding.cs" />
+    <Compile Include="Utils\BinaryStringEncoding.cs" />
+    <Compile Include="Utils\CANAPEServiceProvider.cs" />
+    <Compile Include="Utils\ColorValue.cs" />
+    <Compile Include="Utils\CountedStream.cs" />
+    <Compile Include="Utils\CustomPropertyDescriptor.cs" />
+    <Compile Include="Utils\Diff.cs" />
+    <Compile Include="Utils\DiffItem.cs" />
+    <Compile Include="Utils\DynamicConfigObject.cs" />
+    <Compile Include="Utils\FilePacketLogger.cs" />
+    <Compile Include="Utils\GeneralUtils.cs" />
+    <Compile Include="Utils\INodeConverter.cs" />
+    <Compile Include="Utils\INodeInitializer.cs" />
+    <Compile Include="Utils\LocalizedCategoryAttribute.cs" />
+    <Compile Include="Utils\LocalizedDescriptionAttribute.cs" />
+    <Compile Include="Utils\LockedQueue.cs" />
+    <Compile Include="Nodes\LogPacketPipelineNode.cs" />
+    <Compile Include="Nodes\NetGraph.cs" />
+    <Compile Include="Utils\Logger.cs" />
+    <Compile Include="Utils\NamespaceDoc.cs" />
+    <Compile Include="Utils\PcapReader.cs" />
+    <Compile Include="Utils\PipelineStream.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\PropertyBag.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="canape.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

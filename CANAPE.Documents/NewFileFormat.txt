@@ -1,0 +1,70 @@
+﻿The new file format will be based on SQLite. This provides numerous advantages including the easy caching of data.
+
+The basic format will act as a transition between old and new, over time it might be possible to drop certain features from the data model to remove it being replicated in the tables.
+
+Tables:
+
+enum DataTypes
+{
+    BinarySerialized = 0,
+    UTF8String = 1,
+    ByteArray = 2,
+    XmlDataContract = 3,
+    // Other stuff?
+}
+
+canape_properties - Contains project level property data
+    * name      : varchar, provides a unique identifier (say canape.default_proxy or user specified names)
+    * data_type : int (0 = serialized blob, 1 = utf8 string, 2 = binary data)
+    * data      : blob (data format depends on the data_type field)
+
+canape_documents - Contains individual documents
+    * id            : Guid of the document
+    * name          : varchar, name of the document
+    * hidden        : Boolean to indicate if this document should be shown
+    * data_type     : int, type of data storage, for now only 0 = serialized blob but could be say DataContract serialized
+    * data          : blob (data format depends on the data_type field)
+    * parent_folder : Guid which represents the parent folder, if null Guid then attached to root
+
+canape_document_ref - Contains references to documents from other documents, should prevent a document being deleted, maybe.
+    * id            : Guid of the document 
+    * refid         : Referenced document
+
+canape_folders   - Contains folder hierarchy of the project
+    * id            : Guid of the folder
+    * name          : Name of the folder
+    * parent_folder : Guid of the parent folder (if null Guid then attached to root)
+
+log_UUID - One table per-packet log, the UUID is the unique identifier (probably a GUID stripped of anything but hex),
+           most data should be here for display purposes except network_desc which comes from the network_log at least without necessarily requiring
+           the packet to be resurrected. Only if you want the packet itself, or are displaying custom selections will the packet need to be read
+           The can also be a log_master which is a place for all packets to be collected if that is what you want, allows for duplication of data
+           in case you lose it (as they will be distinct)
+    * rowid         : The numeric ID of the packet
+    * id            : Guid of the packet    
+    * timestamp     : Timestamp of the packet
+    * tag           : varchar, Packet tag
+    * netid         : Guid of the originating network
+    * colour        : 32bit int, colour of the packet to display
+    * hash          : MD5 sum hex string of the packet
+    * length        : int, length of the packet
+    * display_str   : The display string of the packet
+    * data_type     : Type of data frame
+    * data          : The data frame itself
+
+network_log - A log of network connections
+    * id            : ID of the network
+    * document_id   : ID of the creating document (this might no longer exist)
+    * start_time    : Timestamp of start of connection
+    * end_time      : Timestamp of end of connection
+    * network_desc  : varchar, textual description of the network
+
+network_log_properties - Associated properties with the network connection log, basically anything. This is only the properties
+                         assigned at start time, although it could in theory be the values at end time
+    * name          : Name of the property
+    * netid         : Network id associated with the property
+    * data_type     : Type of data
+    * data          : Data blob
+
+Serializing documents individually requires use of references, when a document is serialized it actually just serializes a reference to the document, this
+can then be retrieved when deserializing from the database

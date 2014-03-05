@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FloppyDisk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\FloppyDisk.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="folderopen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\folderopen.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NetGraphIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Data_Schema.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ProjectIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\VSProject_genericproject.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RunIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\otheroptions.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TickIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\112_Tick_Green.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UtilityText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\UtilityText.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PythonScriptIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\py.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Network" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Network.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\copy.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Network_Map" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Network_Map.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="textdoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\textdoc.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CANAPE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\CANAPE.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocumentForm_NoRegisteredEditor" xml:space="preserve">
+    <value>No editor available for '{0}'</value>
+  </data>
+  <data name="MessageBox_ErrorString" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="LoadProject_OpenAnyway" xml:space="preserve">
+    <value>{0} This might not open correctly. Do you want to continue to load?</value>
+  </data>
+  <data name="LoadProject_OpenAnywayCaption" xml:space="preserve">
+    <value>Open Anyway?</value>
+  </data>
+  <data name="MainForm_NoUpdateAvailable" xml:space="preserve">
+    <value>No new updates are available</value>
+  </data>
+  <data name="MainForm_NoUpdateAvailableCaption" xml:space="preserve">
+    <value>No new updates</value>
+  </data>
+  <data name="FatalError_Caption" xml:space="preserve">
+    <value>Fatal Error</value>
+  </data>
+  <data name="FatalError_Message" xml:space="preserve">
+    <value>Sorry, a Fatal Error occurred.
+Please send the file {0} to the developer to help diagnose the issue.
+Exiting</value>
+  </data>
+  <data name="OpenFileDialog_ProjectFilter" xml:space="preserve">
+    <value>Project Files (*.canape)|*.canape|All Files (*.*)|*.*</value>
+  </data>
+  <data name="StartupForm_SelectPreviousItem" xml:space="preserve">
+    <value>Please select previous file to open</value>
+  </data>
+  <data name="StartupForm_SelectPreviousItemCaption" xml:space="preserve">
+    <value>Select File</value>
+  </data>
+  <data name="Program_CheckForUpdates" xml:space="preserve">
+    <value>Do you want to enable automatic update checking? This setting can be changed later in the program configuration.</value>
+  </data>
+  <data name="Program_CheckForUpdatesCaption" xml:space="preserve">
+    <value>Enable Update Check?</value>
+  </data>
+  <data name="MainForm_CertSaveFilter" xml:space="preserve">
+    <value>Certificate Files (*.cer)|*.cer|All Files (*.*)|*.*</value>
+  </data>
+  <data name="MainForm_ProjectModified" xml:space="preserve">
+    <value>Project has been modified, do you want to save?</value>
+  </data>
+  <data name="MainForm_ProjectModifiedCaption" xml:space="preserve">
+    <value>Save Modified?</value>
+  </data>
+  <data name="MainForm_TitleText" xml:space="preserve">
+    <value>CANAPE - {0}</value>
+  </data>
+  <data name="MainForm_UnknownError" xml:space="preserve">
+    <value>Unknown error occurred loading file</value>
+  </data>
+  <data name="MainForm_UntitledFile" xml:space="preserve">
+    <value>(Untitled)</value>
+  </data>
+  <data name="SavingLoadingForm_Loading" xml:space="preserve">
+    <value>Loading from {0}</value>
+  </data>
+  <data name="SavingLoadingForm_Saving" xml:space="preserve">
+    <value>Saving to {0}</value>
+  </data>
+  <data name="MainForm_ConfirmExit" xml:space="preserve">
+    <value>Do you want to close CANAPE?</value>
+  </data>
+  <data name="MainForm_ConfirmExitCaption" xml:space="preserve">
+    <value>Close?</value>
+  </data>
+  <data name="ConfigurationForm_ClearHistory" xml:space="preserve">
+    <value>Do you want to clear the project history?</value>
+  </data>
+  <data name="ConfigurationForm_ClearHistoryCaption" xml:space="preserve">
+    <value>Clear History?</value>
+  </data>
+  <data name="CreateCert_SaveFilter" xml:space="preserve">
+    <value>PFX Certificate (*.pfx;*.p12)|*.pfx;*.p12|Certificate Files (*.cer,*.pem,*.crt)|*.cer;*.pem;*.crt|All Files (*.*)|*.*</value>
+  </data>
+  <data name="ConfigurationForm_MustRestartToChangeLanguage" xml:space="preserve">
+    <value>You must restart CANAPE to change the user interface language</value>
+  </data>
+  <data name="ConfigurationForm_MustRestartToChangeLanguageCaption" xml:space="preserve">
+    <value>Language Changed</value>
+  </data>
+  <data name="ConfigurationForm_DefaultLanguage" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="MainForm_RootCertAlreadyInstalled" xml:space="preserve">
+    <value>The root certificate is already installed</value>
+  </data>
+  <data name="ExtensionManagerForm_AssemblyFilter" xml:space="preserve">
+    <value>Assemblies (*.dll;*.exe)|*.dll;*.exe|All Files (*.*)|*.*</value>
+  </data>
+  <data name="ExtensionManagerForm_CouldntCreateExtensionDir" xml:space="preserve">
+    <value>Could not create extension directory.</value>
+  </data>
+  <data name="Program_ErrorCreatingUserDirectory" xml:space="preserve">
+    <value>Could not create user directory '{0}' to store configuration data. Please ensure you have permissions to create and re-run CANAPE</value>
+  </data>
+  <data name="ConfigurationForm_ResetToDefaults" xml:space="preserve">
+    <value>Do you want to reset all settings to their defaults?</value>
+  </data>
+  <data name="ConfigurationForm_ResetToDefaultsCaption" xml:space="preserve">
+    <value>Reset to Defaults?</value>
+  </data>
+  <data name="ConfigurationForm_DefaultScriptConfig" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="MainForm_ReplaceRootCA" xml:space="preserve">
+    <value>Do you want to replace the current CANAPE Root CA? It will not be possible to recover the old certificate if you do this!</value>
+  </data>
+  <data name="MessageBiox_WarningString" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+</root>

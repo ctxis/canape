@@ -1,0 +1,109 @@
+Version 1.4 3/3/2014
+* Open sourcing of project licensed with GPLv3
+* Removal of IronRuby support as well as additional script engines
+* Upgraded to latest version of IronPython 2.7.4
+* No longer rely of slightly custom BouncyCastle for ASN1 parser support
+* Added support for HiDPI on Windows 8
+* Added basic CLI version of CANAPE which just uses a Python shell
+* Changed strong name key. This will break existing extensions but added a binder to the project loader to cope with version 1.3 assemblies. 
+
+Version 1.3 5/12/2013
+* Breaking change, now requires .NET 4.5 to run. This removes XP support unfortunately.
+* Significant updates to parser editor: 
+o Support for custom expressions to calculate optional conditions, recalculate values
+o Support for sequence unions to parse a sub-sequence based on an expression
+o Support for simple python scripts to recalculate more complex values
+* Protocol layers now exposed to user through GUI, basic support for SSL and HTTP layers with custom scripted layers possible (template code for C# and Python)
+* Instances of old SSL dialog now replaced with layers editorm, including in state graph editor
+* New HTTP parser and HTTP proxy implementation with support for HTTP streaming and stream to chunk conversion
+* Added a HTTP reverse proxy
+* Updates to certificate generator, allows user to specify RSA key size and hashing algorithm
+* Loading previous file versions now warn the user
+* Updated binary differencing tool, now tries to do a resynchronizing difference showing delete, modified and added sections. Also supports text line mode.
+* New packet differencing document, allows you to compare two lists of packets then drill down into changes in individual packets
+* Script editor now has per-language configuration for formatting as well as ability to select the desired font
+* Packet log viewer now can have its columns configured, including custom column based on selected part of a packet and abilty to set the font (right click log and select Change Columns)
+* IronPython shell extension now included with official distribution
+* Support for scripted Hex/String converters in binary editor, including simple XOR template
+* Added auto-backup feature to automatically save project a selected intervals
+* Added history support which allows you to inspect the properties and packets associated with a closed connection
+* Added credentials API and UI to request and cache user-inputted credentials, queried through calling Graph.ServiceProvider.GetService(typeof(CredentialsManagerService))
+* Added flag for global meta to reset when the service is restarted
+* DataKeys now support dynamic dispatch, allows you to use key.Name.Value = X like syntax in scripts
+* Added scriptable packet exporter with template in C# and Python
+* Added new statistics window show more properties about a packet log, also used with history viewer
+* Added selection path support to logging node to only log a subset of a packet
+* Single packet viewer (in log or edit window) has a paste button to replace the current packet with one from the clipboard
+* Added API support to bind sub-services to the current one to allow for bound connections (think FTP)
+* Current running service object can now be queried through calling Graph.ServiceProvider.GetService(typeof(ProxyNetworkService))
+* Various Bug Fixes: 
+o Fixed issue with serialization of script code
+o Few misc crashes
+
+Version 1.2 - 5/1/2013
+* Added new style log viewer, packets can always be modified even in a service, you then can save or revert the packet
+* Added option to open a separate view of a packetlog in another window which can be docked
+* Added option to toggle readonly property on packetlog
+* Added support for modifying referenced assemblies in scripts
+* Added support for custom script configuration settings exposed via the dynamic node when configured in a graph
+* Added current network service as a property of the graph
+* Network client will now auto stop after making its set number of connections
+* Added a simple sequential library endpoint
+* Added options to disable confirmation on clearing text and packet logs
+* Added python and ruby search paths to user directory so scripts can be added without writing to program files
+* German translation (can be selectively enabled, also used as default language on german systems)
+* Added mustaine hessian python library
+* Added general create certificate tool accessible from main window
+* Added support for single file OpenSSL certificate/keys
+* Various Bug Fixes: 
+o Fixed issue with project explorer not populating if loaded after project
+o Fixed issues accessing smartcard certs
+o Filtered out slave layer nodes from the injector selection box
+o Updated version of window docking library which fixes display issues on Win7+
+o Few misc crashes
+
+Version 1.1 - 12/10/2012
+* Release
+
+Version 1.1 RC - 3/9/2012
+* Added tooltips to the user interface to aid in working out what a feature does
+* Add an option to make network logs in services mutable, rather than the current readonly default
+* Added support for Proxy Auto Configuration files, either by explictly specifying or as part of the system configuration. Be careful though as the code will run with full trust :)
+* Added option to proxy filters to allow them to be disabled without deleting them, makes it easier to turn them on and off
+* Added option in cert creation form to specify the signing certificate
+* Added global meta object to project to allow easier sharing of data between services
+* Added new view options in packet log, allows you to view a single connection in one step rather than select first then view.
+* Various Bug Fixes: 
+o Fixed a font rendering issue in the hex editor on Windows 8
+o Fixed HTTP parser to not read data on 304 responses
+o Setup properties for scripted endpoints
+o Fixed a few crashes
+Version 1.1 Beta 3 - 20/8/2012
+* Complex packet viewer now remembers what node was selected for individual packets
+* SSL Layer Sections, allows you to specify a mechanism to force an upgrade of a protocol to SSL through a netgraph, next version will allow you to specify your own layers. Changed State Graph to use layer sections.
+* Addition of linked nodes to the netgraph container
+* Basic code-completion for C# scripts, only works for finding method names for an object (started when pressing '.'). Must be enabled from View->Configuration dialog
+* More SSL options: 
+o Can specify SSL version for individual directions
+o Can use TLS1.1 and 1.2 if .NET 4.5 is installed
+o Can enforce client certificate, also can verify client cert and server cert and reject if invalid
+* All nodes in a graph can now log packets on their input and output to aid in debugging
+* Edit live packet dialog no longer blocks the rest of the GUI
+* Graph now has a ConnectionProperties object which maintains a list of read-only information about the current connection including source and destination addresses and SSL negotiation. Can be accessed in filters by using the '~name' selection path or by looking in the activeconnections properties state
+* Added advanced options to injector, ability to specify a script to process packets before injection (say for fuzzing) and packet delaying
+* Added couple of basic converters to hexeditor and text editor to convert between Base64/Hex encoded data
+* More extensibility points, can create new documents and editor controls, can add new Hexeditor inspectors and converters. Cannot currently be extended through in-built scripts however.
+* Various additional APIs and utility functions to simplify development.
+* Added a redirect to file tab for the network services
+* Various Bug Fixes: 
+o Issues with large projects failing to correctly populate the project tree
+o Correct handling of OpenSSL certificates and keys so they work
+o Fixed some race conditions in network graphs
+o DataNode names are now converted to valid XML names, possible to end up with unselectable nodes otherwise
+o Added resolve handler for assemblies so can be loaded from standard extension directories
+o Fixed bug in SSL certificate cloning which meant Firefox would sometimes ignore certs
+o Made SSL client send destination hostname where known to handle servers which select certificates based on the extension
+
+Version 1.0 - 12/3/2012
+* Release
+

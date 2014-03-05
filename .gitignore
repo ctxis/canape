@@ -1,0 +1,12 @@
+*.suo
+obj/
+bin/
+Release/
+Debug/
+Help/
+Be.Windows.Forms.HexBox/Be.Windows.Forms.HexBox.xml
+*.user
+canape_doc.shfbproj_*
+Gnu.Getopt.xml
+TestResults/
+packages/
