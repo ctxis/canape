@@ -35,9 +35,9 @@ namespace CANAPE.Extension
 
         static CANAPEExtensionManager()
         {
-            AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(Extension_AssemblyResolve);            
+            AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(Extension_AssemblyResolve);
             _extensionAsms = new Dictionary<string, Assembly>();
-        
+        }
 
         /// <summary>
         /// Resolve an assembly, ensures that we lookup any registered extensions as Assembly.Load might fail
