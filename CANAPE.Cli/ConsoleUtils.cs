@@ -18,7 +18,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using CANAPE.DataFrames;
+using CANAPE.Net;
 using CANAPE.Nodes;
+using IronPython.Runtime;
 
 namespace CANAPE.Utils
 {
@@ -30,52 +33,42 @@ namespace CANAPE.Utils
         /// <summary>
         /// Get a logger which logs to the console
         /// </summary>
+        /// <param name="file">A python file object to use for output</param>
         /// <returns>The new logger</returns>
-        public static Logger GetLogger()
+        public static Logger GetLogger(PythonFile file)
         {
             Logger ret = new Logger();
 
-            ret.LogEntryAdded += ret_LogEntryAdded;
+            ret.LogEntryAdded += (sender, e) =>
+                ret_LogEntryAdded(file, sender, e);
 
             return ret;
         }
 
-        static void ret_LogEntryAdded(object sender, Logger.LogEntryAddedEventArgs e)
-        {
-            TextWriter writer = null;
-
-            switch (e.LogEntry.EntryType)
-            {
-                case Logger.LogEntryType.Info:
-                    writer = Console.Out;
-                    break;
-                default:
-                    writer = Console.Error;
-                    break;
-            }
-
+        static void ret_LogEntryAdded(PythonFile file, object sender, Logger.LogEntryAddedEventArgs e)
+        {                      
             string text = e.LogEntry.Text;
             if (e.LogEntry.ExceptionObject != null)
             {
                 text = e.LogEntry.ExceptionObject.ToString();
             }
 
-            writer.WriteLine("{0} {1}: {2}", e.LogEntry.Timestamp, e.LogEntry.SourceName, text);
-            
+            file.write(String.Format("[{0}] {1} {2}: {3}\n", e.LogEntry.EntryType, e.LogEntry.Timestamp, e.LogEntry.SourceName, text));
         }
 
         /// <summary>
         /// Get a logger which logs to the console verbose logs
         /// </summary>
+        /// <param name="file">A python file object to use for output</param>
         /// <returns>The new logger</returns>
-        public static Logger GetVerboseLogger()
+        public static Logger GetVerboseLogger(PythonFile file)
         {
-            Logger l = GetLogger();
+            Logger l = GetLogger(file);
 
             l.LogLevel = Logger.LogEntryType.All;
 
             return l;
-        }
+        }        
 
         private static void WritePacketsHex(Stream stm, LogPacket[] ps)
         {
@@ -83,9 +76,7 @@ namespace CANAPE.Utils
             {
                 foreach (LogPacket p in ps)
                 {
-                    writer.WriteLine("Time {0} - Tag '{1}' - Network '{2}'",
-                        p.Timestamp.ToString(), p.Tag, p.Network);
-
+                    writer.WriteLine(GetHeader(p));
                     writer.WriteLine(GeneralUtils.BuildHexDump(16, p.Frame.ToArray()));
                     writer.WriteLine();
                 }
@@ -98,8 +89,7 @@ namespace CANAPE.Utils
             {
                 foreach (LogPacket p in ps)
                 {
-                    writer.WriteLine("Time {0} - Tag '{1}' - Network '{2}'",
-                    p.Timestamp.ToString(), p.Tag, p.Network);
+                    writer.WriteLine(GetHeader(p));
                     writer.WriteLine(GeneralUtils.MakeByteString(p.Frame.ToArray()));
                 }
             }
@@ -147,6 +137,12 @@ namespace CANAPE.Utils
             }
         }
 
+        private static string GetHeader(LogPacket p)
+        {
+            return String.Format("Time {0} - Tag '{1}' - Network '{2}'",
+                    p.Timestamp.ToString(), p.Tag, p.Network);
+        }
+
         /// <summary>
         /// Convert a packet to a hex string format
         /// </summary>
@@ -156,9 +152,7 @@ namespace CANAPE.Utils
         {
             using (TextWriter writer = new StringWriter())
             {                
-                writer.WriteLine("Time {0} - Tag '{1}' - Network '{2}'",
-                    p.Timestamp.ToString(), p.Tag, p.Network);
-
+                writer.WriteLine(GetHeader(p));
                 writer.WriteLine(GeneralUtils.BuildHexDump(16, p.Frame.ToArray()));
                 writer.WriteLine();             
 
@@ -175,9 +169,84 @@ namespace CANAPE.Utils
         {
             using (TextWriter writer = new StringWriter())
             {
-                writer.WriteLine("Time {0} - Tag '{1}' - Network '{2}'",
-                p.Timestamp.ToString(), p.Tag, p.Network);
+                writer.WriteLine(GetHeader(p));
                 writer.WriteLine(p.Frame.ToDataString());
+
+                return writer.ToString();
+            }
+        }
+
+        /// <summary>
+        /// Convert a packet to a hex string format
+        /// </summary>
+        /// <param name="p">The packet to convert</param>
+        /// <returns>The converted string</returns>
+        public static string ConvertBinaryPacketToString(DataFrame p)
+        {
+            using (TextWriter writer = new StringWriter())
+            {                                
+                writer.WriteLine(GeneralUtils.BuildHexDump(16, p.ToArray()));
+                writer.WriteLine();             
+
+                return writer.ToString();
+            }
+        }
+
+        /// <summary>
+        /// Convert a packet to a text string format
+        /// </summary>
+        /// <param name="p">The packet to convert</param>
+        /// <returns>The converted string</returns>
+        public static string ConvertTextPacketToString(DataFrame p)
+        {
+            using (TextWriter writer = new StringWriter())
+            {                
+                writer.WriteLine(p.ToDataString());
+
+                return writer.ToString();
+            }
+        }
+
+        private static void WriteNodeToTreeString(TextWriter writer, string link, DataNode node)
+        {
+            DataKey key = node as DataKey;            
+
+            if (key != null)
+            {       
+                string towrite = "+ " + key.Name;
+                writer.WriteLine("{0}{1}", link, towrite);                           
+
+                foreach (DataNode n in key.SubNodes)
+                {
+                    WriteNodeToTreeString(writer, new String(' ', link.Length) + "|" + new String('-', towrite.Length - 1), n);
+                }
+            }
+            else
+            {
+                writer.WriteLine("{0}> {1} = {2}", link, node.Name, node.ToDataString());
+            }
+        }
+
+        public static string ConvertPacketToTreeString(DataNode p)
+        {
+            using (TextWriter writer = new StringWriter())
+            {
+                WriteNodeToTreeString(writer, "", p);
+                return writer.ToString();
+            }
+        }
+
+        public static string ConvertPacketToTreeString(DataFrame p)
+        {
+            return ConvertPacketToTreeString(p.Root);
+        }
+
+        public static string ConvertPacketToTreeString(LogPacket p)
+        {
+            using (TextWriter writer = new StringWriter())
+            {
+                writer.WriteLine(GetHeader(p));
+                WriteNodeToTreeString(writer, "", p.Frame.Root);
 
                 return writer.ToString();
             }

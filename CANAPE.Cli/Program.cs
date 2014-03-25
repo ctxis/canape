@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using System.IO;
 using CANAPE.Documents.Net;
 using CANAPE.Net;
+using CANAPE.NodeLibrary;
 using CANAPE.Nodes;
 using CANAPE.Parser;
 using CANAPE.Scripting;
@@ -51,7 +52,8 @@ namespace CANAPE.Cli
             Runtime.LoadAssembly(typeof(Program).Assembly);
             Runtime.LoadAssembly(typeof(BaseDataEndpoint).Assembly);                        
             Runtime.LoadAssembly(typeof(CertificateUtils).Assembly);
-            Runtime.LoadAssembly(typeof(Org.BouncyCastle.Asn1.Asn1Encodable).Assembly);            
+            Runtime.LoadAssembly(typeof(Org.BouncyCastle.Asn1.Asn1Encodable).Assembly);
+            Runtime.LoadAssembly(typeof(NodeLibraryAttribute).Assembly);
             ICollection<string> searchPaths = Engine.GetSearchPaths();
             string item = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "PythonLib");
             searchPaths.Add(item);
