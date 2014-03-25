@@ -198,9 +198,9 @@ namespace CANAPE.Documents.Net
         }
 
         /// <summary>
-        /// Get or set port
+        /// Get or set the local port
         /// </summary>
-        public int Port
+        public int LocalPort
         {
             get { return _port; }
             set

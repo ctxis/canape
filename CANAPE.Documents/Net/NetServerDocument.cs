@@ -249,7 +249,7 @@ namespace CANAPE.Documents.Net
         /// <summary>
         /// Get or set service port
         /// </summary>
-        public int Port
+        public int LocalPort
         {
             get { return _port; }
             set
