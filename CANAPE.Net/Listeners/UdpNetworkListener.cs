@@ -101,9 +101,10 @@ namespace CANAPE.Net.Listeners
                 {
                 }
             }
-            _clientSocket = new UdpClient(_localEndpoint);
-            _clientSocket.EnableBroadcast = _broadcast;
+            _clientSocket = new UdpClient();                                   
             _clientSocket.ExclusiveAddressUse = !_reuseaddr;
+            _clientSocket.Client.Bind(_localEndpoint);
+            _clientSocket.EnableBroadcast = _broadcast;
             foreach (IPAddress addr in _multicastGroups)
             {
                 _clientSocket.JoinMulticastGroup(addr);
