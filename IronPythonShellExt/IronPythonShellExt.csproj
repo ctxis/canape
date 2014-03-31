@@ -42,6 +42,7 @@
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto">
       <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="IronPython">
       <HintPath>..\packages\IronPython.2.7.4\lib\Net45\IronPython.dll</HintPath>

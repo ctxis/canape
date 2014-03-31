@@ -36,7 +36,7 @@ namespace CANAPE.Controls
             InitializeComponent();            
             proxyClientControl.Client = _document.Client;
 
-            numTcpPort.Value = (decimal)_document.Port;
+            numTcpPort.Value = (decimal)_document.LocalPort;
             checkBoxGlobal.Checked = _document.AnyBind;
             checkBoxIpv6.Checked = _document.Ipv6Bind;
 
@@ -160,7 +160,7 @@ namespace CANAPE.Controls
 
         private void numTcpPort_ValueChanged(object sender, EventArgs e)
         {
-            _document.Port = (int)numTcpPort.Value;
+            _document.LocalPort = (int)numTcpPort.Value;
         }
 
         private void checkBoxGlobal_CheckedChanged(object sender, EventArgs e)

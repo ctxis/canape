@@ -39,7 +39,7 @@ namespace CANAPE.Controls
                 dataEndpointSelectionControl.Factory = document.ServerFactory;                
             }
 
-            numLocalTcpPort.Value = (decimal)_document.Port;
+            numLocalTcpPort.Value = (decimal)_document.LocalPort;
 
             checkBoxGlobal.Checked = _document.AnyBind;
             checkBoxIpv6.Checked = _document.Ipv6Bind;
@@ -56,7 +56,7 @@ namespace CANAPE.Controls
 
         private void numLocalTcpPort_ValueChanged(object sender, EventArgs e)
         {
-            _document.Port = (int)numLocalTcpPort.Value;
+            _document.LocalPort = (int)numLocalTcpPort.Value;
         }
 
         private void checkBoxGlobal_CheckedChanged(object sender, EventArgs e)

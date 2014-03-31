@@ -138,7 +138,29 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="example.py" />
+    <Content Include="dnserver.py" />
+    <Content Include="revhttpproxy.py" />
+    <Content Include="httpproxy.py" />
+    <Content Include="socksproxy.py" />
+    <Content Include="fixedproxy.py" />
+    <Content Include="PythonLib\canapecli\docs\data.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonLib\canapecli\docs\net.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonLib\canapecli\docs\__init__.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonLib\canapecli\packets\__init__.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonLib\canapecli\log.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonLib\canapecli\__init__.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

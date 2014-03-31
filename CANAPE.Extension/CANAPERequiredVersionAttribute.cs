@@ -29,15 +29,17 @@ namespace CANAPE.Extension
         private Version _maximum;
        
         public bool MatchedVersion()
-        {            
-            if(_minimum.CompareTo(GeneralUtils.GetCanapeVersion()) < 0)
+        {
+            Version curr = GeneralUtils.GetCanapeVersion();
+            
+            if(curr.CompareTo(_minimum) < 0)
             {
                 return false;
             }         
 
             if (_maximum != null)
             {
-                if (_maximum.CompareTo(GeneralUtils.GetCanapeVersion()) > 0)
+                if (curr.CompareTo(_maximum) > 0)
                 {
                     return false;
                 }
