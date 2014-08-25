@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CANAPE.Gui", "CANAPE.Gui\CANAPE.Gui.csproj", "{D16E9681-BD04-4DA6-8A37-C55AABC4E7B2}"
 EndProject
@@ -44,6 +44,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CANAPE.Cli", "CANAPE.Cli\CANAPE.Cli.csproj", "{10F73A5E-2A2C-4F24-9A29-DDC9F2938C65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CANAPE.Net.NamedPipes", "CANAPE.Net.NamedPipes\CANAPE.Net.NamedPipes.csproj", "{309BE380-7B62-4FBC-A5D2-6D5155D4CED5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateProjects", "UpdateProjects\UpdateProjects.csproj", "{AFAA9888-1B6A-4824-8900-935EE91739E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -255,6 +257,16 @@ Global
 		{309BE380-7B62-4FBC-A5D2-6D5155D4CED5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{309BE380-7B62-4FBC-A5D2-6D5155D4CED5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{309BE380-7B62-4FBC-A5D2-6D5155D4CED5}.Release|x86.ActiveCfg = Release|Any CPU
+		{AFAA9888-1B6A-4824-8900-935EE91739E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFAA9888-1B6A-4824-8900-935EE91739E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFAA9888-1B6A-4824-8900-935EE91739E0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{AFAA9888-1B6A-4824-8900-935EE91739E0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{AFAA9888-1B6A-4824-8900-935EE91739E0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AFAA9888-1B6A-4824-8900-935EE91739E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFAA9888-1B6A-4824-8900-935EE91739E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFAA9888-1B6A-4824-8900-935EE91739E0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{AFAA9888-1B6A-4824-8900-935EE91739E0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{AFAA9888-1B6A-4824-8900-935EE91739E0}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
