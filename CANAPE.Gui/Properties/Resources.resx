@@ -273,4 +273,18 @@ Exiting</value>
   <data name="MessageBiox_WarningString" xml:space="preserve">
     <value>Warning</value>
   </data>
+  <data name="Program_SecurityWarning" xml:space="preserve">
+    <value>WARNING: CANAPE projects can contain dangerous resources such as fully privileged scripts which could compromise your computer. DO NOT open untrusted projects!!!!</value>
+  </data>
+  <data name="Program_SecurityWarningCaption" xml:space="preserve">
+    <value>Big Scary Warning!</value>
+  </data>
+  <data name="LoadProject_SecurityWarning" xml:space="preserve">
+    <value>WARNING: There was a security issue loading this projects '{0}'.
+CANAPE can contain dangerous resources such as fully privileged scripts which could compromise your computer. DO NOT open untrusted projects!!!!
+Do you want to reload insecurely?</value>
+  </data>
+  <data name="LoadProject_SecurityWarningCaption" xml:space="preserve">
+    <value>Security Issue in Project</value>
+  </data>
 </root>

@@ -141,6 +141,9 @@ namespace CANAPE
 
             if (Properties.Settings.Default.RunOnce == false)
             {                
+                MessageBox.Show(CANAPE.Properties.Resources.Program_SecurityWarning,
+                    CANAPE.Properties.Resources.Program_SecurityWarningCaption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
                 Properties.Settings.Default.RunOnce = true;             
                 Program.SaveSettings();
             }

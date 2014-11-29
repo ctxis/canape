@@ -31,7 +31,7 @@ namespace UpdateProjects
                     try
                     {
                         Console.WriteLine("Processing {0}", f);
-                        CANAPEProject.Load(f, false);
+                        CANAPEProject.Load(f, false, true);
                         CANAPEProject.Save(f, false, false);
                     }
                     catch

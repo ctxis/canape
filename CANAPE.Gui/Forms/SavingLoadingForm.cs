@@ -25,13 +25,15 @@ namespace CANAPE.Forms
         string _fileName;
         bool _verifyVersion;
         bool _saving;
+        bool _secure;
 
-        public SavingLoadingForm(string fileName, bool saving, bool verifyVersion)
+        public SavingLoadingForm(string fileName, bool saving, bool verifyVersion, bool secure)
         {
             InitializeComponent();
             _fileName = fileName;
             _saving = saving;
             _verifyVersion = verifyVersion;
+            _secure = secure;
         }
 
         private void SavingLoadingForm_Load(object sender, EventArgs e)
@@ -61,7 +63,7 @@ namespace CANAPE.Forms
                 }
                 else
                 {
-                    CANAPE.Documents.CANAPEProject.Load(_fileName, _verifyVersion);
+                    CANAPE.Documents.CANAPEProject.Load(_fileName, _verifyVersion, _secure);
                 }
             }
             catch (Exception ex)

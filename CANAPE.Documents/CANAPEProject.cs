@@ -30,6 +30,8 @@ using CANAPE.Net.Layers;
 using CANAPE.Nodes;
 using CANAPE.Utils;
 using System.Text;
+using System.Security;
+using System.Security.Permissions;
 
 namespace CANAPE.Documents
 {
@@ -736,22 +738,102 @@ namespace CANAPE.Documents
             }
         }
 
+        // A small attempt to restrict what types can be accessed
+        sealed class SecurityBinder : SerializationBinder
+        {
+            SerializationBinder _delegateBinder;
+
+            internal SecurityBinder(SerializationBinder delegateBinder)
+            {
+                _delegateBinder = delegateBinder;
+            }
+
+            private bool AllowedTypeOrAssembly(Type type)
+            {
+                // "Safe" types I guess, just let them through
+                if(type.IsEnum || type.IsPrimitive || type == typeof(String))
+                {
+                    return true;
+                }
+                                
+                string typeNamespace = type.Namespace.ToLower();           
+
+                if (typeNamespace.StartsWith("canape"))
+                {
+                    return true;
+                }
+
+                switch(typeNamespace.ToLower())
+                {
+                    case "system":
+                    case "system.collections":
+                    case "system.collections.generic":
+                    case "system.text":
+                    case "system.security.authentication":  
+                    case "system.collections.objectmodel":
+                    case "system.reflection":
+                        return true;
+                }
+
+                return false;
+            }
+
+            public override Type BindToType(string assemblyName, string typeName)
+            {
+                System.Diagnostics.Trace.WriteLine(String.Format("{0} {1}", assemblyName, typeName));
+                Type type = null;
+               
+                if (_delegateBinder != null)
+                {
+                    type = _delegateBinder.BindToType(assemblyName, typeName);
+                }
+                else
+                {
+                    type = Type.GetType(String.Format("{0},{1}", typeName, assemblyName));
+                }
+
+                if (type != null)
+                {
+                    if (!AllowedTypeOrAssembly(type))
+                    {
+                        string name = type.FullName;
+                        if (type.IsGenericType)
+                        {
+                            name = type.GetGenericTypeDefinition().FullName;
+                        }
+
+                        throw new SecurityException(String.Format(Properties.Resources.CANAPEProject_InsecureType, name));
+                    }
+                }
+
+                return type;
+            }
+        }
+
         // Create the binary formatter with compat hacks for particular versions if needed
-        private static BinaryFormatter CreateFormatter(Version ver)
+        private static BinaryFormatter CreateFormatter(Version ver, bool secure)
         {
             BinaryFormatter ret = new BinaryFormatter(null, new StreamingContext(StreamingContextStates.File));
+            SerializationBinder binder = null;
 
             if (ver.Major == 1)
             {
                 if (ver.Minor < 3)
                 {
-                    ret.Binder = new FixSerializationFrom12();
+                    binder = new FixSerializationFrom12();
                 }
                 else if(ver.Minor == 3)
                 {
-                    ret.Binder = new FixSerializationFrom13();
+                    binder = new FixSerializationFrom13();
                 }
             }
+
+            if (secure)
+            {
+                binder = new SecurityBinder(binder);
+            }
+
+            ret.Binder = binder;
             
             return ret;
         }
@@ -762,7 +844,8 @@ namespace CANAPE.Documents
         /// <param name="stm">The stream</param>
         /// <param name="fileName">The filename to use (can be null)</param>
         /// <param name="verifyVersion">Set true to verify the version being opened match this canape</param>
-        public static void Load(Stream stm, string fileName, bool verifyVersion)
+        /// <param name="secure">Attemps to make the load secure, not likely to succeed</param>
+        public static void Load(Stream stm, string fileName, bool verifyVersion, bool secure)
         {
             // If an empty stream
             if (stm.Length == 0)
@@ -794,10 +877,29 @@ namespace CANAPE.Documents
                 stm.Position = stm.Position - 1;
 
                 using (Stream inStream = compressed ? new GZipStream(stm, CompressionMode.Decompress, false) : stm)
-                {
-                    BinaryFormatter formatter = CreateFormatter(ver);
+                {                    
+                    BinaryFormatter formatter = CreateFormatter(ver, secure);
+                    CANAPEProject newProject = null;
 
-                    CANAPEProject newProject = (CANAPEProject)formatter.Deserialize(inStream);
+                    // Note that all this is going to do is prevent anything during 
+                    // direct load of objects and scripts, it won't do anything against anything else
+                    if (secure)
+                    {
+                        try
+                        {
+                            PermissionSet ps = new PermissionSet(PermissionState.None);
+                            ps.PermitOnly();
+                            newProject = (CANAPEProject)formatter.UnsafeDeserialize(inStream, null);
+                        }
+                        finally
+                        {
+                            CodeAccessPermission.RevertPermitOnly();
+                        }
+                    }
+                    else
+                    {
+                        newProject = (CANAPEProject)formatter.Deserialize(inStream);
+                    }
 
                     newProject._fileName = fileName;
                     newProject._globalMeta = new MetaDictionary();
@@ -817,11 +919,12 @@ namespace CANAPE.Documents
         /// </summary>
         /// <param name="fileName">The filename to use</param>
         /// <param name="verifyVersion">Set true to verify the version being opened match this canape</param>
-        public static void Load(string fileName, bool verifyVersion)
+        /// <param name="secure">Attempts to open the file securely</param>
+        public static void Load(string fileName, bool verifyVersion, bool secure)
         {             
             using (Stream stm = File.Open(fileName, FileMode.Open, FileAccess.Read))
             {
-                Load(stm, fileName, verifyVersion);
+                Load(stm, fileName, verifyVersion, secure);
             }
         }
     }

@@ -198,7 +198,7 @@ namespace CANAPE.Forms
                             }
                             else
                             {
-                                LoadProject(newProject.FileName, true);
+                                LoadProject(newProject.FileName, true, true);
                             }
                         }
                         else
@@ -210,7 +210,7 @@ namespace CANAPE.Forms
             }
             else
             {
-                LoadProject(_fileName, true);
+                LoadProject(_fileName, true, true);
             }
 
             if (Properties.Settings.Default.AutoSaveEnabled)
@@ -287,7 +287,7 @@ namespace CANAPE.Forms
             
             if(fileName != null)
             {                                   
-                using (SavingLoadingForm frm = new SavingLoadingForm(fileName, true, true))
+                using (SavingLoadingForm frm = new SavingLoadingForm(fileName, true, true, true))
                 {
                     if (frm.ShowDialog(this) == DialogResult.OK)
                     {
@@ -331,9 +331,9 @@ namespace CANAPE.Forms
             return cancel;
         }
 
-        private void LoadProject(string fileName, bool verifyVersion)
+        private void LoadProject(string fileName, bool verifyVersion, bool secure)
         {
-            using (SavingLoadingForm frm = new SavingLoadingForm(fileName, false, verifyVersion))
+            using (SavingLoadingForm frm = new SavingLoadingForm(fileName, false, verifyVersion, secure))
             {
                 InitializeTree();
 
@@ -345,27 +345,36 @@ namespace CANAPE.Forms
                 }
                 else
                 {
-                    if ((frm.Error is InvalidVersionException) && (verifyVersion))
+                    if ((frm.Error is InvalidVersionException) && verifyVersion)
                     {
                         if (MessageBox.Show(this, String.Format(Properties.Resources.LoadProject_OpenAnyway, frm.Error.Message),
                             Properties.Resources.LoadProject_OpenAnywayCaption,
                             MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
-                            LoadProject(fileName, false);
+                            LoadProject(fileName, false, secure);
+                        }
+                    }
+                    else if ((frm.Error is SecurityException) && secure)
+                    {
+                        if (MessageBox.Show(this, String.Format(Properties.Resources.LoadProject_SecurityWarning, frm.Error.Message),
+                            Properties.Resources.LoadProject_SecurityWarningCaption,
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                        {
+                            LoadProject(fileName, verifyVersion, false);
                         }
                     }
                     else
                     {
                         if (frm.Error != null)
                         {
-                            MessageBox.Show(this, frm.Error.Message, 
+                            MessageBox.Show(this, frm.Error.Message,
                                 Properties.Resources.MessageBox_ErrorString,
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
                             MessageBox.Show(this, Properties.Resources.MainForm_UnknownError,
-                                Properties.Resources.MessageBox_ErrorString, 
+                                Properties.Resources.MessageBox_ErrorString,
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
@@ -383,7 +392,7 @@ namespace CANAPE.Forms
 
                     if (dlg.ShowDialog(this) == DialogResult.OK)
                     {
-                        LoadProject(dlg.FileName, true);
+                        LoadProject(dlg.FileName, true, true);
                     }
                 }
             }
@@ -469,7 +478,8 @@ namespace CANAPE.Forms
                 {
                     try
                     {
-                        CANAPEProject.Load(template.GetStream(), null, true);
+                        // Allow insecure load, if someone has added a template they could just add a plugin
+                        CANAPEProject.Load(template.GetStream(), null, true, false);
                     }
                     catch (Exception ex)
                     {
@@ -583,7 +593,7 @@ namespace CANAPE.Forms
             {
                 if (!CheckDirtyFlag())
                 {
-                    LoadProject((string)item.Tag, true);
+                    LoadProject((string)item.Tag, true, true);
                 }
             }
         }
