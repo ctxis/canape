@@ -138,11 +138,21 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dnserver.py" />
-    <Content Include="revhttpproxy.py" />
-    <Content Include="httpproxy.py" />
-    <Content Include="socksproxy.py" />
-    <Content Include="fixedproxy.py" />
+    <Content Include="cliexamples\dnserver.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cliexamples\revhttpproxy.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cliexamples\httpproxy.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cliexamples\socksproxy.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cliexamples\fixedproxy.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="PythonLib\canapecli\docs\data.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
