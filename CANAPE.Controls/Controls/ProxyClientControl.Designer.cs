@@ -72,13 +72,13 @@ namespace CANAPE.Controls
             // 
             // groupBoxConnectionType
             // 
-            resources.ApplyResources(groupBoxConnectionType, "groupBoxConnectionType");
             groupBoxConnectionType.Controls.Add(this.btnPACScript);
             groupBoxConnectionType.Controls.Add(this.radioButtonPac);
             groupBoxConnectionType.Controls.Add(this.radioDefault);
             groupBoxConnectionType.Controls.Add(this.radioSystem);
             groupBoxConnectionType.Controls.Add(this.radioProxy);
             groupBoxConnectionType.Controls.Add(this.radioDirect);
+            resources.ApplyResources(groupBoxConnectionType, "groupBoxConnectionType");
             groupBoxConnectionType.Name = "groupBoxConnectionType";
             groupBoxConnectionType.TabStop = false;
             this.toolTip.SetToolTip(groupBoxConnectionType, resources.GetString("groupBoxConnectionType.ToolTip"));
@@ -138,17 +138,14 @@ namespace CANAPE.Controls
             // 
             resources.ApplyResources(this.labelHost, "labelHost");
             this.labelHost.Name = "labelHost";
-            this.toolTip.SetToolTip(this.labelHost, resources.GetString("labelHost.ToolTip"));
             // 
             // labelPort
             // 
             resources.ApplyResources(this.labelPort, "labelPort");
             this.labelPort.Name = "labelPort";
-            this.toolTip.SetToolTip(this.labelPort, resources.GetString("labelPort.ToolTip"));
             // 
             // groupBoxDetails
             // 
-            resources.ApplyResources(this.groupBoxDetails, "groupBoxDetails");
             this.groupBoxDetails.Controls.Add(this.checkBoxSendHostName);
             this.groupBoxDetails.Controls.Add(this.checkBoxIpv6);
             this.groupBoxDetails.Controls.Add(this.radioHttp);
@@ -158,9 +155,9 @@ namespace CANAPE.Controls
             this.groupBoxDetails.Controls.Add(this.numericUpDownPort);
             this.groupBoxDetails.Controls.Add(this.textBoxHost);
             this.groupBoxDetails.Controls.Add(this.labelHost);
+            resources.ApplyResources(this.groupBoxDetails, "groupBoxDetails");
             this.groupBoxDetails.Name = "groupBoxDetails";
             this.groupBoxDetails.TabStop = false;
-            this.toolTip.SetToolTip(this.groupBoxDetails, resources.GetString("groupBoxDetails.ToolTip"));
             // 
             // checkBoxSendHostName
             // 
@@ -232,7 +229,6 @@ namespace CANAPE.Controls
             this.Controls.Add(this.groupBoxDetails);
             this.Controls.Add(groupBoxConnectionType);
             this.Name = "ProxyClientControl";
-            this.toolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.Load += new System.EventHandler(this.ProxyClientControl_Load);
             groupBoxConnectionType.ResumeLayout(false);
             groupBoxConnectionType.PerformLayout();

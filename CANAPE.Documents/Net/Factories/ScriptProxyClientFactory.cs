@@ -101,18 +101,22 @@ namespace CANAPE.Documents.Net.Factories
         /// <param name="logger">The logger to use</param>
         /// <returns>The new proxy client</returns>
         public override ProxyClient Create(Utils.Logger logger)
-        {
-            IWebProxyScript proxyScript = GetProxyInstance();
+        {            
+            logger.LogError(Properties.Resources.ScriptProxyFactory_CannotCreateScript);
+            return new IpProxyClient();
 
-            if (proxyScript == null)
-            {
-                logger.LogError(Properties.Resources.ScriptProxyFactory_CannotCreateScript);
-                return new IpProxyClient();
-            }
-            else
-            {
-                return new ScriptProxyClient(proxyScript);
-            }
+            // TODO: Implement a better way of using this
+
+            // IWebProxyScript proxyScript = GetProxyInstance();
+            //if (proxyScript == null)
+            //{
+            //    logger.LogError(Properties.Resources.ScriptProxyFactory_CannotCreateScript);
+            //    return new IpProxyClient();
+            //}
+            //else
+            //{
+            //    return new ScriptProxyClient(proxyScript);
+            //}
         }
     }
 }

@@ -32,6 +32,7 @@ using CANAPE.Utils;
 using System.Text;
 using System.Security;
 using System.Security.Permissions;
+using System.Runtime.Serialization.Formatters;
 
 namespace CANAPE.Documents
 {
@@ -622,7 +623,7 @@ namespace CANAPE.Documents
         /// </summary>
         /// <param name="fileName">The filename to save to</param>
         /// <param name="compressed">True to compress the output</param>
-        /// <param name="makeBackup">Indicates whether to make a backup or not</param>
+        /// <param name="makeBackup">Indicates whether to make a backup or not</param>        
         public static void Save(string fileName, bool compressed, bool makeBackup)
         {
             if (currentProject != null)
@@ -831,6 +832,7 @@ namespace CANAPE.Documents
             if (secure)
             {
                 binder = new SecurityBinder(binder);
+                ret.FilterLevel = TypeFilterLevel.Low;
             }
 
             ret.Binder = binder;
@@ -844,7 +846,7 @@ namespace CANAPE.Documents
         /// <param name="stm">The stream</param>
         /// <param name="fileName">The filename to use (can be null)</param>
         /// <param name="verifyVersion">Set true to verify the version being opened match this canape</param>
-        /// <param name="secure">Attemps to make the load secure, not likely to succeed</param>
+        /// <param name="secure">Attemps to make the load secure, not likely to succeed</param>        
         public static void Load(Stream stm, string fileName, bool verifyVersion, bool secure)
         {
             // If an empty stream
@@ -919,7 +921,7 @@ namespace CANAPE.Documents
         /// </summary>
         /// <param name="fileName">The filename to use</param>
         /// <param name="verifyVersion">Set true to verify the version being opened match this canape</param>
-        /// <param name="secure">Attempts to open the file securely</param>
+        /// <param name="secure">Attempts to open the file securely</param>        
         public static void Load(string fileName, bool verifyVersion, bool secure)
         {             
             using (Stream stm = File.Open(fileName, FileMode.Open, FileAccess.Read))
