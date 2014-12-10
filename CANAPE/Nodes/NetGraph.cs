@@ -463,6 +463,33 @@ namespace CANAPE.Nodes
 #endregion
 
         /// <summary>
+        /// Get a node by name
+        /// </summary>
+        /// <param name="name">The name of the node or the UUID</param>
+        /// <returns>The node instance, or null if it doesn't exist</returns>
+        public BasePipelineNode GetNodeByName(string name)
+        {
+            Guid guid;
+
+            if (!Guid.TryParse(name, out guid) || Nodes.ContainsKey(guid))
+            {
+                foreach (BasePipelineNode node in Nodes.Values)
+                {
+                    if (node.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        return node;
+                    }
+                }
+
+                return null;
+            }
+            else
+            {
+                return Nodes[guid];
+            }
+        }
+
+        /// <summary>
         /// Add a node to the graph and ensure shutdown event is handled
         /// </summary>
         /// <param name="uuid">The Guid of the factory</param>
@@ -539,24 +566,6 @@ namespace CANAPE.Nodes
             }
 
             return ret;
-        }
-
-        /// <summary>
-        /// Get a pipeline node by name
-        /// </summary>
-        /// <param name="name">The name of the node</param>
-        /// <returns>The found node, null if it doesn't exist</returns>
-        public BasePipelineNode GetNodeByName(string name)
-        {
-            foreach (var pair in Nodes)
-            {
-                if (pair.Value.Name.Equals(name, StringComparison.OrdinalIgnoreCase))
-                {
-                    return pair.Value;
-                }
-            }
-
-            return null;
         }
 
         /// <summary>

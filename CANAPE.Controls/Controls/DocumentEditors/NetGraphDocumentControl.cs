@@ -110,6 +110,7 @@ namespace CANAPE.Controls.DocumentEditors
         NetGraphDocument _document;
         Dictionary<string, GraphNodeTemplate> _templates;
         PointF _currMousePos;
+        bool _populatingControl;
 
         private void AddNodeTemplate(string templateName, string nameTemplate, GraphNodeShape shape, 
             float width, float height, Color backColor, Color lineColor, Color selectedLineColor, Color textColor, Color hatchedColor, Type tagType)
@@ -156,10 +157,9 @@ namespace CANAPE.Controls.DocumentEditors
                 Color.BlanchedAlmond, Color.Black, Color.Red, Color.Black, Color.Black, typeof(SslLayerSectionNodeConfig));
             AddNodeTemplate(LayerSectionNodeConfig.NodeName, "LAYER{0}", GraphNodeShape.RoundedRectangle, 100.0f, 50.0f,
                 Color.Coral, Color.Black, Color.Red, Color.Black, Color.Black, typeof(LayerSectionNodeConfig));
-
             
             InitializeComponent();
-            PopulateGraphFromDocument();
+            PopulateGraphFromDocument(true);
         }
 
         /// <summary>
@@ -335,13 +335,16 @@ namespace CANAPE.Controls.DocumentEditors
             netEditor.AddLinkLine(src, dest, Color.Blue, DashStyle.Dash, false);
         }
 
-        private void PopulateGraphFromDocument()
+        private void PopulateGraphFromDocument(bool centre)
         {
             Dictionary<Guid, GraphNode> idToNode = new Dictionary<Guid, GraphNode>();
             List<GraphNode> linkedNodes = new List<GraphNode>();
+            _populatingControl = true;
 
             netEditor.SuspendLayout();
             netEditor.ClearGraph();
+            netEditor.DocumentWidth = NetGraphDocument.DEFAULT_DOCUMENT_WIDTH;
+            netEditor.DocumentHeight = NetGraphDocument.DEFAULT_DOCUMENT_HEIGHT;    
 
             foreach(var n in _document.Nodes)
             {
@@ -378,39 +381,48 @@ namespace CANAPE.Controls.DocumentEditors
 
             netEditor.SelectedObject = null;
 
+            if (centre)
+            {
+                netEditor.CenterViewOfGraph();                    
+            }
+
             netEditor.ResumeLayout();
+            _populatingControl = false;
         }
 
         private void PopulateDocumentFromGraph()
         {
-            List<BaseNodeConfig> nodes = new List<BaseNodeConfig>();
-            List<LineConfig> lines = new List<LineConfig>();
-            GraphData graph = netEditor.Graph;
-
-            foreach (var n in graph.Nodes)
-            {                
-                BaseNodeConfig node = (BaseNodeConfig)n.Tag;
-                node.X = n.Center.X;
-                node.Y = n.Center.Y;
-                node.Z = n.Z;
-
-                nodes.Add(node);
-            }
-
-            foreach (var l in graph.Lines)
+            if (!_populatingControl)
             {
-                bool isWeak = false;
-                if (l.Tag != null)
-                {
-                    isWeak = (bool)l.Tag;
-                }
-                LineConfig line = new LineConfig((BaseNodeConfig)l.SourceShape.Tag,
-                    (BaseNodeConfig)l.DestShape.Tag, l.BiDirection, l.Label, isWeak);
-                
-                lines.Add(line);
-            }
+                List<BaseNodeConfig> nodes = new List<BaseNodeConfig>();
+                List<LineConfig> lines = new List<LineConfig>();
+                GraphData graph = netEditor.Graph;
 
-            _document.UpdateGraph(nodes.ToArray(), lines.ToArray());
+                foreach (var n in graph.Nodes)
+                {
+                    BaseNodeConfig node = (BaseNodeConfig)n.Tag;
+                    node.X = n.Center.X;
+                    node.Y = n.Center.Y;
+                    node.Z = n.Z;
+
+                    nodes.Add(node);
+                }
+
+                foreach (var l in graph.Lines)
+                {
+                    bool isWeak = false;
+                    if (l.Tag != null)
+                    {
+                        isWeak = (bool)l.Tag;
+                    }
+                    LineConfig line = new LineConfig((BaseNodeConfig)l.SourceShape.Tag,
+                        (BaseNodeConfig)l.DestShape.Tag, l.BiDirection, l.Label, isWeak);
+
+                    lines.Add(line);
+                }
+
+                _document.UpdateGraph(nodes.ToArray(), lines.ToArray());
+            }
         }
 
         private void NodeGraphForm_Load(object sender, EventArgs e)
@@ -565,6 +577,7 @@ namespace CANAPE.Controls.DocumentEditors
                 toggleEnableToolStripMenuItem.Enabled = true;
                 filtersToolStripMenuItem.Enabled = true;
                 propertiesToolStripMenuItem.Enabled = true;
+                centreOnNodeToolStripMenuItem.Enabled = true;
             }
             else
             {
@@ -575,6 +588,7 @@ namespace CANAPE.Controls.DocumentEditors
                 toggleEnableToolStripMenuItem.Enabled = false;
                 filtersToolStripMenuItem.Enabled = false;
                 propertiesToolStripMenuItem.Enabled = false;
+                centreOnNodeToolStripMenuItem.Enabled = false;
             }
 
             if (Clipboard.ContainsData(NODECONFIG_DATA))
@@ -625,7 +639,7 @@ namespace CANAPE.Controls.DocumentEditors
             {
                 BaseNodeConfig config = (BaseNodeConfig)node.Tag;
 
-                DataFrameFilterFactory[] filters = (NodeFactories.DataFrameFilterFactory[])Clipboard.GetData(NODEFILTER_DATA);
+                DataFrameFilterFactory[] filters = (DataFrameFilterFactory[])Clipboard.GetData(NODEFILTER_DATA);
 
                 if (filters != null)
                 {
@@ -646,7 +660,7 @@ namespace CANAPE.Controls.DocumentEditors
                     }
                     else
                     {
-                        DataFrameFilterFactory[] oldFilters = config.Filters;
+                        IDataFrameFilterFactory[] oldFilters = config.Filters;
                         int len = oldFilters.Length;
                         Array.Resize(ref oldFilters, len + filters.Length);
                         Array.Copy(filters, 0, oldFilters, len, filters.Length);
@@ -877,5 +891,30 @@ namespace CANAPE.Controls.DocumentEditors
                 }
             }
         }
+
+        private void autoLayoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _document.AutoLayout();
+
+            PopulateGraphFromDocument(true);
+        }
+
+        private void centreGraphToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            netEditor.CenterViewOfGraph();
+        }
+
+        private void centreOnNodeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GraphNode node = netEditor.SelectedObject as GraphNode;
+
+            if (node != null)
+            {
+                BaseNodeConfig config = (BaseNodeConfig)node.Tag;
+
+                netEditor.CenterViewOnNode(node);
+            }
+        }
+
     }
 }

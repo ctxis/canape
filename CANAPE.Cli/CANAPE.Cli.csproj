@@ -89,8 +89,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleUtils.cs" />
+    <Compile Include="NetGraphUtils.cs" />
+    <Compile Include="PcapUtils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptDataFrameFilterFactory.cs" />
+    <Compile Include="ScriptNodeConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\CANAPE\canape.snk">
@@ -160,6 +164,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="PythonLib\canapecli\docs\__init__.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonLib\canapecli\netgraphs\__init__.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="PythonLib\canapecli\packets\__init__.py">

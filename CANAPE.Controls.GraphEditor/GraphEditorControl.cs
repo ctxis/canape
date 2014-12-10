@@ -50,8 +50,8 @@ namespace CANAPE.Controls.GraphEditor
         private object _graphLock;
         private bool _mouseZoom;        
 
-        const int MAX_DOCUMENT_WIDTH = 2048;
-        const int MAX_DOCUMENT_HEIGHT = 2048;
+        const int DEFAULT_DOCUMENT_WIDTH = 2048;
+        const int DEFAULT_DOCUMENT_HEIGHT = 2048;
         const float MAX_ZOOM = 2.0f;
         const float MIN_ZOOM = 0.5f;
 
@@ -125,6 +125,8 @@ namespace CANAPE.Controls.GraphEditor
             _dirty = false;            
             _zoom = 1.0f;
             _graphLock = new object();
+            DocumentWidth = DEFAULT_DOCUMENT_WIDTH;
+            DocumentHeight = DEFAULT_DOCUMENT_HEIGHT;
             MouseWheel += new MouseEventHandler(GraphEditorControl_MouseWheel);
             InitializeComponent();
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);            
@@ -134,6 +136,24 @@ namespace CANAPE.Controls.GraphEditor
         #endregion
 
         #region Public Properties
+
+        /// <summary>
+        /// The total width of the document
+        /// </summary>
+        public int DocumentWidth
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// The total height of the document
+        /// </summary>
+        public int DocumentHeight
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Get the selected object
@@ -487,10 +507,49 @@ namespace CANAPE.Controls.GraphEditor
         {
             return _nodes.Find(n => n.Tag == tag);
         }
+     
+        /// <summary>
+        /// Try and centre the view of the graph
+        /// </summary>
+        public void CenterViewOfGraph()
+        {
+            float centrex = 0.0f;
+            float centrey = 0.0f;            
+
+            foreach (GraphNode node in _nodes)
+            {
+                centrex += node.Center.X;
+                centrey += node.Center.Y;
+            }
+
+            centrex /= (float)_nodes.Count;
+            centrey /= (float)_nodes.Count;
+
+            SetScrollCenter(centrex, centrey);
+        }
+
+        public void CenterViewOnNode(GraphNode node)
+        {
+            SetScrollCenter(node.Center.X, node.Center.Y);
+        }
 
         #endregion
 
         #region Private Methods
+
+        private void SetScrollCenter(float centrex, float centrey)
+        {                        
+            centrex -= Size.Width / 2;
+            centrey -= Size.Height / 2;
+
+            int deltax = (int)(_scrollPosition.X - centrex);
+            int deltay = (int)(_scrollPosition.Y - centrey);
+
+            ScrollClientWindow(deltax, hScrollBar);
+            ScrollClientWindow(deltay, vScrollBar);
+
+            Invalidate();
+        }
 
         private void SortNodesByZ()
         {
@@ -660,7 +719,7 @@ namespace CANAPE.Controls.GraphEditor
             _nodes.Add(s);
 
             // Use the move location function to adjust the position to fit within the boundary
-            s.MoveLocation(new SizeF(), new RectangleF(0, 0, MAX_DOCUMENT_WIDTH, MAX_DOCUMENT_HEIGHT));  
+            s.MoveLocation(new SizeF(), new RectangleF(0, 0, DocumentWidth, DocumentHeight));  
 
             Dirty = true;
             Invalidate();
@@ -827,7 +886,7 @@ namespace CANAPE.Controls.GraphEditor
 
                 SizeF delta = new SizeF(newPoint.X - _lastDragPoint.X, newPoint.Y - _lastDragPoint.Y);
  
-                node.MoveLocation(delta, new RectangleF(0, 0, MAX_DOCUMENT_WIDTH, MAX_DOCUMENT_HEIGHT));                
+                node.MoveLocation(delta, new RectangleF(0, 0, DocumentWidth, DocumentHeight));                
                 _lastDragPoint = newPoint;
                 Dirty = true;
                 Invalidate();
@@ -1032,8 +1091,8 @@ namespace CANAPE.Controls.GraphEditor
 
         private void ResizeScrollBars()
         {
-            float vMax = MAX_DOCUMENT_HEIGHT - ((float)ClientRectangle.Height / _zoom);
-            float hMax = MAX_DOCUMENT_WIDTH - ((float)ClientRectangle.Width / _zoom);
+            float vMax = DocumentHeight - ((float)ClientRectangle.Height / _zoom);
+            float hMax = DocumentWidth - ((float)ClientRectangle.Width / _zoom);
 
             if (vMax < 0.0f)
             {

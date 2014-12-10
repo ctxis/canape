@@ -68,5 +68,15 @@ namespace CANAPE.Net.Utils
             EndTime = endtime;
             Properties = new Dictionary<string, object>();
         }
+
+        /// <summary>
+        /// Override for ToString
+        /// </summary>
+        /// <returns>The connection entry details</returns>
+        public override string ToString()
+        {
+            return String.Format(CANAPE.Net.Properties.Resources.ConnectionHistoryEntry_ToString,
+                NetworkDescription, NetId, StartTime, EndTime);
+        }
     }
 }

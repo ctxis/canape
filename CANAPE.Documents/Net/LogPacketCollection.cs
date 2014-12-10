@@ -18,6 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
+using System.Linq;
 using CANAPE.Nodes;
 
 namespace CANAPE.Documents.Net
@@ -133,6 +134,29 @@ namespace CANAPE.Documents.Net
         }
 
         /// <summary>
+        /// Get a list of packets for a tag name
+        /// </summary>
+        /// <param name="tag">The tag name</param>
+        /// <returns>The list of packets</returns>
+        public LogPacket[] GetPacketsForTag(string tag)
+        {
+            List<LogPacket> packets = new List<LogPacket>();
+
+            lock (this)
+            {
+                foreach (LogPacket packet in this)
+                {
+                    if (tag == packet.Tag)
+                    {
+                        packets.Add(packet);
+                    }
+                }
+            }
+
+            return packets.ToArray();
+        }
+
+        /// <summary>
         /// Get a list of packets for a network connection
         /// </summary>
         /// <param name="netId">The network ID</param>
@@ -154,5 +178,44 @@ namespace CANAPE.Documents.Net
 
             return packets.ToArray();
         }
+
+        /// <summary>
+        /// Get the packets for a network id
+        /// </summary>
+        /// <param name="netId">The network id</param>
+        /// <returns>The list of network packets</returns>
+        public LogPacket[] GetPacketsForNetwork(string netId)
+        {
+            Guid g;
+
+            if (Guid.TryParse(netId, out g))
+            {
+                return GetPacketsForNetwork(g);
+            }
+            else
+            {
+                return new LogPacket[0];
+            }
+        }
+
+        /// <summary>
+        /// Get the list of network ids in this log
+        /// </summary>        
+        /// <returns>The list of network ids</returns>
+        public IEnumerable<Guid> GetNetworkIds()
+        {
+            HashSet<Guid> networks = new HashSet<Guid>();
+
+            lock (this)
+            {
+                foreach (LogPacket packet in this)
+                {
+                    networks.Add(packet.NetId);
+                }
+            }
+
+            return networks;
+        }
+
     }
 }

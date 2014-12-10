@@ -21,7 +21,6 @@ namespace CANAPE.NodeFactories
     /// <summary>
     /// Node factory for a server endpoint
     /// </summary>
-    [Serializable]
     public class ServerEndpointFactory : PipelineEndpointFactory
     {
         /// <summary>

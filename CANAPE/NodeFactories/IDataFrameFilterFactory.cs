@@ -1,4 +1,4 @@
-//    CANAPE Network Testing Tool
+﻿//    CANAPE Network Testing Tool
 //    Copyright (C) 2014 Context Information Security
 //
 //    This program is free software: you can redistribute it and/or modify
@@ -14,23 +14,24 @@
 //    You should have received a copy of the GNU General Public License
 //    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-using System;
+using CANAPE.DataFrames.Filters;
 
 namespace CANAPE.NodeFactories
 {
     /// <summary>
-    /// Factory for client node
+    /// Interface for a dataframe filter factory
     /// </summary>
-    public class ClientEndpointFactory : PipelineEndpointFactory
+    public interface IDataFrameFilterFactory
     {
         /// <summary>
-        /// 
+        /// Create an instance of a filter
         /// </summary>
-        /// <param name="label"></param>
-        /// <param name="guid"></param>
-        public ClientEndpointFactory(string label, Guid guid) 
-            : base(label, guid)
-        {
-        }
+        /// <returns>The created filter</returns>
+        IDataFrameFilter CreateFilter();
+
+        /// <summary>
+        /// Indicates the filter is enabled
+        /// </summary>
+        bool Enabled { get; set; }
     }
 }

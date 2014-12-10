@@ -76,6 +76,7 @@
     <Compile Include="Net\Factories\IpProxyClientFactory.cs" />
     <Compile Include="Net\Factories\IpProxyFilterFactory.cs" />
     <Compile Include="Net\Factories\IProxyClientFactory.cs" />
+    <Compile Include="Net\LayoutGraph.cs" />
     <Compile Include="Net\NodeConfigs\EndpointClassChoiceConverter.cs" />
     <Compile Include="Net\NodeConfigs\LayerClassChoiceConverter.cs" />
     <Compile Include="Net\Factories\LibraryDataEndpointFactory.cs" />

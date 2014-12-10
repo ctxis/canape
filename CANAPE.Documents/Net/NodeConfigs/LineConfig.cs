@@ -22,44 +22,98 @@ namespace CANAPE.Documents.Net.NodeConfigs
     /// 
     /// </summary>
     [Serializable]
-    public class LineConfig
+    public sealed class LineConfig
     {
         /// <summary>
-        /// 
+        /// The currently assigned netgraph, may be null
+        /// </summary>
+        [NonSerialized]
+        private NetGraphDocument _document;
+
+        /// <summary>
+        /// Specifies the document this edge is currently assigned to
+        /// </summary>        
+        internal NetGraphDocument Document 
+        {
+            get
+            {
+                return _document;
+            }
+
+            set
+            {
+                _document = value;
+            }
+        }
+
+        /// <summary>
+        /// The source node configuration
         /// </summary>
         public BaseNodeConfig SourceNode { get; set; }
         /// <summary>
-        /// 
+        /// The destination node configuration
         /// </summary>
         public BaseNodeConfig DestNode { get; set; }
         /// <summary>
-        /// 
+        /// Indicates if the edge is bi-directional
         /// </summary>
         public bool BiDirection { get; set; }
         /// <summary>
-        /// 
+        /// Indicates the label of the edge
         /// </summary>
         public string PathName { get; set; }
         /// <summary>
-        /// Weak path
+        /// Indicates a weak path 
         /// </summary>
         public bool WeakPath { get; set; }
+        /// <summary>
+        /// Indicates the label of the edge
+        /// </summary>
+        public string Label { get { return PathName; } set { PathName = value; } }
 
         /// <summary>
-        /// 
+        /// Constructor
         /// </summary>
-        /// <param name="source"></param>
-        /// <param name="dest"></param>
-        /// <param name="biDirection"></param>
-        /// <param name="pathName"></param>
-        /// <param name="weak"></param>
-        public LineConfig(BaseNodeConfig source, BaseNodeConfig dest, bool biDirection, string pathName, bool weak)
+        /// <param name="source">The source node configuration</param>
+        /// <param name="dest">The destination node configuration</param>
+        /// <param name="biDirection">Indicates if the edge is bi-directional</param>
+        /// <param name="pathName">Indicates the label of the edge</param>
+        /// <param name="weak">Indicates a weak path </param>
+        public LineConfig(BaseNodeConfig source, BaseNodeConfig dest, 
+            bool biDirection, string pathName, bool weak)
         {
             SourceNode = source;
             DestNode = dest;
             BiDirection = biDirection;
             PathName = pathName;
             WeakPath = weak;
+        }
+
+        /// <summary>
+        /// Adds an edge between the destination node of this edge 
+        /// and another if it doesn't exist
+        /// </summary>
+        /// <param name="destNode">The destination node</param>
+        /// <returns>The edge configuration</returns>
+        public LineConfig AddEdge(BaseNodeConfig destNode)
+        {
+            if (_document != null)
+            {
+                return _document.AddEdge(null, this.DestNode, destNode);
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Remove the current edge
+        /// </summary>
+        public void RemoveEdge()
+        {
+            if (_document != null)
+            {
+                _document.RemoveEdge(this);
+            }
         }
     }
 }

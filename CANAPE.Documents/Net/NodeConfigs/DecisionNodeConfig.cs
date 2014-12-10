@@ -79,5 +79,25 @@ namespace CANAPE.Documents.Net.NodeConfigs
         {
             _pathName = "True";
         }
+
+        /// <summary>
+        /// Add an edge for true, based on the current path name
+        /// </summary>
+        /// <param name="destNode">The destination node</param>
+        /// <returns>The edge configuration</returns>
+        public LineConfig AddTrueEdge(BaseNodeConfig destNode)
+        {
+            return AddEdge(_pathName, destNode);
+        }
+
+        /// <summary>
+        /// Add an edge for false, based on the current path name
+        /// </summary>
+        /// <param name="destNode">The destination node</param>
+        /// <returns>The edge configuration</returns>
+        public LineConfig AddFalseEdge(BaseNodeConfig destNode)
+        {
+            return AddEdge(String.Format("!{0}", _pathName), destNode);
+        }
     }
 }

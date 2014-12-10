@@ -15,9 +15,11 @@
 //    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Xml;
 using CANAPE.DataFrames;
 using CANAPE.Net;
 using CANAPE.Nodes;
@@ -170,7 +172,7 @@ namespace CANAPE.Utils
             using (TextWriter writer = new StringWriter())
             {
                 writer.WriteLine(GetHeader(p));
-                writer.WriteLine(p.Frame.ToDataString());
+                writer.Write(p.Frame.ToDataString());
 
                 return writer.ToString();
             }
@@ -186,7 +188,7 @@ namespace CANAPE.Utils
             using (TextWriter writer = new StringWriter())
             {                                
                 writer.WriteLine(GeneralUtils.BuildHexDump(16, p.ToArray()));
-                writer.WriteLine();             
+                writer.WriteLine();
 
                 return writer.ToString();
             }
@@ -223,18 +225,27 @@ namespace CANAPE.Utils
             }
             else
             {
-                writer.WriteLine("{0}> {1} = {2}", link, node.Name, node.ToDataString());
+                if (node.Value is byte[])
+                {
+                    string hexdump = GeneralUtils.BuildHexDump(16, node.Value);
+                    writer.WriteLine("{0}> {1} = ", link, node.Name);
+                    writer.WriteLine(hexdump);
+                }
+                else
+                {
+                    writer.WriteLine("{0}> {1} = {2}", link, node.Name, node.Value);
+                }
             }
         }
 
-        public static string ConvertPacketToTreeString(DataNode p)
+        private static string ConvertPacketToTreeString(DataNode p)
         {
             using (TextWriter writer = new StringWriter())
             {
                 WriteNodeToTreeString(writer, "", p);
                 return writer.ToString();
             }
-        }
+        }        
 
         public static string ConvertPacketToTreeString(DataFrame p)
         {
@@ -243,12 +254,291 @@ namespace CANAPE.Utils
 
         public static string ConvertPacketToTreeString(LogPacket p)
         {
+            return ConvertPacketToTreeString(new LogPacket[] { p });
+        }
+
+        public static string ConvertPacketToTreeString(IEnumerable ps)
+        {
+            using (TextWriter writer = new StringWriter())
+            {
+                int count = 0;
+
+                foreach (object o in ps)
+                {
+                    LogPacket p = o as LogPacket;
+                    DataFrame f = o as DataFrame;
+
+                    if (p != null)
+                    {
+                        writer.WriteLine(GetHeader(p));
+                        WriteNodeToTreeString(writer, "", p.Frame.Root);
+                    }
+                    else if(f != null)
+                    {
+                        writer.WriteLine("Packet {0}", count);
+                        WriteNodeToTreeString(writer, "", f.Root);
+                    }
+                    count++;
+                }
+
+                return writer.ToString();
+            }
+        }
+
+        public static string ConvertPacketToString(DataFrame p)
+        {
+            if (p.IsBasic)
+            {
+                return ConvertBinaryPacketToString(p);
+            }
+            else if (p.IsDataString)
+            {
+                return ConvertTextPacketToString(p);
+            }
+            else
+            {
+                return ConvertPacketToTreeString(p);
+            }
+        }
+
+        public static string ConvertPacketToString(LogPacket p)
+        {
             using (TextWriter writer = new StringWriter())
             {
                 writer.WriteLine(GetHeader(p));
-                WriteNodeToTreeString(writer, "", p.Frame.Root);
+                writer.WriteLine(ConvertPacketToString(p.Frame));
+                return writer.ToString();
+            }
+        }
+
+        public static string ConvertPacketToString(IEnumerable ps)
+        {
+            using (TextWriter writer = new StringWriter())
+            {
+                int count = 0;
+
+                foreach (object o in ps)
+                {
+                    LogPacket p = o as LogPacket;
+                    DataFrame f = o as DataFrame;
+
+                    if (p != null)
+                    {
+                        writer.Write(ConvertPacketToString(p));
+                    }
+                    else if(f != null)
+                    {
+                        writer.WriteLine("Packet {0}", count);
+                        writer.Write(ConvertPacketToString(f));
+                    }
+                    count++;
+                }
 
                 return writer.ToString();
+            }
+        }
+
+
+
+        private static void WriteBinaryPacketAsHtml(XmlWriter writer, DataFrame frame, ColorValue c)
+        {
+            writer.WriteStartElement("pre");
+            writer.WriteAttributeString("style", String.Format("background-color:#{0:X02}{1:X02}{2:X02}", c.R, c.G, c.B));
+            writer.WriteString(GeneralUtils.BuildHexDump(16, frame.ToArray()));
+            writer.WriteEndElement();
+        }
+
+        private static void WriteTextPacketAsHtml(XmlWriter writer, DataFrame frame, ColorValue c)
+        {
+            writer.WriteStartElement("pre");
+            writer.WriteAttributeString("style", String.Format("background-color:#{0:X02}{1:X02}{2:X02}", c.R, c.G, c.B));
+            writer.WriteString(frame.ToDataString());
+            writer.WriteEndElement();
+        }
+
+        private static void WriteTreeNodeAsHtml(XmlWriter writer, DataNode node)
+        {
+            writer.WriteStartElement("li");
+
+            DataKey key = node as DataKey;            
+
+            if (key != null)
+            {       
+                string towrite = String.Format("{0} +", key.Name);
+                writer.WriteElementString("span", towrite);
+
+                foreach (DataNode n in key.SubNodes)
+                {                    
+                    writer.WriteStartElement("ul");
+                    WriteTreeNodeAsHtml(writer, n);
+                    writer.WriteEndElement();
+                }
+            }
+            else
+            {
+                if (node.Value is byte[])
+                {
+                    string hexdump = GeneralUtils.BuildHexDump(16, node.Value);
+
+                    writer.WriteElementString("span", node.Name + " = ");
+                    writer.WriteElementString("pre", hexdump);
+                }
+                else
+                {
+                    writer.WriteElementString("span", String.Format("{0} = {1}", node.Name, node.Value));                    
+                }
+            }
+
+            writer.WriteEndElement();
+        }
+
+        private static void WriteTreePacketAsHtml(XmlWriter writer, DataFrame frame, ColorValue c)
+        {
+            writer.WriteStartElement("ul");
+            writer.WriteAttributeString("style", String.Format("background-color:#{0:X02}{1:X02}{2:X02}", c.R, c.G, c.B));
+            WriteTreeNodeAsHtml(writer, frame.Root);
+            writer.WriteEndElement();
+        }
+
+        private static void ConvertPacketsToHtml(TextWriter textWriter, IEnumerable ps, bool forcebin)
+        {
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+            settings.OmitXmlDeclaration = true;
+            
+            using (XmlWriter writer = XmlWriter.Create(textWriter,settings))
+            {
+                int count = 0;
+
+                writer.WriteStartElement("html");
+                writer.WriteStartElement("head");
+                writer.WriteElementString("title", "Packet Log");             
+                writer.WriteEndElement();                
+                writer.WriteStartElement("body");
+
+                foreach (object o in ps)
+                {
+                    LogPacket p = o as LogPacket;
+                    DataFrame f = o as DataFrame;
+                    ColorValue c = ColorValue.White;
+                    if (p != null)
+                    {
+                        writer.WriteElementString("h2", String.Format("Time {0} - Tag '{1}' - Network '{2}'",
+                            p.Timestamp.ToString(), p.Tag, p.Network));
+                        f = p.Frame;
+                        c = p.Color;
+                    }
+                    else
+                    {
+                        writer.WriteElementString("h2", String.Format("Packet {0}", count));
+                    }
+                    count++;
+
+                    if (f.IsBasic || forcebin)
+                    {
+                        WriteBinaryPacketAsHtml(writer, f, c);
+                    }
+                    else if (f.IsDataString)
+                    {
+                        WriteTextPacketAsHtml(writer, f, c);
+                    }
+                    else
+                    {
+                        WriteTreePacketAsHtml(writer, f, c);
+                    }
+                }
+
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+            }
+        }
+
+        public static string ConvertPacketsToHtml(IEnumerable ps)
+        {   
+            using (TextWriter textWriter = new StringWriter())
+            {
+                ConvertPacketsToHtml(textWriter, ps, false);
+
+                return textWriter.ToString();
+            }
+        }
+
+        public static string ConvertPacketsToHtml(DataFrame f)
+        {
+            return ConvertPacketsToHtml(new DataFrame[] { f });
+        }
+
+        public static string ConvertPacketsToHtml(LogPacket p)
+        {
+            return ConvertPacketsToHtml(new LogPacket[] { p });
+        }
+
+        public static byte[] ConvertListToByteArray(IEnumerable list)
+        {
+            MemoryStream stm = new MemoryStream();
+
+            foreach (object o in list)
+            {
+                byte b = Convert.ToByte(o);
+
+                stm.WriteByte(b);
+            }
+
+            return stm.ToArray();
+        }
+
+        public static List<LogPacket> EnumerableToPackets(IEnumerable ps)
+        {
+            List<LogPacket> packets = new List<LogPacket>();
+
+            foreach(object o in ps)
+            {
+                LogPacket p = o as LogPacket;
+                if(p == null)
+                {
+                    DataFrame f = o as DataFrame;
+                    if(f == null)
+                    {
+                        continue;
+                    }
+                    p = new LogPacket("Unknown", Guid.Empty, "Unknown", f, ColorValue.White);
+                }
+                packets.Add(p);
+            }
+
+            return packets;
+        }
+
+        public static void SavePackets(string filename, IEnumerable ps)
+        {
+            List<LogPacket> packets = new List<LogPacket>();
+
+            foreach(object o in ps)
+            {
+                LogPacket p = o as LogPacket;
+                if(p == null)
+                {
+                    DataFrame f = o as DataFrame;
+                    if(f == null)
+                    {
+                        continue;
+                    }
+                    p = new LogPacket("Unknown", Guid.Empty, "Unknown", f, ColorValue.White);
+                }
+                packets.Add(p);
+            }
+
+            using (FileStream stm = File.Open(filename, FileMode.Create))
+            {
+                GeneralUtils.SerializeLogPackets(packets.ToArray(), stm);
+            }
+        }
+
+        public static IEnumerable<LogPacket> LoadPackets(string filename)
+        {            
+            using (FileStream stm = File.OpenRead(filename))
+            {
+                return GeneralUtils.DeserializeLogPackets(stm);
             }
         }
     }

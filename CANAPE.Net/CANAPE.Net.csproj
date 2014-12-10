@@ -59,6 +59,8 @@
     <Compile Include="Layers\BaseNetworkLayer.cs" />
     <Compile Include="Layers\DynamicNetworkLayer.cs" />
     <Compile Include="Layers\ParserNetworkLayer.cs" />
+    <Compile Include="Layers\TextNetworkLayer.cs" />
+    <Compile Include="Layers\TextNetworkLayerConfig.cs" />
     <Compile Include="Layers\WrappedNetworkLayer.cs" />
     <Compile Include="Layers\DynamicStreamNetworkLayer.cs" />
     <Compile Include="Layers\HttpLayerConfigEntry.cs" />

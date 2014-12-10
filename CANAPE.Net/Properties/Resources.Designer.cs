@@ -70,6 +70,15 @@ namespace CANAPE.Net.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Network: {0}, Id: {1}, StartTime: {2}, EndTime: {3}.
+        /// </summary>
+        internal static string ConnectionHistoryEntry_ToString {
+            get {
+                return ResourceManager.GetString("ConnectionHistoryEntry_ToString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fixed Proxy Server.
         /// </summary>
         internal static string FixedProxyServer_ToString {

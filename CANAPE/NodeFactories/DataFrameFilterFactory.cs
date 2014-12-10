@@ -27,7 +27,7 @@ namespace CANAPE.NodeFactories
     /// Factory class to create a dataframe filter
     /// </summary>
     [Serializable]
-    public abstract class DataFrameFilterFactory
+    public abstract class DataFrameFilterFactory : IDataFrameFilterFactory
     {
         /// <summary>
         /// The dataframe path to filter on, / means the whole root

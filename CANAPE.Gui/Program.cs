@@ -86,6 +86,7 @@ namespace CANAPE
             RegisterEditor(typeof(Dictionary<string, string>), typeof(NodePropertiesEditor));
             RegisterEditor(typeof(ColorValue), typeof(ColorValueEditor));
             RegisterEditor(typeof(DataFrameFilterFactory[]), typeof(DataFrameFilterEditor));
+            RegisterEditor(typeof(IDataFrameFilterFactory[]), typeof(DataFrameFilterEditor));
             RegisterEditor(typeof(byte[]), typeof(ByteArrayEditor));
             RegisterEditor(typeof(SslNetworkLayerConfig), typeof(SslConfigEditor));
             RegisterEditor(typeof(INetworkLayerFactory[]), typeof(LayersEditor));

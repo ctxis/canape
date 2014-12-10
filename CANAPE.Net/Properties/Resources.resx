@@ -120,6 +120,9 @@
   <data name="CertManager_NullMatch" xml:space="preserve">
     <value>Cannot get a certificate when the match is null</value>
   </data>
+  <data name="ConnectionHistoryEntry_ToString" xml:space="preserve">
+    <value>Network: {0}, Id: {1}, StartTime: {2}, EndTime: {3}</value>
+  </data>
   <data name="FixedProxyServer_ToString" xml:space="preserve">
     <value>Fixed Proxy Server</value>
   </data>
