@@ -168,17 +168,17 @@
   <data name="toolStripButtonZoomIn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJFSURBVDhPpZJLaBNRFIYHXAUEFUXrIgulIFi7E6UbC12I
-        CxEsUqSgO21VqlkILiviQs2EJLWZanw1iUgN1VbTYrDBiY2SmFczTfOuJmnSdBJb8sAaJxk4zmmnxGpc
-        VH84cO+5//dz5s4lfhVJaqQKNSWTK6k3cjmVWylhjT08E231pVTeayGV1KhiQA+6EQuYPUmwhVgYs7pA
-        axgGPEOPaF8vTEcD+XgErOF4NZQpLYcWyvlYtrzEpJaLHxJZzjhGr4TUnQRHvK3RgcGR+4FQeJFb2NL+
-        ArCC2UqSmecybh9bHhx6BegVsZrwO1VD78ASyWc+JqoRx1w1hPC2znHwpHm/d56ftgXZlMkWBPSKWE14
-        WVqzD1zJSngN3N41CTuvTkFDbxR234xDdJGLWJxRQK+I1YTNwbdT4Etxgd/BXddjsEPYzy5xQdoZ+UuA
-        MJbBZAVbhP2SzFcD6QI/swbOlXhPRigmkUtYJgNAqvonRGxVRqNxE15Mv/YJTHiZ4nS6MMMWeP/Wc+9h
-        c4cJ2BK4Z7PfgnZPtKR/+hLkakonojXJ+/r24C/SG0eBZphiIJX+nCt892PFUtm4U+i9HqfhxjUZQ94d
-        uCJi6yU8kiMYcv+RDmi7E2yfPOBwecHu9oHh2TBQvef5S2daubbDTadF5E/Ve8p3VBrzrYvH3M97DlWo
-        swcAQ1qaG0+JyIbU/fDyfl7duQ9kJ1uL/xHSzCs69kJX+9Gvwr5xtb0xdT/oaeIvHG+rCOt/CiAkEskJ
-        aYP0IEEQxE//b5B1GW13fAAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJCSURBVDhPpZJLaBNRFIYHXAUEFUXrIgulIFTdidKNhS7E
+        RREsUqSgO20tVLMQXFbEhZoJedhMakBtEpEaqq2mxWCDiQ2SmPc0zbuapEnTSWzJA2ucZOA4p50Sq3FR
+        /eHAvef+38+ZO5f4VSSpFsuUlEQqp95KpVRhvfg19vBMsDWXXD7STsqpSZlGD7oJC5i9abBHGJiyuUFr
+        GAc8Q49g3ypMRwP5ZAJs0WQ9kqusRZarxUS+ukpn1sq2VJ41TlnXQ5pOgiPeV+vA4Cz8QCi6wi7v6n4J
+        WOF8LU0vsTmPn6mOjr0G9ApYQ/idirH3YIkVcx9T9ZhzsR5BeE/vNHizXNC3xM3Zw0zGZA8DegWsIbws
+        rTkA7nQtugnu7ZuF/Tf90DIUh4N3kxBfYWMWVxzQK2ANYXP0nR8CGTb0O3jgdgL28fuFVTZsdcX+EsCP
+        ZTDZwB5jvqSL9VC2xM1vgosVzpvji04VUpbZEJCK4RkB25DRaNyBFzOsfQozPro8ly3NMyUuuPvKB9jZ
+        YwKmAp6F/Lewwxuv6J+9AqmS0gloQ1KV6hD+Ir1xEqw0XQ5lsp8Lpe9BrEQmn3TxvTfTVrhzS0KTDzU3
+        BGyr+EdyGkMePdaB1eEC+ycvON0+cHgCYHg+Dqqhq9zApQ6289TRiwLyp5o95QcKtfnewFnPi8GTNery
+        McCQ9uOtFwRkW+ofud7GKXuPgOR8R/m/QmQ9h6Gv+8xXft+60d6e+jWDbdy1rs4av/6nAEIkEp0Tt4hP
+        EARB/ATd9JBaz+yAEwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="toolStripButtonZoomIn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -193,17 +193,17 @@
   <data name="toolStripButtonZoomOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJLSURBVDhPpZJfaFJhGMYPdOVVRFHrwotiELR2F8VuGuwi
-        uohgIyIGddlWsfIi6HIRXVQeUdc8K/s3NWLJaqttJE1SZqGpx3nm/HN0pXbUHW3rqLTs6Mm38+kJW9nF
-        6gcffN/7Pc/De97zYb+C4zq5SksolGripVJJ5GpL3KMaupNkzVGrb3fgamJSNWIEw4QVLGQSHGEWpu0e
-        0JvGAd0hjSRfD0pHAvzBBNgj8Uo4U1wLL5e4WLa0SjFrhTeJLG+ettVCmnaCWryhM4DJlfuGTJEVfpkp
-        VCH++TuEsuUkleYzXj9bGh17Dkgr2Rqg79SMvQYrzWXeJiq062MlXAvgqkCmhIAvLSw4Qiwz5QgB0kq2
-        BmhYeosfPMlyZHPPU9jSOwNb++Zg+6V5aBmMws5rcYiu8LTVHQWklWwNUHH01Tz4GT74u3HHlRhsE89L
-        q3zI5qb/EiC2ZZqyg4NmPyS5SjCVFxbrM6hCmiuWMkWBpBK5hHUuCLhmeFay1TGbzZvQYIb1D2HWRxUW
-        UvlFNi8Efg6RLYJ3Kfsl5CSjReOjZ6DUEgbJ2kA5NLQL/SKjeRJsFFUIMqn3ufzXAFoxJht3i7UXMza4
-        ellB4bdGLkq29YiP5BAKuXPfADanGxzvSHB5fOD0+sH0eByIwTPC+VOdfNfBtpOS5U+aPeWbGp3l+rkj
-        3icDB8rE6X2AQjraW49Llg3Rf+/CXkHbuwcU3Z2F/whpF1QndkNfz+FP4rm1Xt4Y/XcH2oSzR7vK4v6f
-        AjCZTHZM3iLfj2EY9gMV2p2qULERlAAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJGSURBVDhPpZJLaBNRFIYHXGUlomhdZKEUhKo7Ubqx0IW4
+        EMFSRAq6tLVQzUJwWREXaibkYTOpAbVJROpQbbUtBhtMaJDEvKdp3tUkTpJO0tZJgjVOMuY4NxmJ1bio
+        fnDh3nP//+fMmYv9Co5rpQo1IZMriddyOVFoLGGPauhOlLVHqRzvxpXEjEJnBMO0BczeNNgjDMzZ3KA3
+        TQG6QxpRvhWUjgT4o2mwRZO1SK68GVmtsIl8ZYOiN0u2VJ4j56yNkLadoBbvag1gcha+IVN0nVulS3VI
+        fv4O4Xw1TWW5nMfPVCYmXwLSirYW6DtVk2/BEmNz71K1mPNTLdIIYOvgzfBBX5ZfsocZetYeBqQVbS3Q
+        sPTmALjT1ejOvuewa2Aedg8uwt7rfugYjcP+20mIr3MxiysOSCvaWqDixBs/BGgu9Ltx380E7BHOKxtc
+        2OqK/SVAaMs0awN7jPmYZmuhTJFfbs6gDlmWreTKvJdKFVKWxRDgqrEF0daEJMkdaDBj+sew4KNKS5ni
+        MlPkgz+HyJTBs5L/EnZ442XjkxcgVxMG0dpCrtEcQL/ISM6AlaJKITrzoVD8GkQrQeeTLqH2at4Kt27I
+        KPy+7ppo24rwSE6ikAcPDWB1uMD+3gtOtw8cngCYnk6BZvQyP3yxh+s9cfiCaPmTdk/5nkprvjN82vNs
+        5HiVuHQEUEj30c5+0bIthsavdvHqgUMgO9dT+q8QxfmDMNh3ak04dzbL22NIN9LFXznTWxX2/xSASSSS
+        s9IO6TEMw7Af7d6djIJKivAAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="toolStripButtonZoomOut.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -339,37 +339,37 @@
     <value>Layer Sections</value>
   </data>
   <data name="addNodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 22</value>
+    <value>158, 22</value>
   </data>
   <data name="addNodeToolStripMenuItem.Text" xml:space="preserve">
     <value>Add Node</value>
   </data>
   <data name="deleteSelectedToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 22</value>
+    <value>158, 22</value>
   </data>
   <data name="deleteSelectedToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete Selected</value>
   </data>
   <data name="toggleEnableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 22</value>
+    <value>158, 22</value>
   </data>
   <data name="toggleEnableToolStripMenuItem.Text" xml:space="preserve">
     <value>Toggle Enable</value>
   </data>
   <data name="copyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 22</value>
+    <value>158, 22</value>
   </data>
   <data name="copyToolStripMenuItem.Text" xml:space="preserve">
     <value>Copy</value>
   </data>
   <data name="cutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 22</value>
+    <value>158, 22</value>
   </data>
   <data name="cutToolStripMenuItem.Text" xml:space="preserve">
     <value>Cut</value>
   </data>
   <data name="pasteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 22</value>
+    <value>158, 22</value>
   </data>
   <data name="pasteToolStripMenuItem.Text" xml:space="preserve">
     <value>Paste</value>
@@ -387,7 +387,7 @@
     <value>Paste</value>
   </data>
   <data name="filtersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 22</value>
+    <value>158, 22</value>
   </data>
   <data name="filtersToolStripMenuItem.Text" xml:space="preserve">
     <value>Filters</value>
@@ -405,13 +405,31 @@
     <value>Paste</value>
   </data>
   <data name="propertiesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 22</value>
+    <value>158, 22</value>
   </data>
   <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
     <value>Properties</value>
   </data>
+  <data name="autoLayoutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 22</value>
+  </data>
+  <data name="autoLayoutToolStripMenuItem.Text" xml:space="preserve">
+    <value>Auto Layout</value>
+  </data>
+  <data name="centreGraphToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 22</value>
+  </data>
+  <data name="centreGraphToolStripMenuItem.Text" xml:space="preserve">
+    <value>Center Graph</value>
+  </data>
+  <data name="centreOnNodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 22</value>
+  </data>
+  <data name="centreOnNodeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Center on Node</value>
+  </data>
   <data name="contextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 180</value>
+    <value>159, 246</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip.Name" xml:space="preserve">
     <value>contextMenuStrip</value>
@@ -435,7 +453,7 @@
     <value>netEditor</value>
   </data>
   <data name="&gt;&gt;netEditor.Type" xml:space="preserve">
-    <value>CANAPE.Controls.GraphEditor.GraphEditorControl, GraphEditor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+    <value>CANAPE.Controls.GraphEditor.GraphEditorControl, CANAPE.Controls.GraphEditor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67951cd6aa8a0ad9</value>
   </data>
   <data name="&gt;&gt;netEditor.Parent" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
@@ -599,6 +617,12 @@
   <data name="&gt;&gt;sSLLayerSectionToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;genericLayerSectionToolStripMenuItem.Name" xml:space="preserve">
+    <value>genericLayerSectionToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;genericLayerSectionToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;deleteSelectedToolStripMenuItem.Name" xml:space="preserve">
     <value>deleteSelectedToolStripMenuItem</value>
   </data>
@@ -665,10 +689,22 @@
   <data name="&gt;&gt;pastePropertiesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;genericLayerSectionToolStripMenuItem.Name" xml:space="preserve">
-    <value>genericLayerSectionToolStripMenuItem</value>
+  <data name="&gt;&gt;autoLayoutToolStripMenuItem.Name" xml:space="preserve">
+    <value>autoLayoutToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;genericLayerSectionToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;autoLayoutToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;centreGraphToolStripMenuItem.Name" xml:space="preserve">
+    <value>centreGraphToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;centreGraphToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;centreOnNodeToolStripMenuItem.Name" xml:space="preserve">
+    <value>centreOnNodeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;centreOnNodeToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -30,5 +30,5 @@ def load(filename):
     """Load to the current project from a file
     :param filename: The file to output to
     """
-    CANAPE.Documents.CANAPEProject.Load(filename, True)
+    CANAPE.Documents.CANAPEProject.Load(filename, True, True)
     return getcurrentproject()

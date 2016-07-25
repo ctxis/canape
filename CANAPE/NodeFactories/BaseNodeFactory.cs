@@ -40,7 +40,7 @@ namespace CANAPE.NodeFactories
         /// <summary>
         /// List of filters
         /// </summary>
-        public DataFrameFilterFactory[] Filters { get; set; }
+        public IDataFrameFilterFactory[] Filters { get; set; }
 
         /// <summary>
         /// Whether all the filters need to match (AND) or just one (OR)
@@ -88,7 +88,7 @@ namespace CANAPE.NodeFactories
             Enabled = true;
             Properties = new Dictionary<string, string>();
             Id = guid;
-            Filters = new DataFrameFilterFactory[0];
+            Filters = new IDataFrameFilterFactory[0];
             SelectionPath = "/";
         }
 
@@ -129,7 +129,7 @@ namespace CANAPE.NodeFactories
 
                     DataFrameFilterExpression filters = new DataFrameFilterExpression(MatchAllFilters);
 
-                    foreach (DataFrameFilterFactory factory in Filters)
+                    foreach (IDataFrameFilterFactory factory in Filters)
                     {
                         if (factory.Enabled)
                         {

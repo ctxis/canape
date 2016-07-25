@@ -1,4 +1,4 @@
-//    CANAPE Network Testing Tool
+﻿//    CANAPE Network Testing Tool
 //    Copyright (C) 2014 Context Information Security
 //
 //    This program is free software: you can redistribute it and/or modify
@@ -14,23 +14,32 @@
 //    You should have received a copy of the GNU General Public License
 //    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+using CANAPE.Documents;
 using System;
+using System.IO;
 
-namespace CANAPE.NodeFactories
+namespace UpdateProjects
 {
-    /// <summary>
-    /// Factory for client node
-    /// </summary>
-    public class ClientEndpointFactory : PipelineEndpointFactory
+    class Program
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="label"></param>
-        /// <param name="guid"></param>
-        public ClientEndpointFactory(string label, Guid guid) 
-            : base(label, guid)
+        static void Main(string[] args)
         {
+            foreach (string file in args)
+            {
+                foreach (string f in Directory.GetFiles(Environment.CurrentDirectory, file))
+                {
+                    try
+                    {
+                        Console.WriteLine("Processing {0}", f);
+                        CANAPEProject.Load(f, false, true);
+                        CANAPEProject.Save(f, false, false);
+                    }
+                    catch
+                    {
+                    }
+                }
+             
+            }
         }
     }
 }

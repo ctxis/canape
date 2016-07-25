@@ -47,7 +47,8 @@ namespace CANAPE.Net.Utils
         /// <summary>
         /// Constructor
         /// </summary>
-        public NetGraphBuilder() : this(new NetGraphFactory())
+        public NetGraphBuilder() 
+            : this(new NetGraphFactory())
         {            
         }         
 
@@ -76,6 +77,16 @@ namespace CANAPE.Net.Utils
         }
 
         /// <summary>
+        /// Add a server node
+        /// </summary>
+        /// <param name="label">The node label</param>
+        /// <returns>The server endpoint factory</returns>
+        public ServerEndpointFactory AddServer(string label)
+        {
+            return AddServer(label, Guid.NewGuid());            
+        }
+
+        /// <summary>
         /// Add a client node
         /// </summary>
         /// <param name="label">Label</param>
@@ -88,6 +99,16 @@ namespace CANAPE.Net.Utils
             AddNode(factory);
 
             return factory;
+        }
+
+        /// <summary>
+        /// Add a client node
+        /// </summary>
+        /// <param name="label">Label</param>        
+        /// <returns>The client endpoint factory</returns>
+        public ClientEndpointFactory AddClient(string label)
+        {
+            return AddClient(label, Guid.NewGuid());            
         }
 
         /// <summary>
@@ -106,6 +127,16 @@ namespace CANAPE.Net.Utils
             AddNode(log);
 
             return log;
+        }
+
+        /// <summary>
+        /// Add a log node
+        /// </summary>
+        /// <param name="label">Label of the node</param>
+        /// <returns>The log packet node factory</returns>
+        public LogPacketNodeFactory AddLog(string label)
+        {
+            return AddLog(label, Guid.NewGuid(), new ColorValue(0xff, 0xff, 0xff), label, false);
         }
 
         /// <summary>

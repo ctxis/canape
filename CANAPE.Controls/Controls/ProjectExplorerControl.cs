@@ -179,7 +179,7 @@ namespace CANAPE.Controls
 
         private void BuildDefaultProxyNetgraph(NetGraphDocument document)
         {
-            List<BaseNodeConfig> nodes = new List<BaseNodeConfig>();
+            List<BaseNodeConfig> nodes = new List<BaseNodeConfig>();            
 
             ServerEndpointConfig server = new ServerEndpointConfig();
             server.Label = "SERVER";

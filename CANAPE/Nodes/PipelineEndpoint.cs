@@ -16,6 +16,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Text;
 using System.Threading;
 using CANAPE.DataAdapters;
 using CANAPE.DataFrames;
@@ -91,6 +92,7 @@ namespace CANAPE.Nodes
             WriteOutput(frame);
         }
 
+
         private void ReadThread()
         {
             try
@@ -99,9 +101,9 @@ namespace CANAPE.Nodes
 
                 do
                 {
-                    DataFrame frame = ReadDataFrame();
+                    DataFrame frame = ReadDataFrame();                   
 
-                    if (frame != null)
+                    if(frame != null)
                     {
                         WriteFrame(frame);
                     }

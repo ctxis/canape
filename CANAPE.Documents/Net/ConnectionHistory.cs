@@ -26,6 +26,43 @@ namespace CANAPE.Documents.Net
     /// </summary>
     [Serializable]    
     public class ConnectionHistory : ObservableCollection<ConnectionHistoryEntry>
-    {        
+    {
+        /// <summary>
+        /// Get a connection entry by ID
+        /// </summary>
+        /// <param name="netId">The network ID</param>
+        /// <returns>The connection history entry</returns>
+        public ConnectionHistoryEntry GetConnectionById(Guid netId)
+        {
+            lock (this)
+            {
+                foreach (ConnectionHistoryEntry entry in this)
+                {
+                    if (entry.NetId == netId)
+                    {
+                        return entry;
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Get a connection entry by ID
+        /// </summary>
+        /// <param name="netId">The network ID</param>
+        /// <returns>The connection history entry</returns>
+        public ConnectionHistoryEntry GetConnectionById(string netId)
+        {
+            Guid g;
+
+            if (Guid.TryParse(netId, out g))
+            {
+                return GetConnectionById(g);
+            }
+
+            return null;
+        }
     }
 }

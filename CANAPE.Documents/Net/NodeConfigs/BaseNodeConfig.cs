@@ -46,7 +46,7 @@ namespace CANAPE.Documents.Net.NodeConfigs
         /// <summary>
         /// 
         /// </summary>
-        protected DataFrameFilterFactory[] _filters;
+        protected IDataFrameFilterFactory[] _filters;
 
         /// <summary>
         /// 
@@ -266,7 +266,7 @@ namespace CANAPE.Documents.Net.NodeConfigs
         /// Get or set the list of filters
         /// </summary>
         [LocalizedDescription("BaseNodeConfig_FiltersDescription", typeof(Properties.Resources)), Category("Filters")]
-        public DataFrameFilterFactory[] Filters
+        public IDataFrameFilterFactory[] Filters
         {
             get { return _filters; }
             set
@@ -284,6 +284,46 @@ namespace CANAPE.Documents.Net.NodeConfigs
                     SetDirty();
                 }
             }
+        }
+
+        /// <summary>
+        /// Remove all filters
+        /// </summary>
+        public void RemoveAllFilters()
+        {
+            if (_filters.Length > 0)
+            {
+                _filters = new IDataFrameFilterFactory[0];
+                SetDirty();
+            }            
+        }
+
+        /// <summary>
+        /// Add a filter
+        /// </summary>
+        /// <param name="filter">The filter factory</param>
+        public void AddFilter(IDataFrameFilterFactory filter)
+        {
+            List<IDataFrameFilterFactory> filters = new List<IDataFrameFilterFactory>(_filters);
+
+            filters.Add(filter);            
+            _filters = filters.ToArray();
+            SetDirty();            
+        }
+
+        /// <summary>
+        /// Remove a filter
+        /// </summary>
+        /// <param name="filter">The filter factory</param>
+        public void RemoveFilter(IDataFrameFilterFactory filter)
+        {
+            List<IDataFrameFilterFactory> filters = new List<IDataFrameFilterFactory>(_filters);
+
+            if (filters.Remove(filter))
+            {
+                _filters = filters.ToArray();
+                SetDirty();
+            }            
         }
 
         /// <summary>
@@ -493,6 +533,119 @@ namespace CANAPE.Documents.Net.NodeConfigs
         public virtual void Delete()
         {
 
+        }
+
+        /// <summary>
+        /// Removes the node from the containing document (if it exists)
+        /// </summary>
+        public void Remove()
+        {
+            if (_document != null)
+            {
+                _document.RemoveNode(this);
+            }
+        }
+
+        /// <summary>
+        /// Get the edges which originate from this node
+        /// </summary>
+        /// <returns>The list of edges</returns>
+        public IEnumerable<LineConfig> EdgesFrom
+        {
+            get
+            {
+                List<LineConfig> edges = new List<LineConfig>();
+
+                if (_document != null)
+                {
+                    edges.AddRange(_document.Edges.Where(e =>
+                        e.SourceNode == this ||
+                        e.BiDirection && e.DestNode == this));
+                }
+
+                return edges.AsReadOnly();
+            }
+        }
+
+        /// <summary>
+        /// Get the edges to this node
+        /// </summary>
+        /// <returns>The list of edges</returns>
+        public IEnumerable<LineConfig> EdgesTo 
+        {
+            get
+            {
+                List<LineConfig> edges = new List<LineConfig>();
+
+                if (_document != null)
+                {
+                    edges.AddRange(_document.Edges.Where(e =>
+                        e.DestNode == this ||
+                        (e.BiDirection && e.SourceNode == this)));
+                }
+
+                return edges.AsReadOnly();
+            }
+        }
+
+        /// <summary>
+        /// Add a list of edges to a set of nodes
+        /// </summary>
+        /// <param name="node">The first node to add</param>
+        /// <param name="nodes">The list of nodes</param>
+        public void AddEdge(BaseNodeConfig node, params BaseNodeConfig[] nodes)
+        {
+            if (nodes.Length > 0)
+            {
+                BaseNodeConfig curr_node = node;
+
+                this.AddEdge(node);
+                for (int i = 0; i < nodes.Length; ++i)
+                {
+                    curr_node.AddEdge(nodes[i]);
+                    curr_node = nodes[i];
+                }
+            }
+        }
+
+        /// <summary>
+        /// Remove all edges from this node
+        /// </summary>
+        public void RemoveAllEdges()
+        {
+            foreach (LineConfig edge in EdgesFrom)
+            {
+                edge.RemoveEdge();
+            }
+        }
+
+        /// <summary>
+        /// Adds an edge between this node and another if it doesn't exist
+        /// </summary>
+        /// <param name="destNode">The destination node</param>
+        /// <returns>The edge configuration</returns>
+        public LineConfig AddEdge(BaseNodeConfig destNode)
+        {
+            if (_document != null)
+            {
+                return _document.AddEdge(null, this, destNode);
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Add an edge with a label
+        /// </summary>
+        /// <param name="label">The label to add</param>
+        /// <param name="destNode">The destination node</param>
+        /// <returns>The edge configuration</returns>
+        public LineConfig AddEdge(string label, BaseNodeConfig destNode)
+        {
+            LineConfig edge = AddEdge(destNode);
+            edge.Label = label;
+
+            return edge;
         }
     }
 }

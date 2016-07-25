@@ -16,6 +16,7 @@
 
 from CANAPE.Documents.Net import *
 import CANAPE.NodeLibrary.Server
+import CANAPE.NodeLibrary.Endpoint
 import CANAPE.Documents.Net.Factories
 import System.Net
 
@@ -26,9 +27,12 @@ class DnsServerDocument(NetServerDocument):
         self.LocalPort = 53
         self.UdpEnable = True
 
+    def __getattr__(self, name):
+        print name
+
     @property
     def ResponseAddress(self):
-        return str(self.Config.ReponseAddress)
+        return str(self.ServerFactory.Config.ReponseAddress)
 
     @ResponseAddress.setter
     def ResponseAddress(self, addr):
@@ -57,4 +61,9 @@ class DnsServerDocument(NetServerDocument):
     @TimeToLive.setter
     def TimeToLive(self, ttl):
         self.ServerFactory.Config.TimeToLive = ttl
+
+class EchoServerDocument(NetServerDocument):
+    def __init__(self):        
+        self.ServerFactory = CANAPE.Documents.Net.Factories.LibraryDataEndpointFactory(CANAPE.NodeLibrary.Endpoint.EchoDataEndpoint, 
+                                                                                        CANAPE.NodeLibrary.Endpoint.EchoDataEndpointConfig, "Echo Server")     
 

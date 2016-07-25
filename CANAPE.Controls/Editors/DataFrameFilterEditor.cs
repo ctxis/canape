@@ -34,7 +34,7 @@ namespace CANAPE.NodeConfigs
 
         public override object EditValue(System.ComponentModel.ITypeDescriptorContext context, IServiceProvider provider, object value)
         {
-            DataFrameFilterFactory[] filters = value as DataFrameFilterFactory[];
+            IDataFrameFilterFactory[] filters = value as IDataFrameFilterFactory[];
 
             if ((filters != null) && (provider != null))
             {
@@ -42,11 +42,11 @@ namespace CANAPE.NodeConfigs
 
                 if (service != null)
                 {
-                    Dictionary<string, Type> typeMap = new Dictionary<string, Type>();
-                    typeMap["String"] = typeof(StringDataFrameFilterFactory);
-                    typeMap["Binary"] = typeof(BinaryDataFrameFilterFactory);
-                    typeMap["Regular Exp"] = typeof(RegexDataFrameFilterFactory);
-                    typeMap["Select Count"] = typeof(NodeCountDataFrameFilterFactory);
+                    Dictionary<string, Func<object>> typeMap = new Dictionary<string, Func<object>>();
+                    typeMap["String"] = () => new StringDataFrameFilterFactory();
+                    typeMap["Binary"] = () => new BinaryDataFrameFilterFactory();
+                    typeMap["Regular Exp"] = () => new RegexDataFrameFilterFactory();
+                    typeMap["Select Count"] = () => new NodeCountDataFrameFilterFactory();
 
                     using (ObjectCollectionForm frm = new ObjectCollectionForm(filters, typeMap))
                     {

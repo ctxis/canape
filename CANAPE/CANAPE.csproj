@@ -90,6 +90,7 @@
     <Compile Include="DataFrames\IPrimitiveValue.cs" />
     <Compile Include="DataFrames\IPAddressDataValue.cs" />
     <Compile Include="NodeFactories\DelayNodeFactory.cs" />
+    <Compile Include="NodeFactories\IDataFrameFilterFactory.cs" />
     <Compile Include="Nodes\BaseDecoupledPipelineNode.cs" />
     <Compile Include="Nodes\DelayPipelineNode.cs" />
     <Compile Include="Nodes\IPersistNode.cs" />

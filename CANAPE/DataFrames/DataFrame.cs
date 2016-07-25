@@ -22,6 +22,7 @@ using CANAPE.Utils;
 using System.Text;
 using System.Collections;
 using System.Dynamic;
+using System.Collections.Generic;
 
 namespace CANAPE.DataFrames
 {
@@ -181,6 +182,16 @@ namespace CANAPE.DataFrames
         }
 
         /// <summary>
+        /// Converts the frame from a byte array, a synonym for
+        /// ConvertToBasic
+        /// </summary>
+        /// <param name="data">The dataframe data</param>
+        public DataValue FromArray(byte[] data)
+        {
+            return ConvertToBasic(data);
+        }
+
+        /// <summary>
         /// Convert the frame to a stream
         /// </summary>
         /// <param name="stm">The stream to convert to</param>
@@ -196,7 +207,6 @@ namespace CANAPE.DataFrames
         /// Convert to a byte string
         /// </summary>
         /// <returns>A byte string representing the frame</returns>
-        [Obsolete("Use ToDataString instead")]
         public string ToByteString()
         {
             if ((_root != null) && (!_root.MetaData))
@@ -207,6 +217,16 @@ namespace CANAPE.DataFrames
             {
                 return "";
             }
+        }
+
+        /// <summary>
+        /// Replace the contents of the contents of this frame with bytes
+        /// </summary>
+        /// <param name="data">The data to convert</param>
+        /// <returns>A instance of the datavalue added</returns>
+        public DataValue FromByteString(string data)
+        {
+            return ConvertToBasic(data);
         }
 
         /// <summary>
@@ -224,6 +244,18 @@ namespace CANAPE.DataFrames
                 {
                     return false;
                 }
+            }
+        }
+
+        /// <summary>
+        /// Returns an indication if this a byte string frame, i.e. one which only contains bytes
+        /// Same as IsBasic
+        /// </summary>
+        public bool IsBytes
+        {
+            get
+            {
+                return IsBasic;
             }
         }
 
@@ -269,6 +301,26 @@ namespace CANAPE.DataFrames
         public DataFrame(string data)
         {
             ConvertToBasic(data);
+        }        
+
+        /// <summary>
+        /// Constructor, creates a data string frame
+        /// </summary>
+        /// <param name="data">The data string</param>
+        /// <param name="encoding">The text encoding as a string</param>
+        public DataFrame(string data, string encoding)
+        {
+            FromDataString(data, encoding);
+        }
+
+        /// <summary>
+        /// Constructor, creates a data string frame
+        /// </summary>
+        /// <param name="data">The data string</param>
+        /// <param name="encoding">The text encoding</param>
+        public DataFrame(string data, Encoding encoding)
+        {
+            FromDataString(data, encoding);
         }
 
         /// <summary>
@@ -292,6 +344,7 @@ namespace CANAPE.DataFrames
         /// <summary>
         /// Converts this frame to a basic one
         /// </summary>
+        /// <returns>The root datavalue</returns>
         public DataValue ConvertToBasic()
         {
             return ConvertToBasic(ToArray());            
@@ -305,6 +358,15 @@ namespace CANAPE.DataFrames
         public DataValue ConvertToString(string value)
         {
             return FromDataString(value, BinaryEncoding.Instance);
+        }
+
+        /// <summary>
+        /// Convert this frame to bytes
+        /// </summary>
+        /// <returns>The root data value</returns>
+        public DataValue ConvertToBytes()
+        {
+            return ConvertToBasic();
         }
 
         /// <summary>
@@ -327,12 +389,37 @@ namespace CANAPE.DataFrames
         /// Convert the frame to a string value
         /// </summary>
         /// <param name="value">The string value</param>
+        /// <param name="encoding">The encoding name for the string, such as binary or UTF-8</param>
+        /// <returns>The data value</returns>
+        public DataValue FromDataString(string value, string encoding)
+        {
+            Encoding enc = null;
+
+            if (encoding != null)
+            {
+                if (encoding.Equals("binary", StringComparison.OrdinalIgnoreCase))
+                {
+                    enc = BinaryEncoding.Instance;
+                }
+                else
+                {
+                    enc = Encoding.GetEncoding(encoding);
+                }
+            }
+
+            return FromDataString(value, enc);
+        }
+
+        /// <summary>
+        /// Convert the frame to a string value
+        /// </summary>
+        /// <param name="value">The string value</param>
         /// <param name="encoding">The encoding for the string</param>
         /// <returns>The data value</returns>
         public DataValue FromDataString(string value, Encoding encoding)
         {
             DataValue ret = null;
-            bool doConvert = true;
+            bool doConvert = true;            
 
             // If already basic, don't convert the entire frame
             if (IsDataString)
@@ -342,7 +429,11 @@ namespace CANAPE.DataFrames
                 if (dv != null)
                 {
                     dv.Value = value;
-                    dv.StringEncoding = encoding;
+                    // Only set encoding if different
+                    if (encoding != null)
+                    {
+                        dv.StringEncoding = encoding;
+                    }
                     ret = dv;
                     doConvert = false;
                 }
@@ -352,11 +443,11 @@ namespace CANAPE.DataFrames
             if (doConvert)
             {
                 DataKey root = new DataKey("Root");
-                root.Class = new Guid(DataNodeClasses.BINARY_NODE_CLASS);
-                root.FormatString = "$Data";
+                root.Class = new Guid(DataNodeClasses.STRING_NODE_CLASS);
+                root.FormatString = "$Data";                
 
                 root.SetLinks(this, null);
-                ret = root.AddValue("Data", value, encoding);
+                ret = root.AddValue("Data", value, encoding ?? BinaryEncoding.Instance);
 
                 Root = root;
             }
@@ -364,6 +455,17 @@ namespace CANAPE.DataFrames
             OnModified();
 
             return ret;
+        }
+
+        /// <summary>
+        /// Convert the frame to a string value, doesn't change the encoding if already set
+        /// otherwise uses BinaryEncoding
+        /// </summary>
+        /// <param name="value">The string value</param>
+        /// <returns>The new root data value</returns>
+        public DataValue FromDataString(string value)
+        {
+            return FromDataString(value, (Encoding)null);
         }
 
         /// <summary>
@@ -415,6 +517,25 @@ namespace CANAPE.DataFrames
         public DataValue ConvertToBasic(string data)
         {
             return ConvertToBasic(BinaryEncoding.Instance.GetBytes(data));
+        }
+
+        /// <summary>
+        /// Convert to a data string
+        /// </summary>
+        /// <param name="encoding">The text encoding</param>
+        /// <returns>The root data value</returns>
+        public DataValue ConvertToDataString(string encoding)
+        {
+            return FromDataString(ToDataString(), encoding);
+        }
+
+        /// <summary>
+        /// Convert to a binary data string
+        /// </summary>
+        /// <returns>The root data value</returns>
+        public DataValue ConvertToDataString()
+        {
+            return ConvertToDataString(null);
         }
 
         /// <summary>

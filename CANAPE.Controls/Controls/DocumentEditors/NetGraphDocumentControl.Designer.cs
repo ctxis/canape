@@ -69,6 +69,7 @@ namespace CANAPE.Controls.DocumentEditors
             this.libraryNodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layerSectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sSLLayerSectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.genericLayerSectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toggleEnableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,7 +81,9 @@ namespace CANAPE.Controls.DocumentEditors
             this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyPropertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pastePropertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.genericLayerSectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoLayoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.centreGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.centreOnNodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -156,7 +159,10 @@ namespace CANAPE.Controls.DocumentEditors
             this.cutToolStripMenuItem,
             this.pasteToolStripMenuItem,
             this.filtersToolStripMenuItem,
-            this.propertiesToolStripMenuItem});
+            this.propertiesToolStripMenuItem,
+            this.autoLayoutToolStripMenuItem,
+            this.centreGraphToolStripMenuItem,
+            this.centreOnNodeToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
             resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
@@ -283,6 +289,13 @@ namespace CANAPE.Controls.DocumentEditors
             this.sSLLayerSectionToolStripMenuItem.Tag = "ssllayersection";
             this.sSLLayerSectionToolStripMenuItem.Click += new System.EventHandler(this.AddNode_Click);
             // 
+            // genericLayerSectionToolStripMenuItem
+            // 
+            this.genericLayerSectionToolStripMenuItem.Name = "genericLayerSectionToolStripMenuItem";
+            resources.ApplyResources(this.genericLayerSectionToolStripMenuItem, "genericLayerSectionToolStripMenuItem");
+            this.genericLayerSectionToolStripMenuItem.Tag = "layersection";
+            this.genericLayerSectionToolStripMenuItem.Click += new System.EventHandler(this.AddNode_Click);
+            // 
             // deleteSelectedToolStripMenuItem
             // 
             this.deleteSelectedToolStripMenuItem.Name = "deleteSelectedToolStripMenuItem";
@@ -353,12 +366,23 @@ namespace CANAPE.Controls.DocumentEditors
             resources.ApplyResources(this.pastePropertiesToolStripMenuItem, "pastePropertiesToolStripMenuItem");
             this.pastePropertiesToolStripMenuItem.Click += new System.EventHandler(this.pastePropertiesToolStripMenuItem_Click);
             // 
-            // genericLayerSectionToolStripMenuItem
+            // autoLayoutToolStripMenuItem
             // 
-            this.genericLayerSectionToolStripMenuItem.Name = "genericLayerSectionToolStripMenuItem";
-            resources.ApplyResources(this.genericLayerSectionToolStripMenuItem, "genericLayerSectionToolStripMenuItem");
-            this.genericLayerSectionToolStripMenuItem.Tag = "layersection";
-            this.genericLayerSectionToolStripMenuItem.Click += new System.EventHandler(this.AddNode_Click);
+            this.autoLayoutToolStripMenuItem.Name = "autoLayoutToolStripMenuItem";
+            resources.ApplyResources(this.autoLayoutToolStripMenuItem, "autoLayoutToolStripMenuItem");
+            this.autoLayoutToolStripMenuItem.Click += new System.EventHandler(this.autoLayoutToolStripMenuItem_Click);
+            // 
+            // centreGraphToolStripMenuItem
+            // 
+            this.centreGraphToolStripMenuItem.Name = "centreGraphToolStripMenuItem";
+            resources.ApplyResources(this.centreGraphToolStripMenuItem, "centreGraphToolStripMenuItem");
+            this.centreGraphToolStripMenuItem.Click += new System.EventHandler(this.centreGraphToolStripMenuItem_Click);
+            // 
+            // centreOnNodeToolStripMenuItem
+            // 
+            this.centreOnNodeToolStripMenuItem.Name = "centreOnNodeToolStripMenuItem";
+            resources.ApplyResources(this.centreOnNodeToolStripMenuItem, "centreOnNodeToolStripMenuItem");
+            this.centreOnNodeToolStripMenuItem.Click += new System.EventHandler(this.centreOnNodeToolStripMenuItem_Click);
             // 
             // NetGraphDocumentControl
             // 
@@ -416,5 +440,8 @@ namespace CANAPE.Controls.DocumentEditors
         private System.Windows.Forms.ToolStripMenuItem sSLLayerSectionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem delayNodeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem genericLayerSectionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem autoLayoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem centreGraphToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem centreOnNodeToolStripMenuItem;
     }
 }

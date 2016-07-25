@@ -24,7 +24,7 @@ namespace CANAPE.NodeFactories
     /// <summary>
     /// Factory for a pipeline endpoint node
     /// </summary>    
-    public class PipelineEndpointFactory : BaseNodeFactory
+    public abstract class PipelineEndpointFactory : BaseNodeFactory
     {
         /// <summary>
         /// Constructor
