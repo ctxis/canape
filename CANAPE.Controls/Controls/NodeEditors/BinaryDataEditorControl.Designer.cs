@@ -45,101 +45,131 @@ namespace CANAPE.Controls.NodeEditors
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.radioButtonHex = new System.Windows.Forms.RadioButton();
-            this.radioButtonText = new System.Windows.Forms.RadioButton();
             this.textEditorControl = new CANAPE.Controls.NodeRichTextBox();
             this.hexEditorControl = new CANAPE.Controls.HexEditorControl();
             this.inlineSearchControl = new CANAPE.Controls.InlineSearchControl();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabPageHex = new System.Windows.Forms.TabPage();
+            this.tabPageText = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.tabControl.SuspendLayout();
+            this.tabPageHex.SuspendLayout();
+            this.tabPageText.SuspendLayout();
+            this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // radioButtonHex
-            // 
-            this.radioButtonHex.AutoSize = true;
-            this.radioButtonHex.Checked = true;
-            this.radioButtonHex.Location = new System.Drawing.Point(3, 3);
-            this.radioButtonHex.Name = "radioButtonHex";
-            this.radioButtonHex.Size = new System.Drawing.Size(44, 17);
-            this.radioButtonHex.TabIndex = 0;
-            this.radioButtonHex.TabStop = true;
-            this.radioButtonHex.Text = "Hex";
-            this.toolTip.SetToolTip(this.radioButtonHex, "Check to view data as hex");
-            this.radioButtonHex.UseVisualStyleBackColor = true;
-            this.radioButtonHex.CheckedChanged += new System.EventHandler(this.radioButtonHex_CheckedChanged);
-            // 
-            // radioButtonText
-            // 
-            this.radioButtonText.AutoSize = true;
-            this.radioButtonText.Location = new System.Drawing.Point(53, 3);
-            this.radioButtonText.Name = "radioButtonText";
-            this.radioButtonText.Size = new System.Drawing.Size(46, 17);
-            this.radioButtonText.TabIndex = 1;
-            this.radioButtonText.Text = "Text";
-            this.toolTip.SetToolTip(this.radioButtonText, "Check to view data as text");
-            this.radioButtonText.UseVisualStyleBackColor = true;
-            this.radioButtonText.CheckedChanged += new System.EventHandler(this.radioButtonText_CheckedChanged);
             // 
             // textEditorControl
             // 
-            this.textEditorControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textEditorControl.BackColor = System.Drawing.SystemColors.Control;
+            this.textEditorControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textEditorControl.IsReadOnly = false;
-            this.textEditorControl.Location = new System.Drawing.Point(0, 26);
+            this.textEditorControl.Location = new System.Drawing.Point(3, 3);
+            this.textEditorControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textEditorControl.Name = "textEditorControl";
             this.textEditorControl.ShowMatchingBracket = false;
             this.textEditorControl.ShowVRuler = false;
-            this.textEditorControl.Size = new System.Drawing.Size(791, 465);
+            this.textEditorControl.Size = new System.Drawing.Size(1166, 661);
             this.textEditorControl.TabIndex = 6;
-            this.textEditorControl.Visible = false;
             // 
             // hexEditorControl
             // 
-            this.hexEditorControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hexEditorControl.BytesPerLine = 16;
+            this.hexEditorControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hexEditorControl.HexColor = System.Drawing.Color.White;
-            this.hexEditorControl.Location = new System.Drawing.Point(-1, 26);
+            this.hexEditorControl.Location = new System.Drawing.Point(3, 3);
+            this.hexEditorControl.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.hexEditorControl.Name = "hexEditorControl";
             this.hexEditorControl.ReadOnly = false;
-            this.hexEditorControl.Size = new System.Drawing.Size(792, 465);
+            this.hexEditorControl.Size = new System.Drawing.Size(1084, 575);
             this.hexEditorControl.TabIndex = 4;
             this.hexEditorControl.BytesChanged += new System.EventHandler(this._byteProv_Changed);
             // 
             // inlineSearchControl
             // 
-            this.inlineSearchControl.Location = new System.Drawing.Point(105, 1);
+            this.inlineSearchControl.Location = new System.Drawing.Point(6, 8);
+            this.inlineSearchControl.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.inlineSearchControl.Name = "inlineSearchControl";
-            this.inlineSearchControl.Size = new System.Drawing.Size(541, 27);
+            this.inlineSearchControl.Size = new System.Drawing.Size(812, 33);
             this.inlineSearchControl.TabIndex = 5;
             this.inlineSearchControl.SearchNext += new System.EventHandler<CANAPE.Controls.InlineSearchControl.SearchEventArgs>(this.inlineSearchControl_SearchNext);
             this.inlineSearchControl.SearchPrev += new System.EventHandler<CANAPE.Controls.InlineSearchControl.SearchEventArgs>(this.inlineSearchControl_SearchPrev);
             // 
+            // tabControl
+            // 
+            this.tabControl.Controls.Add(this.tabPageHex);
+            this.tabControl.Controls.Add(this.tabPageText);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Location = new System.Drawing.Point(3, 52);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1180, 700);
+            this.tabControl.TabIndex = 7;
+            this.tabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl_Selected);
+            this.tabControl.Deselected += new System.Windows.Forms.TabControlEventHandler(this.tabControl_Deselected);
+            // 
+            // tabPageHex
+            // 
+            this.tabPageHex.Controls.Add(this.hexEditorControl);
+            this.tabPageHex.Location = new System.Drawing.Point(4, 29);
+            this.tabPageHex.Name = "tabPageHex";
+            this.tabPageHex.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageHex.Size = new System.Drawing.Size(1090, 581);
+            this.tabPageHex.TabIndex = 0;
+            this.tabPageHex.Text = "Hex";
+            this.tabPageHex.UseVisualStyleBackColor = true;
+            // 
+            // tabPageText
+            // 
+            this.tabPageText.Controls.Add(this.textEditorControl);
+            this.tabPageText.Location = new System.Drawing.Point(4, 29);
+            this.tabPageText.Name = "tabPageText";
+            this.tabPageText.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageText.Size = new System.Drawing.Size(1172, 667);
+            this.tabPageText.TabIndex = 1;
+            this.tabPageText.Text = "Text";
+            this.tabPageText.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel
+            // 
+            this.tableLayoutPanel.ColumnCount = 1;
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel.Controls.Add(this.inlineSearchControl, 0, 0);
+            this.tableLayoutPanel.Controls.Add(this.tabControl, 0, 1);
+            this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel.Name = "tableLayoutPanel";
+            this.tableLayoutPanel.RowCount = 2;
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel.Size = new System.Drawing.Size(1186, 755);
+            this.tableLayoutPanel.TabIndex = 8;
+            // 
             // BinaryDataEditorControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textEditorControl);
-            this.Controls.Add(this.hexEditorControl);
-            this.Controls.Add(this.radioButtonText);
-            this.Controls.Add(this.radioButtonHex);
-            this.Controls.Add(this.inlineSearchControl);
+            this.Controls.Add(this.tableLayoutPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "BinaryDataEditorControl";
-            this.Size = new System.Drawing.Size(791, 491);
+            this.Size = new System.Drawing.Size(1186, 755);
             this.Load += new System.EventHandler(this.BinaryDataEditorControl_Load);
+            this.tabControl.ResumeLayout(false);
+            this.tabPageHex.ResumeLayout(false);
+            this.tabPageText.ResumeLayout(false);
+            this.tableLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.RadioButton radioButtonHex;
-        private System.Windows.Forms.RadioButton radioButtonText;
         private HexEditorControl hexEditorControl;
         private InlineSearchControl inlineSearchControl;
         private NodeRichTextBox textEditorControl;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TabPage tabPageHex;
+        private System.Windows.Forms.TabPage tabPageText;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
     }
 }

@@ -21,7 +21,6 @@ using System.Text;
 using System.Windows.Forms;
 using CANAPE.Utils;
 using ICSharpCode.TextEditor.Document;
-using ICSharpCode.TextEditor;
 
 namespace CANAPE.Controls.NodeEditors
 {
@@ -98,14 +97,19 @@ namespace CANAPE.Controls.NodeEditors
         void _byteProv_Changed(object sender, EventArgs e)
         {
             OnDataChanged();
-        }        
+        }
+
+        private bool IsHexSelected()
+        {
+            return tabControl.SelectedTab == tabPageHex;
+        }
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public byte[] Data
         {
             get
             {
-                RebuildData(radioButtonHex.Checked);
+                RebuildData(IsHexSelected());
                 return _data;
             }
 
@@ -113,7 +117,7 @@ namespace CANAPE.Controls.NodeEditors
             {
                 _data = value;
                 // Reload the data into which ever is visible
-                LoadData(radioButtonHex.Checked);
+                LoadData(IsHexSelected());
             }
         }
 
@@ -156,11 +160,9 @@ namespace CANAPE.Controls.NodeEditors
         /// Switch view
         /// </summary>
         /// <param name="hex">Indicates what we are switch to, if true we are switch to hex view</param>
-        private void SwitchView(bool hex)
+        private void SwitchViewX(bool hex)
         {            
             RebuildData(!hex);
-            textEditorControl.Visible = !hex;
-            hexEditorControl.Visible = hex;
             LoadData(hex);
         }
 
@@ -172,22 +174,6 @@ namespace CANAPE.Controls.NodeEditors
             _data = new byte[0];
         }
 
-        private void radioButtonHex_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButtonHex.Checked)
-            {
-                SwitchView(true);
-            }
-        }
-
-        private void radioButtonText_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButtonText.Checked)
-            {
-                SwitchView(false);
-            }
-        }
-
         private void BinaryDataEditorControl_Load(object sender, EventArgs e)
         {
             LoadData(true);
@@ -197,7 +183,7 @@ namespace CANAPE.Controls.NodeEditors
         {
             bool found = false;
 
-            if (radioButtonHex.Checked)
+            if (IsHexSelected())
             {
                 byte[] data;
 
@@ -244,6 +230,16 @@ namespace CANAPE.Controls.NodeEditors
         private void inlineSearchControl_SearchPrev(object sender, InlineSearchControl.SearchEventArgs e)
         {
             DoFind(e, false);
+        }
+
+        private void tabControl_Deselected(object sender, TabControlEventArgs e)
+        {
+            RebuildData(e.TabPage == tabPageHex);
+        }
+
+        private void tabControl_Selected(object sender, TabControlEventArgs e)
+        {
+            LoadData(e.TabPage == tabPageHex);
         }
     }
 }
