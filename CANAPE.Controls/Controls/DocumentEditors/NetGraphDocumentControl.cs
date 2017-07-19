@@ -785,16 +785,6 @@ namespace CANAPE.Controls.DocumentEditors
             }
         }
 
-        private void toolStripButtonZoomIn_Click(object sender, EventArgs e)
-        {
-            netEditor.Zoom = netEditor.Zoom + 0.15f;
-        }
-
-        private void toolStripButtonZoomOut_Click(object sender, EventArgs e)
-        {
-            netEditor.Zoom = netEditor.Zoom - 0.15f;
-        }
-
         private static DataFrameFilterFactory GetFilterForValue(DataValue value)
         {
             SetDataFrameFilterFactory ret;

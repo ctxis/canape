@@ -136,7 +136,7 @@ namespace CANAPE.Controls.GraphEditor
             GraphicsPath path = GetPath();
 
             try
-            {                
+            {
                 if (!selected)
                 {
                     p = new Pen(LineColor);
