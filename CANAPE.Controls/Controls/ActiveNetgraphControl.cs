@@ -229,34 +229,7 @@ namespace CANAPE.Controls
                 SetupGraph((NetGraph)comboBoxNetGraph.SelectedItem);
             }
         }
-
-        private void comboBoxView_SelectedIndexChanged(object sender, EventArgs e)
-        {            
-            switch (comboBoxView.SelectedIndex)
-            {
-                case 0:
-                    listViewNetGraph.Visible = true;
-                    metaEditorControl.Visible = false;
-                    propertyBagViewerControl.Visible = false;
-                    break;
-                case 1:
-                    listViewNetGraph.Visible = false;
-                    metaEditorControl.Visible = true;
-                    propertyBagViewerControl.Visible = false;
-                    break;
-                case 2:
-                    listViewNetGraph.Visible = false;
-                    metaEditorControl.Visible = false;
-                    propertyBagViewerControl.Visible = true;
-                    break;
-            }
-        }
-
-        private void ActiveNetgraphControl_Load(object sender, EventArgs e)
-        {
-            comboBoxView.SelectedIndex = 0;
-        }
-
+        
         private void shutdownNodeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (listViewNetGraph.SelectedItems.Count > 0)

@@ -47,7 +47,6 @@ namespace CANAPE.Controls
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActiveNetgraphControl));
-            System.Windows.Forms.Label label2;
             System.Windows.Forms.ColumnHeader columnHeaderName;
             System.Windows.Forms.ColumnHeader columnHeaderEnabled;
             System.Windows.Forms.ColumnHeader columnHeaderShutdown;
@@ -60,33 +59,34 @@ namespace CANAPE.Controls
             this.toggleEnableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shutdownNodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBoxShowHidden = new System.Windows.Forms.CheckBox();
-            this.comboBoxView = new System.Windows.Forms.ComboBox();
             this.listViewNetGraph = new CANAPE.Controls.ListViewExtension();
             this.columnHeaderBytes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metaEditorControl = new CANAPE.Controls.MetaEditorControl();
             this.propertyBagViewerControl = new CANAPE.Controls.PropertyBagViewerControl();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabPageGraph = new System.Windows.Forms.TabPage();
+            this.tabPageMeta = new System.Windows.Forms.TabPage();
+            this.tabPageProperties = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             label1 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
             columnHeaderName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             columnHeaderEnabled = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             columnHeaderShutdown = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             columnHeaderInput = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             columnHeaderOutput = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip.SuspendLayout();
+            this.tabControl.SuspendLayout();
+            this.tabPageGraph.SuspendLayout();
+            this.tabPageMeta.SuspendLayout();
+            this.tabPageProperties.SuspendLayout();
+            this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             resources.ApplyResources(label1, "label1");
             label1.Name = "label1";
-            this.toolTip.SetToolTip(label1, resources.GetString("label1.ToolTip"));
-            // 
-            // label2
-            // 
-            resources.ApplyResources(label2, "label2");
-            label2.Name = "label2";
-            this.toolTip.SetToolTip(label2, resources.GetString("label2.ToolTip"));
             // 
             // columnHeaderName
             // 
@@ -126,31 +126,31 @@ namespace CANAPE.Controls
             // 
             // contextMenuStrip
             // 
-            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
+            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pastePacketsToolStripMenuItem,
             this.toggleEnableToolStripMenuItem,
             this.shutdownNodeToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.toolTip.SetToolTip(this.contextMenuStrip, resources.GetString("contextMenuStrip.ToolTip"));
+            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // pastePacketsToolStripMenuItem
             // 
-            resources.ApplyResources(this.pastePacketsToolStripMenuItem, "pastePacketsToolStripMenuItem");
             this.pastePacketsToolStripMenuItem.Name = "pastePacketsToolStripMenuItem";
+            resources.ApplyResources(this.pastePacketsToolStripMenuItem, "pastePacketsToolStripMenuItem");
             this.pastePacketsToolStripMenuItem.Click += new System.EventHandler(this.pastePacketsToolStripMenuItem_Click);
             // 
             // toggleEnableToolStripMenuItem
             // 
-            resources.ApplyResources(this.toggleEnableToolStripMenuItem, "toggleEnableToolStripMenuItem");
             this.toggleEnableToolStripMenuItem.Name = "toggleEnableToolStripMenuItem";
+            resources.ApplyResources(this.toggleEnableToolStripMenuItem, "toggleEnableToolStripMenuItem");
             this.toggleEnableToolStripMenuItem.Click += new System.EventHandler(this.toggleEnableToolStripMenuItem_Click);
             // 
             // shutdownNodeToolStripMenuItem
             // 
-            resources.ApplyResources(this.shutdownNodeToolStripMenuItem, "shutdownNodeToolStripMenuItem");
             this.shutdownNodeToolStripMenuItem.Name = "shutdownNodeToolStripMenuItem";
+            resources.ApplyResources(this.shutdownNodeToolStripMenuItem, "shutdownNodeToolStripMenuItem");
             this.shutdownNodeToolStripMenuItem.Click += new System.EventHandler(this.shutdownNodeToolStripMenuItem_Click);
             // 
             // checkBoxShowHidden
@@ -161,22 +161,8 @@ namespace CANAPE.Controls
             this.checkBoxShowHidden.UseVisualStyleBackColor = true;
             this.checkBoxShowHidden.CheckedChanged += new System.EventHandler(this.checkBoxShowHidden_CheckedChanged);
             // 
-            // comboBoxView
-            // 
-            resources.ApplyResources(this.comboBoxView, "comboBoxView");
-            this.comboBoxView.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxView.FormattingEnabled = true;
-            this.comboBoxView.Items.AddRange(new object[] {
-            resources.GetString("comboBoxView.Items"),
-            resources.GetString("comboBoxView.Items1"),
-            resources.GetString("comboBoxView.Items2")});
-            this.comboBoxView.Name = "comboBoxView";
-            this.toolTip.SetToolTip(this.comboBoxView, resources.GetString("comboBoxView.ToolTip"));
-            this.comboBoxView.SelectedIndexChanged += new System.EventHandler(this.comboBoxView_SelectedIndexChanged);
-            // 
             // listViewNetGraph
             // 
-            resources.ApplyResources(this.listViewNetGraph, "listViewNetGraph");
             this.listViewNetGraph.AutoScrollList = false;
             this.listViewNetGraph.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             columnHeaderName,
@@ -186,10 +172,10 @@ namespace CANAPE.Controls
             columnHeaderOutput,
             this.columnHeaderBytes});
             this.listViewNetGraph.ContextMenuStrip = this.contextMenuStrip;
+            resources.ApplyResources(this.listViewNetGraph, "listViewNetGraph");
             this.listViewNetGraph.FullRowSelect = true;
             this.listViewNetGraph.MultiSelect = false;
             this.listViewNetGraph.Name = "listViewNetGraph";
-            this.toolTip.SetToolTip(this.listViewNetGraph, resources.GetString("listViewNetGraph.ToolTip"));
             this.listViewNetGraph.UseCompatibleStateImageBehavior = false;
             this.listViewNetGraph.View = System.Windows.Forms.View.Details;
             // 
@@ -201,32 +187,66 @@ namespace CANAPE.Controls
             // 
             resources.ApplyResources(this.metaEditorControl, "metaEditorControl");
             this.metaEditorControl.Name = "metaEditorControl";
-            this.toolTip.SetToolTip(this.metaEditorControl, resources.GetString("metaEditorControl.ToolTip"));
             // 
             // propertyBagViewerControl
             // 
             resources.ApplyResources(this.propertyBagViewerControl, "propertyBagViewerControl");
             this.propertyBagViewerControl.Name = "propertyBagViewerControl";
-            this.toolTip.SetToolTip(this.propertyBagViewerControl, resources.GetString("propertyBagViewerControl.ToolTip"));
+            // 
+            // tabControl
+            // 
+            this.tableLayoutPanel.SetColumnSpan(this.tabControl, 3);
+            this.tabControl.Controls.Add(this.tabPageGraph);
+            this.tabControl.Controls.Add(this.tabPageMeta);
+            this.tabControl.Controls.Add(this.tabPageProperties);
+            resources.ApplyResources(this.tabControl, "tabControl");
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            // 
+            // tabPageGraph
+            // 
+            this.tabPageGraph.Controls.Add(this.listViewNetGraph);
+            resources.ApplyResources(this.tabPageGraph, "tabPageGraph");
+            this.tabPageGraph.Name = "tabPageGraph";
+            this.tabPageGraph.UseVisualStyleBackColor = true;
+            // 
+            // tabPageMeta
+            // 
+            this.tabPageMeta.Controls.Add(this.metaEditorControl);
+            resources.ApplyResources(this.tabPageMeta, "tabPageMeta");
+            this.tabPageMeta.Name = "tabPageMeta";
+            this.tabPageMeta.UseVisualStyleBackColor = true;
+            // 
+            // tabPageProperties
+            // 
+            this.tabPageProperties.Controls.Add(this.propertyBagViewerControl);
+            resources.ApplyResources(this.tabPageProperties, "tabPageProperties");
+            this.tabPageProperties.Name = "tabPageProperties";
+            this.tabPageProperties.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel
+            // 
+            resources.ApplyResources(this.tableLayoutPanel, "tableLayoutPanel");
+            this.tableLayoutPanel.Controls.Add(label1, 0, 0);
+            this.tableLayoutPanel.Controls.Add(this.tabControl, 0, 1);
+            this.tableLayoutPanel.Controls.Add(this.comboBoxNetGraph, 1, 0);
+            this.tableLayoutPanel.Controls.Add(this.checkBoxShowHidden, 2, 0);
+            this.tableLayoutPanel.Name = "tableLayoutPanel";
             // 
             // ActiveNetgraphControl
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(label2);
-            this.Controls.Add(this.comboBoxView);
-            this.Controls.Add(this.propertyBagViewerControl);
-            this.Controls.Add(this.checkBoxShowHidden);
-            this.Controls.Add(label1);
-            this.Controls.Add(this.listViewNetGraph);
-            this.Controls.Add(this.comboBoxNetGraph);
-            this.Controls.Add(this.metaEditorControl);
+            this.Controls.Add(this.tableLayoutPanel);
             this.Name = "ActiveNetgraphControl";
-            this.toolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
-            this.Load += new System.EventHandler(this.ActiveNetgraphControl_Load);
             this.contextMenuStrip.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
+            this.tabPageGraph.ResumeLayout(false);
+            this.tabPageMeta.ResumeLayout(false);
+            this.tabPageProperties.ResumeLayout(false);
+            this.tableLayoutPanel.ResumeLayout(false);
+            this.tableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -241,9 +261,13 @@ namespace CANAPE.Controls
         private System.Windows.Forms.ToolStripMenuItem toggleEnableToolStripMenuItem;
         private MetaEditorControl metaEditorControl;
         private System.Windows.Forms.CheckBox checkBoxShowHidden;
-        private System.Windows.Forms.ComboBox comboBoxView;
         private PropertyBagViewerControl propertyBagViewerControl;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem shutdownNodeToolStripMenuItem;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
+        private System.Windows.Forms.TabPage tabPageGraph;
+        private System.Windows.Forms.TabPage tabPageMeta;
+        private System.Windows.Forms.TabPage tabPageProperties;
     }
 }
