@@ -20,6 +20,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using System.Linq;
 
 namespace CANAPE.Controls.GraphEditor
 {
@@ -185,7 +186,7 @@ namespace CANAPE.Controls.GraphEditor
                 }
             }
         }
-
+        
         /// <summary>
         /// Get or set the graph data
         /// </summary>
@@ -199,7 +200,7 @@ namespace CANAPE.Controls.GraphEditor
 
                 lock (_graphLock)
                 {
-                    ret = new GraphData(_nodes.ToArray(), _lines.ToArray());
+                    ret = new GraphData(_nodes.Select(n => n.CloneAndScale(_xscale, _yscale)).ToArray(), _lines.ToArray());
                 }
 
                 return ret;
@@ -305,6 +306,7 @@ namespace CANAPE.Controls.GraphEditor
         /// Add a pre configured node to the graph
         /// </summary>
         /// <param name="p">The point location of the centre (in client co-ordinates)</param>
+        /// <param name="abs_pos">Whether the point is in screen co-ordinates or not.</param>
         /// <param name="z">The z level of the node</param>        
         /// <param name="id">The ID of the node</param>
         /// <param name="name">The text for the node</param>
@@ -319,10 +321,10 @@ namespace CANAPE.Controls.GraphEditor
         /// <param name="tag">A opaque object to store in the node</param>
         /// <exception cref="System.ArgumentException">Throw if node shape is unknown</exception>
         /// <returns>The created node</returns>
-        public GraphNode AddNode(PointF p, float z, Guid id, string name, GraphNodeShape shape, float width, float height, 
+        public GraphNode AddNode(PointF p, bool abs_pos, float z, Guid id, string name, GraphNodeShape shape, float width, float height, 
             Color backColor, Color lineColor, Color selectedLineColor, Color textColor, Color hatchedColor, object tag)
         {
-            return AddNodeInternal(ClientToDocumentPoint(p), z, id, name, shape, width, height, 
+            return AddNodeInternal(ClientToDocumentPoint(p), abs_pos, z, id, name, shape, width, height, 
                 backColor, lineColor, selectedLineColor, textColor, hatchedColor, tag);
         }
 
@@ -554,12 +556,15 @@ namespace CANAPE.Controls.GraphEditor
             return new PointF(cp.X + _scrollPosition.X, cp.Y + _scrollPosition.Y);
         }
 
-        private RectangleF CreateBoundary(PointF p, float width, float height)
+        private RectangleF CreateBoundary(PointF p, bool abs_pos, float width, float height)
         {
             width *= _xscale;
             height *= _yscale;
-            p.X *= _xscale;
-            p.Y *= _yscale;
+            if (!abs_pos)
+            {
+                p.X *= _xscale;
+                p.Y *= _yscale;
+            }
 
             return new RectangleF(p.X - (width / 2.0f), p.Y - (height / 2.0f), width, height);
         }
@@ -602,6 +607,7 @@ namespace CANAPE.Controls.GraphEditor
         /// Add a pre configured node to the graph
         /// </summary>
         /// <param name="p">The point location of the centre (in document co-ordinates)</param>
+        /// <param name="abs_pos">Whether the position is absolute or unscaled</param>
         /// <param name="z">The z level of the node</param>        
         /// <param name="id">The ID of the node</param>
         /// <param name="name">The text for the node</param>
@@ -616,7 +622,7 @@ namespace CANAPE.Controls.GraphEditor
         /// <param name="tag">A opaque object to store in the node</param>
         /// <exception cref="System.ArgumentException">Throw if node shape is unknown</exception>
         /// <returns>The created node</returns>
-        private GraphNode AddNodeInternal(PointF p, float z, Guid id, string name, GraphNodeShape shape, float width, float height,
+        private GraphNode AddNodeInternal(PointF p, bool abs_pos, float z, Guid id, string name, GraphNodeShape shape, float width, float height,
             Color backColor, Color lineColor, Color selectedLineColor, Color textColor, Color hatchedColor, object tag)
         {
             GraphNode s;            
@@ -624,23 +630,23 @@ namespace CANAPE.Controls.GraphEditor
             switch (shape)
             {
                 case GraphNodeShape.Ellipse:
-                    s = new GraphNodeCircle(id, CreateBoundary(p, width, height),
+                    s = new GraphNodeCircle(id, CreateBoundary(p, abs_pos, width, height),
                         z, backColor, lineColor, selectedLineColor, textColor, hatchedColor);
                     break;
                 case GraphNodeShape.Rectangle:
-                    s = new GraphNodeRectangle(id, CreateBoundary(p, width, height),
+                    s = new GraphNodeRectangle(id, CreateBoundary(p, abs_pos, width, height),
                         z, backColor, lineColor, selectedLineColor, textColor, hatchedColor);
                     break;
                 case GraphNodeShape.RoundedRectangle:
-                    s = new GraphNodeRoundedRectangle(id, CreateBoundary(p, width, height),
+                    s = new GraphNodeRoundedRectangle(id, CreateBoundary(p, abs_pos, width, height),
                         z, backColor, lineColor, selectedLineColor, textColor, hatchedColor);
                     break;
                 case GraphNodeShape.Triangle:
-                    s = new GraphNodeTriangle(id, CreateBoundary(p, width, height),
+                    s = new GraphNodeTriangle(id, CreateBoundary(p, abs_pos, width, height),
                         z, backColor, lineColor, selectedLineColor, textColor, hatchedColor);
                     break;
                 case GraphNodeShape.Rhombus:
-                    s = new GraphNodeRhombus(id, CreateBoundary(p, width, height),
+                    s = new GraphNodeRhombus(id, CreateBoundary(p, abs_pos, width, height),
                         z, backColor, lineColor, selectedLineColor, textColor, hatchedColor);
                     break;
                 default:
