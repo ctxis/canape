@@ -60,21 +60,21 @@ namespace CANAPE.Controls
             this.textBoxPath = new System.Windows.Forms.TextBox();
             this.packetLogControl = new CANAPE.Controls.PacketLogControl();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             labelValue = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelValue
             // 
             resources.ApplyResources(labelValue, "labelValue");
             labelValue.Name = "labelValue";
-            this.toolTip.SetToolTip(labelValue, resources.GetString("labelValue.ToolTip"));
             // 
             // label2
             // 
             resources.ApplyResources(label2, "label2");
             label2.Name = "label2";
-            this.toolTip.SetToolTip(label2, resources.GetString("label2.ToolTip"));
             // 
             // btnFind
             // 
@@ -86,9 +86,9 @@ namespace CANAPE.Controls
             // 
             // progressBar
             // 
+            this.tableLayoutPanel.SetColumnSpan(this.progressBar, 2);
             resources.ApplyResources(this.progressBar, "progressBar");
             this.progressBar.Name = "progressBar";
-            this.toolTip.SetToolTip(this.progressBar, resources.GetString("progressBar.ToolTip"));
             // 
             // backgroundWorker
             // 
@@ -100,6 +100,7 @@ namespace CANAPE.Controls
             // 
             // textBoxValue
             // 
+            this.tableLayoutPanel.SetColumnSpan(this.textBoxValue, 2);
             resources.ApplyResources(this.textBoxValue, "textBoxValue");
             this.textBoxValue.Name = "textBoxValue";
             this.toolTip.SetToolTip(this.textBoxValue, resources.GetString("textBoxValue.ToolTip"));
@@ -117,7 +118,6 @@ namespace CANAPE.Controls
             // 
             resources.ApplyResources(this.labelMode, "labelMode");
             this.labelMode.Name = "labelMode";
-            this.toolTip.SetToolTip(this.labelMode, resources.GetString("labelMode.ToolTip"));
             // 
             // checkBoxCaseSensitive
             // 
@@ -128,6 +128,7 @@ namespace CANAPE.Controls
             // 
             // comboBoxEncoding
             // 
+            this.tableLayoutPanel.SetColumnSpan(this.comboBoxEncoding, 2);
             resources.ApplyResources(this.comboBoxEncoding, "comboBoxEncoding");
             this.comboBoxEncoding.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEncoding.FormattingEnabled = true;
@@ -138,10 +139,10 @@ namespace CANAPE.Controls
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.toolTip.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // textBoxPath
             // 
+            this.tableLayoutPanel.SetColumnSpan(this.textBoxPath, 2);
             resources.ApplyResources(this.textBoxPath, "textBoxPath");
             this.textBoxPath.Name = "textBoxPath";
             this.toolTip.SetToolTip(this.textBoxPath, resources.GetString("textBoxPath.ToolTip"));
@@ -149,31 +150,37 @@ namespace CANAPE.Controls
             // packetLogControl
             // 
             resources.ApplyResources(this.packetLogControl, "packetLogControl");
+            this.tableLayoutPanel.SetColumnSpan(this.packetLogControl, 3);
             this.packetLogControl.IsInFindForm = true;
             this.packetLogControl.LogName = null;
             this.packetLogControl.Name = "packetLogControl";
             this.packetLogControl.ReadOnly = false;
-            this.toolTip.SetToolTip(this.packetLogControl, resources.GetString("packetLogControl.ToolTip"));
             // 
-            // FindDataFrameForm
-            //             
-            resources.ApplyResources(this, "$this");            
-            this.Controls.Add(this.textBoxPath);
-            this.Controls.Add(label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBoxEncoding);
-            this.Controls.Add(this.checkBoxCaseSensitive);
-            this.Controls.Add(this.labelMode);
-            this.Controls.Add(this.comboBoxMode);
-            this.Controls.Add(this.textBoxValue);
-            this.Controls.Add(labelValue);
-            this.Controls.Add(this.progressBar);
-            this.Controls.Add(this.btnFind);
-            this.Controls.Add(this.packetLogControl);
-            this.Name = "FindDataFrameForm";
-            this.toolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));            
+            // tableLayoutPanel
+            // 
+            resources.ApplyResources(this.tableLayoutPanel, "tableLayoutPanel");
+            this.tableLayoutPanel.Controls.Add(labelValue, 0, 0);
+            this.tableLayoutPanel.Controls.Add(this.packetLogControl, 0, 5);
+            this.tableLayoutPanel.Controls.Add(this.progressBar, 0, 4);
+            this.tableLayoutPanel.Controls.Add(this.comboBoxEncoding, 1, 3);
+            this.tableLayoutPanel.Controls.Add(this.label1, 0, 3);
+            this.tableLayoutPanel.Controls.Add(this.textBoxPath, 1, 1);
+            this.tableLayoutPanel.Controls.Add(this.textBoxValue, 1, 0);
+            this.tableLayoutPanel.Controls.Add(label2, 0, 1);
+            this.tableLayoutPanel.Controls.Add(this.comboBoxMode, 1, 2);
+            this.tableLayoutPanel.Controls.Add(this.labelMode, 0, 2);
+            this.tableLayoutPanel.Controls.Add(this.btnFind, 2, 4);
+            this.tableLayoutPanel.Controls.Add(this.checkBoxCaseSensitive, 2, 2);
+            this.tableLayoutPanel.Name = "tableLayoutPanel";
+            // 
+            // FindDataFrameControl
+            // 
+            this.Controls.Add(this.tableLayoutPanel);
+            this.Name = "FindDataFrameControl";
+            resources.ApplyResources(this, "$this");
+            this.tableLayoutPanel.ResumeLayout(false);
+            this.tableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -191,5 +198,6 @@ namespace CANAPE.Controls
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxPath;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
     }
 }
