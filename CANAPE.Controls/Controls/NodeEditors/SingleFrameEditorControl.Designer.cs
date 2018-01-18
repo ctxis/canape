@@ -47,21 +47,22 @@ namespace CANAPE.Controls.NodeEditors
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SingleFrameEditorControl));
             this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripButtonSnapshot = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCopyFrame = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPasteFrame = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonConvertToBytes = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonLoadFromFile = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonUndo = new System.Windows.Forms.ToolStripButton();
             this.frameEditorControl = new CANAPE.Controls.NodeEditors.FrameEditorControl();
             this.timerUpdatePaste = new System.Windows.Forms.Timer(this.components);
-            this.toolStripButtonLoadFromFile = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonSnapshot = new System.Windows.Forms.ToolStripButton();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip
             // 
             this.toolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonSnapshot,
             this.toolStripButtonCopyFrame,
@@ -72,10 +73,22 @@ namespace CANAPE.Controls.NodeEditors
             this.toolStripButtonUndo});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
+            this.toolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip.Size = new System.Drawing.Size(832, 25);
+            this.toolStrip.Size = new System.Drawing.Size(1248, 31);
             this.toolStrip.TabIndex = 0;
             this.toolStrip.Text = "Tool Strip";
+            // 
+            // toolStripButtonSnapshot
+            // 
+            this.toolStripButtonSnapshot.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonSnapshot.Enabled = false;
+            this.toolStripButtonSnapshot.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonSnapshot.Image")));
+            this.toolStripButtonSnapshot.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonSnapshot.Name = "toolStripButtonSnapshot";
+            this.toolStripButtonSnapshot.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButtonSnapshot.Text = "Snapshot Packet";
+            this.toolStripButtonSnapshot.Click += new System.EventHandler(this.toolStripButtonSnapshot_Click);
             // 
             // toolStripButtonCopyFrame
             // 
@@ -83,7 +96,7 @@ namespace CANAPE.Controls.NodeEditors
             this.toolStripButtonCopyFrame.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCopyFrame.Image")));
             this.toolStripButtonCopyFrame.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonCopyFrame.Name = "toolStripButtonCopyFrame";
-            this.toolStripButtonCopyFrame.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonCopyFrame.Size = new System.Drawing.Size(28, 28);
             this.toolStripButtonCopyFrame.Text = "Copy Frame";
             this.toolStripButtonCopyFrame.Click += new System.EventHandler(this.toolStripButtonCopyFrame_Click);
             // 
@@ -94,7 +107,7 @@ namespace CANAPE.Controls.NodeEditors
             this.toolStripButtonPasteFrame.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonPasteFrame.Image")));
             this.toolStripButtonPasteFrame.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonPasteFrame.Name = "toolStripButtonPasteFrame";
-            this.toolStripButtonPasteFrame.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonPasteFrame.Size = new System.Drawing.Size(28, 28);
             this.toolStripButtonPasteFrame.Text = "Paste Frame";
             this.toolStripButtonPasteFrame.Click += new System.EventHandler(this.toolStripButtonPasteFrame_Click);
             // 
@@ -105,14 +118,24 @@ namespace CANAPE.Controls.NodeEditors
             this.toolStripButtonConvertToBytes.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonConvertToBytes.Image")));
             this.toolStripButtonConvertToBytes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonConvertToBytes.Name = "toolStripButtonConvertToBytes";
-            this.toolStripButtonConvertToBytes.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonConvertToBytes.Size = new System.Drawing.Size(28, 28);
             this.toolStripButtonConvertToBytes.Text = "Convert to Bytes";
             this.toolStripButtonConvertToBytes.Click += new System.EventHandler(this.toolStripButtonConvertToBytes_Click);
+            // 
+            // toolStripButtonLoadFromFile
+            // 
+            this.toolStripButtonLoadFromFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonLoadFromFile.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonLoadFromFile.Image")));
+            this.toolStripButtonLoadFromFile.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonLoadFromFile.Name = "toolStripButtonLoadFromFile";
+            this.toolStripButtonLoadFromFile.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButtonLoadFromFile.Text = "Load From File";
+            this.toolStripButtonLoadFromFile.Click += new System.EventHandler(this.toolStripButtonLoadFromFile_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripButtonUndo
             // 
@@ -121,19 +144,18 @@ namespace CANAPE.Controls.NodeEditors
             this.toolStripButtonUndo.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonUndo.Image")));
             this.toolStripButtonUndo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonUndo.Name = "toolStripButtonUndo";
-            this.toolStripButtonUndo.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonUndo.Size = new System.Drawing.Size(28, 28);
             this.toolStripButtonUndo.Text = "Undo";
             this.toolStripButtonUndo.Click += new System.EventHandler(this.toolStripButtonUndo_Click);
             // 
             // frameEditorControl
             // 
-            this.frameEditorControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.frameEditorControl.Location = new System.Drawing.Point(3, 28);
+            this.frameEditorControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.frameEditorControl.Location = new System.Drawing.Point(0, 31);
+            this.frameEditorControl.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.frameEditorControl.Name = "frameEditorControl";
             this.frameEditorControl.ReadOnly = false;
-            this.frameEditorControl.Size = new System.Drawing.Size(826, 450);
+            this.frameEditorControl.Size = new System.Drawing.Size(1248, 709);
             this.frameEditorControl.TabIndex = 1;
             // 
             // timerUpdatePaste
@@ -141,35 +163,15 @@ namespace CANAPE.Controls.NodeEditors
             this.timerUpdatePaste.Interval = 1000;
             this.timerUpdatePaste.Tick += new System.EventHandler(this.timerUpdatePaste_Tick);
             // 
-            // toolStripButtonLoadFromFile
-            // 
-            this.toolStripButtonLoadFromFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonLoadFromFile.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonLoadFromFile.Image")));
-            this.toolStripButtonLoadFromFile.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonLoadFromFile.Name = "toolStripButtonLoadFromFile";
-            this.toolStripButtonLoadFromFile.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonLoadFromFile.Text = "Load From File";
-            this.toolStripButtonLoadFromFile.Click += new System.EventHandler(this.toolStripButtonLoadFromFile_Click);
-            // 
-            // toolStripButtonSnapshot
-            // 
-            this.toolStripButtonSnapshot.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonSnapshot.Enabled = false;
-            this.toolStripButtonSnapshot.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonSnapshot.Image")));
-            this.toolStripButtonSnapshot.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonSnapshot.Name = "toolStripButtonSnapshot";
-            this.toolStripButtonSnapshot.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonSnapshot.Text = "Snapshot Packet";
-            this.toolStripButtonSnapshot.Click += new System.EventHandler(this.toolStripButtonSnapshot_Click);
-            // 
             // SingleFrameEditorControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.frameEditorControl);
             this.Controls.Add(this.toolStrip);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SingleFrameEditorControl";
-            this.Size = new System.Drawing.Size(832, 481);
+            this.Size = new System.Drawing.Size(1248, 740);
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
             this.ResumeLayout(false);

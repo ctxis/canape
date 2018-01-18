@@ -253,11 +253,11 @@ namespace CANAPE.Controls.DocumentEditors
         /// <param name="config">The node entry</param>
         /// <param name="p">The point to set</param>
         /// <param name="z">The z co-ordinate</param>
-        private GraphNode AddNode(BaseNodeConfig config, PointF p, float z)
+        private GraphNode AddNode(BaseNodeConfig config, PointF p, bool abs_pos, float z)
         {
             GraphNodeTemplate template = _templates[config.GetNodeName()];
 
-            GraphNode n = netEditor.AddNode(p, z, config.Id, config.Label, template.Shape,
+            GraphNode n = netEditor.AddNode(p, abs_pos, z, config.Id, config.Label, template.Shape,
                         template.Width, template.Height, template.BackColor, template.LineColor, template.SelectedLineColor,
                         template.TextColor, template.HatchedColor, config);
             
@@ -317,13 +317,13 @@ namespace CANAPE.Controls.DocumentEditors
                     config.Label = template.GetNewName();
                 }
 
-                GraphNode n = AddNode(config, _currMousePos, 0.0f);
+                GraphNode n = AddNode(config, _currMousePos, true, 0.0f);
                 
                 if (config is MasterLayerNodeConfig)
                 {                    
                     MasterLayerNodeConfig masterConfig = config as MasterLayerNodeConfig;
                     masterConfig.Slave.Label = config.Label + "-Slave";
-                    AddLinkLine(n, AddNode(masterConfig.Slave, new PointF(_currMousePos.X + 75.0f, _currMousePos.Y), 0.0f));
+                    AddLinkLine(n, AddNode(masterConfig.Slave, new PointF(_currMousePos.X + 75.0f, _currMousePos.Y), true, 0.0f));
                 }
 
                 netEditor.SelectedObject = n;
@@ -348,7 +348,7 @@ namespace CANAPE.Controls.DocumentEditors
 
             foreach(var n in _document.Nodes)
             {
-                idToNode[n.Id] = AddNode(n, new PointF(n.X, n.Y), n.Z);
+                idToNode[n.Id] = AddNode(n, new PointF(n.X, n.Y), false, n.Z);
                 ILinkedNodeConfig linkedConfig = n as ILinkedNodeConfig;
 
                 if ((linkedConfig != null) && (linkedConfig.LinkedNode != null))
@@ -548,12 +548,12 @@ namespace CANAPE.Controls.DocumentEditors
                     {
                         // Create a new ID
                         config.Id = Guid.NewGuid();
-                        GraphNode n = AddNode(config, _currMousePos, 0.0f);
+                        GraphNode n = AddNode(config, _currMousePos, true, 0.0f);
 
                         if (config is MasterLayerNodeConfig)
                         {
                             MasterLayerNodeConfig masterConfig = config as MasterLayerNodeConfig;
-                            AddLinkLine(n, AddNode(masterConfig.Slave, new PointF(_currMousePos.X + 50.0f, _currMousePos.Y + 50.0f), 0.0f));
+                            AddLinkLine(n, AddNode(masterConfig.Slave, new PointF(_currMousePos.X + 50.0f, _currMousePos.Y + 50.0f), true, 0.0f));
                         }
                     }
                 }
@@ -783,16 +783,6 @@ namespace CANAPE.Controls.DocumentEditors
                     }
                 }
             }
-        }
-
-        private void toolStripButtonZoomIn_Click(object sender, EventArgs e)
-        {
-            netEditor.Zoom = netEditor.Zoom + 0.15f;
-        }
-
-        private void toolStripButtonZoomOut_Click(object sender, EventArgs e)
-        {
-            netEditor.Zoom = netEditor.Zoom - 0.15f;
         }
 
         private static DataFrameFilterFactory GetFilterForValue(DataValue value)

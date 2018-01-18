@@ -126,10 +126,14 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 13</value>
+    <value>4, 0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
+    <value>50, 20</value>
   </data>
   <data name="lblInput.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -144,50 +148,67 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblInput.Parent" xml:space="preserve">
-    <value>splitContainer.Panel1</value>
+    <value>tableLayoutPanelInput</value>
   </data>
   <data name="&gt;&gt;lblInput.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="splitContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="splitContainer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>4, 5</value>
+  </data>
+  <data name="splitContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="splitContainer.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="logPacketControlInput.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="logPacketControlInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 32</value>
-  </data>
-  <data name="logPacketControlInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>768, 179</value>
-  </data>
-  <data name="logPacketControlInput.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="logPacketControlInput.ToolTip" xml:space="preserve">
-    <value>Copy packets to this log to send them for test</value>
+  <data name="tableLayoutPanelInput.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;logPacketControlInput.Name" xml:space="preserve">
     <value>logPacketControlInput</value>
   </data>
   <data name="&gt;&gt;logPacketControlInput.Type" xml:space="preserve">
-    <value>CANAPE.Controls.PacketLogControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+    <value>CANAPE.Controls.PacketLogControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67951cd6aa8a0ad9</value>
   </data>
   <data name="&gt;&gt;logPacketControlInput.Parent" xml:space="preserve">
-    <value>splitContainer.Panel1</value>
+    <value>tableLayoutPanelInput</value>
   </data>
   <data name="&gt;&gt;logPacketControlInput.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="tableLayoutPanelInput.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanelInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanelInput.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanelInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1170, 332</value>
+  </data>
+  <data name="tableLayoutPanelInput.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelInput.Name" xml:space="preserve">
+    <value>tableLayoutPanelInput</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelInput.Parent" xml:space="preserve">
+    <value>splitContainer.Panel1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelInput.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanelInput.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="lblInput" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="logPacketControlInput" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="&gt;&gt;splitContainer.Panel1.Name" xml:space="preserve">
     <value>splitContainer.Panel1</value>
@@ -201,14 +222,20 @@
   <data name="&gt;&gt;splitContainer.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="tableLayoutPanelOutput.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
+    <value>4, 0</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 13</value>
+    <value>62, 20</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -223,19 +250,22 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>splitContainer.Panel2</value>
+    <value>tableLayoutPanelOutput</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="logPacketControlOutput.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="logPacketControlOutput.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="logPacketControlOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
+    <value>6, 28</value>
+  </data>
+  <data name="logPacketControlOutput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
   <data name="logPacketControlOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>768, 193</value>
+    <value>1158, 294</value>
   </data>
   <data name="logPacketControlOutput.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -250,13 +280,43 @@
     <value>logPacketControlOutput</value>
   </data>
   <data name="&gt;&gt;logPacketControlOutput.Type" xml:space="preserve">
-    <value>CANAPE.Controls.PacketLogControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+    <value>CANAPE.Controls.PacketLogControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67951cd6aa8a0ad9</value>
   </data>
   <data name="&gt;&gt;logPacketControlOutput.Parent" xml:space="preserve">
-    <value>splitContainer.Panel2</value>
+    <value>tableLayoutPanelOutput</value>
   </data>
   <data name="&gt;&gt;logPacketControlOutput.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="tableLayoutPanelOutput.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanelOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanelOutput.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanelOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1170, 330</value>
+  </data>
+  <data name="tableLayoutPanelOutput.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelOutput.Name" xml:space="preserve">
+    <value>tableLayoutPanelOutput</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelOutput.Parent" xml:space="preserve">
+    <value>splitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelOutput.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanelOutput.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="label2" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="logPacketControlOutput" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="&gt;&gt;splitContainer.Panel2.Name" xml:space="preserve">
     <value>splitContainer.Panel2</value>
@@ -271,10 +331,13 @@
     <value>1</value>
   </data>
   <data name="splitContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>777, 430</value>
+    <value>1170, 668</value>
   </data>
   <data name="splitContainer.SplitterDistance" type="System.Int32, mscorlib">
-    <value>214</value>
+    <value>332</value>
+  </data>
+  <data name="splitContainer.SplitterWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="splitContainer.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -291,14 +354,50 @@
   <data name="&gt;&gt;splitContainer.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="logPacketControlInput.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="logPacketControlInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 28</value>
+  </data>
+  <data name="logPacketControlInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
+  </data>
+  <data name="logPacketControlInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1158, 296</value>
+  </data>
+  <data name="logPacketControlInput.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="logPacketControlInput.ToolTip" xml:space="preserve">
+    <value>Copy packets to this log to send them for test</value>
+  </data>
+  <data name="&gt;&gt;logPacketControlInput.Name" xml:space="preserve">
+    <value>logPacketControlInput</value>
+  </data>
+  <data name="&gt;&gt;logPacketControlInput.Type" xml:space="preserve">
+    <value>CANAPE.Controls.PacketLogControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67951cd6aa8a0ad9</value>
+  </data>
+  <data name="&gt;&gt;logPacketControlInput.Parent" xml:space="preserve">
+    <value>tableLayoutPanelInput</value>
+  </data>
+  <data name="&gt;&gt;logPacketControlInput.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="tabPageTest.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 29</value>
+  </data>
+  <data name="tabPageTest.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="tabPageTest.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="tabPageTest.Size" type="System.Drawing.Size, System.Drawing">
-    <value>783, 436</value>
+    <value>1178, 678</value>
   </data>
   <data name="tabPageTest.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -322,7 +421,7 @@
     <value>eventLogControl</value>
   </data>
   <data name="&gt;&gt;eventLogControl.Type" xml:space="preserve">
-    <value>CANAPE.Controls.EventLogControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+    <value>CANAPE.Controls.EventLogControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67951cd6aa8a0ad9</value>
   </data>
   <data name="&gt;&gt;eventLogControl.Parent" xml:space="preserve">
     <value>tabPageLog</value>
@@ -331,13 +430,16 @@
     <value>0</value>
   </data>
   <data name="tabPageLog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 29</value>
+  </data>
+  <data name="tabPageLog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="tabPageLog.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="tabPageLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>783, 436</value>
+    <value>1178, 678</value>
   </data>
   <data name="tabPageLog.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -363,8 +465,11 @@
   <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="tabControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>791, 462</value>
+    <value>1186, 711</value>
   </data>
   <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -385,10 +490,13 @@
     <value>Fill</value>
   </data>
   <data name="eventLogControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>4, 5</value>
+  </data>
+  <data name="eventLogControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
   <data name="eventLogControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>777, 430</value>
+    <value>1170, 668</value>
   </data>
   <data name="eventLogControl.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -397,7 +505,7 @@
     <value>eventLogControl</value>
   </data>
   <data name="&gt;&gt;eventLogControl.Type" xml:space="preserve">
-    <value>CANAPE.Controls.EventLogControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0d5b25a3516745f0</value>
+    <value>CANAPE.Controls.EventLogControl, CANAPE.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67951cd6aa8a0ad9</value>
   </data>
   <data name="&gt;&gt;eventLogControl.Parent" xml:space="preserve">
     <value>tabPageLog</value>
@@ -409,10 +517,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>9, 20</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>791, 462</value>
+    <value>1186, 711</value>
   </data>
   <data name="&gt;&gt;toolTip.Name" xml:space="preserve">
     <value>toolTip</value>

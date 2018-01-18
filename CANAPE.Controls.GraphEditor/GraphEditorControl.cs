@@ -20,6 +20,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using System.Linq;
 
 namespace CANAPE.Controls.GraphEditor
 {
@@ -44,16 +45,14 @@ namespace CANAPE.Controls.GraphEditor
         private MouseButtons _heldButton;
         private DraggingMode _draggingMode;
         private PointF _lastDragPoint;
-        private PointF _scrollPosition;
-        private float _zoom;        
+        private PointF _scrollPosition;        
         private bool _dirty;
         private object _graphLock;
-        private bool _mouseZoom;        
+        private float _xscale;
+        private float _yscale;
 
         const int DEFAULT_DOCUMENT_WIDTH = 2048;
         const int DEFAULT_DOCUMENT_HEIGHT = 2048;
-        const float MAX_ZOOM = 2.0f;
-        const float MIN_ZOOM = 0.5f;
 
         #endregion
 
@@ -78,10 +77,7 @@ namespace CANAPE.Controls.GraphEditor
         /// </summary>
         protected virtual void OnSelectedObjectChanged()
         {
-            if (SelectedObjectChanged != null)
-            {
-                SelectedObjectChanged(this, new EventArgs());
-            }
+            SelectedObjectChanged?.Invoke(this, new EventArgs());
         }
 
         /// <summary>
@@ -89,10 +85,7 @@ namespace CANAPE.Controls.GraphEditor
         /// </summary>
         protected virtual void OnDirtyChanged()
         {
-            if (DirtyChanged != null)
-            {
-                DirtyChanged(this, new EventArgs());
-            }
+            DirtyChanged?.Invoke(this, new EventArgs());
         }
 
         /// <summary>
@@ -101,10 +94,7 @@ namespace CANAPE.Controls.GraphEditor
         /// <param name="node"></param>
         protected virtual void OnNodeDeleted(GraphNode node)
         {
-            if (NodeDeleted != null)
-            {
-                NodeDeleted(this, new NodeDeletedEventArgs(node));
-            }
+            NodeDeleted?.Invoke(this, new NodeDeletedEventArgs(node));
         }
 
         #endregion
@@ -122,11 +112,15 @@ namespace CANAPE.Controls.GraphEditor
             _lastDragPoint = new PointF();            
             _draggingMode = DraggingMode.None;
             _scrollPosition = new PointF();
-            _dirty = false;            
-            _zoom = 1.0f;
+            _dirty = false;
             _graphLock = new object();
-            DocumentWidth = DEFAULT_DOCUMENT_WIDTH;
-            DocumentHeight = DEFAULT_DOCUMENT_HEIGHT;
+            using (Graphics g = CreateGraphics())
+            {
+                _xscale = g.DpiX / 96.0f;
+                _yscale = g.DpiY / 96.0f;
+            }
+            DocumentWidth = (int)(DEFAULT_DOCUMENT_WIDTH * _xscale);
+            DocumentHeight = (int)(DEFAULT_DOCUMENT_HEIGHT * _yscale);
             MouseWheel += new MouseEventHandler(GraphEditorControl_MouseWheel);
             InitializeComponent();
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);            
@@ -192,7 +186,7 @@ namespace CANAPE.Controls.GraphEditor
                 }
             }
         }
-
+        
         /// <summary>
         /// Get or set the graph data
         /// </summary>
@@ -206,7 +200,7 @@ namespace CANAPE.Controls.GraphEditor
 
                 lock (_graphLock)
                 {
-                    ret = new GraphData(_nodes.ToArray(), _lines.ToArray());
+                    ret = new GraphData(_nodes.Select(n => n.CloneAndScale(_xscale, _yscale)).ToArray(), _lines.ToArray());
                 }
 
                 return ret;
@@ -268,33 +262,6 @@ namespace CANAPE.Controls.GraphEditor
             set;
         }
 
-        /// <summary>
-        /// The zoom level of the graph
-        /// </summary>
-        [Category("Graph")]
-        public float Zoom
-        {
-            get
-            {
-                return _zoom;
-            }
-
-            set
-            {
-                UpdateZoom(value);
-            }
-        }
-
-        [Category("Graph")]
-        public bool MouseZoom
-        {
-            get { return _mouseZoom;  }
-            set
-            {
-                _mouseZoom = value;
-            }
-        }
-
         #endregion
 
         #region Public Methods
@@ -339,6 +306,7 @@ namespace CANAPE.Controls.GraphEditor
         /// Add a pre configured node to the graph
         /// </summary>
         /// <param name="p">The point location of the centre (in client co-ordinates)</param>
+        /// <param name="abs_pos">Whether the point is in screen co-ordinates or not.</param>
         /// <param name="z">The z level of the node</param>        
         /// <param name="id">The ID of the node</param>
         /// <param name="name">The text for the node</param>
@@ -353,10 +321,10 @@ namespace CANAPE.Controls.GraphEditor
         /// <param name="tag">A opaque object to store in the node</param>
         /// <exception cref="System.ArgumentException">Throw if node shape is unknown</exception>
         /// <returns>The created node</returns>
-        public GraphNode AddNode(PointF p, float z, Guid id, string name, GraphNodeShape shape, float width, float height, 
+        public GraphNode AddNode(PointF p, bool abs_pos, float z, Guid id, string name, GraphNodeShape shape, float width, float height, 
             Color backColor, Color lineColor, Color selectedLineColor, Color textColor, Color hatchedColor, object tag)
         {
-            return AddNodeInternal(ClientToDocumentPoint(p), z, id, name, shape, width, height, 
+            return AddNodeInternal(ClientToDocumentPoint(p), abs_pos, z, id, name, shape, width, height, 
                 backColor, lineColor, selectedLineColor, textColor, hatchedColor, tag);
         }
 
@@ -583,31 +551,21 @@ namespace CANAPE.Controls.GraphEditor
             return l;
         }
 
-        private void UpdateZoom(float z)
-        {
-            if (z < MIN_ZOOM)
-            {
-                z = MIN_ZOOM;
-            }
-            else if (z > MAX_ZOOM)
-            {
-                z = MAX_ZOOM;
-            }            
-
-            _zoom = z;
-
-            ResizeScrollBars();
-
-            Invalidate();
-        }
-
         private PointF ClientToDocumentPoint(PointF cp)
         {           
-            return new PointF((cp.X / _zoom) + _scrollPosition.X, (cp.Y / _zoom) + _scrollPosition.Y);
+            return new PointF(cp.X + _scrollPosition.X, cp.Y + _scrollPosition.Y);
         }
 
-        private RectangleF CreateBoundary(PointF p, float width, float height)
+        private RectangleF CreateBoundary(PointF p, bool abs_pos, float width, float height)
         {
+            width *= _xscale;
+            height *= _yscale;
+            if (!abs_pos)
+            {
+                p.X *= _xscale;
+                p.Y *= _yscale;
+            }
+
             return new RectangleF(p.X - (width / 2.0f), p.Y - (height / 2.0f), width, height);
         }
 
@@ -649,6 +607,7 @@ namespace CANAPE.Controls.GraphEditor
         /// Add a pre configured node to the graph
         /// </summary>
         /// <param name="p">The point location of the centre (in document co-ordinates)</param>
+        /// <param name="abs_pos">Whether the position is absolute or unscaled</param>
         /// <param name="z">The z level of the node</param>        
         /// <param name="id">The ID of the node</param>
         /// <param name="name">The text for the node</param>
@@ -663,7 +622,7 @@ namespace CANAPE.Controls.GraphEditor
         /// <param name="tag">A opaque object to store in the node</param>
         /// <exception cref="System.ArgumentException">Throw if node shape is unknown</exception>
         /// <returns>The created node</returns>
-        private GraphNode AddNodeInternal(PointF p, float z, Guid id, string name, GraphNodeShape shape, float width, float height,
+        private GraphNode AddNodeInternal(PointF p, bool abs_pos, float z, Guid id, string name, GraphNodeShape shape, float width, float height,
             Color backColor, Color lineColor, Color selectedLineColor, Color textColor, Color hatchedColor, object tag)
         {
             GraphNode s;            
@@ -671,23 +630,23 @@ namespace CANAPE.Controls.GraphEditor
             switch (shape)
             {
                 case GraphNodeShape.Ellipse:
-                    s = new GraphNodeCircle(id, CreateBoundary(p, width, height),
+                    s = new GraphNodeCircle(id, CreateBoundary(p, abs_pos, width, height),
                         z, backColor, lineColor, selectedLineColor, textColor, hatchedColor);
                     break;
                 case GraphNodeShape.Rectangle:
-                    s = new GraphNodeRectangle(id, CreateBoundary(p, width, height),
+                    s = new GraphNodeRectangle(id, CreateBoundary(p, abs_pos, width, height),
                         z, backColor, lineColor, selectedLineColor, textColor, hatchedColor);
                     break;
                 case GraphNodeShape.RoundedRectangle:
-                    s = new GraphNodeRoundedRectangle(id, CreateBoundary(p, width, height),
+                    s = new GraphNodeRoundedRectangle(id, CreateBoundary(p, abs_pos, width, height),
                         z, backColor, lineColor, selectedLineColor, textColor, hatchedColor);
                     break;
                 case GraphNodeShape.Triangle:
-                    s = new GraphNodeTriangle(id, CreateBoundary(p, width, height),
+                    s = new GraphNodeTriangle(id, CreateBoundary(p, abs_pos, width, height),
                         z, backColor, lineColor, selectedLineColor, textColor, hatchedColor);
                     break;
                 case GraphNodeShape.Rhombus:
-                    s = new GraphNodeRhombus(id, CreateBoundary(p, width, height),
+                    s = new GraphNodeRhombus(id, CreateBoundary(p, abs_pos, width, height),
                         z, backColor, lineColor, selectedLineColor, textColor, hatchedColor);
                     break;
                 default:
@@ -742,7 +701,7 @@ namespace CANAPE.Controls.GraphEditor
 
                 var g = e.Graphics;
                 
-                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                g.SmoothingMode = SmoothingMode.AntiAlias;
 
                 if (DrawDropShadow)
                 {                    
@@ -754,43 +713,13 @@ namespace CANAPE.Controls.GraphEditor
             else
             {
                 Graphics g = e.Graphics;
-                //List<GraphNode> drawNodes = new List<GraphNode>();
-                //List<GraphLine> drawLines = new List<GraphLine>();
                 List<GraphNode> drawNodes = new List<GraphNode>(_nodes);
                 List<GraphLine> drawLines = new List<GraphLine>(_lines);
                 List<GraphLinkLine> drawLinkLines = new List<GraphLinkLine>(_linkLines);
 
-                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-
-                g.ScaleTransform(_zoom, _zoom);
+                g.SmoothingMode = SmoothingMode.AntiAlias;
                 g.TranslateTransform(-_scrollPosition.X, -_scrollPosition.Y);
-
-                //g.ScaleTransform(_zoom, _zoom);
-                //g.TranslateTransform(-_scrollPosition.X, -_scrollPosition.Y);
-
-                //foreach (GraphNode n in _nodes)
-                //{
-                //    RectangleF boundary = n.Boundary;
-
-                //    if (DrawDropShadow)
-                //    {
-                //        boundary = new RectangleF(boundary.Location, new SizeF(boundary.Width + DropShadowOffsetX, boundary.Height + DropShadowOffsetY));                        
-                //    }
-
-                //    if (g.Clip.IsVisible(boundary))
-                //    {
-                //        drawNodes.Add(n);
-                //    }
-                //}
-
-                //foreach (GraphLine l in _lines)
-                //{
-                //    if (g.Clip.IsVisible(GraphUtils.GetLineBoundingBox(l.SourceShape.Center, l.DestShape.Center)))
-                //    {
-                //        drawLines.Add(l);
-                //    }
-                //}
-
+                
                 if (DrawDropShadow)
                 {
                     foreach (var n in drawNodes)
@@ -1056,20 +985,8 @@ namespace CANAPE.Controls.GraphEditor
 
         private void GraphEditorControl_MouseWheel(object sender, MouseEventArgs e)
         {
-            if (ModifierKeys == Keys.Control)
-            {
-                if (_mouseZoom)
-                {
-                    float delta = (float)e.Delta * 0.001f;
-
-                    UpdateZoom(_zoom + delta);
-                }
-            }
-            else if (ModifierKeys == Keys.None)
-            {
-                ScrollClientWindow(e.Delta / 4, vScrollBar);
-                Invalidate();
-            }
+            ScrollClientWindow(e.Delta / 4, vScrollBar);
+            Invalidate();
         }
 
         private void hScrollBar_Scroll(object sender, ScrollEventArgs e)
@@ -1091,8 +1008,8 @@ namespace CANAPE.Controls.GraphEditor
 
         private void ResizeScrollBars()
         {
-            float vMax = DocumentHeight - ((float)ClientRectangle.Height / _zoom);
-            float hMax = DocumentWidth - ((float)ClientRectangle.Width / _zoom);
+            float vMax = DocumentHeight - ClientRectangle.Height;
+            float hMax = DocumentWidth - ClientRectangle.Width;
 
             if (vMax < 0.0f)
             {

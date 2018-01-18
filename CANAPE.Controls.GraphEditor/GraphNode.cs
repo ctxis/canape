@@ -37,6 +37,14 @@ namespace CANAPE.Controls.GraphEditor
     /// </summary>
     public abstract class GraphNode : IGraphObject
     {
+        internal GraphNode CloneAndScale(float xscale, float yscale)
+        {
+            GraphNode ret = (GraphNode)MemberwiseClone();
+            RectangleF b = ret.Boundary;
+            ret.Boundary = new RectangleF(b.X / xscale, b.Y / yscale, b.Width / xscale, b.Height / yscale);
+            return ret;
+        }
+
         /// <summary>
         /// Get the boundary of the node
         /// </summary>
@@ -136,7 +144,7 @@ namespace CANAPE.Controls.GraphEditor
             GraphicsPath path = GetPath();
 
             try
-            {                
+            {
                 if (!selected)
                 {
                     p = new Pen(LineColor);

@@ -55,10 +55,12 @@ namespace CANAPE.Controls
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listViewMeta = new CANAPE.Controls.ListViewExtension();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             columnHeaderName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             columnHeaderType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             columnHeaderValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip.SuspendLayout();
+            this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // columnHeaderName
@@ -89,6 +91,7 @@ namespace CANAPE.Controls
             // 
             // contextMenuStrip
             // 
+            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
@@ -102,28 +105,36 @@ namespace CANAPE.Controls
             // 
             // listViewMeta
             // 
-            resources.ApplyResources(this.listViewMeta, "listViewMeta");
             this.listViewMeta.AutoScrollList = false;
             this.listViewMeta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             columnHeaderName,
             columnHeaderType,
             columnHeaderValue});
+            this.tableLayoutPanel.SetColumnSpan(this.listViewMeta, 2);
             this.listViewMeta.ContextMenuStrip = this.contextMenuStrip;
+            resources.ApplyResources(this.listViewMeta, "listViewMeta");
             this.listViewMeta.FullRowSelect = true;
             this.listViewMeta.MultiSelect = false;
             this.listViewMeta.Name = "listViewMeta";
             this.listViewMeta.UseCompatibleStateImageBehavior = false;
             this.listViewMeta.View = System.Windows.Forms.View.Details;
             // 
+            // tableLayoutPanel
+            // 
+            resources.ApplyResources(this.tableLayoutPanel, "tableLayoutPanel");
+            this.tableLayoutPanel.Controls.Add(this.listViewMeta, 0, 1);
+            this.tableLayoutPanel.Controls.Add(this.btnClear, 0, 0);
+            this.tableLayoutPanel.Name = "tableLayoutPanel";
+            // 
             // MetaEditorControl
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.listViewMeta);
+            this.Controls.Add(this.tableLayoutPanel);
             this.Name = "MetaEditorControl";
             this.Load += new System.EventHandler(this.MetaEditorControl_Load);
             this.contextMenuStrip.ResumeLayout(false);
+            this.tableLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -136,5 +147,6 @@ namespace CANAPE.Controls
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
     }
 }

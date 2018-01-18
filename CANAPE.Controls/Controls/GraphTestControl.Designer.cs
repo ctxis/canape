@@ -49,7 +49,9 @@ namespace CANAPE.Controls
             System.Windows.Forms.Label lblInput;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GraphTestControl));
             this.splitContainer = new System.Windows.Forms.SplitContainer();
+            this.tableLayoutPanelInput = new System.Windows.Forms.TableLayoutPanel();
             this.logPacketControlInput = new CANAPE.Controls.PacketLogControl();
+            this.tableLayoutPanelOutput = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.logPacketControlOutput = new CANAPE.Controls.PacketLogControl();
             this.tabControl = new System.Windows.Forms.TabControl();
@@ -62,6 +64,8 @@ namespace CANAPE.Controls
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
+            this.tableLayoutPanelInput.SuspendLayout();
+            this.tableLayoutPanelOutput.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPageTest.SuspendLayout();
             this.tabPageLog.SuspendLayout();
@@ -79,13 +83,18 @@ namespace CANAPE.Controls
             // 
             // splitContainer.Panel1
             // 
-            this.splitContainer.Panel1.Controls.Add(lblInput);
-            this.splitContainer.Panel1.Controls.Add(this.logPacketControlInput);
+            this.splitContainer.Panel1.Controls.Add(this.tableLayoutPanelInput);
             // 
             // splitContainer.Panel2
             // 
-            this.splitContainer.Panel2.Controls.Add(this.label2);
-            this.splitContainer.Panel2.Controls.Add(this.logPacketControlOutput);
+            this.splitContainer.Panel2.Controls.Add(this.tableLayoutPanelOutput);
+            // 
+            // tableLayoutPanelInput
+            // 
+            resources.ApplyResources(this.tableLayoutPanelInput, "tableLayoutPanelInput");
+            this.tableLayoutPanelInput.Controls.Add(lblInput, 0, 0);
+            this.tableLayoutPanelInput.Controls.Add(this.logPacketControlInput, 0, 1);
+            this.tableLayoutPanelInput.Name = "tableLayoutPanelInput";
             // 
             // logPacketControlInput
             // 
@@ -96,6 +105,13 @@ namespace CANAPE.Controls
             this.logPacketControlInput.ReadOnly = false;
             this.toolTip.SetToolTip(this.logPacketControlInput, resources.GetString("logPacketControlInput.ToolTip"));
             this.logPacketControlInput.ConfigChanged += new System.EventHandler(this.logPacketControlInput_ConfigChanged);
+            // 
+            // tableLayoutPanelOutput
+            // 
+            resources.ApplyResources(this.tableLayoutPanelOutput, "tableLayoutPanelOutput");
+            this.tableLayoutPanelOutput.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanelOutput.Controls.Add(this.logPacketControlOutput, 0, 1);
+            this.tableLayoutPanelOutput.Name = "tableLayoutPanelOutput";
             // 
             // label2
             // 
@@ -146,11 +162,13 @@ namespace CANAPE.Controls
             this.Controls.Add(this.tabControl);
             this.Name = "GraphTestControl";
             this.splitContainer.Panel1.ResumeLayout(false);
-            this.splitContainer.Panel1.PerformLayout();
             this.splitContainer.Panel2.ResumeLayout(false);
-            this.splitContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
+            this.tableLayoutPanelInput.ResumeLayout(false);
+            this.tableLayoutPanelInput.PerformLayout();
+            this.tableLayoutPanelOutput.ResumeLayout(false);
+            this.tableLayoutPanelOutput.PerformLayout();
             this.tabControl.ResumeLayout(false);
             this.tabPageTest.ResumeLayout(false);
             this.tabPageLog.ResumeLayout(false);
@@ -169,5 +187,7 @@ namespace CANAPE.Controls
         private System.Windows.Forms.TabPage tabPageLog;
         private EventLogControl eventLogControl;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelInput;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelOutput;
     }
 }

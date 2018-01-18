@@ -80,6 +80,11 @@ namespace CANAPE.Forms
             pictureBox.Name = "pictureBox";
             pictureBox.TabStop = false;
             // 
+            // label1
+            // 
+            resources.ApplyResources(label1, "label1");
+            label1.Name = "label1";
+            // 
             // linkLabel
             // 
             resources.ApplyResources(this.linkLabel, "linkLabel");
@@ -114,11 +119,6 @@ namespace CANAPE.Forms
             // 
             resources.ApplyResources(this.labelEmail, "labelEmail");
             this.labelEmail.Name = "labelEmail";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(label1, "label1");
-            label1.Name = "label1";
             // 
             // AboutForm
             // 

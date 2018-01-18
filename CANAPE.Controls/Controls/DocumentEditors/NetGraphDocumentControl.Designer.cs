@@ -119,20 +119,6 @@ namespace CANAPE.Controls.DocumentEditors
             resources.ApplyResources(this.toolStrip, "toolStrip");
             this.toolStrip.Name = "toolStrip";
             // 
-            // toolStripButtonZoomIn
-            // 
-            this.toolStripButtonZoomIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.toolStripButtonZoomIn, "toolStripButtonZoomIn");
-            this.toolStripButtonZoomIn.Name = "toolStripButtonZoomIn";
-            this.toolStripButtonZoomIn.Click += new System.EventHandler(this.toolStripButtonZoomIn_Click);
-            // 
-            // toolStripButtonZoomOut
-            // 
-            this.toolStripButtonZoomOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.toolStripButtonZoomOut, "toolStripButtonZoomOut");
-            this.toolStripButtonZoomOut.Name = "toolStripButtonZoomOut";
-            this.toolStripButtonZoomOut.Click += new System.EventHandler(this.toolStripButtonZoomOut_Click);
-            // 
             // netEditor
             // 
             this.netEditor.AllowBidirectionLines = false;
@@ -142,9 +128,7 @@ namespace CANAPE.Controls.DocumentEditors
             this.netEditor.DrawDropShadow = true;
             this.netEditor.DropShadowOffsetX = 5F;
             this.netEditor.DropShadowOffsetY = 5F;
-            this.netEditor.MouseZoom = false;
             this.netEditor.Name = "netEditor";
-            this.netEditor.Zoom = 1F;
             this.netEditor.NodeDeleted += new System.EventHandler<CANAPE.Controls.GraphEditor.NodeDeletedEventArgs>(this.netEditor_NodeDeleted);
             this.netEditor.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.netEditor_MouseDoubleClick);
             this.netEditor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.netEditor_MouseDown);
